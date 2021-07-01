@@ -1,0 +1,2343 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAZdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAuMTnU1rJkAAAEeUlEQVRoQ82VX08cZRTGN34SE7+DicnObOKFNvGiF5p4URNirFYDadOqhZW/WmkwoBKsdbFtSgqKIshisbSlQuuKlC6CZCkkEkVtLUYiTWsam1Z57Duc0bNnz+zODDutT/K7mXOec85zM2+sHIovbIcXg89eVyHrvVM8twN+SD+/VhIaeXcU/7YSQfis6jff0IpoFJ/ZiTAM77oSGFpZPsWzu+GHazX1Jfl8zyVf0OrNKz71MoqhHemXkb3LRaETwiv+dQ280A4Ky6nkkid0SnDFM7XQmNlfpx5huJqsL+gfrVv8l8vJDtXnwns5dJJ/WecaoaEtNWi9LmcacyraHIPWa6DTSssaew0a2jKtTzK2b7Yo2lytz0Aness60wwNuWDLSb1P4+z+rC/kDq3HQKfqsk61QCIHaz3FOPfGpG/kLq2HTi2UNdIGyXTzq3kDtR4OjSqqTFsGxeD7DFoPjcqXNfw2JHzQo0NvFdRdaEQgTbSPwwu+V6vTiP9kDXVAwocYtB4DjQilyXdGoSF3az00YkPW4EFI+ACtbiD7pnT+4Ag0+H6tTvYNWf2d4HCzQdYNZC2LLnQOQyJvkPVs6sQDjtnqOwwJN2p1x1hmTR9JQ8Lv0OqO0eo9Cgk3anXHWGZ909UPCb9DqztGq6cbHG5aSzbk1QyOKSLNdn8EzlzXB3n3yLpjso59CA43yJrBMUWkud4eSPg9suaYrKMfg8MNsmZwTBEp19cFCb9H1hyTdWQAHG6QNYNjikjz/Yc+nR84DA6/R9bmBw4di1nvp8HhBlkz0K5IhMbG+xbSKXD4PbJ2MZ36O2anjoPDDbJmoF2RaGahMpX7bgcWv38GSz9WYPnytrx7rl57DH/ceAR/3nwYt2/bWF9/qD9mv3sCHG6QNQPtikSzC5UIEsAx2R2nweEGWTM4pogULkD7F+BwQ7a+Na9mcEwRKVyAN89Cwk1a3TGWWdncLsgA/I7Vta0eAVq/goQbtbpjLLNCBzCyWybB4UaDrBvIWhZNzr4EGeD31uq8G2SAW7esKrLfCdB8ARJu1uoGsm9KmWz1eS0A37+y+nhBALJvyN43AwkfYNB6DDQilManaqcz0zWQAeTukgGM7KY5SPgQre5CIwJpdKIJ41N1KBXg0sqTBQFoRL7shnlI+CCD1sOhUUV1fKwFI1++Dq8AcqfvAEZ27SIkcqDWo/LK4qCZ2T3U+V7v8AF8crIdg6NtKBZA7jLvgAzgHOolO7kEDTlY6/HiTgD4CSB3uA9ZoABG9t4foCEXGLQ+SakA2lz+EvMAdGJp2S/+BA1tmUHrdfEKcKWlQZ3FHzIegE7zL3v3L9DQlrps2bNc0C8DaD4X/g7wAHRScCV2/govtAPCIn+jPMDPK088SOeEU6JqFcXQDvKL1zvgBqATNq/EC2vwg3akpNQ74Aag1eVT4rnrCIPf3ygPQCujUWL7DQQhSABacXeUePom/OAnAI28N0pU4P5ExV/wwivA6Ymmahrx/1Ri23pP4imYAH30KQLFYv8AriP3Fbxh25kAAAAASUVORK5CYII=">
+	<title>Основы html, css и javascript</title>
+	<style>
+		.lightTheme {
+			--c-back--: #fff7e5;
+			--c-link--: blue;
+			--c-text--: black;
+			--c-selection--: #add6ff;
+
+			--c-t--: #ad0000; /* html tag */
+			--c-tb--: #ad0000; /* html tag bracket */
+			--c-a--: #ff0000; /* html attribute */
+			--c-s--: #0000ff; /* html string */
+			--c-b--: #0000ff; /* bool */
+			--c-sj--: #a31515; /* js string */
+			--c-k--: #af00db; /* keyword */
+			--c-kj--: #0000ff; /* keyword 2 */
+			--c-c--: #008000; /* comment */
+			--c-vc--: #0070c1; /* const var */
+			--c-vl--: #001080; /* let var */
+			--c-n--: #098658; /* number */
+			--c-f--: #795e26; /* function */
+			--c-m--: #267f99; /* module, class */
+			--c-ct--: #800000; /* css, tag */
+			--c-cp--: #ff0000; /* css, property */
+			--c-cs--: #0451a5; /* css, string */
+			--c-cn--: #098658; /* css, number */
+			--c-ck--: #795e26; /* css, keyword */
+			--c-ck2--: #af00db; /* css, keyword 2 */
+			--c-ca--: #001080; /* css, animation name */
+		}
+		.darkTheme {
+			--c-back--: #1e1e1e;
+			--c-link--: #00ffff;
+			/* --c-text--: white; */
+			--c-text--: #d4d4d4;
+			--c-selection--: #264f78;
+
+			--c-t--: #569cd6; /* html tag */
+			--c-tb--: #808080; /* html tag bracket */
+			--c-a--: #9cdcfe; /* html attribute */
+			--c-s--: #ce9178; /* html string */
+			--c-b--: #569cd6;; /* bool */
+			--c-sj--: #ce9178; /* js string */
+			--c-k--: #c586c0; /* keyword */
+			--c-kj--: #569cd6;; /* keyword 2 */
+			--c-c--: #6a9955; /* comment */
+			--c-vc--: #4fc1ff; /* const var */
+			--c-vl--: #9cdcfe; /* let var */
+			--c-n--: #b5cea8; /* number */
+			--c-f--: #dcdcaa; /* function */
+			--c-m--: #4ec9b0; /* module, class */
+			--c-ct--: #d7ba7d; /* css, tag */
+			--c-cp--: #9cdcfe; /* css, property */
+			--c-cs--: #ce9178; /* css, string */
+			--c-cn--: #b5cea8; /* css, number */
+			--c-ck--: #dcdcaa; /* css, keyword */
+			--c-ck2--: #c586c0; /* css, keyword 2 */
+			--c-ca--: #9cdcfe; /* css, animation name*/
+		}
+	</style>
+	<style>
+		body {
+			--t-dur--: 250ms;
+			transition-property: color, background-color;
+			transition-duration: var(--t-dur--);
+			background-color: var(--c-back--);
+			font-family: Arial, Helvetica, sans-serif;
+			margin: 0px;
+			padding: 10px;
+			display: flex;
+			justify-content: center;
+			color: var(--c-text--);
+		}
+		.body {
+			max-width: 50rem;
+			width: 100%;
+			display: none;
+			margin-bottom: 10rem;
+		}
+		.visible { display: block; }
+		h1, h2 {
+			font-family: 'Times New Roman', Times, serif;
+			text-align: center;
+			margin-bottom: 0px;
+			margin-top: 0px;
+		}
+		.raw {
+			font-family: revert;
+			text-align: revert;
+			margin-bottom: revert;
+			margin-top: revert;
+		}
+		h2 { margin-top: 2rem; }
+		h1 + h1 { font-size: 1.3rem; }
+		p, ul, ol, .footer, table, a, .header span, .main-font-size { font-size: 1.15rem; }
+		li { margin-top: 0.5rem; }
+		pre {
+			font-size: 1rem;
+			white-space: pre-wrap;
+			tab-size: 4;
+			transition-duration: calc(var(--t-dur--) / 4);
+		}
+		pre span { transition-duration: var(--t-dur--); }
+		pre::selection, pre *::selection {
+			background-color: var(--c-selection--);
+		}
+		p + p { margin-top: -0.6rem; }
+		a, .header span, .changeThemeButton {
+			color: var(--c-link--);
+			outline: none;
+			text-decoration-skip-ink: none;
+			text-decoration: none;
+			cursor: pointer;
+		}
+		a:hover, .header span:hover, .changeThemeButton:hover { text-decoration: underline; }
+		a:focus, .header span:focus, .changeThemeButton:focus { text-decoration: underline; }
+		a[fake], a[fake]:hover { color: var(--c-text--); text-decoration: none; }
+		.header {
+			position: sticky;
+			z-index: 2;
+			height: 2.5rem;
+			top: 0px;
+			background-color: var(--c-back--);
+			display: flex;
+			align-items: center;
+			transition-duration: var(--t-dur--);
+		}
+		.header a + a { margin-left: 20px; }
+		.header div { flex: 1 1 auto; }
+		.footer {
+			text-align: center;
+			margin-top: 5rem;
+		}
+	</style>
+	<style>
+		.rect3d {
+			height: 80px;
+			padding: 25px;
+			text-align: center;
+		}
+		.rect3d div {
+			--size--: 40px;
+			height: calc(var(--size--) * 2);
+			width: calc(var(--size--) * 2);
+			transform-style: preserve-3d;
+			animation: rect3d-anim 3s linear infinite;
+			display: inline-block;
+		}
+		.rect3d div div {
+			display: flex;
+    		align-items: center;
+    		justify-content: center;
+    		width: 100%;
+    		height: 100%;
+    		position: absolute;
+    		backface-visibility: inherit;
+    		font-size: 50px;
+    		color: #fff;
+			animation: none;
+		}
+		.rect3d div div:nth-child(1) {
+			background: rgba(90, 90, 90, 0.7);
+    		transform: translateZ(var(--size--));
+		}
+		.rect3d div div:nth-child(2) {
+			background: rgba(0, 210, 0, 0.7);
+			transform: rotateY(180deg) translateZ(var(--size--));
+		}
+		.rect3d div div:nth-child(3) {
+			background: rgba(210, 0, 0, 0.7);
+			transform: rotateY(90deg) translateZ(var(--size--));
+		}
+		.rect3d div div:nth-child(4) {
+			background: rgba(0, 0, 210, 0.7);
+			transform: rotateY(-90deg) translateZ(var(--size--));
+		}
+		.rect3d div div:nth-child(5) {
+			background: rgba(210, 210, 0, 0.7);
+			transform: rotateX(90deg) translateZ(var(--size--));
+		}
+		.rect3d div div:nth-child(6) {
+			background: rgba(210, 0, 210, 0.7);
+			transform: rotateX(-90deg) translateZ(var(--size--));
+		}
+		@keyframes rect3d-anim {
+			from {
+				transform: rotate3d(1, 1, 1, 0deg);
+			}
+			to {
+				transform: rotate3d(-0.5, 0.5, 0.8, 360deg);
+			}
+		}
+	</style>
+	<style>
+		span.w { color: var(--c-text--); }
+		span.t { color: var(--c-t--); }
+		span.tb { color: var(--c-tb--); }
+		span.a { color: var(--c-a--); }
+		span.s { color: var(--c-s--); }
+		span.b { color: var(--c-b--); }
+		span.sj { color: var(--c-sj--); }
+		span.k { color: var(--c-k--); }
+		span.kj { color: var(--c-kj--); }
+		span.c { color: var(--c-c--); }
+		span.vc { color: var(--c-vc--); }
+		span.vl { color: var(--c-vl--); }
+		span.n { color: var(--c-n--); }
+		span.f { color: var(--c-f--); }
+		span.m { color: var(--c-m--); }
+		span.ct { color: var(--c-ct--); }
+		span.cp { color: var(--c-cp--); }
+		span.cs { color: var(--c-cs--); }
+		span.cn { color: var(--c-cn--); }
+		span.ck { color: var(--c-ck--); }
+		span.ck2 { color: var(--c-ck2--); }
+		span.ca { color: var(--c-ca--); }
+	</style>
+	<style>
+		.hover-red:hover { color: red; }
+		.active-red:active { color: red; }
+		.focus-lightblue:focus { background-color: lightblue; }
+		.flex-container-div { display: flex; flex-wrap: wrap; }
+		.flex-container-div div { padding: 10px; border: 3px solid lime; margin: 5px; flex-grow: 1; text-align: center;}
+		.pg10-container {
+			position: relative;
+			min-height: 100px;
+			background-color: gray;
+		}
+		.pg10-element1, .pg10-element2 {
+			position: absolute;
+			background-color: lime;
+			width: 50px;
+			height: 50px;
+			top: 20px;
+			left: 10px;
+		}
+		.pg10-element2 {
+			top: -20px;
+			left: 70px;
+		}
+		.pg18-anim-rect {
+			transition-property: background-color;
+			transition-duration: 1s;
+			background-color: blue;
+			width: 100px;
+			height: 100px;
+		}
+		.pg18-anim-rect:hover {
+			background-color: red;
+		}
+		.pg18-anim-button {
+			transition-property: color, background-color;
+			transition-duration: 250ms;
+			background-color: lightblue;
+			color: black;
+			border: 1px solid gray;
+		}
+		.pg18-anim-button:active {
+			background-color: blue;
+			color: lime;
+		}
+		@keyframes pg18-cool-animation {
+			0% {
+				background-color: cyan;
+				width: 100px;
+			}
+			50% {
+				background-color: lime;
+			}
+			100% {
+				background-color: yellow;
+				width: 100%;
+			}
+		}
+		.pg18-anim-div {
+			animation: pg18-cool-animation 2s infinite alternate;
+			height: 100px;
+		}
+	</style>
+	<style>
+		.cool-button {
+			--color: white;
+			--back-color: #0d6efd;
+			transition: background-color box-shadow;
+			transition-duration: 200ms;
+			background-color: var(--back-color);
+			color: var(--color);
+			padding: 0.4em 0.6em;
+			border-radius: 0.25em;
+			border: none;
+			outline: none;
+		}
+		.cool-button:hover {
+			box-shadow: 0px 0px 0px 0.1em var(--back-color);
+		}
+		.cool-button:active {
+			box-shadow: inset 0px 0px 0px 0.1em var(--back-color);
+		}
+		.cool-button2 {
+			--color: #0d6efd;
+			--back-color: white;
+			transition: background-color color;
+			transition-duration: 150ms;
+			background-color: var(--back-color);
+			color: var(--color);
+			padding: 0.4em 0.6em;
+			border-radius: 0.25em;
+			border: 0.15em solid var(--color);
+			outline: none;
+		}
+		.cool-button2:hover {
+			background-color: var(--color);
+			color: var(--back-color);
+		}
+		.cool-button2:active {
+			transition-duration: 0ms;
+			background-color: var(--back-color);
+			color: var(--color);
+		}
+		.cool-button3 {
+			--color: white;
+			--back-color: #0d6efd;
+			transition: background-color box-shadow;
+			transition-duration: 200ms;
+			background-color: var(--back-color);
+			color: var(--color);
+			padding: 0.4em 0.6em;
+			border-radius: 0.25em;
+			border: none;
+			outline: none;
+		}
+		.cool-button3:hover {
+			box-shadow: 0px 0.6em 0.7em -0.2em var(--back-color);
+		}
+		.cool-button3:active {
+			transform: translateY(0.2em);
+			box-shadow: 0px 0.4em 0.3em -0.1em var(--back-color);
+		}
+		.cool-button4 {
+			--color: white;
+			--back-color: #0d6efd;
+			transition: background-color;
+			transition-duration: 100ms;
+			background-color: var(--back-color);
+			color: var(--color);
+			padding: 0.4em 0.6em;
+			border-radius: 0.25em;
+			text-decoration-skip-ink: none;
+			border: none;
+			outline: none;
+		}
+		.cool-button4:hover {
+			text-decoration: underline;
+		}
+		.cool-button4:active {
+			text-decoration: none;
+		}
+	</style>
+</head>
+<body class="lightTheme">
+	<script>
+		let lightTheme = localStorage.getItem("lightTheme");
+		if (lightTheme == null) {
+			lightTheme = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+		}
+		else lightTheme = lightTheme == "false";
+		changeTheme();
+		function changeTheme() {
+			lightTheme = !lightTheme;
+			localStorage.setItem("lightTheme", lightTheme ? "true" : "false");
+			if (lightTheme) {
+				document.body.classList.add("lightTheme");
+				document.body.classList.remove("darkTheme");
+			}
+			else {
+				document.body.classList.remove("lightTheme");
+				document.body.classList.add("darkTheme");
+			}
+		}
+	</script>
+	<div class="body" id="pg0">
+		<h1>Основы html, css и javascript</h1>
+		<!-- <h1>Которая будет работать в браузере</h1> -->
+		<h2>Оглавление</h2>
+		<ul>
+			<li>Основы</li>
+			<ol>
+				<li><a href="" onclick="toPage(1)">Html, css и javascript</a></li>
+				<li><a href="" onclick="toPage(2)">Javascript и python - основные отличия</a></li>
+				<li><a href="" onclick="toPage(3)">Html страница</a></li>
+				<li><a href="" onclick="toPage(4)">Html: Основные теги</a></li>
+				<li><a href="" onclick="toPage(5)">Css</a></li>
+				<li><a href="" onclick="toPage(6)">Javascript на странице</a></li>
+				<li><a href="" onclick="toPage(7)">Как создать проект</a></li>
+			</ol>
+			<li>Css</li>
+			<ol>
+				<li><a href="" onclick="toPage(8)">Значения</a></li>
+				<li><a href="" onclick="toPage(9)">Cелекторы</a></li>
+				<li><a href="" onclick="toPage(10)">Основные свойства</a></li>
+				<li><a href="" onclick="toPage(11)">Переменные</a></li>
+				<li><a href="" onclick="toPage(12)">Функция calc()</a></li>
+			</ol>
+			<li>Javascript</li>
+			<ol>
+				<li><a href="" onclick="toPage(13)">Взаимодействие со страницей</a></li>
+				<li><a href="" onclick="toPage(14)">Элемент как объект</a></li>
+				<li><a href="" onclick="toPage(15)">События</a></li>
+			</ol>
+			<li>Подробнее о разном</li>
+			<ol>
+				<li><a href="" onclick="toPage(16)">Больше css свойств</a></li>
+				<li><a href="" onclick="toPage(17)">Тег input</a></li>
+				<li><a href="" onclick="toPage(18)">Css анимации</a></li>
+				<li><a href="" onclick="toPage(19)">Тег canvas</a></li>
+				<li><a href="" onclick="toPage(20)">canvas анимации</a></li>
+			</ol>
+			<li>Дополнительно</li>
+			<ol>
+				<li><a href="" onclick="toPage(21)">Функция range()</a></li>
+				<li><a href="" onclick="toPage(22)">code и key любой клавиши</a></li>
+				<li><a href="" onclick="toPage(23)">Красивые кнопки</a></li>
+				<li><a href="" onclick="toPage(24)">3D куб</a></li>
+			</ol>
+		</ul>
+		<p style="margin-top: 3rem; text-align: center;"><span class="changeThemeButton" onclick="changeTheme()">Сменить тему</span></p>
+	</div>
+
+
+	<div class="body" id="pg1">
+		<div class="header"><a href="" onclick="history.back()">Назад</a><a href="" onclick="toPage(0)">На главную</a><div></div><span onclick="changeTheme()">Сменить тему</span></div>
+		<h1>Html, css и javascript</h1>
+		<p>Интернет-страница состоит из трёх частей: html, css и javascript.</p>
+		<ul>
+			<li>html - язык разметки документов. Им указывают, где будут располагаться части страницы: тексты, кнопки, заголовки...</li>
+			<li>css - язык описания внешнего вида документа. Цвета, размер текста, шрифт - всё указывается с помощью css.</li>
+			<li>javascript - язык программирования, позволяет добавить интерактивность на страницу.</li>
+		</ul>
+
+		<h2>Html</h2>
+		<p>Начнём с html. В html всё состоит из элементов. Элементы обозначаются тегами: &lt;tag&gt; - начало, &lt;/tag&gt; - конец элемента.</p>
+		<p>Например, вот так выглядит этот абзац:</p>
+		<pre><span class="tb">&lt;</span><span class="t">p</span><span class="tb">&gt;</span>Например, вот так выглядит этот абзац:<span class="tb">&lt;/</span><span class="t">p</span><span class="tb">&gt;</span></pre>
+		<p>Также бывают элементы, внутрь которых нельзя ничего добавить, у таких элементов нет закрывающего тега.</p>
+		<p>Внутри тега также пишутся атрибуты, в таком виде:</p>
+		<pre><span class="tb">&lt;</span><span class="t">tag<span class="a"> атрибут1=<span class="s">"значение"</span></span> <span class="a">атрибут2=<span class="s">"значение"</span></spna><span class="tb">&gt;</span></span><span class="tb">&lt;/<span class="t">tag</span><span class="tb">&gt;</span></span></pre>
+		<p>Например, для элемента ссылка, можно указать атрибут адрес ссылки:</p>
+		<pre><span class="tb">&lt;</span><span class="t">a<span class="a"> href=<span class="s">"https://yandex.ru/"</span></span></span><span class="tb">&gt;</span>Ссылка на яндекс<span class="tb">&lt;/<span class="t">a</span>&gt;</span></pre>
+
+		<h2>Css</h2>
+		<p>Css позволяет добавить на страницу стили и даже анимацию.</p>
+		<p>Для стилей есть атрибут style. Стили пишутся в таком виде:</p>
+		<pre><span class="tb">&lt;</span><span class="t">p</span> <span class="a">style</span>=<span class="s">"стиль: значение; стиль: значение;"</span><span class="tb">&gt;</span><span class="tb">&lt;/</span><span class="t">p</span><span class="tb">&gt;</span></pre>
+		<p>Например можно изменить цвет текста и фона:</p>
+		<pre><span class="tb">&lt;</span><span class="t">p<span class="a"> style=<span class="s">"color: green; background-color: pink;"</span></span><span class="tb">&gt;</span></span>Текст зелёного цвета на розовом фоне.<span class="tb">&lt;/</span><span class="t">p</span><span class="tb">&gt;</span></pre>
+		<p style="color: green; background-color: pink;">Текст зелёного цвета на розовом фоне.</p>
+		<p>Можно сделать даже такую анимацию:</p>
+		<div class="rect3d"><div><div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div></div></div>
+		<p>Этот куб сделан только с помощью html и css. В одной из глав, будет показано как сделать такой куб.</p>
+
+		<h2>Javascript</h2>
+		<p>Позволяет добавить интерактивность на страницу, чтобы кнопки нажимались, а ваш заказ в магазине отправлялся.</p>
+		<p>Для тех, кто не знает javascript:</p>
+		<p>Если вы знаете python, можете перейти на главу <a href="" onclick="toPage(2)">основные различия между javascript и python</a></p>
+		<p>Если нет, то на <a href="https://learn.javascript.ru/" target="_blank">этом сайте</a> можно изучить javascript</p>
+		<div class="footer"><a href="" onclick="toPage(3)">Следующая тема</a></div>
+	</div>
+
+
+	<div class="body" id="pg2">
+		<div class="header"><a href="" onclick="history.back()">Назад</a><a href="" onclick="toPage(0)">На главную</a><div></div><span onclick="changeTheme()">Сменить тему</span></div>
+		<h1>Javascript и python - основные отличия</h1>
+		<div>
+			<p>Начнём, например, с того, что в javascript нет обязательного форматирования, то есть не обязательно ставить пробелы в теле цикла или функции.</p>
+			<p>Сразу скажу про функцию print(), в javascript эта функция не печатает текст в консоль, а нужна для печати на принтере. Функции input() в javascript нет.</p>
+			<p>Вместо функции print() можно использовать alert() - вывод на экран или console.log() - вывод в консоль (открывается в браузере по кнопке F12).
+				Нажмите, чтобы вызвать функцию:
+				<span onclick='alert("Текст в alert")' style="color: violet; cursor: pointer;">alert("Текст в alert")</span>,
+				<span onclick='console.log("Текст в консоль")' style="color: violet; cursor: pointer;">console.log("Текст в консоль")</span>
+			</p>
+			<p>Для комментариев в тексте используются два слэша: //комментарий.</p>
+			<p>В конце строк желательно ставить точку с запятой (;).</p>
+			<p>Изменение переменной на единицу можно записать так: a++ и a--, тоже, что и a += 1 и a -= 1</p>
+		</div>
+
+		<h2>Переменные</h2>
+		<div>
+			<p>В javascript для создания переменной необходимо перед её именем написать const или let:</p>
+			<p>const - значение этой переменной нельзя будет изменить</p>
+			<p>let - значение этой переменной можно изменять.</p>
+			<p>Желательно использовать let только тогда, когда вы собираетесь изменять значение - это упрощает отладку и понимание кода.
+			В редакторах const и let переменные подсвечиваются разными цветами.</p>
+			<pre>
+<span class="kj">let</span> <span class="vl">a</span> = <span class="sj">"abc"</span>;
+<span class="kj">const</span> <span class="vc">b</span> = <span class="sj">"abc"</span>;
+
+<span class="vl">a</span> = <span class="n">123</span>; <span class="c">// Значение 'a' измениться</span>
+<span class="vc">b</span> = <span class="n">123</span>; <span class="c">// Произойдёт ошибка: "Assignment to constant variable."</span>
+</pre>
+		</div>
+
+		<h2>Фигурные скобки</h2>
+		<div>
+			<p>В javascript вместо того, чтобы отделять, например, тело цикла, используются не пробелы, а фигурные скобки.
+				Переменные, созданные внутри скобок, не видны снаружи. В них можно заключать также любую часть кода.
+			</p>
+			<pre>
+{
+	Какие-либо действия;
+}
+{ Какие-либо действия; } <span class="c">// Можно и так</span>
+{ Действие; Действие; Действие; } <span class="c">// И так тоже</span>
+
+<span class="kj">const</span> <span class="vc">a</span> = <span class="sj">"123"</span>;
+{
+	<span class="kj">const</span> <span class="vc">a</span> = <span class="sj">"abc"</span>; <span class="c">// Это уже другая переменная</span>
+	<span class="vl">console</span>.<span class="f">log</span>(<span class="vc">a</span>); <span class="c">// Вывод: abc</span>
+}
+<span class="vl">console</span>.<span class="f">log</span>(<span class="vc">a</span>); <span class="c">// Вывод: 123</span>
+
+<span class="kj">let</span> <span class="vl">b</span> = <span class="sj">"abc"</span>;
+{
+	<span class="vl">console</span>.<span class="f">log</span>(<span class="vl">b</span>); <span class="c">// Вывод: abc</span>
+	<span class="vl">b</span> = <span class="sj">"123"</span>;
+}
+<span class="vl">console</span>.<span class="f">log</span>(<span class="vl">b</span>); <span class="c">// Вывод: 123</span>
+</pre>
+		</div>
+
+		<h2>Логические операции</h2>
+		<div>
+			<p>В javascript вместо and, or и not используются &&, || и ! соответственно.</p>
+			<pre>!(<span class="vl">a</span> == <span class="n">1</span> && <span class="vl">b</span> != <span class="n">1</span>) <span class="c">// not(a == 1 and b != 1)</span></pre>
+			<p>Также, в javascript false и true пишутся с маленькой буквы.</p>
+			<pre>!(<span class="vl">a</span> == <span class="b">true</span> || <span class="vl">b</span> == <span class="b">false</span>) <span class="c">// not(a is True or b is False)</span></pre>
+		</div>
+
+		<h2>Условный оператор</h2>
+		<div>
+			<pre>
+<span class="k">if</span> (условие)
+{
+	Действия, если условие верно;
+}
+<span class="k">else if</span> (условие) <span class="c">// Вместо elif</span>
+{
+	Действия, если предыдущие условия оказались неверны, а это верно;
+}
+<span class="k">else</span>
+{
+	Действия, если предыдущие условия оказались неверны;
+}
+</pre>
+			<p>Условия обязательно писать в скобках.</p>
+			<p>Если вы делаете только одно действие по условию, можно записать короче:</p>
+			<pre>
+<span class="k">if</span> (условие) Одна команда;
+<span class="k">else if</span> (условие) Одна команда;
+<span class="k">else</span> Одна команда;
+</pre>
+		</div>
+
+		<h2>Цикл while</h2>
+		<div>
+			<pre>
+<span class="k">while</span> (условие)
+{
+	Тело цикла;
+}
+</pre>
+			<p>Если вы хотите вначале выполнить тело цикла, а проверять условие после, есть оператор do</p>
+			<pre>
+<span class="k">do</span>
+{
+	Тело цикла; <span class="c">// Выполнится хотя бы один раз</span>
+} <span class="k">while</span> (условие)
+</pre>
+			<p>Если вы делаете только одно действие в цикле, можно записать короче:</p>
+			<pre>
+<span class="k">while</span> (условие) Одна команда;
+
+<span class="k">do</span> Одна команда;
+<span class="k">while</span> (условие)
+</pre>
+		</div>
+
+		<h2>Цикл for</h2>
+		<div>
+			<p>В javascript нет функции range().</p>
+			<p>Если вы очень к ней привыкли: моя реализация <a href="" onclick="toPage(21)">функции range()</a>.</p>
+			<p>Цикл от 0 до 10 не включительно:</p>
+			<pre>
+<span class="k">for</span> (<span class="kj">let</span> <span class="vl">i</span> = <span class="n">0</span>; <span class="vl">i</span> &lt; <span class="n">10</span>; <span class="vl">i</span>++) {
+	Тело цикла;
+}</pre>
+			<p>В отличие от python, если в теле цикла вы измените i, то это повлияет на цикл:</p>
+			<pre><span class="k">for</span> (<span class="kj">let</span> <span class="vl">i</span> = <span class="n">0</span>; <span class="vl">i</span> &lt; <span class="n">10</span>; <span class="vl">i</span>++) <span class="vl">i</span> = <span class="n">9</span>;</pre>
+			<p>В этом цикле на первой итерации i станет равнятся 9, после чего i увеличится на единицу (т. к. в цикле i++), и условие станет ложно (10 &lt; 10) - конец цикла.</p>
+			<p>Цикл 'for el in [1, 2, 3]:':</p>
+			<pre>
+<span class="k">for</span> (<span class="kj">const</span> <span class="vc">el</span> <span class="kj">of</span> [<span class="n">1</span>, <span class="n">2</span>, <span class="n">3</span>]) {
+	Тело цикла;
+}</pre>
+			<p>Если вы делаете только одно действие в цикле, можно записать короче:</p>
+			<pre>
+<span class="k">for</span> (<span class="kj">let</span> <span class="vl">i</span> = <span class="n">0</span>; <span class="vl">i</span> &lt; <span class="n">10</span>; <span class="vl">i</span>++) Одна команда;
+<span class="k">for</span> (<span class="kj">const</span> <span class="vc">el</span> <span class="kj">of</span> [<span class="n">1</span>, <span class="n">2</span>, <span class="n">3</span>]) Одна команда;
+</pre>
+		</div>
+
+		<h2>Списки и строки</h2>
+		<div>
+			<p>Обращение по индексу к элементу, которого нет, не вызовет ошибки, вы просто получите undefined.</p>
+			<p>Не работают отрицательные индексы для отсчёта с конца: "abcd"[-1] == undefined. <span style="color: gray;">(Можно хранить данные и в отрицательных индексах!)</span></p>
+			<p>Нет функции list() для создания пустого списка.</p>
+			<p>Метод push() для добавления элемента в конец списка (вместо append()).</p>
+			<p>Нет функции len(). Получение длины:</p>
+			<pre>
+<span class="kj">const</span> <span class="vc">length1</span> = <span class="sj">"abc"</span>.<span class="vc">length</span>; <span class="c">// Длина строки</span>
+<span class="kj">const</span> <span class="vc">length2</span> = [<span class="sj">"abc"</span>, <span class="n">15</span>].<span class="vc">length</span>; <span class="c">// Длина списка</span>
+</pre>
+			<p>Для совмещения списков есть метод concat():</p>
+			<pre>
+<span class="kj">const</span> <span class="vc">a</span> = [<span class="sj">"abc"</span>, <span class="n">15</span>];
+<span class="kj">const</span> <span class="vc">b</span> = [<span class="b">false</span>, <span class="sj">"45"</span>];
+<span class="kj">const</span> <span class="vc">c</span> = <span class="vc">a</span>.<span class="f">concat</span>(<span class="vc">b</span>); <span class="c">// c == ["abc", 15, false, "45"]</span>
+</pre>
+			<p>Метод concat() может добавлять также любые значения:</p>
+			<pre>
+<span class="kj">const</span> <span class="vc">a</span> = [<span class="sj">"abc"</span>, <span class="n">15</span>].<span class="f">concat</span>(<span class="sj">"qwerty"</span>, [<span class="b">false</span>, <span class="sj">"45"</span>], <span class="b">true</span>);
+<span class="c">// a == ["abc", 15, "qwerty", false, "45", true]</span>
+</pre>
+		</div>
+
+		<h2>Срезы</h2>
+		<div>
+			<p>Для срезов, как в python (a[1:3]), в javascript есть метод slice.</p>
+			<pre>
+<span class="kj">const</span> <span class="vc">a</span> = <span class="sj">"abcd"</span>.<span class="f">slice</span>(<span class="n">1</span>, <span class="n">3</span>); <span class="c">// a == "bc"</span>
+<span class="kj">const</span> <span class="vc">b</span> = [<span class="sj">"a"</span>, <span class="sj">"1"</span>, <span class="b">true</span>, <span class="n">5</span>].<span class="f">slice</span>(<span class="n">1</span>, <span class="n">3</span>); <span class="c">// b == ["1", true]</span>
+
+<span class="kj">const</span> <span class="vc">c</span> = <span class="sj">"abcd"</span>.<span class="f">slice</span>(<span class="n">-1</span>); <span class="c">// c == "d"</span>
+<span class="kj">const</span> <span class="vc">d</span> = <span class="sj">"abcd"</span>.<span class="f">slice</span>(<span class="n">-3</span>, <span class="n">-1</span>); <span class="c">// d == "bc"</span>
+</pre>
+			<p>Для переворота списка есть метод reverse:</p>
+			<pre>
+<span class="kj">const</span> <span class="vc">a</span> = [<span class="sj">"a"</span>, <span class="sj">"1"</span>, <span class="b">true</span>, <span class="n">5</span>];
+<span class="vc">a</span>.<span class="f">reverse</span>(); <span class="c">// a == [5, true, "1", "a"]</span>
+</pre>
+			<p>Для переворота строки встроенного метода нет, но можно сделать так:</p>
+			<pre>
+<span class="kj">const</span> <span class="vc">a</span> = <span class="sj">"abcd"</span>.<span class="f">split</span>(<span class="sj">""</span>).<span class="f">reverse</span>().<span class="f">join</span>(<span class="sj">""</span>); <span class="c">// a == "dcba"</span>
+</pre>
+		</div>
+
+
+		<h2>F-строки</h2>
+		<div>
+			<p>В javascript тоже есть способ вставлять переменные в строки.</p>
+			<p>Для этого строку надо заключать не в обычные кавычки, а в косые (те, что на клавише с буквой Ё). А перед фугурными скобками нужно ставить знак доллара.</p>
+			<pre>
+<span class="kj">const</span> <span class="vc">name</span> = <span class="sj">"Иванов"</span>;
+<span class="vl">console</span>.<span class="f">log</span>(<span class="sj">`Здравствуйте, </span><span class="kj">${</span><span class="vc">name</span><span class="kj">}</span><span class="sj">.`</span>);
+
+</pre>
+		</div>
+
+		<h2>Объекты</h2>
+		<div>
+			<p>Объект может иметь свойства.</p>
+			<p>Именем свойства может быть слово, строка или число. Пример объекта:</p>
+			<pre>
+<span class="kj">const</span> <span class="vc">person</span> = {
+	<span class="sj">"name"</span>: <span class="sj">"Вася"</span>,
+	<span class="vl">age</span>: <span class="n">25</span>,
+	<span class="n">1</span>: <span class="sj">"Что-то ещё"</span>,
+}
+<span class="c">// Получить значения:</span>
+<span class="kj">const</span> <span class="vc">p_name</span> = <span class="vc">person</span>.<span class="vl">name</span>; <span class="c">// Обычный способ</span>
+<span class="kj">const</span> <span class="vc">p_age</span> = <span class="vc">person</span>[<span class="sj">"age"</span>]; <span class="c">// С помощью квадратных скобок</span>
+<span class="kj">const</span> <span class="vc">p_1</span> = <span class="vc">person</span>[<span class="n">1</span>]; <span class="c">// Значение числового свойства</span>
+</pre>
+		</div>
+
+		<h2>Функции</h2>
+		<div>
+			<p>В javascript функции объявляются таким способом:</p>
+			<pre>
+<span class="kj">function</span> <span class="f">имя_функции</span>(аргументы)
+{
+	тело функции;
+}
+</pre>
+			<p>Функция, принимающая любое количество аргументов:</p>
+			<pre><span class="kj">function</span> <span class="f">myCoolFunction</span>(...<span class="vl">args</span>) { <span class="vl">console</span>.<span class="f">log</span>(...<span class="vl">args</span>); }</pre>
+			<p>В javascript функции можно вызывать даже до объявления:</p>
+			<pre>
+<span class="f">log</span>(<span class="sj">"function test"</span>);
+<span class="kj">function</span> <span class="f">log</span>(<span class="vl">text</span>)
+{
+	<span class="vl">console</span>.<span class="f">log</span>(<span class="vl">text</span>);
+}
+</pre>
+			<p>Функции можно класть в переменные:</p>
+			<pre>
+<span class="kj">const</span> <span class="vc">log</span> = <span class="kj">function</span> (<span class="vl">text</span>)
+{
+	<span class="vl">console</span>.<span class="f">log</span>(<span class="vl">text</span>);
+}
+<span class="c">// Стрелочная функция:</span>
+<span class="kj">const</span> <span class="vc">log2</span> = (<span class="vl">text</span>) <span class="kj">=></span>
+{
+	<span class="vl">console</span>.<span class="f">log</span>(<span class="vl">text</span>);
+}
+<span class="c">// Ещё короче:</span>
+<span class="kj">const</span> <span class="vc">log3</span> = (<span class="vl">text</span>) <span class="kj">=></span> <span class="vl">console</span>.<span class="f">log</span>(<span class="vl">text</span>);
+</pre>
+		<p>В python есть лямбда-функции, в которых можно писать только одну строку, в javascript такой проблемы нет.</p>
+		<p>Метод списка, который позволяет пройти по всем элементам:</p>
+		<pre>
+<span class="kj">const</span> <span class="vc">a</span> = [<span class="n">2</span>, <span class="n">5</span>, <span class="n">3</span>, <span class="n">1</span>, <span class="n">1</span>];
+<span class="vc">a</span>.<span class="f">forEach</span>(<span class="vl">el</span> <span class="kj">=></span> {
+	<span class="k">if</span> (<span class="vl">el</span> &gt; 2) <span class="vl">console</span>.<span class="f">log</span>(<span class="sj">"more then 2"</span>);
+	<span class="k">if</span> (<span class="vl">el</span> &lt; 3) <span class="vl">console</span>.<span class="f">log</span>(<span class="sj">"less then 3"</span>);
+});
+</pre>
+		</div>
+
+		<h2>Класс Math</h2>
+		<div>
+			<p>В javascript объект Math импортировать не нужно.</p>
+			<p>Функции max и min находятся в Math:</p>
+			<pre>
+<span class="kj">const</span> <span class="vc">a</span> = <span class="m">Math</span>.<span class="f">max</span>(<span class="n">4</span>, <span class="n">6</span>, <span class="n">3</span>); <span class="c">// a == 6</span>
+<span class="kj">const</span> <span class="vc">b</span> = <span class="m">Math</span>.<span class="f">min</span>(...[<span class="n">3</span>, <span class="n">4</span>, <span class="n">2</span>, <span class="n">6</span>, <span class="sj">"1"</span>]); <span class="c">// b == 1</span>
+</pre>
+		</div>
+
+		<h2>Модули в Javascript</h2>
+		<div>
+			<p>Модули в javascript работают только если страница находится на сервере!</p>
+			<p>Как и в python, можно импортировать объекты из других файлов. Объекты, которые вы хотите импортировать, должны быть помечены словом export.</p>
+			<p>Основной файл:</p>
+			<pre>
+<span class="k">import</span> <span class="vl">log</span> <span class="k">from</span> <span class="sj">"./functions.js"</span>;
+<span class="f">log</span>(<span class="sj">"123"</span>);
+</pre>
+			<p>Файл functions.js (в той же папке):</p>
+			<pre>
+<span class="k">export</span> <span class="kj">function</span> <span class="f">log</span>(<span class="vl">text</span>)
+{
+	<span class="vl">console</span>.<span class="f">log</span>(<span class="vl">text</span>);
+}
+</pre>
+		</div>
+
+		<h2>Классы</h2>
+		<div>
+			<p>В javascript вместо метода __init__ есть метод constructor.</p>
+			<p>Вместо self - this.</p>
+			<p>Поля класса можно объявлять вне конструктора.</p>
+			<p>В javascript не нужно передовать this в каждую функцию, он сам неявно передаётся!</p>
+			<pre>
+<span class="kj">class</span> <span class="m">Person</span>
+{
+	<span class="vl">can_swim</span> = <span class="b">true</span>;
+	<span class="kj">constructor</span>(<span class="vl">name</span>, <span class="vl">age</span>) {
+		<span class="kj">this</span>.<span class="vl">name</span> = <span class="vl">name</span>;
+		<span class="kj">this</span>.<span class="vl">age</span> = <span class="vl">age</span>;
+	}
+
+	<span class="f">print_name</span>() {
+		<span class="vl">console</span>.<span class="f">log</span>(<span class="kj">this</span>.<span class="vl">name</span>);
+	}
+	<span class="f">get_age</span>() {
+		<span class="k">return</span> <span class="kj">this</span>.<span class="vl">age</span>;
+	}
+}
+</pre>
+			<p>Создание экземпляра класса:</p>
+			<pre>
+<span class="kj">const</span> <span class="vc">tom</span> = <span class="kj">new</span> <span class="m">Person</span>(<span class="sj">"Tom"</span>, <span class="n">45</span>);
+<span class="vc">tom</span>.<span class="f">print_name</span>();
+<span class="vc">tom</span>.<span class="vl">can_swim</span> = <span class="b">false</span>;
+</pre>
+			<p>Наследование:</p>
+			<pre>
+<span class="kj">class</span> <span class="m">Worker</span> <span class="k">extends</span> <span class="m">Person</span>
+{
+	<span class="kj">constructor</span>(<span class="vl">name</span>, <span class="vl">work</span>) {
+		<span class="kj">super</span>(<span class="vl">name</span>, <span class="n">30</span>); <span class="c">// вместо super().__init__(name, 30)</span>
+		<span class="c">//Вызов родительского конструктора обязателен</span>
+		<span class="c">//Он должен быть в самом начале</span>
+		<span class="kj">this</span>.<span class="vl">work</span> = <span class="vl">work</span>;
+		<span class="kj">this</span>.<span class="vl">can_swim</span> = <span class="b">false</span>;
+	}
+	<span class="f">print_name</span>() {
+		<span class="kj">super</span>.<span class="f">print_name</span>();
+		<span class="vl">console</span>.<span class="f">log</span>(<span class="sj">"work: "</span> + <span class="kj">this</span>.<span class="vl">work</span>);
+	}
+}
+</pre>
+			<p>Проверка, принадлежит ли объект к классу:</p>
+			<pre>
+<span class="kj">const</span> <span class="vc">worker</span> = <span class="kj">new</span> <span class="m">Worker</span>(<span class="sj">"John"</span>, <span class="sj">"Miner"</span>);
+<span class="kj">const</span> <span class="vc">number</span> = <span class="n">15</span>;
+
+<span class="kj">const</span> <span class="vc">a</span> = <span class="vc">worker</span> <span class="kj">instanceof</span> <span class="m">Worker</span>; <span class="c">// a == true</span>
+<span class="kj">const</span> <span class="vc">b</span> = <span class="vc">worker</span> <span class="kj">instanceof</span> <span class="m">Person</span>; <span class="c">// b == true</span>
+<span class="kj">const</span> <span class="vc">c</span> = <span class="vc">number</span> <span class="kj">instanceof</span> <span class="m">Person</span>; <span class="c">// c == false</span>
+			</pre>
+		</div>
+
+		<h2>Если не поставить ;</h2>
+		<div>
+			<p>В большинстве случаев это ничего не изменит, но иногда могут появиться неожиданные ошибки. Например:</p>
+			<pre>
+<span class="kj">const</span> <span class="vc">a</span> = [[<span class="n">10</span>, <span class="n">20</span>], [<span class="n">30</span>, <span class="n">40</span>]]
+
+[<span class="n">1</span>].<span class="f">forEach</span>(<span class="vl">num</span> <span class="kj">=></span> <span class="vl">console</span>.<span class="f">log</span>(<span class="vl">num</span>)); <span class="c">// Кажется, что выведется цифра 1, но нет! Выведятся числа 30 и 40!</span>
+</pre>
+			<p>Для тех, кто не знает, что делает forEach: он для каждого элемента вызывает функцию, которую вы ему передали.
+				В этом случае функция просто выводит в консоль элемент.</p>
+			<p>Почему вывод будет 30 и 40? Потому что интерпретатор воспринимает этот код так:</p>
+			<pre>
+<span class="kj">const</span> <span class="vc">a</span> = [[<span class="n">10</span>, <span class="n">20</span>], [<span class="n">30</span>, <span class="n">40</span>]][<span class="n">1</span>].<span class="f">forEach</span>(<span class="vl">num</span> <span class="kj">=></span> <span class="vl">console</span>.<span class="f">log</span>(<span class="vl">num</span>));
+</pre>
+			<p>Элемент с индексом 1 как раз [30, 40], а в переменной 'a' будет undefined.</p>
+			<p>Для избежания такой проблемы достаточно поставить ; в конце первой строчки.</p>
+		</div>
+
+		<h2>А оно-то по-другому!</h2>
+		<div>
+			<p>То, что в javascript по-другому.</p>
+			<p>[a, b] = [b, a] вместо: a, b = b, a</p>
+			<p>В javascript есть объекты null, undefined, NaN и Infinity:</p>
+			<p>NaN - объект типа число, хоть и означает Not a Number, то есть Не Число</p>
+			<p>Infinity - объект типа число, бесконечность</p>
+			<p>null, undefined - тоже, что и None в python</p>
+			<pre>
+<span class="vl">console</span>.<span class="f">log</span>(<span class="vl">NaN</span> == <span class="vl">NaN</span>); <span class="c">// Вывод: false. NaN не равно NaN!</span>
+<span class="vl">console</span>.<span class="f">log</span>(<span class="f">isNaN</span>(<span class="vl">NaN</span>)); <span class="c">// Вывод: true. Проверять надо так</span>
+</pre>
+			<pre>
+<span class="kj">const</span> <span class="vc">a</span> = <span class="sj">"2"</span> + <span class="n">1</span>; <span class="c">// Вы получите '21', ошибки не будет!</span>
+<span class="kj">const</span> <span class="vc">b</span> = <span class="sj">"2"</span> - <span class="n">1</span>; <span class="c">// Вы получите цифру 1, ошибки не будет!</span>
+<span class="kj">const</span> <span class="vc">c</span> = <span class="sj">"4"</span> / <span class="n">2</span>; <span class="c">// Вы получите цифру 2, ошибки не будет!</span>
+<span class="kj">const</span> <span class="vc">d</span> = <span class="sj">"2"</span> * <span class="n">3</span>; <span class="c">// Вы получите цифру 6, а не '222'!</span>
+<span class="kj">const</span> <span class="vc">e</span> = <span class="sj">[2]</span> * <span class="n">3</span>; <span class="c">// Вы получите цифру 6, а не ['2', '2', '2']!</span>
+<span class="kj">const</span> <span class="vc">f</span> = <span class="sj">"a"</span> * <span class="n">3</span>; <span class="c">// Вы получите NaN, а не 'aaa'!</span>
+<span class="kj">const</span> <span class="vc">f</span> = <span class="sj">[2, 1]</span> * <span class="n">2</span>; <span class="c">// Вы получите NaN, а не ['2', '1', '2', '1']!</span>
+<span class="kj">const</span> <span class="vc">g</span> = <span class="n">5</span> / <span class="n">0</span>; <span class="c">// Вы получите Infinity, ошибки не будет!</span>
+</pre>
+			<p>Оператор in в javascript проверяет не то, есть ли в списке такой элемент, а есть ли такое свойство.</p>
+			<pre>
+<span class="kj">const</span> <span class="vc">a</span> = [<span class="sj">"a"</span>, <span class="sj">"b"</span>, <span class="sj">"c"</span>];
+<span class="vl">console</span>.<span class="f">log</span>(<span class="n">1</span> <span class="kj">in</span> <span class="vc">a</span>); <span class="c">// Вывод: true. Так как в списке есть элемент с таким индексом</span>
+
+<span class="kj">const</span> <span class="vc">b</span> = {a: <span class="sj">"123"</span>, b: <span class="sj">"abc"</span>};
+<span class="vl">console</span>.<span class="f">log</span>(<span class="sj">"a"</span> <span class="kj">in</span> <span class="vc">b</span>); <span class="c">// Вывод: true. Так как в объекте есть значение по ключу 'a'</span>
+</pre>
+			<p>В javascript нет целочисленного деления (// - в python), но можно сделать его так:</p>
+			<pre>
+<span class="kj">const</span> <span class="vc">a</span> = <span class="m">Math</span>.<span class="f">floor</span>(<span class="n">15</span> / <span class="n">2</span>);
+</pre>
+			<p>В javascript нет функций int, float, str, вместо них можно использовать parseInt, parseFloat и `${что-то}` соответственно.
+				Функции parseInt и parseFloat не выдают ошибку в случае, если нельзя переобразовать в число, а просто вернут NaN.
+			</p>
+		</div>
+
+
+		<div class="footer"><a href="" onclick="toPage(3)">Следующая тема</a></div>
+	</div>
+
+
+	<div class="body" id="pg3">
+		<div class="header"><a href="" onclick="history.back()">Назад</a><a href="" onclick="toPage(0)">На главную</a><div></div><span onclick="changeTheme()">Сменить тему</span></div>
+		<h1>Html страница</h1>
+		<p>Для корректной работы каждая html страница должна быть составлена по определённому шаблону:</p>
+		<pre>
+<span class="tb">&lt;!</span><span class="t">DOCTYPE</span> <span class="a">html</span><span class="tb">&gt;</span>
+<span class="tb">&lt;</span><span class="t">html</span> <span class="a">lang</span>=<span class="s">"ru"</span><span class="tb">&gt;</span>
+<span class="tb">&lt;<span class="t">head</span>&gt;</span>
+	<span class="tb">&lt;</span><span class="t">meta</span> <span class="a">charset</span>=<span class="s">"UTF-8"</span><span class="tb">&gt;</span>
+	<span class="tb">&lt;</span><span class="t">meta</span> <span class="a">name</span>=<span class="s">"viewport"</span> <span class="a">content</span>=<span class="s">"width=device-width, initial-scale=1.0"</span><span class="tb">&gt;</span>
+	<span class="tb">&lt;</span><span class="t">title</span><span class="tb">&gt;</span>Document<span class="tb">&lt;/</span><span class="t">title</span><span class="tb">&gt;</span>
+<span class="tb">&lt;/</span><span class="t">head</span><span class="tb">&gt;</span>
+<span class="tb">&lt;</span><span class="t">body</span><span class="tb">&gt;</span>
+	<span class="c">&lt;!-- Содержимое страницы --&gt;</span>
+<span class="tb">&lt;/</span><span class="t">body</span><span class="tb">&gt;</span>
+<span class="tb">&lt;/</span><span class="t">html</span><span class="tb">&gt;</span>
+</pre>
+		<p>Шаблон страницы с комментариями:</p>
+		<pre>
+<span class="tb">&lt;!</span><span class="t">DOCTYPE</span> <span class="a">html</span><span class="tb">&gt;</span>
+<span class="c">&lt;!-- Тип документа --&gt;</span>
+
+<span class="tb">&lt;</span><span class="t">html</span> <span class="a">lang</span>=<span class="s">"ru"</span><span class="tb">&gt;</span>
+<span class="c">&lt;!-- Начало html страницы, атрибут lang указывает язык вашей страницы для правильной работы поисковых систем --&gt;</span>
+
+<span class="tb">&lt;<span class="t">head</span>&gt;</span> <span class="c">&lt;!-- Начало заголовка страницы --&gt;</span>
+
+	<span class="tb">&lt;</span><span class="t">meta</span> <span class="a">charset</span>=<span class="s">"UTF-8"</span><span class="tb">&gt;</span>
+	<span class="c">&lt;!-- Указывает, что надо использовать кодировку UTF-8, иначе вместо руских букв будут закорючки --&gt;</span>
+
+	<span class="tb">&lt;</span><span class="t">meta</span> <span class="a">name</span>=<span class="s">"viewport"</span> <span class="a">content</span>=<span class="s">"width=device-width, initial-scale=1.0"</span><span class="tb">&gt;</span>
+	<span class="c">&lt;!-- Ширина страницы изменится по ширине экрана телефона --&gt;</span>
+
+	<span class="tb">&lt;</span><span class="t">title</span><span class="tb">&gt;</span>Document<span class="tb">&lt;/</span><span class="t">title</span><span class="tb">&gt;</span>
+	<span class="c">&lt;!-- Заголовок страницы, тот, что написан на вкладке --&gt;</span>
+
+<span class="tb">&lt;/</span><span class="t">head</span><span class="tb">&gt;</span> <span class="c">&lt;!-- Конец заголовка --&gt;</span>
+<span class="tb">&lt;</span><span class="t">body</span><span class="tb">&gt;</span> <span class="c">&lt;!-- Начало содержимого страницы --&gt;</span>
+
+	<span class="c">&lt;!-- Сюда и надо добавлять тексты, кнопки и картинки --&gt;</span>
+
+<span class="tb">&lt;/</span><span class="t">body</span><span class="tb">&gt;</span> <span class="c">&lt;!-- Конец содержимого --&gt;</span>
+<span class="tb">&lt;/</span><span class="t">html</span><span class="tb">&gt;</span> <span class="c">&lt;!-- Конец страницы --&gt;</span>
+</pre>
+		<div class="footer"><a href="" onclick="toPage(4)">Следующая тема</a></div>
+	</div>
+
+
+	<div class="body" id="pg4">
+		<div class="header"><a href="" onclick="history.back()">Назад</a><a href="" onclick="toPage(0)">На главную</a><div></div><span onclick="changeTheme()">Сменить тему</span></div>
+		<h1>Html: Основные теги</h1>
+		<h1>Немного о том, что можно добавить в body</h1>
+		<p>Универсальный тег <b>div</b> - можно назвать его контейнером для элементов.
+			Отделить часть страницы, добавить отдельный блок, или когда стандартные теги не подходят.</p>
+		<p>Тег span можно вставлять <span>внутрь текста</span> без видимых изменений.</p>
+		<pre><span class="tb">&lt;</span><span class="t">p</span><span class="tb">&gt;</span>Тег span можно вставлять <span class="tb">&lt;</span><span class="t">span</span><span class="tb">&gt;</span>внутрь текста<span class="tb">&lt;/</span><span class="t">span</span><span class="tb">&gt;</span> без видимых изменений.<span class="tb">&lt;/</span><span class="t">p</span><span class="tb">&gt;</span></pre>
+		<pre><span class="tb">&lt;</span><span class="t">p</span><span class="tb">&gt;</span>Абзац<span class="tb">&lt;/</span><span class="t">p</span><span class="tb">&gt;</span></pre>
+		<pre><span class="tb">&lt;</span><span class="t">p</span><span class="tb">&gt;</span><span class="tb">&lt;</span><span class="t">i</span><span class="tb">&gt;</span><i>Наклонный</i><span class="tb">&lt;/</span><span class="t">i</span><span class="tb">&gt;</span> и <span class="tb">&lt;</span><span class="t">b</span><span class="tb">&gt;</span><b>жирный</b><span class="tb">&lt;/</span><span class="t">b</span><span class="tb">&gt;</span> текст.<span class="tb">&lt;/</span><span class="t">p</span><span class="tb">&gt;</span></pre>
+
+		<h2>Картинки</h2>
+		<pre><span class="tb">&lt;</span><span class="t">img</span> <span class="a">scr</span>=<span class="s">"Ссылка на картинку"</span><span class="tb">&gt;</span></pre>
+		<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAZdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAuMTnU1rJkAAAEeUlEQVRoQ82VX08cZRTGN34SE7+DicnObOKFNvGiF5p4URNirFYDadOqhZW/WmkwoBKsdbFtSgqKIshisbSlQuuKlC6CZCkkEkVtLUYiTWsam1Z57Duc0bNnz+zODDutT/K7mXOec85zM2+sHIovbIcXg89eVyHrvVM8twN+SD+/VhIaeXcU/7YSQfis6jff0IpoFJ/ZiTAM77oSGFpZPsWzu+GHazX1Jfl8zyVf0OrNKz71MoqhHemXkb3LRaETwiv+dQ280A4Ky6nkkid0SnDFM7XQmNlfpx5huJqsL+gfrVv8l8vJDtXnwns5dJJ/WecaoaEtNWi9LmcacyraHIPWa6DTSssaew0a2jKtTzK2b7Yo2lytz0Aness60wwNuWDLSb1P4+z+rC/kDq3HQKfqsk61QCIHaz3FOPfGpG/kLq2HTi2UNdIGyXTzq3kDtR4OjSqqTFsGxeD7DFoPjcqXNfw2JHzQo0NvFdRdaEQgTbSPwwu+V6vTiP9kDXVAwocYtB4DjQilyXdGoSF3az00YkPW4EFI+ACtbiD7pnT+4Ag0+H6tTvYNWf2d4HCzQdYNZC2LLnQOQyJvkPVs6sQDjtnqOwwJN2p1x1hmTR9JQ8Lv0OqO0eo9Cgk3anXHWGZ909UPCb9DqztGq6cbHG5aSzbk1QyOKSLNdn8EzlzXB3n3yLpjso59CA43yJrBMUWkud4eSPg9suaYrKMfg8MNsmZwTBEp19cFCb9H1hyTdWQAHG6QNYNjikjz/Yc+nR84DA6/R9bmBw4di1nvp8HhBlkz0K5IhMbG+xbSKXD4PbJ2MZ36O2anjoPDDbJmoF2RaGahMpX7bgcWv38GSz9WYPnytrx7rl57DH/ceAR/3nwYt2/bWF9/qD9mv3sCHG6QNQPtikSzC5UIEsAx2R2nweEGWTM4pogULkD7F+BwQ7a+Na9mcEwRKVyAN89Cwk1a3TGWWdncLsgA/I7Vta0eAVq/goQbtbpjLLNCBzCyWybB4UaDrBvIWhZNzr4EGeD31uq8G2SAW7esKrLfCdB8ARJu1uoGsm9KmWz1eS0A37+y+nhBALJvyN43AwkfYNB6DDQilManaqcz0zWQAeTukgGM7KY5SPgQre5CIwJpdKIJ41N1KBXg0sqTBQFoRL7shnlI+CCD1sOhUUV1fKwFI1++Dq8AcqfvAEZ27SIkcqDWo/LK4qCZ2T3U+V7v8AF8crIdg6NtKBZA7jLvgAzgHOolO7kEDTlY6/HiTgD4CSB3uA9ZoABG9t4foCEXGLQ+SakA2lz+EvMAdGJp2S/+BA1tmUHrdfEKcKWlQZ3FHzIegE7zL3v3L9DQlrps2bNc0C8DaD4X/g7wAHRScCV2/govtAPCIn+jPMDPK088SOeEU6JqFcXQDvKL1zvgBqATNq/EC2vwg3akpNQ74Aag1eVT4rnrCIPf3ygPQCujUWL7DQQhSABacXeUePom/OAnAI28N0pU4P5ExV/wwivA6Ymmahrx/1Ri23pP4imYAH30KQLFYv8AriP3Fbxh25kAAAAASUVORK5CYII=">
+
+		<h2>Ссылки</h2>
+		<br>
+		<pre><span class="tb">&lt;</span><span class="t">a</span> <span class="a">href</span>=<span class="s">"Адрес ссылки"</span> <span class="a">target</span>=<span class="s">"_blank"</span><span class="tb">&gt;</span>Текст ссылки<span class="tb">&lt;/</span><span class="t">a</span><span class="tb">&gt;</span></pre>
+		<p>target="_blank" - значит открывать ссылку в новой вкладке (желательно всегда добавлять)</p>
+		<p>Вместо текста в ссылку можно вставить другие теги, например, картинку:</p>
+		<pre><span class="tb">&lt;</span><span class="t">a</span> <span class="a">href</span>=<span class="s">"https://yandex.ru/"</span> <span class="a">target</span>=<span class="s">"_blank"</span><span class="tb">&gt;</span><span class="tb">&lt;</span><span class="t">img</span> <span class="a">scr</span>=<span class="s">"Ссылка на картинку"</span><span class="tb">&gt;</span><span class="tb">&lt;/</span><span class="t">a</span><span class="tb">&gt;</span></pre>
+		<a href="https://yandex.ru/" target="_blank"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAZdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAuMTnU1rJkAAAEeUlEQVRoQ82VX08cZRTGN34SE7+DicnObOKFNvGiF5p4URNirFYDadOqhZW/WmkwoBKsdbFtSgqKIshisbSlQuuKlC6CZCkkEkVtLUYiTWsam1Z57Duc0bNnz+zODDutT/K7mXOec85zM2+sHIovbIcXg89eVyHrvVM8twN+SD+/VhIaeXcU/7YSQfis6jff0IpoFJ/ZiTAM77oSGFpZPsWzu+GHazX1Jfl8zyVf0OrNKz71MoqhHemXkb3LRaETwiv+dQ280A4Ky6nkkid0SnDFM7XQmNlfpx5huJqsL+gfrVv8l8vJDtXnwns5dJJ/WecaoaEtNWi9LmcacyraHIPWa6DTSssaew0a2jKtTzK2b7Yo2lytz0Aness60wwNuWDLSb1P4+z+rC/kDq3HQKfqsk61QCIHaz3FOPfGpG/kLq2HTi2UNdIGyXTzq3kDtR4OjSqqTFsGxeD7DFoPjcqXNfw2JHzQo0NvFdRdaEQgTbSPwwu+V6vTiP9kDXVAwocYtB4DjQilyXdGoSF3az00YkPW4EFI+ACtbiD7pnT+4Ag0+H6tTvYNWf2d4HCzQdYNZC2LLnQOQyJvkPVs6sQDjtnqOwwJN2p1x1hmTR9JQ8Lv0OqO0eo9Cgk3anXHWGZ909UPCb9DqztGq6cbHG5aSzbk1QyOKSLNdn8EzlzXB3n3yLpjso59CA43yJrBMUWkud4eSPg9suaYrKMfg8MNsmZwTBEp19cFCb9H1hyTdWQAHG6QNYNjikjz/Yc+nR84DA6/R9bmBw4di1nvp8HhBlkz0K5IhMbG+xbSKXD4PbJ2MZ36O2anjoPDDbJmoF2RaGahMpX7bgcWv38GSz9WYPnytrx7rl57DH/ceAR/3nwYt2/bWF9/qD9mv3sCHG6QNQPtikSzC5UIEsAx2R2nweEGWTM4pogULkD7F+BwQ7a+Na9mcEwRKVyAN89Cwk1a3TGWWdncLsgA/I7Vta0eAVq/goQbtbpjLLNCBzCyWybB4UaDrBvIWhZNzr4EGeD31uq8G2SAW7esKrLfCdB8ARJu1uoGsm9KmWz1eS0A37+y+nhBALJvyN43AwkfYNB6DDQilManaqcz0zWQAeTukgGM7KY5SPgQre5CIwJpdKIJ41N1KBXg0sqTBQFoRL7shnlI+CCD1sOhUUV1fKwFI1++Dq8AcqfvAEZ27SIkcqDWo/LK4qCZ2T3U+V7v8AF8crIdg6NtKBZA7jLvgAzgHOolO7kEDTlY6/HiTgD4CSB3uA9ZoABG9t4foCEXGLQ+SakA2lz+EvMAdGJp2S/+BA1tmUHrdfEKcKWlQZ3FHzIegE7zL3v3L9DQlrps2bNc0C8DaD4X/g7wAHRScCV2/govtAPCIn+jPMDPK088SOeEU6JqFcXQDvKL1zvgBqATNq/EC2vwg3akpNQ74Aag1eVT4rnrCIPf3ygPQCujUWL7DQQhSABacXeUePom/OAnAI28N0pU4P5ExV/wwivA6Ymmahrx/1Ri23pP4imYAH30KQLFYv8AriP3Fbxh25kAAAAASUVORK5CYII="></a>
+
+		<h2>Ввод данных</h2>
+		<pre><span class="tb">&lt;</span><span class="t">button</span><span class="tb">&gt;</span>Кнопка<span class="tb">&lt;/</span><span class="t">button</span><span class="tb">&gt;</span></pre>
+		<button>Кнопка</button>
+		<pre><span class="tb">&lt;</span><span class="t">input</span> <span class="a">type</span>=<span class="s">"text"</span><span class="tb">&gt;</span></pre>
+		<input type="text">
+		<pre><span class="tb">&lt;</span><span class="t">input</span> <span class="a">type</span>=<span class="s">"number"</span><span class="tb">&gt;</span></pre>
+		<input type="number">
+		<pre><span class="tb">&lt;</span><span class="t">input</span> <span class="a">type</span>=<span class="s">"date"</span><span class="tb">&gt;</span></pre>
+		<input type="date">
+		<pre><span class="tb">&lt;</span><span class="t">input</span> <span class="a">type</span>=<span class="s">"color"</span><span class="tb">&gt;</span></pre>
+		<input type="color">
+		<pre><span class="tb">&lt;</span><span class="t">input</span> <span class="a">type</span>=<span class="s">"range"</span><span class="tb">&gt;</span></pre>
+		<input type="range">
+		<pre><span class="tb">&lt;</span><span class="t">input</span> <span class="a">type</span>=<span class="s">"checkbox"</span><span class="tb">&gt;</span></pre>
+		<input type="checkbox">
+		<pre>
+<span class="tb">&lt;</span><span class="t">input</span> <span class="a">type</span>=<span class="s">"radio"</span> <span class="a">name</span>=<span class="s">"input-radio"</span><span class="tb">&gt;</span>
+<span class="tb">&lt;</span><span class="t">input</span> <span class="a">type</span>=<span class="s">"radio"</span> <span class="a">name</span>=<span class="s">"input-radio"</span><span class="tb">&gt;</span>
+</pre>
+		<input type="radio" name="input-radio">
+		<input type="radio" name="input-radio">
+		<p>Для input типа radio необходимо указать атрибут name, чтобы всегда был выбран только один.</p>
+		<p>Больше о теге input в главе <a href="" onclick="toPage(17)">Тег input</a>.</p>
+
+		<h2>Таблицы</h2>
+		<p>С помощью таблиц легко расположить элементы на странице.</p>
+		<pre>
+<span class="tb">&lt;</span><span class="t">table</span><span class="tb">&gt;</span>
+	<span class="tb">&lt;</span><span class="t">tr</span><span class="tb">&gt;</span><span class="tb">&lt;</span><span class="t">th</span><span class="tb">&gt;</span>Заголовок 1<span class="tb">&lt;/</span><span class="t">th</span><span class="tb">&gt;</span><span class="tb">&lt;</span><span class="t">th</span><span class="tb">&gt;</span>Заголовок 2<span class="tb">&lt;/</span><span class="t">th</span><span class="tb">&gt;</span><span class="tb">&lt;/</span><span class="t">tr</span><span class="tb">&gt;</span>
+	<span class="tb">&lt;</span><span class="t">tr</span><span class="tb">&gt;</span><span class="tb">&lt;</span><span class="t">td</span><span class="tb">&gt;</span>Ячейка 1<span class="tb">&lt;/</span><span class="t">td</span><span class="tb">&gt;</span><span class="tb">&lt;</span><span class="t">td</span><span class="tb">&gt;</span>Ячейка 2<span class="tb">&lt;/</span><span class="t">td</span><span class="tb">&gt;</span><span class="tb">&lt;/</span><span class="t">tr</span><span class="tb">&gt;</span>
+	<span class="tb">&lt;</span><span class="t">tr</span><span class="tb">&gt;</span><span class="tb">&lt;</span><span class="t">td</span><span class="tb">&gt;</span>Ячейка 3<span class="tb">&lt;/</span><span class="t">td</span><span class="tb">&gt;</span><span class="tb">&lt;</span><span class="t">td</span><span class="tb">&gt;</span>Ячейка 4<span class="tb">&lt;/</span><span class="t">td</span><span class="tb">&gt;</span><span class="tb">&lt;/</span><span class="t">tr</span><span class="tb">&gt;</span>
+<span class="tb">&lt;/</span><span class="t">table</span><span class="tb">&gt;</span>
+</pre>
+		<table style="width: 22rem;">
+			<tr><th>Заголовок 1</th><th>Заголовок 2</th></tr>
+			<tr><td>Ячейка 1</td><td>Ячейка 2</td></tr>
+			<tr><td>Ячейка 3</td><td>Ячейка 4</td></tr>
+		</table>
+		<p>&lt;table&gt; - Таблица</p>
+		<p>&lt;tr&gt; - Строка</p>
+		<p>&lt;td&gt; - Ячейка</p>
+		<p>&lt;th&gt; - Ячейка, заголовок</p>
+
+		<h2>Заголовки</h2>
+		<h1 class="raw">&lt;h1&gt;Заголовок&lt;/h1&gt;</h1>
+		<h2 class="raw">&lt;h2&gt;Заголовок&lt;/h2&gt;</h2>
+		<h3>&lt;h3&gt;Заголовок&lt;/h3&gt;</h3>
+		<h4>&lt;h4&gt;Заголовок&lt;/h4&gt;</h4>
+		<h5>&lt;h5&gt;Заголовок&lt;/h5&gt;</h5>
+		<h6>&lt;h6&gt;Заголовок&lt;/h6&gt;</h6>
+		<h2>Списки</h2>
+		<p style="margin-bottom: 0px;">&lt;ul&gt;</p>
+		<ul style="margin-top: 0px; margin-bottom: 0px;">
+			<li>&lt;li&gt;Элемент списка&lt;/li&gt;</li>
+			<li>&lt;li&gt;Элемент списка&lt;/li&gt;</li>
+			<li>&lt;li&gt;Элемент списка&lt;/li&gt;</li>
+		</ul>
+		<p style="margin-top: 0px;">&lt;/ul&gt;</p>
+		<p style="margin-bottom: 0px;">&lt;ol&gt;</p>
+		<ol style="margin-top: 0px; margin-bottom: 0px;">
+			<li>&lt;li&gt;Элемент списка&lt;/li&gt;</li>
+			<li>&lt;li&gt;Элемент списка&lt;/li&gt;</li>
+			<li>&lt;li&gt;Элемент списка&lt;/li&gt;</li>
+		</ol>
+		<p style="margin-top: 0px;">&lt;/ol&gt;</p>
+
+		<div class="footer"><a href="" onclick="toPage(5)">Следующая тема</a></div>
+	</div>
+
+
+	<div class="body" id="pg5">
+		<div class="header"><a href="" onclick="history.back()">Назад</a><a href="" onclick="toPage(0)">На главную</a><div></div><span onclick="changeTheme()">Сменить тему</span></div>
+		<h1>Css</h1>
+		<p>С помощью css можно делать очень красочные и анимированные сайты, но здесь будет рассказаны только основы.</p>
+		<p>В css есть наследование стилей, то есть если вы укажите шрифт у body, то у элементов внутри него тоже применится этот шрифт.
+			Но если у элемента внутри body тоже будет указан шрифт, то применится он. Наследование работает не со всеми свойствами и тегами.
+		</p>
+		<h2>Добавление стилей</h2>
+		<p><b>Способ 1</b>: Внутри html тега, в атрибуте style:</p>
+		<pre><span class="tb">&lt;</span><span class="t">p</span> <span class="a">style</span>=<span class="s">"стиль: значение; стиль: значение;"</span><span class="tb">&gt;</span><span class="tb">&lt;/</span><span class="t">p</span><span class="tb">&gt;</span></pre>
+		<p>Такой способ усложняет написание html.</p>
+		<p><b>Способ 2</b>: Внутри head:</p>
+		<pre>
+<span class="tb">&lt;<span class="t">head</span>&gt;</span>
+	<span class="tb">&lt;</span><span class="t">style</span><span class="tb">&gt;</span>
+		<span class="c">/* Стили */</span>
+	<span class="tb">&lt;/</span><span class="t">style</span><span class="tb">&gt;</span>
+	<span class="c">/* Либо в отдельном файле (.css): */</span>
+	<span class="tb">&lt;</span><span class="t">link</span> <span class="a">rel</span>=<span class="s">"stylesheet"</span> <span class="a">href</span>=<span class="s">"styles.css"</span><span class="tb">&gt;</span> <span class="c">/* Ссылка на файл (styles.css) со стилями */</span>
+<span class="tb">&lt;/</span><span class="t">head</span><span class="tb">&gt;</span>
+</pre>
+		<h2>Написание стилей</h2>
+		<p>Для написания стилей необходимо указать, к каким элементам они будут применятся.</p>
+		<p>Элемент можно указывать по тегу, id или классу.</p>
+		<p>id нужен для получения элемента в javascript<br>
+			Классы как раз для стилей.
+		</p>
+		<pre><span class="tb">&lt;</span><span class="t">p</span> <span class="a">class</span>=<span class="s">"имена классов через пробел"</span><span class="tb">&gt;</span><span class="tb">&lt;/</span><span class="t">p</span><span class="tb">&gt;</span></pre>
+		<p>Имена классов и id можно писать любые, главное - одно слово, так как имена разделяются пробелами.</p>
+		<p>Стили указываются по такому формату:</p>
+		<pre>
+<span class="ct">селектор</span> {
+	<span class="cp">свойство</span>: значение;
+	<span class="cp">свойство</span>: значение;
+}
+</pre>
+		<p>Точка с запятой в конце свойства обязательна!</p>
+		<p>Для выбора всех элементов по *** необходимо написать:</p>
+		<ul>
+			<li>Тэгу - имя тега без скобок</li>
+			<li>Классу - имя класса начиная с точки</li>
+			<li>id - id начиная с решетки</li>
+		</ul>
+		<p>Для указания стиля к разным элементам перечислите их через запятую.</p>
+		<p>Например, сделаем всем абзацам (&lt;p&gt;) и элементам с классом pink розовый цвет букв, а элементам с классом crossed сделаем зачеркнутые буквы:</p>
+		<pre>
+<span class="ct">p</span>, <span class="ct">.pink</span> {
+	<span class="cp">color</span>: <span class="cs">pink</span>;
+}
+<span class="ct">.crossed</span> {
+	<span class="cp">text-decoration</span>: <span class="cs">line-through</span>;
+}
+</pre>
+		<p>&lt;p&gt;<span style="color: pink;">Абзац</span>&lt;/p&gt;</p>
+		<p><span>&lt;span class="pink crossed"&gt;<span style="color: pink; text-decoration: line-through;">Элемент с классом blue и crossed</span>&lt;/span&gt;</span></p>
+		<br>
+		<p>Указать элемент можно также через его родительские элементы:</p>
+		<pre>
+<span class="ct">p span</span> { <span class="c">/* Стили для span который внутри абзаца */</span>
+	<span class="cp">color</span>: <span class="s">pink</span>;
+}
+</pre>
+		<p><span>&lt;span&gt;span не внутри абзаца&lt;/span&gt;</span></p>
+		<p>&lt;p&gt;Абзац<span>&lt;span&gt;<span style="color: pink;">span внутри абзаца</span>&lt;/span&gt;</span>&lt;/p&gt;</p>
+		<br>
+		<p>Другие способы указания элементов, а также свойства которые есть у элементов будут рассмотрены в следующих темах.</p>
+		<div class="footer"><a href="" onclick="toPage(6)">Следующая тема</a></div>
+	</div>
+
+
+	<div class="body" id="pg6">
+		<div class="header"><a href="" onclick="history.back()">Назад</a><a href="" onclick="toPage(0)">На главную</a><div></div><span onclick="changeTheme()">Сменить тему</span></div>
+		<h1>Javascript на странице</h1>
+		<p>Добавить javascript на страницу можно несколькими способами.</p>
+		<p>Весь код на странице будет находится в общей памяти. То есть, если в одном из скриптов вы создадите переменную или функцию,
+			то она будет доступна и в других скриптах на вашей странице (по-другому при использовании модулей).</p>
+		<p>В примерах нет других тегов в head, так как в них показывается, куда нужно добавить элементы</p>
+		<p><b>Вариант 1</b>: Добавить код прямо в html файл.</p>
+		<p>Для этого необходимо добавить тег script, внутри него можно писать любой код. Тег можно добавить в head или в body.</p>
+		<pre>
+<span class="tb">&lt;<span class="t">head</span>&gt;</span>
+	<span class="tb">&lt;</span><span class="t">script</span><span class="tb">&gt;</span>
+		<span class="c">// Любой код</span>
+		<span class="vl">console</span>.<span class="f">log</span>(<span class="sj">"Hello world!"</span>);
+	<span class="tb">&lt;/</span><span class="t">script</span><span class="tb">&gt;</span>
+<span class="tb">&lt;/</span><span class="t">head</span><span class="tb">&gt;</span>
+</pre>
+		<p>Имейте в виду, что страница строится сверху вниз, и если вы поставите скрипт в начале, вы не сможете в нём получить элементы страницы, так как они ещё не созданы.</p>
+		<pre>
+<span class="tb">&lt;<span class="t">body</span>&gt;</span>
+	<span class="tb">&lt;</span><span class="t">script</span><span class="tb">&gt;</span>
+		<span class="c">// Абзац ещё не создан, его не получится получить в коде</span>
+	<span class="tb">&lt;/</span><span class="t">script</span><span class="tb">&gt;</span>
+	<span class="tb">&lt;<span class="t">p</span>&gt;</span>Абзац с текстом<span class="tb">&lt;/</span><span class="t">p</span><span class="tb">&gt;</span>
+	<span class="tb">&lt;</span><span class="t">script</span><span class="tb">&gt;</span>
+		<span class="c">// Абзац уже создан, его можно получить в коде</span>
+	<span class="tb">&lt;/</span><span class="t">script</span><span class="tb">&gt;</span>
+<span class="tb">&lt;/</span><span class="t">body</span><span class="tb">&gt;</span>
+</pre>
+
+		<p><b>Вариант 2</b>: Добавить на страницу ссылку на файл.</p>
+		<p>В отличие от предыдущего варианта, тегу можно добавить атрибут defer, который означает, что код запустится после создания всей страницы.</p>
+		<pre>
+<span class="tb">&lt;<span class="t">head</span>&gt;</span>
+	<span class="tb">&lt;</span><span class="t">script</span> <span class="a">src</span>=<span class="s">"./main.js"</span> <span class="a">defer</span><span class="tb">&gt;</span><span class="tb">&lt;/</span><span class="t">script</span><span class="tb">&gt;</span>
+<span class="tb">&lt;/</span><span class="t">head</span><span class="tb">&gt;</span>
+</pre>
+		<p>Атрибут scr указывает где файл. Как писать путь файла:</p>
+		<p>"./" - значит: в той же папке где и страница</p>
+		<p>"../" - значит: на уровне выше</p>
+		<p>Примеры:</p>
+		<p>"js/main.js" - значит в папке js, которая находится в той же папке, что и страница, файл main.js</p>
+		<p>"../js/main.js" - значит на уровне выше, чем файл страницы в папке js файл main.js</p>
+		<p>Обратите внимание, что скрипты выполняются по-очереди - сверху вниз. Поэтому, если у вас есть файл с функциями, его нужно загрузить раньше, чем файл, где вы их используете.</p>
+		<pre>
+<span class="tb">&lt;<span class="t">head</span>&gt;</span>
+	<span class="tb">&lt;</span><span class="t">script</span> <span class="a">src</span>=<span class="s">"./functions.js"</span> <span class="a">defer</span><span class="tb">&gt;</span><span class="tb">&lt;/</span><span class="t">script</span><span class="tb">&gt;</span> <span class="c">&lt;!-- Сначала выполнится этот --&gt;</span>
+	<span class="tb">&lt;</span><span class="t">script</span> <span class="a">src</span>=<span class="s">"./main.js"</span> <span class="a">defer</span><span class="tb">&gt;</span><span class="tb">&lt;/</span><span class="t">script</span><span class="tb">&gt;</span> <span class="c">&lt;!-- Потом этот --&gt;</span>
+<span class="tb">&lt;/</span><span class="t">head</span><span class="tb">&gt;</span>
+</pre>
+
+		<p><b>Вариант 3</b>: Использование модулей</p>
+		<p><b>Работают, только если страница находится на сервере!</b></p>
+		<p>В этом случае каждый файл будет находиться в отдельной памяти. Вы сможете не беспокоиться о том, что вы уже использовали это имя функции в другом файле.</p>
+		<p>Для доступа к объектам из другого файла нужно будет писать import, а в файле, из которого вы импортируете - export, перед тем, что вы хотите экспортировать.</p>
+		<p>При использовании модулей, в html достаточно написать только скрипт, с которого начинается ваша программа.
+			Ваш скрипт сам загрузит файлы, которые вы указали в import, а те файлы тоже сами догрузят необходимое.</p>
+		<p>Для использования модулей необходимо добавить атрибут type="module".</p>
+		<p>Модули всегда запускаются после загрузки страницы, атрибут defer не нужен.</p>
+		<pre>
+<span class="tb">&lt;<span class="t">head</span>&gt;</span>
+	<span class="tb">&lt;</span><span class="t">script</span> <span class="a">src</span>=<span class="s">"./main.js"</span> <span class="a">type</span>=<span class="s">"module"</span><span class="tb">&gt;</span><span class="tb">&lt;/</span><span class="t">script</span><span class="tb">&gt;</span>
+<span class="tb">&lt;/</span><span class="t">head</span><span class="tb">&gt;</span>
+</pre>
+		<p>Файл main.js (в той же папке):</p>
+		<pre>
+<span class="k">import</span> <span class="vl">log</span> <span class="k">from</span> <span class="sj">"./functions.js"</span>;
+<span class="f">log</span>(<span class="sj">"123"</span>);
+</pre>
+		<p>Файл functions.js (в той же папке):</p>
+		<pre>
+<span class="k">export</span> <span class="kj">function</span> <span class="f">log</span>(<span class="vl">text</span>)
+{
+	<span class="vl">console</span>.<span class="f">log</span>(<span class="vl">text</span>);
+}
+</pre>
+		<div class="footer"><a href="" onclick="toPage(7)">Следующая тема</a></div>
+	</div>
+
+
+	<div class="body" id="pg7">
+		<div class="header"><a href="" onclick="history.back()">Назад</a><a href="" onclick="toPage(0)">На главную</a><div></div><span onclick="changeTheme()">Сменить тему</span></div>
+		<h1>Как создать проект</h1>
+		<p>Для редактирования html, css и javascript я рекомендую студию <a href="https://code.visualstudio.com/" target="_blank">Visual&nbsp;Studio&nbsp;Code</a>.</p>
+		<p>Создайте папку для проекта, в этой папке создайте два файла:</p>
+		<p>index.html - стандартное имя главной html страницы на сайте.</p>
+		<p>styles.css - для стилей.</p>
+		<p>Создайте папку js, и в этой папке файл main.js</p>
+		<p>Если вы работаете в студии <a href="https://code.visualstudio.com/" target="_blank">VS Code</a>, то можете в папке с вашим проектом нажать "ПКМ -> Открыть с помощью Code" - для открытия студии в этой папке.</p>
+		<h2>Заполните html файл</h2>
+		<pre>
+<span class="tb">&lt;!</span><span class="t">DOCTYPE</span> <span class="a">html</span><span class="tb">&gt;</span>
+<span class="tb">&lt;</span><span class="t">html</span> <span class="a">lang</span>=<span class="s">"ru"</span><span class="tb">&gt;</span>
+<span class="tb">&lt;<span class="t">head</span>&gt;</span>
+	<span class="tb">&lt;</span><span class="t">meta</span> <span class="a">charset</span>=<span class="s">"UTF-8"</span><span class="tb">&gt;</span>
+	<span class="tb">&lt;</span><span class="t">meta</span> <span class="a">name</span>=<span class="s">"viewport"</span> <span class="a">content</span>=<span class="s">"width=device-width, initial-scale=1.0"</span><span class="tb">&gt;</span>
+	<span class="tb">&lt;</span><span class="t">title</span><span class="tb">&gt;</span>Document<span class="tb">&lt;/</span><span class="t">title</span><span class="tb">&gt;</span>
+	<span class="tb">&lt;</span><span class="t">link</span> <span class="a">rel</span>=<span class="s">"stylesheet"</span> <span class="a">href</span>=<span class="s">"styles.css"</span><span class="tb">&gt;</span>
+	<span class="c">&lt;!-- Место для других js файлов --&gt;</span>
+	<span class="tb">&lt;</span><span class="t">script</span> <span class="a">src</span>=<span class="s">"js/main.js"</span> <span class="a">defer</span><span class="tb">&gt;</span><span class="tb">&lt;/</span><span class="t">script</span><span class="tb">&gt;</span>
+<span class="tb">&lt;/</span><span class="t">head</span><span class="tb">&gt;</span>
+<span class="tb">&lt;</span><span class="t">body</span><span class="tb">&gt;</span>
+	<span class="c">&lt;!-- Содержимое страницы --&gt;</span>
+<span class="tb">&lt;/</span><span class="t">body</span><span class="tb">&gt;</span>
+<span class="tb">&lt;/</span><span class="t">html</span><span class="tb">&gt;</span>
+</pre>
+		<h2>С использованием js модулей</h2>
+		<pre>
+<span class="tb">&lt;!</span><span class="t">DOCTYPE</span> <span class="a">html</span><span class="tb">&gt;</span>
+<span class="tb">&lt;</span><span class="t">html</span> <span class="a">lang</span>=<span class="s">"ru"</span><span class="tb">&gt;</span>
+<span class="tb">&lt;<span class="t">head</span>&gt;</span>
+	<span class="tb">&lt;</span><span class="t">meta</span> <span class="a">charset</span>=<span class="s">"UTF-8"</span><span class="tb">&gt;</span>
+	<span class="tb">&lt;</span><span class="t">meta</span> <span class="a">name</span>=<span class="s">"viewport"</span> <span class="a">content</span>=<span class="s">"width=device-width, initial-scale=1.0"</span><span class="tb">&gt;</span>
+	<span class="tb">&lt;</span><span class="t">title</span><span class="tb">&gt;</span>Document<span class="tb">&lt;/</span><span class="t">title</span><span class="tb">&gt;</span>
+	<span class="tb">&lt;</span><span class="t">link</span> <span class="a">rel</span>=<span class="s">"stylesheet"</span> <span class="a">href</span>=<span class="s">"styles.css"</span><span class="tb">&gt;</span>
+	<span class="tb">&lt;</span><span class="t">script</span> <span class="a">src</span>=<span class="s">"out/main.js"</span> <span class="a">type</span>=<span class="s">"module"</span><span class="tb">&gt;</span><span class="tb">&lt;/</span><span class="t">script</span><span class="tb">&gt;</span>
+<span class="tb">&lt;/</span><span class="t">head</span><span class="tb">&gt;</span>
+<span class="tb">&lt;</span><span class="t">body</span><span class="tb">&gt;</span>
+	<span class="c">&lt;!-- Содержимое страницы --&gt;</span>
+<span class="tb">&lt;/</span><span class="t">body</span><span class="tb">&gt;</span>
+<span class="tb">&lt;/</span><span class="t">html</span><span class="tb">&gt;</span>
+</pre>
+
+		<div class="footer"><a href="" onclick="toPage(8)">Следующая тема</a></div>
+	</div>
+
+
+	<div class="body" id="pg8">
+		<div class="header"><a href="" onclick="history.back()">Назад</a><a href="" onclick="toPage(0)">На главную</a><div></div><span onclick="changeTheme()">Сменить тему</span></div>
+		<h1>Css значения</h1>
+		<h2>Цвета</h2>
+		<p>Цвета можно указывать названием, в формате RGB, RGBA, HSL, HSLA, а также шестнадцатеричным значением.</p>
+		<pre>
+<span class="ct">color</span>: <span class="cs">blue</span>;
+<span class="ct">color</span>: <span class="cs">#00ffff</span>;
+<span class="ct">color</span>: <span class="cs">rgb</span>(<span class="cn">125</span>, <span class="cn">15</span>, <span class="cn">200</span>);
+<span class="ct">color</span>: <span class="cs">rgba</span>(<span class="cn">125</span>, <span class="cn">15</span>, <span class="cn">200</span>, <span class="cn">0.5</span>);
+</pre>
+
+		<h2>Единицы измерения</h2>
+		<p>В css существуют разные единицы измерения:</p>
+		<ul>
+			<li>em - размер шрифта</li>
+			<li>rem - размер шрифта &lt;html&gt; элемента</li>
+			<li>vw - процент от ширины окна</li>
+			<li>vh - процент от высоты окна</li>
+			<li>% - в процентах</li>
+			<li>px - пиксели</li>
+		</ul>
+		<p>Не рекомендуется указывать размер в пикселях, так как размер экрана у всех разный.</p>
+		<p>Процент размера шрифта берётся от его изначального размера в браузере.</p>
+		<p>Ширина, указанная в процентах, считается относительно ширины родительского элемента.</p>
+
+		<h2>inherit и initial</h2>
+		<p>Указываются вместо любого значения, означают:</p>
+		<p>inherit - значение свойства наследуется у родительского элемента.</p>
+		<p>initial - устанавливается исходное значения свойства.</p>
+
+		<div class="footer"><a href="" onclick="toPage(9)">Следующая тема</a></div>
+	</div>
+
+
+	<div class="body" id="pg9">
+		<div class="header"><a href="" onclick="history.back()">Назад</a><a href="" onclick="toPage(0)">На главную</a><div></div><span onclick="changeTheme()">Сменить тему</span></div>
+		<h1>Css селекторы</h1>
+		<p>В css много способов указания элементов, также существуют псевдо-классы, которые позволяют менять стили, например, при наведении курсора на элемент.</p>
+		<h2>Выбор элементов</h2>
+		<p>Указать элемент можно, написав его тег, класс или id. Для применения стиля к разным элементам их можно написать через запятую:</p>
+		<pre><span class="ct">тег</span>, <span class="ct">.класс</span>, <span class="ct">#id</span> { }</pre>
+		<p>Для указания элемента с определённым классом или id, нужно написать тег и имя класса (или id) без пробелов:</p>
+		<pre><span class="ct">p.bold</span> { } <span class="c">/* Стили для p, у которого класс bold */</span></pre>
+		<p>Можно указать элемент через те, в которые он вложен, написав через пробел:</p>
+		<pre><span class="ct">p span</span> { } <span class="c">/* Стили для span, который внутри p */</span></pre>
+		<pre>
+<span class="tb">&lt;</span><span class="t">p</span><span class="tb">&gt;</span><span class="tb">&lt;</span><span class="t">span</span><span class="tb">&gt;</span>Стили поменяются здесь<span class="tb">&lt;/</span><span class="t">span</span><span class="tb">&gt;</span><span class="tb">&lt;/</span><span class="t">p</span><span class="tb">&gt;</span>
+<span class="tb">&lt;</span><span class="t">div</span><span class="tb">&gt;</span><span class="tb">&lt;</span><span class="t">span</span><span class="tb">&gt;</span>А здесь нет<span class="tb">&lt;/</span><span class="t">span</span><span class="tb">&gt;</span><span class="tb">&lt;/</span><span class="t">div</span><span class="tb">&gt;</span>
+<span class="tb">&lt;</span><span class="t">p</span><span class="tb">&gt;</span>
+	<span class="tb">&lt;</span><span class="t">div</span><span class="tb">&gt;</span>
+		<span class="tb">&lt;</span><span class="t">span</span><span class="tb">&gt;</span>А здесь поменяются, так как span внутри p<span class="tb">&lt;/</span><span class="t">span</span><span class="tb">&gt;</span>
+	<span class="tb">&lt;/</span><span class="t">div</span><span class="tb">&gt;</span>
+<span class="tb">&lt;/</span><span class="t">p</span><span class="tb">&gt;</span>
+</pre>
+		<p>Для указания элементов по их родительскому, необходимо написать символ &gt;:</p>
+		<pre><span class="ct">p</span> &gt; <span class="ct">span</span> { } <span class="c">/* Стили для span, у которого родительский элемент p */</span></pre>
+		<pre>
+<span class="tb">&lt;</span><span class="t">p</span><span class="tb">&gt;</span><span class="tb">&lt;</span><span class="t">span</span><span class="tb">&gt;</span>Стили поменяются здесь<span class="tb">&lt;/</span><span class="t">span</span><span class="tb">&gt;</span><span class="tb">&lt;/</span><span class="t">p</span><span class="tb">&gt;</span>
+<span class="tb">&lt;</span><span class="t">div</span><span class="tb">&gt;</span><span class="tb">&lt;</span><span class="t">span</span><span class="tb">&gt;</span>А здесь нет<span class="tb">&lt;/</span><span class="t">span</span><span class="tb">&gt;</span><span class="tb">&lt;/</span><span class="t">div</span><span class="tb">&gt;</span>
+<span class="tb">&lt;</span><span class="t">p</span><span class="tb">&gt;</span>
+	<span class="tb">&lt;</span><span class="t">div</span><span class="tb">&gt;</span>
+		<span class="tb">&lt;</span><span class="t">span</span><span class="tb">&gt;</span>И здесь нет, так как у span родительский элемент div<span class="tb">&lt;/</span><span class="t">span</span><span class="tb">&gt;</span>
+	<span class="tb">&lt;/</span><span class="t">div</span><span class="tb">&gt;</span>
+<span class="tb">&lt;/</span><span class="t">p</span><span class="tb">&gt;</span>
+</pre>
+		<p>Также можно указать элемент, который находится строго после другого, написав символ +:</p>
+		<pre><span class="ct">span</span> + <span class="ct">span</span> { } <span class="c">/* Стили для span, который идёт после span*/</span></pre>
+		<pre>
+<span class="tb">&lt;</span><span class="t">span</span><span class="tb">&gt;</span>Здесь стили не поменяются<span class="tb">&lt;/</span><span class="t">span</span><span class="tb">&gt;</span>
+<span class="tb">&lt;</span><span class="t">span</span><span class="tb">&gt;</span>Стили поменяются здесь<span class="tb">&lt;/</span><span class="t">span</span><span class="tb">&gt;</span>
+<span class="tb">&lt;</span><span class="t">span</span><span class="tb">&gt;</span>И здесь тоже<span class="tb">&lt;/</span><span class="t">span</span><span class="tb">&gt;</span>
+<span class="tb">&lt;</span><span class="t">p</span><span class="tb">&gt;</span>Здесь - нет, т. к. не span<span class="tb">&lt;/</span><span class="t">p</span><span class="tb">&gt;</span>
+<span class="tb">&lt;</span><span class="t">span</span><span class="tb">&gt;</span>И здесь тоже нет, т. к. предыдущий элемент p<span class="tb">&lt;/</span><span class="t">span</span><span class="tb">&gt;</span>
+</pre>
+		<p>Все селекторы можно изучить <a href="https://www.w3schools.com/cssref/css_selectors.asp" target="_blank">по ссылке</a>.</p>
+
+		<h2>Псевдо-классы</h2>
+		<p>Псевдо-классы позволяют указывать элементы более конкретно, а также менять стили при взаимодействии пользователя со страницей.</p>
+		<p>:first-child и :last-child - позволяют выбрать первый и последний элемент.</p>
+		<p>:nth-child(n) - позволяет выбрать n-ный элемент:</p>
+		<pre>
+<span class="ct">span:first-child</span> { } <span class="c">/* Стили для span, который первый внутри чего-либо */</span>
+<span class="ct">span:nth-child(2)</span> { } <span class="c">/* Стили для span, который второй внутри чего-либо */</span>
+<span class="ct">span:last-child</span> { } <span class="c">/* Стили для span, который последний внутри чего-либо */</span>
+</pre>
+		<pre>
+<span class="tb">&lt;</span><span class="t">p</span><span class="tb">&gt;</span>
+		<span class="tb">&lt;</span><span class="t">span</span><span class="tb">&gt;</span>Этот span - :first-child и :nth-child(1)<span class="tb">&lt;/</span><span class="t">span</span><span class="tb">&gt;</span>
+		<span class="tb">&lt;</span><span class="t">span</span><span class="tb">&gt;</span>Этот span - :nth-child(2)<span class="tb">&lt;/</span><span class="t">span</span><span class="tb">&gt;</span>
+		<span class="tb">&lt;</span><span class="t">span</span><span class="tb">&gt;</span>Этот span - :nth-child(3)<span class="tb">&lt;/</span><span class="t">span</span><span class="tb">&gt;</span>
+		<span class="tb">&lt;</span><span class="t">span</span><span class="tb">&gt;</span>Этот span - :last-child и :nth-child(4)<span class="tb">&lt;/</span><span class="t">span</span><span class="tb">&gt;</span>
+<span class="tb">&lt;/</span><span class="t">p</span><span class="tb">&gt;</span>
+</pre>
+		<p>:hover - позволяет выбрать элемент, на который навели курсор:</p>
+		<pre><span class="ct">span:hover</span> { color: red; }</pre>
+		<p>span элемент:</p>
+		<p><span class="hover-red">Наведите сюда курсор.</span></p>
+		<p>:focus - позволяет выбрать элемент, который в фокусе:</p>
+		<pre><span class="ct">input:focus</span> { background-color: lightblue; }</pre>
+		<p>input элемент (нажмите на него):</p>
+		<input type="text" class="focus-lightblue">
+		<p>:active - позволяет выбрать элемент, на который нажимают:</p>
+		<pre><span class="ct">button:active</span> { color: red; }</pre>
+		<p>button элемент:</p>
+		<button type="text" class="active-red">Нажмите сюда</button>
+		<p>Все псевдо-классы можно изучить <a href="https://www.w3schools.com/css/css_pseudo_classes.asp" target="_blank">по ссылке</a>.</p>
+
+
+		<div class="footer"><a href="" onclick="toPage(10)">Следующая тема</a></div>
+	</div>
+
+
+	<div class="body" id="pg10">
+		<div class="header"><a href="" onclick="history.back()">Назад</a><a href="" onclick="toPage(0)">На главную</a><div></div><span onclick="changeTheme()">Сменить тему</span></div>
+		<h1>Css: Основные свойства</h1>
+		<h2>Цвета</h2>
+		<p>color - цвет текста.</p>
+		<p>background-color - цвет фона.</p>
+
+		<h2>width и height</h2>
+		<p>Свойства width и height соответственно.</p>
+		<p>Значения этих свойств можно установить в:</p>
+		<ul>
+			<li>Число - em, %, px и другие</li>
+			<li>max-content - размер элемента будет таким, как у самого большого содержимого</li>
+			<li>min-content - размер элемента будет таким, как у самого маленького содержимого</li>
+			<li>fit-content - min(max-content, max(min-content, размер-содержимого))</li>
+		</ul>
+		<p>Также существуют свойства min-width, max-width и min-height, max-height - для указания максимальных и минимальных размеров.</p>
+		<p>Например, вы можете указать ширину в 50%, но не больше чем 600px и не меньше, чем 100px:</p>
+		<pre>
+<span class="cp">width</span>: <span class="cn">50%</span>;
+<span class="cp">min-width</span>: <span class="cn">100px</span>;
+<span class="cp">max-width</span>: <span class="cn">600px</span>;
+		</pre>
+
+
+		<h2>Рамка</h2>
+		<pre><span class="cp">border</span>: <span class="cn">толщина</span> <span class="cs">стиль цвет</span>;</pre>
+		<pre><span class="cp">border-radius</span>: <span class="cn">радиус</span>;</pre>
+		<p>Например:</p>
+		<pre>
+<span class="ct">p</span> {
+	<span class="cp">border</span>: <span class="cn">3px</span> <span class="cs">solid lime</span>;
+	<span class="cp">border-radius</span>: <span class="cn">5px</span>;
+}
+</pre>
+		<p style="border: 3px solid lime; border-radius: 5px;">Абзац с рамкой</p>
+		<p>Виды рамки:</p>
+		<div class="flex-container-div main-font-size">
+			<div style="border-style: solid;">solid</div>
+			<div style="border-style: dashed;">dashed</div>
+			<div style="border-style: dotted;">dotted</div>
+			<div style="border-style: double;">double</div>
+			<div style="border-style: groove;">groove</div>
+			<div style="border-style: ridge;">ridge</div>
+			<div style="border-style: inset;">inset</div>
+			<div style="border-style: outset;">outset</div>
+		</div>
+		<p>Можно настроить свойства рамки по отдельности:</p>
+		<ul>
+			<li>border-width - ширина рамки</li>
+			<li>border-style - стиль рамки</li>
+			<li>border-color - цвет рамки</li>
+		</ul>
+		<p>Рамку можно настроить для всех сторон индивидуально, дописав сторону к свойству:</p>
+		<ul>
+			<li>border-сторона - рамка</li>
+			<li>border-сторона-width - ширина рамки</li>
+			<li>border-сторона-style - стиль рамки</li>
+			<li>border-сторона-color - цвет рамки</li>
+			<li>border-сторона-сторона-radius - радиус угла рамки</li>
+		</ul>
+		<p>Все стороны: top, right, bottom, left.</p>
+
+		<h2>Отступы</h2>
+		<p>Отступ от границы элемента до:</p>
+		<ul>
+			<li>содержимого - padding</li>
+			<li>других элементов - margin</li>
+		</ul>
+		<p>Как выглядит элемент с margin, border и padding:</p>
+		<div class="main-font-size" style="color: black;">
+			<div style="padding: 1em; background-color: orange;">
+				<div style="margin-bottom: 0.5em;">margin</div>
+				<div style="padding: 1em; background-color: lightgreen;">
+					<div style="margin-bottom: 0.5em;">border</div>
+					<div style="padding: 1em; background-color: green;">
+						<div style="margin-bottom: 0.5em;">padding</div>
+						<div style="background-color: lightblue;">Содержимое элемента, например, текст.</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<p>Два div'а без margin и padding:</p>
+		<div class="main-font-size"><div style="border: 3px solid lime">Первый div</div><div style="border: 3px solid lime">Второй div</div></div>
+		<p>С margin и padding:</p>
+		<div class="main-font-size"><div style="border: 3px solid lime; padding: 10px; margin-bottom: 10px;">Первый div</div><div style="border: 3px solid lime; padding: 10px;">Второй div</div></div>
+		<p>Отступы тоже можно настроить для всех сторон индивидуально, дописав сторону к свойству:</p>
+		<ul>
+			<li>margin-сторона</li>
+			<li>padding-сторона</li>
+		</ul>
+
+		<h2>Текст</h2>
+		<p>Свойства для настройки текста:</p>
+		<ul>
+			<li>color - цвет текста</li>
+			<li>font-family - шрифт</li>
+			<li>font-size - размер шрифта</li>
+			<li>font-style - начертание шрифта - normal или italic</li>
+			<li>font-weight - толщина шрифта - bold, bolder, lighter, normal или число от 100 до 900</li>
+			<li>text-align - горизонтальное выравнивание текста - center, left, right или justify (растянуть текст на всю ширину)</li>
+			<li>text-decoration - оформление текста - line-through, overline, underline, none</li>
+			<li>text-decoration-skip-ink - как выводить линию под или над текстом - auto или none</li>
+		</ul>
+		<p>text-decoration примеры:</p>
+		<p>
+			<span style="text-decoration: none;">none</span>
+			<span style="text-decoration: underline;">underline</span>
+			<span style="text-decoration: line-through;">line-through</span>
+			<span style="text-decoration: overline;">overline</span>
+		</p>
+		<p>По умолчанию линия под текстом будет прерываться:</p>
+		<p style="text-decoration: underline;">Добро пожаловать, хорошего дня!</p>
+		<p>С text-decoration-skip-ink: none:</p>
+		<p style="text-decoration: underline; text-decoration-skip-ink: none;">Добро пожаловать, хорошего дня!</p>
+		<p>text-align примеры:</p>
+		<div style="border: 2px solid lime; padding: 1em;">
+			<p style="text-align: left">text-align: left</p>
+			<p style="text-align: center">text-align: center</p>
+			<p style="text-align: right">text-align: right</p>
+			<p style="text-align: justify">text-align: justify. Для демонстрации необходимо больше текста. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a placerat metus. Etiam in felis laoreet, tempor est sed, consequat orci.</p>
+			<p style="text-align: left">text-align: left. Для сравнения с justify. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In a placerat metus. Etiam in felis laoreet, tempor est sed, consequat orci.</p>
+		</div>
+
+		<h2>position</h2>
+		<p>Устанавливает способ позиционирования элемента на странице.</p>
+		<p>Значения:</p>
+		<ul>
+			<li>absolute - элемент располагается относительно родительского элемента с position: relative, если такого нет, то как fixed</li>
+			<li>fixed - элемент располагается относительно окна браузера (не двигается при прокрутке)</li>
+			<li>relative - элемент сдвигается относительно его положения</li>
+			<li>static - элемент отображается как обычно</li>
+			<li>sticky - отображается как обычно, если влезает в экран, иначе как absolute</li>
+		</ul>
+		<p>При absolute и fixed элемент перестаёт занимать место среди других элементов.</p>
+		<p>Пример sticky: панель вверху с кнопками "Назад", "На главную" и "<span class="changeThemeButton" onclick="changeTheme()">Сменить тему</span>".</p>
+		<p>Для указания положения элементов необходимо использовать свойства top, right, bottom и left</p>
+		<p>Пример:</p>
+		<pre>
+<span class="ct">.container</span> {
+	<span class="cp">position</span>: <span class="cs">relative</span>;
+	<span class="cp">min-height</span>: <span class="cn">100px</span>;
+	<span class="cp">background-color</span>: <span class="cs">gray</span>;
+}
+<span class="ct">.element1</span>, <span class="ct">.element2</span> {
+	<span class="cp">position</span>: <span class="cs">absolute</span>;
+	<span class="cp">width</span>: <span class="cn">50px</span>;
+	<span class="cp">height</span>: <span class="cn">50px</span>;
+	<span class="cp">top</span>: <span class="cn">20px</span>;
+	<span class="cp">left</span>: <span class="cn">10px</span>;
+	<span class="cp">background-color</span>: <span class="cs">lime</span>;
+}
+<span class="ct">.element2</span> {
+	<span class="cp">top</span>: -<span class="cn">20px</span>;
+	<span class="cp">left</span>: <span class="cn">70px</span>;
+}
+</pre>
+
+
+		<div class="pg10-container">
+			<div class="pg10-element1"></div>
+			<div class="pg10-element2"></div>
+		</div>
+
+		<h2>display</h2>
+		<p>Устанавливает, как элемент должен быть показан в документе.</p>
+		<ul>
+			<li>block - перенос строк в начале и в конце элемента, расстягивается на всю доступную ширину.</li>
+			<li>inline - элемент располагается на той же строке, последовательно. Ширина и высота элемента определяются по содержимому. Поменять их нельзя.</li>
+			<li>flex - позволяет располагать элементы внутри очень гибкими способами.</li>
+			<li>grid - позволяет располагать элементы внутри по сетке.</li>
+		</ul>
+		<p>Все значения display на <a target="_blank" href="https://webref.ru/css/display">этом сайте</a>.</p>
+
+
+		<div class="footer"><a href="" onclick="toPage(11)">Следующая тема</a></div>
+	</div>
+
+
+	<div class="body" id="pg11">
+		<div class="header"><a href="" onclick="history.back()">Назад</a><a href="" onclick="toPage(0)">На главную</a><div></div><span onclick="changeTheme()">Сменить тему</span></div>
+		<h1>Css: Переменные</h1>
+		<p>Переменные должны начинаться с двойного дефиса:</p>
+		<pre><span class="cp">--имя-переменной</span>: <span class="cs">любое значение</span>;</pre>
+		<p>Для использования своей переменной в качестве значения, необходимо написать её внутри var():</p>
+		<pre><span class="cp">color</span>: <span class="ck">var</span>(<span class="cs">--ваша-переменная</span>);</pre>
+		<p>Использовать переменные можно, например, для того, чтобы сделать разные темы на сайте:</p>
+		<p>Цвет, шрифт, размер шрифта - всё можно указать переменными.</p>
+		<p>Значения всех переменных можно определить в одном месте и потом менять у &lt;body&gt; класс (с помощью javascript):</p>
+		<pre>
+<span class="ct">.light-theme</span> {
+	<span class="cp">--color-text</span>: <span class="cs">black</span>;
+	<span class="cp">--color-back</span>: <span class="cs">white</span>;
+}
+<span class="ct">.dark-theme</span> {
+	<span class="cp">--color-text</span>: <span class="cs">white</span>;
+	<span class="cp">--color-back</span>: <span class="cs">black</span>;
+}
+<span class="ct">p</span> {
+	<span class="cp">color</span>: <span class="ck">var</span>(<span class="cs">--color-text</span>);
+}
+</pre>
+		<pre>
+<span class="tb">&lt;</span><span class="t">body</span> <span class="a">class</span>=<span class="s">"light-theme"</span><span class="tb">&gt;</span>
+	<span class="tb">&lt;</span><span class="t">p</span><span class="tb">&gt;</span>Текст<span class="t">&lt;/</span><span class="t">p</span><span class="tb">&gt;</span>
+<span class="tb">&lt;/</span><span class="t">body</span><span class="tb">&gt;</span>
+</pre>
+
+		<div class="footer"><a href="" onclick="toPage(12)">Следующая тема</a></div>
+	</div>
+
+
+	<div class="body" id="pg12">
+		<div class="header"><a href="" onclick="history.back()">Назад</a><a href="" onclick="toPage(0)">На главную</a><div></div><span onclick="changeTheme()">Сменить тему</span></div>
+		<h1>Функция calc()</h1>
+		<p>Функция calc() позволяет делать математические действия.</p>
+		<p>Пример:</p>
+		<pre>
+<span class="ct">.something</span> {
+	<span class="cp">width</span>: <span class="ck">calc</span>(<span class="cn">50%</span> - <span class="cn">5em</span>);
+}
+</pre>
+		<div class="footer"><a href="" onclick="toPage(13)">Следующая тема</a></div>
+	</div>
+
+
+	<div class="body" id="pg13">
+		<div class="header"><a href="" onclick="history.back()">Назад</a><a href="" onclick="toPage(0)">На главную</a><div></div><span onclick="changeTheme()">Сменить тему</span></div>
+		<h1>Взаимодействие со страницей</h1>
+		<p>Для взаимодействия со страницей нужно уметь получать элемент со страницы в виде объекта, а так же создавать и добавлять новые элементы на страницу.</p>
+		<h2>Получить элемент</h2>
+		<p>Элемент &lt;body&gt; находится в document.body</p>
+		<p>document.getElementById("id") - получить элемент можно по id. Он должен быть уникальным у всех элементов, иначе результат будет непредсказуем.</p>
+		<p>document.querySelectorAll("селектор") - получить все элементы (массивом) по css селектору.</p>
+		<p>document.querySelector("селектор") - получить первый подходящий элемент по css селектору.</p>
+		<h2>Получить элемент через другой</h2>
+		<p>el.firstChild - первый дочерний элемент</p>
+		<p>el.lastChild - последний дочерний элемент</p>
+		<p>el.parentNode - родительский элемент</p>
+		<h2>Создать элемент</h2>
+		<p>document.createElement("тег")</p>
+		<h2>Добавить элемент</h2>
+		<p>Добавить элемент внутрь данного:</p>
+		<p>el.appendChild(элемент) - в конец.</p>
+		<p>el.insertBefore(элемент, элемент2) - перед элемент2.</p>
+		<h2>Удалить элемент из html</h2>
+		<p>el.removeChild(элемент) - удалить дочерний элемент.</p>
+
+		<div class="footer"><a href="" onclick="toPage(14)">Следующая тема</a></div>
+	</div>
+
+
+	<div class="body" id="pg14">
+		<div class="header"><a href="" onclick="history.back()">Назад</a><a href="" onclick="toPage(0)">На главную</a><div></div><span onclick="changeTheme()">Сменить тему</span></div>
+		<h1>Элемент как объект</h1>
+		<p>В javascript html элементы представлены в виде классов. Изменив значения полей объекта, вы поменяете и сам html элемент.</p>
+		<p>Свойства html элементов:</p>
+		<h2>Содержимое</h2>
+		<p>el.innerText - текст внутри элемента.</p>
+		<p>el.innerHTML - html внутри элемента, строка, содержащая html теги.</p>
+		<h2>Стили</h2>
+		<p>el.style - объект, содержащий все стили элемента.</p>
+		<p>Для каждого css свойства в style есть поле с его значением.</p>
+		<p>В именах из нескольких слов тире убираются, а следующая буква делается заглавной:</p>
+		<p>css свойство background-color в объекте style поле backgroundColor.</p>
+		<p>Значения в style не пустые в случае, если стили указаны в атрибуте style или через javascript.</p>
+		<h2>Классы</h2>
+		<p>el.classList - объект, содержащий все классы элемента, итерируемый.</p>
+		<p>el.classList.add("class") - добавить класс.</p>
+		<p>el.classList.remove("class") - удалить класс.</p>
+		<p>el.classList.toggle("class") - если есть - удалить, если нет - добавить класс.</p>
+		<p>el.classList.contains("class") - проверить наличие класса, возвращает true или false.</p>
+		<h2>Атрибуты</h2>
+		<p>Атрибуты элементов располагаются в соответствующих полях, например:</p>
+		<p>Атрибут href у ссылок: el.href,</p>
+		<p>Атрибут type у &lt;input&gt;: el.type.</p>
+		<div class="footer"><a href="" onclick="toPage(15)">Следующая тема</a></div>
+	</div>
+
+
+	<div class="body" id="pg15">
+		<div class="header"><a href="" onclick="history.back()">Назад</a><a href="" onclick="toPage(0)">На главную</a><div></div><span onclick="changeTheme()">Сменить тему</span></div>
+		<h1>События</h1>
+		<h1>Интерактивность!</h1>
+		<p>Событие – это сигнал от браузера о том, что что-то произошло.</p>
+		<p>На каждое событие можно подписаться и ваша функция будет вызываться каждый раз, когда оно случается.
+			Также в качестве параметра в вашу функцую передадутся подробности события.</p>
+		<p>Когда на элементе происходит событие, обработчики сначала срабатывают на нём, потом на его родителе, затем выше и так далее, вверх по цепочке предков.</p>
+		<p>Для определения, на каком элементе произошло событие, у него есть свойство target, в нём хранится элемент, на котором оно произошло.</p>
+		<h2>Обработчики события</h2>
+		<p>Обработчик события можно добавить к html элементу:</p>
+		<pre>
+<span class="vc">el</span>.<span class="f">addEventListener</span>(<span class="sj">"событие"</span>, <span class="f">ваша_функция</span>);
+<span class="c">// Можно и удалить:</span>
+<span class="vc">el</span>.<span class="f">removeEventListener</span>(<span class="sj">"событие"</span>, <span class="f">ваша_функция</span>);
+</pre>
+		<p>Обработчик события, добавленный к объекту window - самый глобальный.</p>
+		<p>Так обработчик не удалится:</p>
+		<pre>
+<span class="vc">el</span>.<span class="f">addEventListener</span>(<span class="sj">"событие"</span>, (<span class="vl">e</span>) <span class="kj">=></span> <span class="f">doSmth</span>(<span class="vl">e</span>));
+<span class="vc">el</span>.<span class="f">removeEventListener</span>(<span class="sj">"событие"</span>, (<span class="vl">e</span>) <span class="kj">=></span> <span class="f">doSmth</span>(<span class="vl">e</span>));
+</pre>
+		<p>так как (e) => doSmth(e) - это создание новой, уже другой функции. А для удаления обработчика необходимо указывать ту же функцию.</p>
+
+		<h2>События</h2>
+		<ul>
+			<li>click - нажатие ЛКМ или пальцем в экран.</li>
+			<li>contextmenu - нажатие ПКМ или долгое нажатие пальцем.</li>
+			<li>mousemove - движение мыши.</li>
+			<li>mouseover / mouseout - мышь наводится на / покидает элемент.</li>
+			<li>mousedown / mouseup - когда нажали / отжали кнопку мыши на элементе.</li>
+			<li>keypress - нажатие с отпусканием клавиши.</li>
+			<li>keydown / keyup - нажатие / отпускание клавиши.</li>
+		</ul>
+		<p>У событий, связанных с мышью, есть свойства, содержащие её координаты:</p>
+		<ul>
+			<li>clientX, clientY - координаты относительно окна браузера.</li>
+			<li>pageX, pageY - координаты относительно страницы.</li>
+			<li>offsetX, offsetY - координаты относительно элемента, на котором произошло событие.</li>
+		</ul>
+		<p>У событий, связанных с клавиатурой, есть свойства, содержащие нажатую клавишу:</p>
+		<ul>
+			<li>code - нажатая клавиша на клавиатуре.</li>
+			<li>key - значение нажатой клавиши.</li>
+		</ul>
+		<p>Глава <a href="" onclick="toPage(22)">code и key любой клавиши</a>.</p>
+		<div class="footer"><a href="" onclick="toPage(16)">Следующая тема</a></div>
+	</div>
+
+
+	<div class="body" id="pg16">
+		<div class="header"><a href="" onclick="history.back()">Назад</a><a href="" onclick="toPage(0)">На главную</a><div></div><span onclick="changeTheme()">Сменить тему</span></div>
+		<h1>Больше css свойств</h1>
+		<h2>visibility</h2>
+		<p>Значения: visible или hidden.</p>
+		<p>При visibility: hidden элемент продолжает занимать место на странице.</p>
+		<p><span style="visibility: hidden;">visibility: hidden</span> &lt;-- hidden</p>
+		<p style="visibility: visible;">visibility: visible</p>
+
+		<h2>opacity</h2>
+		<p>Значения от 0 до 1.</p>
+		<div class="flex-container-div">
+			<div style="opacity: 1;">opacity: 1</div>
+			<div style="opacity: 0.7;">opacity: 0.7</div>
+			<div style="opacity: 0.4;">opacity: 0.4</div>
+			<div style="opacity: 0.1;">opacity: 0.1</div>
+		</div>
+
+		<h2>z-index</h2>
+		<p>Расположение элемента по "высоте":</p>
+		<div style="position: relative; height: 7em;">
+			<div style="position: absolute; top: 0em; left: 0em; background-color: gray; padding: 1em; border: 1px solid lime;">z-index: 1</div>
+			<div style="position: absolute; top: 1.6em; left: 0.5em; background-color: gray; padding: 1em; border: 1px solid lime;">z-index: 2</div>
+			<div style="position: absolute; top: 3.2em; left: 1em; background-color: gray; padding: 1em; border: 1px solid lime;">z-index: 3</div>
+		</div>
+
+		<h2>cursor</h2>
+		<p>Курсор при наведении на элемент. Виды (наведите курсор для просмотра):</p>
+		<ul>
+			<li style="cursor: default;">default</li>
+			<li style="cursor: help;">help</li>
+			<li style="cursor: pointer;">pointer</li>
+			<li style="cursor: progress;">progress</li>
+			<li style="cursor: wait;">wait</li>
+			<li style="cursor: cell;">cell</li>
+			<li style="cursor: crosshair;">crosshair</li>
+			<li style="cursor: text;">text</li>
+			<li style="cursor: move;">move</li>
+			<li style="cursor: not-allowed;">not-allowed</li>
+		</ul>
+		<p>Все виды курсоров на <a target="_blank" href="https://webref.ru/css/cursor">этом сайте</a>.</p>
+
+
+		<div class="footer"><a href="" onclick="toPage(17)">Следующая тема</a></div>
+	</div>
+
+
+	<div class="body" id="pg17">
+		<div class="header"><a href="" onclick="history.back()">Назад</a><a href="" onclick="toPage(0)">На главную</a><div></div><span onclick="changeTheme()">Сменить тему</span></div>
+		<h1>Тег input</h1>
+		<p>Подробнее о его возможностях и как им можно пользоваться.</p>
+		<h2>Виды input</h2>
+		<p>Для указания вида поля ввода у него есть атрибут type.</p>
+		<p>У input можно указать дополнительные атрибуты для настройки поля ввода.</p>
+		<p>У любого типа input есть атрибут value, содержащий значение поля.</p>
+		<pre><span class="tb">&lt;</span><span class="t">input</span> <span class="a">type</span>=<span class="s">"text"</span> <span class="a">maxlength</span>=<span class="s">"число"</span> <span class="a">placeholder</span>=<span class="s">"Подсказка"</span><span class="tb">&gt;</span></pre>
+		<input type="text" placeholder="Подсказка">
+		<pre><span class="tb">&lt;</span><span class="t">input</span> <span class="a">type</span>=<span class="s">"number"</span> <span class="a">min</span>=<span class="s">"число"</span> <span class="a">max</span>=<span class="s">"число"</span> <span class="a">step</span>=<span class="s">"число"</span> <span class="a">placeholder</span>=<span class="s">"Подсказка"</span><span class="tb">&gt;</span></pre>
+		<input type="number" placeholder="Подсказка">
+		<pre><span class="tb">&lt;</span><span class="t">input</span> <span class="a">type</span>=<span class="s">"range"</span> <span class="a">min</span>=<span class="s">"число"</span> <span class="a">max</span>=<span class="s">"число"</span> <span class="a">step</span>=<span class="s">"число"</span><span class="tb">&gt;</span></pre>
+		<input type="range">
+		<pre><span class="tb">&lt;</span><span class="t">input</span> <span class="a">type</span>=<span class="s">"date"</span> <span class="a">min</span>=<span class="s">"дата в формате ГГГГ-ММ-ДД"</span> <span class="a">max</span>=<span class="s">"дата"</span><span class="tb">&gt;</span></pre>
+		<input type="date">
+		<pre><span class="tb">&lt;</span><span class="t">input</span> <span class="a">type</span>=<span class="s">"color"</span><span class="tb">&gt;</span></pre>
+		<input type="color">
+		<pre>
+<span class="tb">&lt;</span><span class="t">input</span> <span class="a">type</span>=<span class="s">"checkbox"</span><span class="tb">&gt;</span>
+<span class="tb">&lt;</span><span class="t">input</span> <span class="a">type</span>=<span class="s">"checkbox"</span> <span class="a">checked</span><span class="tb">&gt;</span>
+</pre>
+		<input type="checkbox">
+		<input type="checkbox" checked>
+		<pre>
+<span class="tb">&lt;</span><span class="t">input</span> <span class="a">type</span>=<span class="s">"radio"</span> <span class="a">name</span>=<span class="s">"input-radio"</span><span class="tb">&gt;</span>
+<span class="tb">&lt;</span><span class="t">input</span> <span class="a">type</span>=<span class="s">"radio"</span> <span class="a">name</span>=<span class="s">"input-radio"</span> <span class="a">checked</span><span class="tb">&gt;</span>
+</pre>
+		<input type="radio" name="input-radio">
+		<input type="radio" name="input-radio" checked>
+		<p>Для input типа radio необходимо указать атрибут name, чтобы всегда был выбран только один.</p>
+		<p>Любому input можно добавить атрибут disabled для блокировки взаимодействия с ним:</p>
+		<pre>
+<span class="tb">&lt;</span><span class="t">input</span> <span class="a">type</span>=<span class="s">"text"</span><span class="tb">&gt;</span>
+<span class="tb">&lt;</span><span class="t">input</span> <span class="a">type</span>=<span class="s">"text"</span> <span class="a">disabled</span><span class="tb">&gt;</span>
+</pre>
+		<input type="text">
+		<input type="text" disabled>
+
+		<h2>Javascript</h2>
+		<p>Получив input элемент в виде объекта, вы можете получить/изменить его значение:</p>
+		<ul>
+			<li>value - строка</li>
+			<li>valueAsDate - объект <a target="_blank" href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Date">Date</a></li>
+			<li>valueAsNumber - число</li>
+			<li>checked - у checkbox и radio, значение true или false</li>
+			<li>max, min, step - строки, присваивать можно цифры</li>
+			<li>maxLength - число</li>
+			<li>placeholder - строка</li>
+			<li>type - строка</li>
+		</ul>
+		<h2>События</h2>
+		<p>У input есть два полезных события:</p>
+		<p>input - происходит каждый раз при изменении значения пользователем.</p>
+		<p>changed - происходит, когда пользователь завершил ввод (нажал вне поля ввода, закрыл меню выбора цвета/даты).</p>
+		<div class="footer"><a href="" onclick="toPage(18)">Следующая тема</a></div>
+	</div>
+
+
+	<div class="body" id="pg18">
+		<div class="header"><a href="" onclick="history.back()">Назад</a><a href="" onclick="toPage(0)">На главную</a><div></div><span onclick="changeTheme()">Сменить тему</span></div>
+		<h1>Css анимации</h1>
+		<p>Для анимации необходимо настроить два css свойства:</p>
+		<ul>
+			<li>transition-property - какие свойства анимировать</li>
+			<li>transition-duration - длительность анимации</li>
+		</ul>
+		<p>Длительность анимации указывается в секундах: 5s или милисекундах: 500ms</p>
+		<p>Не все свойства можно анимировать.</p>
+		<p>Пример анимации:</p>
+		<pre>
+<span class="ct">.anim-rect</span> {
+	<span class="cp">transition-property</span>: <span class="cs">background-color</span>;
+	<span class="cp">transition-duration</span>: <span class="cn">1s</span>;
+	<span class="cp">background-color</span>: <span class="cs">blue</span>;
+}
+<span class="ct">.anim-rect:hover</span> {
+	<span class="cp">background-color</span>: <span class="cs">red</span>;
+}
+</pre>
+		<div><div class="pg18-anim-rect"></div></div>
+		<pre>
+<span class="ct">.anim-button</span> {
+	<span class="cp">transition-property</span>: <span class="cs">color</span>, <span class="cs">background-color</span>;
+	<span class="cp">transition-duration</span>: <span class="cn">250ms</span>;
+	<span class="cp">background-color</span>: <span class="cs">lightblue</span>;
+	<span class="cp">color</span>: <span class="cs">black</span>;
+}
+<span class="ct">.anim-button:active</span> {
+	<span class="cp">background-color</span>: <span class="cs">blue</span>;
+	<span class="cp">color</span>: <span class="cs">lime</span>;
+}
+</pre>
+		<p><button class="pg18-anim-button">Нажмите сюда</button></p>
+
+		<h2>Сложные анимации</h2>
+		<p>Можно делать анимации по ключевым кадрам.</p>
+		<p>Создание ключевых кадров:</p>
+		<pre>
+<span class="ck2">@keyframes</span> <span class="ca">название-анимации</span> {
+	0% { <span class="c">/* Начало анимации */</span>
+		<span class="c">/* значения свойств на данном этапе анимации */</span>
+	}
+	50% { } <span class="c">/* Можно добавить любое количество промежуточных этапов */</span>
+	25%, 75% { }
+	100% { } <span class="c">/* Конец анимации */</span>
+}
+</pre>
+		<p>Добавление анимации:</p>
+		<pre>
+<span class="cp">animation</span>: <span class="ca">название-анимации</span> <span class="cn">продолжительность</span> <span class="cs">кол-во-повторений направление-анимации</span>;
+<span class="c">/* Или: */</span>
+<span class="cp">animation-name</span>: <span class="ca">название-анимации</span>;
+<span class="cp">animation-duration</span>: <span class="cn">продолжительность-анимации</span>;
+<span class="cp">animation-iteration-count</span>: <span class="cs">кол-во-повторений-анимации</span>;
+<span class="cp">animation-direction</span>: <span class="cs">направление-анимации</span>;
+</pre>
+		<p>Количество повторений анимации можно указать числом или infinite - бесконечно.</p>
+		<p>Направление анимации можно указать в alternate - анимация, дойдя до конца, проигрывается в обратном направлении.</p>
+		<p>Количество повторений и направление анимации указывать не обязательно.</p>
+		<p>Пример:</p>
+		<pre>
+<span class="ck2">@keyframes</span> <span class="ca">cool-animation</span> {
+	0% {
+		<span class="cp">background-color</span>: <span class="cs">cyan</span>;
+		<span class="cp">width</span>: <span class="cn">100px</span>;
+	}
+	50% {
+		<span class="cp">background-color</span>: <span class="cs">lime</span>;
+	}
+	100% {
+		<span class="cp">background-color</span>: <span class="cs">yellow</span>;
+		<span class="cp">width</span>: <span class="cn">100%</span>;
+	}
+}
+<span class="ct">.anim-div</span> {
+	<span class="cp">animation</span>: <span class="ca">cool-animation</span> <span class="cn">2s</span> <span class="cs">infinite alternate</span>;
+	<span class="cp">height</span>: <span class="cn">100px</span>;
+}
+</pre>
+		<div><div class="pg18-anim-div"></div></div>
+		<p>Все про анимацию можно узнать на <a target="_blank" href="https://webref.ru/css/cursor">этом сайте</a>.</p>
+
+		<div class="footer"><a href="" onclick="toPage(19)">Следующая тема</a></div>
+	</div>
+
+
+	<div class="body" id="pg19">
+		<div class="header"><a href="" onclick="history.back()">Назад</a><a href="" onclick="toPage(0)">На главную</a><div></div><span onclick="changeTheme()">Сменить тему</span></div>
+		<h1>Тег canvas</h1>
+		<p>Канва - это место, где вы можете рисовать.</p>
+		<p>Атрибутами width и height можно указать размер холста в пикселях.
+			Размер канвы, указанный стилями, не изменяет размер холста,
+			изображение будет расстягиваться под размер канвы.</p>
+		<p>Размер холста можно изменить и через javascript:</p>
+		<pre>
+<span class="vc">canvas</span>.<span class="vl">width</span> = <span class="n">300</span>;
+<span class="vc">canvas</span>.<span class="vl">height</span> = <span class="n">300</span>;
+</pre>
+		<p>Для рисования необходимо получить контекст канвы:</p>
+		<pre><span class="kj">const</span> <span class="vc">ctx</span> = <span class="vc">canvas</span>.<span class="f">getContext</span>(<span class="sj">"2d"</span>);</pre>
+		<p>Теперь можно рисовать:</p>
+		<pre>
+<span class="vc">ctx</span>.<span class="f">fillRect</span>(<span class="vc">x</span>, <span class="vc">y</span>, <span class="vc">width</span>, <span class="vc">height</span>); <span class="c">// Закрасить прямоугольник</span>
+<span class="vc">ctx</span>.<span class="f">strokeRect</span>(<span class="vc">x</span>, <span class="vc">y</span>, <span class="vc">width</span>, <span class="vc">height</span>); <span class="c">// Рамка прямоугольника</span>
+<span class="vc">ctx</span>.<span class="f">clearRect</span>(<span class="vc">x</span>, <span class="vc">y</span>, <span class="vc">width</span>, <span class="vc">height</span>); <span class="c">// Очистить прямоугольник</span>
+
+<span class="vc">ctx</span>.<span class="f">fillText</span>(<span class="sj">"текст"</span>, <span class="vc">x</span>, <span class="vc">y</span>); <span class="c">// Нарисовать текст</span>
+<span class="vc">ctx</span>.<span class="f">strokeText</span>(<span class="sj">"текст"</span>, <span class="vc">x</span>, <span class="vc">y</span>); <span class="c">// Нарисовать рамку текста</span>
+
+<span class="c">// Рисование путей:</span>
+<span class="vc">ctx</span>.<span class="f">beginPath</span>(); <span class="c">// Начать путь</span>
+
+<span class="vc">ctx</span>.<span class="f">moveTo</span>(<span class="vc">x</span>, <span class="vc">y</span>); <span class="c">// Передвинуть карандаш</span>
+<span class="vc">ctx</span>.<span class="f">lineTo</span>(<span class="vc">x</span>, <span class="vc">y</span>); <span class="c">// Провести линию от позиции карандаша к x, y</span>
+<span class="vc">ctx</span>.<span class="f">arc</span>(<span class="vc">x</span>, <span class="vc">y</span>, <span class="vc">radius</span>, <span class="vc">startAngle</span>, <span class="vc">endAngle</span>); <span class="c">// дуга с центром в x, y</span>
+<span class="vc">ctx</span>.<span class="f">arcTo</span>(<span class="vc">x1</span>, <span class="vc">y1</span>, <span class="vc">x2</span>, <span class="vc">y2</span>, <span class="vc">radius</span>); <span class="c">// сложная дуга</span>
+;
+<span class="vc">ctx</span>.<span class="f">stroke</span>(); <span class="c">// Закончить путь и нарисовать его</span>
+<span class="c">// или</span>
+<span class="vc">ctx</span>.<span class="f">fill</span>(); <span class="c">// Закончить путь и заполнить его</span>
+</pre>
+		<p>Изменение стилей:</p>
+		<pre>
+<span class="vc">ctx</span>.<span class="f">fillStyle</span> = <span class="sj">"цвет"</span>; <span class="c">// Цвет заливки</span>
+<span class="vc">ctx</span>.<span class="f">strokeStyle</span> = <span class="sj">"цвет"</span>; <span class="c">// Цвет линий</span>
+<span class="vc">ctx</span>.<span class="f">lineWidth</span> = <span class="vc">width</span>; <span class="c">// Толщина линий</span>
+<span class="vc">ctx</span>.<span class="f">font</span> = <span class="sj">"10px шрифт"</span>; <span class="c">// Размер и шрифт текста</span>
+</pre>
+		<p>Начальный и конечный угол дуги указывается в радианах. 360° == 2 * Math.PI.</p>
+		<p>Из градусов в радианы: x / 180 * Math.PI</p>
+		<p>Из радиан в градусы: x / Math.PI * 180</p>
+
+		<h2>Пример</h2>
+		<pre><span class="tb">&lt;</span><span class="t">canvas</span> <span class="a">id</span>=<span class="s">"canvas"</span><span class="tb">&gt;</span><span class="tb">&lt;/</span><span class="t">canvas</span><span class="tb">&gt;</span></pre>
+		<canvas id="pg19-canvas" style="max-width: 100%;"></canvas>
+		<pre>
+<span class="kj">const</span> <span class="vc">canvas</span> = <span class="vl">document</span>.<span class="f">getElementById</span>(<span class="sj">"canvas"</span>);
+<span class="kj">const</span> <span class="vc">ctx</span> = <span class="vc">canvas</span>.<span class="f">getContext</span>(<span class="sj">"2d"</span>);
+
+<span class="vc">canvas</span>.<span class="vl">height</span> = <span class="n">300</span>;
+<span class="vc">canvas</span>.<span class="vl">width</span> = <span class="n">300</span>;
+
+<span class="vc">ctx</span>.<span class="vl">font</span> = <span class="sj">"120px Arial"</span>;
+<span class="vc">ctx</span>.<span class="vl">fillStyle</span> = <span class="sj">"blue"</span>;
+<span class="vc">ctx</span>.<span class="vl">strokeStyle</span> = <span class="sj">"lime"</span>;
+<span class="vc">ctx</span>.<span class="vl">lineWidth</span> = <span class="n">5</span>;
+
+<span class="vc">ctx</span>.<span class="f">fillRect</span>(<span class="n">10</span>, <span class="n">10</span>, <span class="n">100</span>, <span class="n">80</span>);
+<span class="vc">ctx</span>.<span class="f">strokeRect</span>(<span class="n">20</span>, <span class="n">20</span>, <span class="n">100</span>, <span class="n">80</span>);
+<span class="vc">ctx</span>.<span class="f">clearRect</span>(<span class="n">90</span>, <span class="n">30</span>, <span class="n">50</span>, <span class="n">50</span>);
+
+<span class="vc">ctx</span>.<span class="f">fillText</span>(<span class="sj">"Текст"</span>, <span class="n">0</span>, <span class="n">200</span>);
+<span class="vc">ctx</span>.<span class="f">strokeText</span>(<span class="sj">"Текст"</span>, <span class="n">0</span>, <span class="n">240</span>);
+
+<span class="vc">ctx</span>.<span class="f">beginPath</span>();
+<span class="vc">ctx</span>.<span class="f">moveTo</span>(<span class="n">30</span>, <span class="n">30</span>);
+<span class="vc">ctx</span>.<span class="f">lineTo</span>(<span class="n">40</span>, <span class="n">60</span>);
+<span class="vc">ctx</span>.<span class="f">lineTo</span>(<span class="n">60</span>, <span class="n">40</span>);
+<span class="vc">ctx</span>.<span class="f">lineTo</span>(<span class="n">80</span>, <span class="n">70</span>);
+<span class="vc">ctx</span>.<span class="f">stroke</span>();
+
+<span class="vc">ctx</span>.<span class="f">beginPath</span>();
+<span class="vc">ctx</span>.<span class="f">arc</span>(<span class="n">155</span>, <span class="n">40</span>, <span class="n">30</span>, <span class="n">0</span>, <span class="m">Math</span>.<span class="vc">PI</span> * <span class="n">2</span>);
+<span class="vc">ctx</span>.<span class="f">arc</span>(<span class="n">230</span>, <span class="n">40</span>, <span class="n">30</span>, <span class="m">Math</span>.<span class="vc">PI</span>, <span class="m">Math</span>.<span class="vc">PI</span> * <span class="n">2</span>);
+<span class="vc">ctx</span>.<span class="f">fill</span>();
+<span class="vc">ctx</span>.<span class="f">beginPath</span>();
+<span class="vc">ctx</span>.<span class="f">arc</span>(<span class="n">240</span>, <span class="n">80</span>, <span class="n">30</span>, <span class="m">Math</span>.<span class="vc">PI</span> / <span class="n">2</span>, <span class="m">Math</span>.<span class="vc">PI</span> * <span class="n">1.8</span>);
+<span class="vc">ctx</span>.<span class="f">fill</span>();
+</pre>
+		<script>
+		{
+			const canvas = document.getElementById("pg19-canvas");
+			const ctx = canvas.getContext("2d");
+
+			canvas.height = 300;
+			canvas.width = 300;
+
+			ctx.font = "120px Arial";
+			ctx.fillStyle = "blue";
+			ctx.strokeStyle = "lime";
+			ctx.lineWidth = 5;
+
+			ctx.fillRect(10, 10, 100, 80);
+			ctx.strokeRect(20, 20, 100, 80);
+			ctx.clearRect(90, 30, 50, 50);
+
+			ctx.fillText("Текст", 0, 200);
+			ctx.strokeText("Текст", 0, 240);
+
+			ctx.beginPath();
+			ctx.moveTo(30, 30);
+			ctx.lineTo(40, 60);
+			ctx.lineTo(60, 40);
+			ctx.lineTo(80, 70);
+			ctx.stroke();
+
+			ctx.beginPath();
+			ctx.arc(155, 40, 30, 0, Math.PI * 2);
+			ctx.arc(230, 40, 30, Math.PI, Math.PI * 2);
+			ctx.fill();
+			ctx.beginPath();
+			ctx.arc(240, 80, 30, Math.PI / 2, Math.PI * 1.8);
+			ctx.fill();
+		}
+		</script>
+
+		<div class="footer"><a href="" onclick="toPage(20)">Следующая тема</a></div>
+	</div>
+
+
+	<div class="body" id="pg20">
+		<div class="header"><a href="" onclick="history.back()">Назад</a><a href="" onclick="toPage(0)">На главную</a><div></div><span onclick="changeTheme()">Сменить тему</span></div>
+		<h1>canvas анимации</h1>
+		<p>Для создания анимаций или игр на канве необходимо обновлять канву несколько раз в секунду. Для этого существует функция requestAnimationFrame().</p>
+		<p>В качестве параметра она принимает функцию, которую необходимо вызвать. Этой функции она передаст прошедшее время первым параметром.</p>
+		<p>Пример использования:</p>
+		<pre>
+<span class="f">mainLoop</span>(<span class="n">0</span>);
+<span class="kj">function</span> <span class="f">mainLoop</span>(<span class="vl">time</span>) {
+	<span class="c">// Любые действия</span>
+
+	<span class="f">requestAnimationFrame</span>(<span class="f">mainLoop</span>);
+}
+</pre>
+		<p>Например, анимация квадрата:</p>
+		<pre><span class="tb">&lt;</span><span class="t">canvas</span> <span class="a">id</span>=<span class="s">"canvas"</span><span class="tb">&gt;</span><span class="tb">&lt;/</span><span class="t">canvas</span><span class="tb">&gt;</span></pre>
+		<canvas id="pg20-canvas" style="max-width: 100%;"></canvas>
+		<pre>
+<span class="kj">const</span> <span class="vc">width</span> = <span class="n">300</span>;
+<span class="kj">const</span> <span class="vc">height</span> = <span class="n">100</span>;
+<span class="kj">const</span> <span class="vc">rectSize</span> = <span class="n">50</span>;
+<span class="kj">const</span> <span class="vc">rectSpeed</span> = <span class="n">5</span>;
+<span class="kj">const</span> <span class="vc">canvas</span> = <span class="vl">document</span>.<span class="f">getElementById</span>(<span class="sj">"canvas"</span>);
+<span class="kj">const</span> <span class="vc">ctx</span> = <span class="vc">canvas</span>.<span class="f">getContext</span>(<span class="sj">"2d"</span>);
+
+<span class="vc">canvas</span>.<span class="vl">height</span> = <span class="vc">height</span>;
+<span class="vc">canvas</span>.<span class="vl">width</span> = <span class="vc">width</span>;
+<span class="vc">ctx</span>.<span class="vl">fillStyle</span> = <span class="sj">"blue"</span>;
+
+<span class="kj">const</span> <span class="vc">rectY</span> = (<span class="vc">height</span> - <span class="vc">rectSize</span>) / <span class="n">300</span>;
+<span class="kj">let</span> <span class="vl">rectX</span> = <span class="n">0</span>;
+<span class="kj">let</span> <span class="vl">rectDirection</span> = <span class="n">1</span>;
+
+<span class="f">mainLoop</span>();
+<span class="kj">function</span> <span class="f">mainLoop</span>() {
+	<span class="kj">const</span> <span class="vc">nextX</span> = <span class="vl">rectX</span> + <span class="vc">rectSpeed</span> * <span class="vl">rectDirection</span>;
+	<span class="k">if</span> (<span class="vc">nextX</span> &lt; <span class="n">0</span> || <span class="vc">nextX</span> &gt; <span class="vc">width</span> - <span class="vc">rectSize</span>)
+	{
+		<span class="vl">rectDirection</span> *= <span class="n">-1</span>;
+	}
+	<span class="vl">rectX</span> = <span class="vc">nextX</span>;
+
+	<span class="vc">ctx</span>.<span class="f">clearRect</span>(<span class="n">0</span>, <span class="n">0</span>, <span class="vc">width</span>, <span class="vc">height</span>);
+	<span class="vc">ctx</span>.<span class="f">fillRect</span>(<span class="vl">rectX</span>, <span class="vc">rectY</span>, <span class="vc">rectSize</span>, <span class="vc">rectSize</span>);
+
+	<span class="f">requestAnimationFrame</span>(<span class="f">mainLoop</span>);
+}
+</pre>
+		<script>
+		{
+			const width = 300;
+			const height = 100;
+			const rectSize = 50;
+			const rectSpeed = 5;
+			const canvas = document.getElementById("pg20-canvas");
+			const ctx = canvas.getContext("2d");
+
+			canvas.height = height;
+			canvas.width = width;
+			ctx.fillStyle = "blue";
+
+			const rectY = (height - rectSize) / 2;
+			let rectX = 0;
+			let rectDirection = 1;
+
+			mainLoop();
+			function mainLoop() {
+				const nextX = rectX + rectSpeed * rectDirection;
+				if (nextX < 0 || nextX > width - rectSize)
+				{
+					rectDirection *= -1;
+				}
+				rectX = nextX;
+
+				ctx.clearRect(0, 0, width, height);
+				ctx.fillRect(rectX, rectY, rectSize, rectSize);
+
+				requestAnimationFrame(mainLoop);
+			}
+		}
+		</script>
+
+		<div class="footer"><a href="" onclick="toPage(21)">Следующая тема</a></div>
+	</div>
+
+
+	<div class="body" id="pg21">
+		<div class="header"><a href="" onclick="history.back()">Назад</a><a href="" onclick="toPage(0)">На главную</a><div></div><span onclick="changeTheme()">Сменить тему</span></div>
+		<h1>Функция range()</h1>
+		<p>Моя реализация функции range() из python.</p>
+		<p>Работает так же:</p>
+		<ul>
+			<li>range(start, stop, step) - три параметра</li>
+			<li>range(start, stop) - два параметра</li>
+			<li>range(stop) - один параметр</li>
+		</ul>
+		<pre>
+<span class="kj">function*</span> <span class="f">range</span>(<span class="vl">start_stop</span>, <span class="vl">stop</span> = <span class="kj">undefined</span>, <span class="vl">step</span> = <span class="n">1</span>)
+{
+	<span class="kj">const</span> <span class="vc">start</span> = <span class="vl">stop</span> == <span class="kj">undefined</span> ? <span class="n">0</span> : <span class="vl">start_stop</span>;
+	<span class="vl">stop</span> = <span class="vl">stop</span> == <span class="kj">undefined</span> ? <span class="vl">start_stop</span> : <span class="vl">stop</span>;
+	<span class="kj">const</span> <span class="vc">sign</span> = <span class="m">Math</span>.<span class="f">sign</span>(<span class="vl">step</span>);
+	<span class="vl">stop</span> *= <span class="vc">sign</span>
+	<span class="k">for</span> (<span class="kj">let</span> <span class="vl">i</span> = <span class="vc">start</span>; <span class="vl">i</span> * <span class="vc">sign</span> &lt; <span class="vl">stop</span>; <span class="vl">i</span> += <span class="vl">step</span>)
+	{
+		<span class="k">yield</span> <span class="vl">i</span>;
+	}
+}
+</pre>
+		<p>Использование:</p>
+		<pre>
+<span class="k">for</span> (<span class="kj">const</span> <span class="vc">i</span> <span class="kj">of</span> <span class="f">range</span>(<span class="n">10</span>)) {
+	<span class="vl">console</span>.<span class="f">log</span>(<span class="vc">i</span>);
+}
+<span class="c">// Или:</span>
+<span class="k">for</span> (<span class="kj">let</span> <span class="vl">i</span> <span class="kj">of</span> <span class="f">range</span>(<span class="n">10</span>)) {
+	<span class="vl">console</span>.<span class="f">log</span>(<span class="vl">i</span>);
+}
+</pre>
+		<div class="footer"><a href="" onclick="toPage(22)">Следующая тема</a></div>
+	</div>
+
+
+	<div class="body" id="pg22">
+		<div class="header"><a href="" onclick="history.back()">Назад</a><a href="" onclick="toPage(0)">На главную</a><div></div><span onclick="changeTheme()">Сменить тему</span></div>
+		<h1>code и key любой клавиши</h1>
+		<p>Нажмите любую клавишу.</p>
+		<div style="padding: 10px;" id="pg22-output"></div>
+		<script>
+		{
+			const output = document.getElementById("pg22-output");
+			let count = 0;
+			let last = { key: "", code: "" };
+			function addLine(key, code) {
+				const p = document.createElement("p");
+				p.innerText = `key: ${key}, code: ${code}`;
+				output.prepend(p);
+
+				count++;
+				if (count > 6) output.removeChild(output.lastChild);
+			}
+			document.body.addEventListener("keydown", (e) => {
+				if (last.key == e.key && last.code == e.code) return;
+				last = { key: e.key, code: e.code };
+				addLine(e.key, e.code);
+			});
+		}
+		</script>
+		<div class="footer"><a href="" onclick="toPage(23)">Следующая тема</a></div>
+	</div>
+
+
+	<div class="body" id="pg23">
+		<div class="header"><a href="" onclick="history.back()">Назад</a><a href="" onclick="toPage(0)">На главную</a><div></div><span onclick="changeTheme()">Сменить тему</span></div>
+		<h1>Красивые кнопки</h1>
+		<p>Стандартные кнопки выглядят неплохо, но не всегда.</p>
+		<p><button class="main-font-size">Кнопка</button></p>
+		<p>В стилях ниже, для настройки цвета кнопок есть переменные --color и --back-color.</p>
+		<p>Добавим же стили:</p>
+		<p><button class="cool-button main-font-size">Кнопка</button></p>
+		<pre>
+<span class="ct">.cool-button</span> {
+	<span class="cp">--color</span>: <span class="cs">white</span>;
+	<span class="cp">--back-color</span>: <span class="cs">#0d6efd</span>;
+	<span class="cp">transition</span>: <span class="cs">background-color</span> <span class="cs">box-shadow</span>;
+	<span class="cp">transition-duration</span>: <span class="cn">200ms</span>;
+	<span class="cp">background-color</span>: <span class="ck">var</span>(<span class="cp">--back-color</span>);
+	<span class="cp">color</span>: <span class="ck">var</span>(<span class="cp">--color</span>);
+	<span class="cp">padding</span>: <span class="cn">0.4em</span> <span class="cn">0.6em</span>;
+	<span class="cp">border-radius</span>: <span class="cn">0.25em</span>;
+	<span class="cp">border</span>: <span class="cs">none</span>;
+	<span class="cp">outline</span>: <span class="cs">none</span>;
+}
+<span class="ct">.cool-button:hover</span> {
+	<span class="cp">box-shadow</span>: <span class="cn">0px</span> <span class="cn">0px</span> <span class="cn">0px</span> <span class="cn">0.1em</span> <span class="ck">var</span>(<span class="cp">--back-color</span>);
+}
+<span class="ct">.cool-button:active</span> {
+	<span class="cp">box-shadow</span>: <span class="cs">inset</span> <span class="cn">0px</span> <span class="cn">0px</span> <span class="cn">0px</span> <span class="cn">0.1em</span> <span class="ck">var</span>(<span class="cp">--back-color</span>);
+}
+		</pre>
+		<p>Другой вариант:</p>
+		<p><button class="cool-button2 main-font-size">Кнопка</button></p>
+		<pre>
+<span class="ct">.cool-button2</span> {
+	<span class="cp">--color</span>: <span class="cs">#0d6efd</span>;
+	<span class="cp">--back-color</span>: <span class="cs">white</span>;
+	<span class="cp">transition</span>: <span class="cs">background-color</span> <span class="cs">color</span>;
+	<span class="cp">transition-duration</span>: <span class="cn">150ms</span>;
+	<span class="cp">background-color</span>: <span class="ck">var</span>(<span class="cp">--back-color</span>);
+	<span class="cp">color</span>: <span class="ck">var</span>(<span class="cp">--color</span>);
+	<span class="cp">padding</span>: <span class="cn">0.4em</span> <span class="cn">0.6em</span>;
+	<span class="cp">border-radius</span>: <span class="cn">0.25em</span>;
+	<span class="cp">border</span>: <span class="cn">0.15em</span> <span class="cs">solid</span> <span class="ck">var</span>(<span class="cp">--color</span>);
+	<span class="cp">outline</span>: <span class="cs">none</span>;
+}
+<span class="ct">.cool-button2:hover</span> {
+	<span class="cp">background-color</span>: <span class="ck">var</span>(<span class="cp">--color</span>);
+	<span class="cp">color</span>: <span class="ck">var</span>(<span class="cp">--back-color</span>);
+}
+<span class="ct">.cool-button2:active</span> {
+	<span class="cp">transition-duration</span>: <span class="cn">0ms</span>;
+	<span class="cp">background-color</span>: <span class="ck">var</span>(<span class="cp">--back-color</span>);
+	<span class="cp">color</span>: <span class="ck">var</span>(<span class="cp">--color</span>);
+}
+</pre>
+		<p>Ещё один вариант:</p>
+		<p><button class="cool-button3 main-font-size">Кнопка</button></p>
+		<pre>
+<span class="ct">.cool-button3</span> {
+	<span class="cp">--color</span>: <span class="cs">white</span>;
+	<span class="cp">--back-color</span>: <span class="cs">#0d6efd</span>;
+	<span class="cp">transition</span>: <span class="cs">background-color</span> <span class="cs">box-shadow</span>;
+	<span class="cp">transition-duration</span>: <span class="cn">200ms</span>;
+	<span class="cp">background-color</span>: <span class="ck">var</span>(<span class="cp">--back-color</span>);
+	<span class="cp">color</span>: <span class="ck">var</span>(<span class="cp">--color</span>);
+	<span class="cp">padding</span>: <span class="cn">0.4em</span> <span class="cn">0.6em</span>;
+	<span class="cp">border-radius</span>: <span class="cn">0.25em</span>;
+	<span class="cp">border</span>: <span class="cs">none</span>;
+	<span class="cp">outline</span>: <span class="cs">none</span>;
+}
+<span class="ct">.cool-button3:hover</span> {
+	<span class="cp">box-shadow</span>: <span class="cn">0px</span> <span class="cn">0.6em</span> <span class="cn">0.7em</span> <span class="cn">-0.2em</span> <span class="ck">var</span>(<span class="cp">--back-color</span>);
+}
+<span class="ct">.cool-button3:active</span> {
+	<span class="cp">transform</span>: <span class="ck">translateY</span>(<span class="cn">0.2em</span>);
+	<span class="cp">box-shadow</span>: <span class="cn">0px</span> <span class="cn">0.4em</span> <span class="cn">0.3em</span> <span class="cn">-0.1em</span> <span class="ck">var</span>(<span class="cp">--back-color</span>);
+}
+</pre>
+		<p>И ещё один вариант:</p>
+		<p><button class="cool-button4 main-font-size">Кнопка</button></p>
+		<pre>
+<span class="ct">.cool-button4</span> {
+	<span class="cp">--color</span>: <span class="cs">white</span>;
+	<span class="cp">--back-color</span>: <span class="cs">#0d6efd</span>;
+	<span class="cp">transition</span>: <span class="cs">background-color</span>;
+	<span class="cp">transition-duration</span>: <span class="cn">100ms</span>;
+	<span class="cp">background-color</span>: <span class="ck">var</span>(<span class="cp">--back-color</span>);
+	<span class="cp">color</span>: <span class="ck">var</span>(<span class="cp">--color</span>);
+	<span class="cp">padding</span>: <span class="cn">0.4em</span> <span class="cn">0.6em</span>;
+	<span class="cp">border-radius</span>: <span class="cn">0.25em</span>;
+	<span class="cp">text-decoration-skip-ink</span>: <span class="cs">none</span>;
+	<span class="cp">border</span>: <span class="cs">none</span>;
+	<span class="cp">outline</span>: <span class="cs">none</span>;
+}
+<span class="ct">.cool-button4:hover</span> {
+	<span class="cp">text-decoration</span>: <span class="cs">underline</span>;
+}
+<span class="ct">.cool-button4:active</span> {
+	<span class="cp">text-decoration</span>: <span class="cs">none</span>;
+}
+</pre>
+		<div class="footer"><a href="" onclick="toPage(24)">Следующая тема</a></div>
+	</div>
+
+
+	<div class="body" id="pg24">
+		<div class="header"><a href="" onclick="history.back()">Назад</a><a href="" onclick="toPage(0)">На главную</a><div></div><span onclick="changeTheme()">Сменить тему</span></div>
+		<h1>3D куб</h1>
+		<div class="rect3d"><div><div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div></div></div>
+		<p>html куба:</p>
+		<pre>
+<span class="tb">&lt;</span><span class="t">div</span> <span class="a">class</span>=<span class="s">"rect3d"</span><span class="tb">&gt;</span> <span class="c">&lt;!-- контейнер --&gt;</span>
+	<span class="tb">&lt;</span><span class="t">div</span><span class="tb">&gt;</span> <span class="c">&lt;!-- куб --&gt;</span>
+		<span class="c">&lt;!-- стороны куба --&gt;</span>
+		<span class="tb">&lt;</span><span class="t">div</span><span class="tb">&gt;</span>1<span class="tb">&lt;/</span><span class="t">div</span><span class="tb">&gt;</span>
+		<span class="tb">&lt;</span><span class="t">div</span><span class="tb">&gt;</span>2<span class="tb">&lt;/</span><span class="t">div</span><span class="tb">&gt;</span>
+		<span class="tb">&lt;</span><span class="t">div</span><span class="tb">&gt;</span>3<span class="tb">&lt;/</span><span class="t">div</span><span class="tb">&gt;</span>
+		<span class="tb">&lt;</span><span class="t">div</span><span class="tb">&gt;</span>4<span class="tb">&lt;/</span><span class="t">div</span><span class="tb">&gt;</span>
+		<span class="tb">&lt;</span><span class="t">div</span><span class="tb">&gt;</span>5<span class="tb">&lt;/</span><span class="t">div</span><span class="tb">&gt;</span>
+		<span class="tb">&lt;</span><span class="t">div</span><span class="tb">&gt;</span>6<span class="tb">&lt;/</span><span class="t">div</span><span class="tb">&gt;</span>
+	<span class="tb">&lt;/</span><span class="t">div</span><span class="tb">&gt;</span>
+<span class="tb">&lt;/</span><span class="t">div</span><span class="tb">&gt;</span>
+		</pre>
+		<p>Стили:</p>
+		<pre>
+<span class="ct">.rect3d</span> { <span class="c">/* Контейнер */</span>
+	<span class="cp">height</span>: <span class="cn">80px</span>;
+	<span class="cp">padding</span>: <span class="cn">25px</span>;
+	<span class="cp">text-align</span>: <span class="cs">center</span>;
+}
+<span class="ct">.rect3d div</span> { <span class="c">/* Куб */</span>
+	<span class="cp">--size--</span>: <span class="cn">40px</span>;
+	<span class="cp">height</span>: <span class="ck">calc</span>(<span class="ck">var</span>(<span class="cp">--size--</span>) * <span class="cn">2</span>);
+	<span class="cp">width</span>: <span class="ck">calc</span>(<span class="ck">var</span>(<span class="cp">--size--</span>) * <span class="cn">2</span>);
+	<span class="cp">transform-style</span>: <span class="cs">preserve-3d</span>;
+	<span class="cp">animation</span>: <span class="ca">rect3d-anim</span> <span class="cn">3s</span> <span class="cs">linear infinite</span>;
+	<span class="cp">display</span>: <span class="cs">inline-block</span>;
+}
+<span class="c">/* Стороны: */</span>
+<span class="ct">.rect3d div div:nth-child</span>(<span class="cn">1</span>) {
+	<span class="cp">background-color</span>: <span class="ck">rgba</span>(<span class="cn">90</span>, <span class="cn">90</span>, <span class="cn">90</span>, <span class="cn">0.7</span>);
+	<span class="cp">transform</span>: <span class="ck">translateZ</span>(<span class="ck">var</span>(<span class="cp">--size--</span>));
+}
+<span class="ct">.rect3d div div:nth-child</span>(<span class="cn">2</span>) {
+	<span class="cp">background-color</span>: <span class="ck">rgba</span>(<span class="cn">0</span>, <span class="cn">210</span>, <span class="cn">0</span>, <span class="cn">0.7</span>);
+	<span class="cp">transform</span>: <span class="ck">rotateY</span>(<span class="cn">180deg</span>) <span class="ck">translateZ</span>(<span class="ck">var</span>(<span class="cp">--size--</span>));
+}
+<span class="ct">.rect3d div div:nth-child</span>(<span class="cn">3</span>) {
+	<span class="cp">background-color</span>: <span class="ck">rgba</span>(<span class="cn">210</span>, <span class="cn">0</span>, <span class="cn">0</span>, <span class="cn">0.7</span>);
+	<span class="cp">transform</span>: <span class="ck">rotateY</span>(<span class="cn">90deg</span>) <span class="ck">translateZ</span>(<span class="ck">var</span>(<span class="cp">--size--</span>));
+}
+<span class="ct">.rect3d div div:nth-child</span>(<span class="cn">4</span>) {
+	<span class="cp">background-color</span>: <span class="ck">rgba</span>(<span class="cn">0</span>, <span class="cn">0</span>, <span class="cn">210</span>, <span class="cn">0.7</span>);
+	<span class="cp">transform</span>: <span class="ck">rotateY</span>(<span class="cn">-90deg</span>) <span class="ck">translateZ</span>(<span class="ck">var</span>(<span class="cp">--size--</span>));
+}
+<span class="ct">.rect3d div div:nth-child</span>(<span class="cn">5</span>) {
+	<span class="cp">background-color</span>: <span class="ck">rgba</span>(<span class="cn">210</span>, <span class="cn">210</span>, <span class="cn">0</span>, <span class="cn">0.7</span>);
+	<span class="cp">transform</span>: <span class="ck">rotateX</span>(<span class="cn">90deg</span>) <span class="ck">translateZ</span>(<span class="ck">var</span>(<span class="cp">--size--</span>));
+}
+<span class="ct">.rect3d div div:nth-child</span>(<span class="cn">6</span>) {
+	<span class="cp">background-color</span>: <span class="ck">rgba</span>(<span class="cn">210</span>, <span class="cn">0</span>, <span class="cn">210</span>, <span class="cn">0.7</span>);
+	<span class="cp">transform</span>: <span class="ck">rotateX</span>(<span class="cn">-90deg</span>) <span class="ck">translateZ</span>(<span class="ck">var</span>(<span class="cp">--size--</span>));
+}
+<span class="c">/* Анимация вращения: */</span>
+<span class="ck2">@keyframes</span> <span class="ca">rect3d-anim</span> {
+	from {
+		<span class="cp">transform</span>: <span class="ck">rotate3d</span>(<span class="cn">1</span>, <span class="cn">1</span>, <span class="cn">1</span>, <span class="cn">0deg</span>);
+	}
+	to {
+		<span class="cp">transform</span>: <span class="ck">rotate3d</span>(<span class="cn">-0.5</span>, <span class="cn">0.5</span>, <span class="cn">0.8</span>, <span class="cn">360deg</span>);
+	}
+}
+</pre>
+
+		<div class="footer"><a href="" onclick="toPage(0)">На главную</a></div>
+	</div>
+
+	<script>
+		const getEl = (i) => document.getElementById(`pg${i}`);
+		let pageCur = 0;
+		if (typeof history.state == "number") setPage(history.state);
+		else setPage(0);
+		window.addEventListener("popstate", (e) =>
+			{
+				const state = history.state;
+				if (typeof state == "number") setPage(state);
+				else toPage(0);
+			});
+		function setPage(pg) {
+			try {
+				getEl(pageCur).classList.remove("visible");
+			} catch (e) {
+				console.error(e);
+				pageCur = 0;
+				toPage(0);
+			}
+			try {
+				pageCur = pg;
+				getEl(pageCur).classList.add("visible");
+			} catch (e) {
+				console.error(e);
+				pageCur = 0;
+				getEl(0).classList.add("visible");
+				toPage(0);
+			}
+		}
+		function toPage(pg) {
+			history.pushState(pg, "");
+		}
+	</script>
+</body>
+</html>
