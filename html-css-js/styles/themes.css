@@ -1,0 +1,57 @@
+.lightTheme {
+    --c-back--: #fff7e5;
+    --c-link--: blue;
+    --c-text--: black;
+    --c-selection--: #add6ff;
+
+    --c-t--: #ad0000; /* html tag */
+    --c-tb--: #ad0000; /* html tag bracket */
+    --c-a--: #ff0000; /* html attribute */
+    --c-s--: #0000ff; /* html string */
+    --c-b--: #0000ff; /* bool */
+    --c-sj--: #a31515; /* js string */
+    --c-k--: #af00db; /* keyword */
+    --c-kj--: #0000ff; /* keyword 2 */
+    --c-c--: #008000; /* comment */
+    --c-vc--: #0070c1; /* const var */
+    --c-vl--: #001080; /* let var */
+    --c-n--: #098658; /* number */
+    --c-f--: #795e26; /* function */
+    --c-m--: #267f99; /* module, class */
+    --c-ct--: #800000; /* css, tag */
+    --c-cp--: #ff0000; /* css, property */
+    --c-cs--: #0451a5; /* css, string */
+    --c-cn--: #098658; /* css, number */
+    --c-ck--: #795e26; /* css, keyword */
+    --c-ck2--: #af00db; /* css, keyword 2 */
+    --c-ca--: #001080; /* css, animation name */
+}
+.darkTheme {
+    --c-back--: #1e1e1e;
+    --c-link--: #00ffff;
+    /* --c-text--: white; */
+    --c-text--: #d4d4d4;
+    --c-selection--: #264f78;
+
+    --c-t--: #569cd6; /* html tag */
+    --c-tb--: #808080; /* html tag bracket */
+    --c-a--: #9cdcfe; /* html attribute */
+    --c-s--: #ce9178; /* html string */
+    --c-b--: #569cd6;; /* bool */
+    --c-sj--: #ce9178; /* js string */
+    --c-k--: #c586c0; /* keyword */
+    --c-kj--: #569cd6;; /* keyword 2 */
+    --c-c--: #6a9955; /* comment */
+    --c-vc--: #4fc1ff; /* const var */
+    --c-vl--: #9cdcfe; /* let var */
+    --c-n--: #b5cea8; /* number */
+    --c-f--: #dcdcaa; /* function */
+    --c-m--: #4ec9b0; /* module, class */
+    --c-ct--: #d7ba7d; /* css, tag */
+    --c-cp--: #9cdcfe; /* css, property */
+    --c-cs--: #ce9178; /* css, string */
+    --c-cn--: #b5cea8; /* css, number */
+    --c-ck--: #dcdcaa; /* css, keyword */
+    --c-ck2--: #c586c0; /* css, keyword 2 */
+    --c-ca--: #9cdcfe; /* css, animation name*/
+}

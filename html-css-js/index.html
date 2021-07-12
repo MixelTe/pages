@@ -4,448 +4,97 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAZdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAuMTnU1rJkAAAEeUlEQVRoQ82VX08cZRTGN34SE7+DicnObOKFNvGiF5p4URNirFYDadOqhZW/WmkwoBKsdbFtSgqKIshisbSlQuuKlC6CZCkkEkVtLUYiTWsam1Z57Duc0bNnz+zODDutT/K7mXOec85zM2+sHIovbIcXg89eVyHrvVM8twN+SD+/VhIaeXcU/7YSQfis6jff0IpoFJ/ZiTAM77oSGFpZPsWzu+GHazX1Jfl8zyVf0OrNKz71MoqhHemXkb3LRaETwiv+dQ280A4Ky6nkkid0SnDFM7XQmNlfpx5huJqsL+gfrVv8l8vJDtXnwns5dJJ/WecaoaEtNWi9LmcacyraHIPWa6DTSssaew0a2jKtTzK2b7Yo2lytz0Aness60wwNuWDLSb1P4+z+rC/kDq3HQKfqsk61QCIHaz3FOPfGpG/kLq2HTi2UNdIGyXTzq3kDtR4OjSqqTFsGxeD7DFoPjcqXNfw2JHzQo0NvFdRdaEQgTbSPwwu+V6vTiP9kDXVAwocYtB4DjQilyXdGoSF3az00YkPW4EFI+ACtbiD7pnT+4Ag0+H6tTvYNWf2d4HCzQdYNZC2LLnQOQyJvkPVs6sQDjtnqOwwJN2p1x1hmTR9JQ8Lv0OqO0eo9Cgk3anXHWGZ909UPCb9DqztGq6cbHG5aSzbk1QyOKSLNdn8EzlzXB3n3yLpjso59CA43yJrBMUWkud4eSPg9suaYrKMfg8MNsmZwTBEp19cFCb9H1hyTdWQAHG6QNYNjikjz/Yc+nR84DA6/R9bmBw4di1nvp8HhBlkz0K5IhMbG+xbSKXD4PbJ2MZ36O2anjoPDDbJmoF2RaGahMpX7bgcWv38GSz9WYPnytrx7rl57DH/ceAR/3nwYt2/bWF9/qD9mv3sCHG6QNQPtikSzC5UIEsAx2R2nweEGWTM4pogULkD7F+BwQ7a+Na9mcEwRKVyAN89Cwk1a3TGWWdncLsgA/I7Vta0eAVq/goQbtbpjLLNCBzCyWybB4UaDrBvIWhZNzr4EGeD31uq8G2SAW7esKrLfCdB8ARJu1uoGsm9KmWz1eS0A37+y+nhBALJvyN43AwkfYNB6DDQilManaqcz0zWQAeTukgGM7KY5SPgQre5CIwJpdKIJ41N1KBXg0sqTBQFoRL7shnlI+CCD1sOhUUV1fKwFI1++Dq8AcqfvAEZ27SIkcqDWo/LK4qCZ2T3U+V7v8AF8crIdg6NtKBZA7jLvgAzgHOolO7kEDTlY6/HiTgD4CSB3uA9ZoABG9t4foCEXGLQ+SakA2lz+EvMAdGJp2S/+BA1tmUHrdfEKcKWlQZ3FHzIegE7zL3v3L9DQlrps2bNc0C8DaD4X/g7wAHRScCV2/govtAPCIn+jPMDPK088SOeEU6JqFcXQDvKL1zvgBqATNq/EC2vwg3akpNQ74Aag1eVT4rnrCIPf3ygPQCujUWL7DQQhSABacXeUePom/OAnAI28N0pU4P5ExV/wwivA6Ymmahrx/1Ri23pP4imYAH30KQLFYv8AriP3Fbxh25kAAAAASUVORK5CYII=">
-	<title>Основы html, css и javascript</title>
-	<style>
-		.lightTheme {
-			--c-back--: #fff7e5;
-			--c-link--: blue;
-			--c-text--: black;
-			--c-selection--: #add6ff;
-
-			--c-t--: #ad0000; /* html tag */
-			--c-tb--: #ad0000; /* html tag bracket */
-			--c-a--: #ff0000; /* html attribute */
-			--c-s--: #0000ff; /* html string */
-			--c-b--: #0000ff; /* bool */
-			--c-sj--: #a31515; /* js string */
-			--c-k--: #af00db; /* keyword */
-			--c-kj--: #0000ff; /* keyword 2 */
-			--c-c--: #008000; /* comment */
-			--c-vc--: #0070c1; /* const var */
-			--c-vl--: #001080; /* let var */
-			--c-n--: #098658; /* number */
-			--c-f--: #795e26; /* function */
-			--c-m--: #267f99; /* module, class */
-			--c-ct--: #800000; /* css, tag */
-			--c-cp--: #ff0000; /* css, property */
-			--c-cs--: #0451a5; /* css, string */
-			--c-cn--: #098658; /* css, number */
-			--c-ck--: #795e26; /* css, keyword */
-			--c-ck2--: #af00db; /* css, keyword 2 */
-			--c-ca--: #001080; /* css, animation name */
-		}
-		.darkTheme {
-			--c-back--: #1e1e1e;
-			--c-link--: #00ffff;
-			/* --c-text--: white; */
-			--c-text--: #d4d4d4;
-			--c-selection--: #264f78;
-
-			--c-t--: #569cd6; /* html tag */
-			--c-tb--: #808080; /* html tag bracket */
-			--c-a--: #9cdcfe; /* html attribute */
-			--c-s--: #ce9178; /* html string */
-			--c-b--: #569cd6;; /* bool */
-			--c-sj--: #ce9178; /* js string */
-			--c-k--: #c586c0; /* keyword */
-			--c-kj--: #569cd6;; /* keyword 2 */
-			--c-c--: #6a9955; /* comment */
-			--c-vc--: #4fc1ff; /* const var */
-			--c-vl--: #9cdcfe; /* let var */
-			--c-n--: #b5cea8; /* number */
-			--c-f--: #dcdcaa; /* function */
-			--c-m--: #4ec9b0; /* module, class */
-			--c-ct--: #d7ba7d; /* css, tag */
-			--c-cp--: #9cdcfe; /* css, property */
-			--c-cs--: #ce9178; /* css, string */
-			--c-cn--: #b5cea8; /* css, number */
-			--c-ck--: #dcdcaa; /* css, keyword */
-			--c-ck2--: #c586c0; /* css, keyword 2 */
-			--c-ca--: #9cdcfe; /* css, animation name*/
-		}
-	</style>
-	<style>
-		body {
-			--t-dur--: 250ms;
-			transition-property: color, background-color;
-			transition-duration: var(--t-dur--);
-			background-color: var(--c-back--);
-			font-family: Arial, Helvetica, sans-serif;
-			margin: 0px;
-			padding: 10px;
-			display: flex;
-			justify-content: center;
-			color: var(--c-text--);
-		}
-		.body {
-			max-width: 50rem;
-			width: 100%;
-			display: none;
-			margin-bottom: 10rem;
-		}
-		.visible { display: block; }
-		h1, h2 {
-			font-family: 'Times New Roman', Times, serif;
-			text-align: center;
-			margin-bottom: 0px;
-			margin-top: 0px;
-		}
-		.raw {
-			font-family: revert;
-			text-align: revert;
-			margin-bottom: revert;
-			margin-top: revert;
-		}
-		h2 { margin-top: 2rem; }
-		h1 + h1 { font-size: 1.3rem; }
-		p, ul, ol, .footer, table, a, .header span, .main-font-size { font-size: 1.15rem; }
-		li { margin-top: 0.5rem; }
-		pre {
-			font-size: 1rem;
-			white-space: pre-wrap;
-			tab-size: 4;
-			transition-duration: calc(var(--t-dur--) / 4);
-		}
-		pre span { transition-duration: var(--t-dur--); }
-		pre::selection, pre *::selection {
-			background-color: var(--c-selection--);
-		}
-		p + p { margin-top: -0.6rem; }
-		a, .header span, .changeThemeButton {
-			color: var(--c-link--);
-			outline: none;
-			text-decoration-skip-ink: none;
-			text-decoration: none;
-			cursor: pointer;
-		}
-		a:hover, .header span:hover, .changeThemeButton:hover { text-decoration: underline; }
-		a:focus, .header span:focus, .changeThemeButton:focus { text-decoration: underline; }
-		a[fake], a[fake]:hover { color: var(--c-text--); text-decoration: none; }
-		.header {
-			position: sticky;
-			z-index: 2;
-			height: 2.5rem;
-			top: 0px;
-			background-color: var(--c-back--);
-			display: flex;
-			align-items: center;
-			transition-duration: var(--t-dur--);
-		}
-		.header a + a { margin-left: 20px; }
-		.header div { flex: 1 1 auto; }
-		.footer {
-			text-align: center;
-			margin-top: 5rem;
-		}
-	</style>
-	<style>
-		.rect3d {
-			height: 80px;
-			padding: 25px;
-			text-align: center;
-		}
-		.rect3d div {
-			--size--: 40px;
-			height: calc(var(--size--) * 2);
-			width: calc(var(--size--) * 2);
-			transform-style: preserve-3d;
-			animation: rect3d-anim 3s linear infinite;
-			display: inline-block;
-		}
-		.rect3d div div {
-			display: flex;
-    		align-items: center;
-    		justify-content: center;
-    		width: 100%;
-    		height: 100%;
-    		position: absolute;
-    		backface-visibility: inherit;
-    		font-size: 50px;
-    		color: #fff;
-			animation: none;
-		}
-		.rect3d div div:nth-child(1) {
-			background: rgba(90, 90, 90, 0.7);
-    		transform: translateZ(var(--size--));
-		}
-		.rect3d div div:nth-child(2) {
-			background: rgba(0, 210, 0, 0.7);
-			transform: rotateY(180deg) translateZ(var(--size--));
-		}
-		.rect3d div div:nth-child(3) {
-			background: rgba(210, 0, 0, 0.7);
-			transform: rotateY(90deg) translateZ(var(--size--));
-		}
-		.rect3d div div:nth-child(4) {
-			background: rgba(0, 0, 210, 0.7);
-			transform: rotateY(-90deg) translateZ(var(--size--));
-		}
-		.rect3d div div:nth-child(5) {
-			background: rgba(210, 210, 0, 0.7);
-			transform: rotateX(90deg) translateZ(var(--size--));
-		}
-		.rect3d div div:nth-child(6) {
-			background: rgba(210, 0, 210, 0.7);
-			transform: rotateX(-90deg) translateZ(var(--size--));
-		}
-		@keyframes rect3d-anim {
-			from {
-				transform: rotate3d(1, 1, 1, 0deg);
-			}
-			to {
-				transform: rotate3d(-0.5, 0.5, 0.8, 360deg);
-			}
-		}
-	</style>
-	<style>
-		span.w { color: var(--c-text--); }
-		span.t { color: var(--c-t--); }
-		span.tb { color: var(--c-tb--); }
-		span.a { color: var(--c-a--); }
-		span.s { color: var(--c-s--); }
-		span.b { color: var(--c-b--); }
-		span.sj { color: var(--c-sj--); }
-		span.k { color: var(--c-k--); }
-		span.kj { color: var(--c-kj--); }
-		span.c { color: var(--c-c--); }
-		span.vc { color: var(--c-vc--); }
-		span.vl { color: var(--c-vl--); }
-		span.n { color: var(--c-n--); }
-		span.f { color: var(--c-f--); }
-		span.m { color: var(--c-m--); }
-		span.ct { color: var(--c-ct--); }
-		span.cp { color: var(--c-cp--); }
-		span.cs { color: var(--c-cs--); }
-		span.cn { color: var(--c-cn--); }
-		span.ck { color: var(--c-ck--); }
-		span.ck2 { color: var(--c-ck2--); }
-		span.ca { color: var(--c-ca--); }
-	</style>
-	<style>
-		.hover-red:hover { color: red; }
-		.active-red:active { color: red; }
-		.focus-lightblue:focus { background-color: lightblue; }
-		.flex-container-div { display: flex; flex-wrap: wrap; }
-		.flex-container-div div { padding: 10px; border: 3px solid lime; margin: 5px; flex-grow: 1; text-align: center;}
-		.pg10-container {
-			position: relative;
-			min-height: 100px;
-			background-color: gray;
-		}
-		.pg10-element1, .pg10-element2 {
-			position: absolute;
-			background-color: lime;
-			width: 50px;
-			height: 50px;
-			top: 20px;
-			left: 10px;
-		}
-		.pg10-element2 {
-			top: -20px;
-			left: 70px;
-		}
-		.pg18-anim-rect {
-			transition-property: background-color;
-			transition-duration: 1s;
-			background-color: blue;
-			width: 100px;
-			height: 100px;
-		}
-		.pg18-anim-rect:hover {
-			background-color: red;
-		}
-		.pg18-anim-button {
-			transition-property: color, background-color;
-			transition-duration: 250ms;
-			background-color: lightblue;
-			color: black;
-			border: 1px solid gray;
-		}
-		.pg18-anim-button:active {
-			background-color: blue;
-			color: lime;
-		}
-		@keyframes pg18-cool-animation {
-			0% {
-				background-color: cyan;
-				width: 100px;
-			}
-			50% {
-				background-color: lime;
-			}
-			100% {
-				background-color: yellow;
-				width: 100%;
-			}
-		}
-		.pg18-anim-div {
-			animation: pg18-cool-animation 2s infinite alternate;
-			height: 100px;
-		}
-	</style>
-	<style>
-		.cool-button {
-			--color: white;
-			--back-color: #0d6efd;
-			transition: background-color box-shadow;
-			transition-duration: 200ms;
-			background-color: var(--back-color);
-			color: var(--color);
-			padding: 0.4em 0.6em;
-			border-radius: 0.25em;
-			border: none;
-			outline: none;
-		}
-		.cool-button:hover {
-			box-shadow: 0px 0px 0px 0.1em var(--back-color);
-		}
-		.cool-button:active {
-			box-shadow: inset 0px 0px 0px 0.1em var(--back-color);
-		}
-		.cool-button2 {
-			--color: #0d6efd;
-			--back-color: white;
-			transition: background-color color;
-			transition-duration: 150ms;
-			background-color: var(--back-color);
-			color: var(--color);
-			padding: 0.4em 0.6em;
-			border-radius: 0.25em;
-			border: 0.15em solid var(--color);
-			outline: none;
-		}
-		.cool-button2:hover {
-			background-color: var(--color);
-			color: var(--back-color);
-		}
-		.cool-button2:active {
-			transition-duration: 0ms;
-			background-color: var(--back-color);
-			color: var(--color);
-		}
-		.cool-button3 {
-			--color: white;
-			--back-color: #0d6efd;
-			transition: background-color box-shadow;
-			transition-duration: 200ms;
-			background-color: var(--back-color);
-			color: var(--color);
-			padding: 0.4em 0.6em;
-			border-radius: 0.25em;
-			border: none;
-			outline: none;
-		}
-		.cool-button3:hover {
-			box-shadow: 0px 0.6em 0.7em -0.2em var(--back-color);
-		}
-		.cool-button3:active {
-			transform: translateY(0.2em);
-			box-shadow: 0px 0.4em 0.3em -0.1em var(--back-color);
-		}
-		.cool-button4 {
-			--color: white;
-			--back-color: #0d6efd;
-			transition: background-color;
-			transition-duration: 100ms;
-			background-color: var(--back-color);
-			color: var(--color);
-			padding: 0.4em 0.6em;
-			border-radius: 0.25em;
-			text-decoration-skip-ink: none;
-			border: none;
-			outline: none;
-		}
-		.cool-button4:hover {
-			text-decoration: underline;
-		}
-		.cool-button4:active {
-			text-decoration: none;
-		}
-	</style>
+	<title>Основы HTML, CSS и javascript</title>
+	<link rel="icon" type="image/png" href="icon.png">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT Sans|PT Sans Caption|PT Mono">
+	<link rel="stylesheet" href="styles/themes.css">
+	<link rel="stylesheet" href="styles/styles.css">
+	<link rel="stylesheet" href="styles/rect3d.css">
+	<link rel="stylesheet" href="styles/highlight.css">
+	<link rel="stylesheet" href="styles/examples.css">
+	<link rel="stylesheet" href="styles/buttons.css">
+	<script src="scripts/main.js" defer></script>
+	<script src="scripts/codeCopy.js" defer></script>
 </head>
 <body class="lightTheme">
-	<script>
-		let lightTheme = localStorage.getItem("lightTheme");
-		if (lightTheme == null) {
-			lightTheme = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-		}
-		else lightTheme = lightTheme == "false";
-		changeTheme();
-		function changeTheme() {
-			lightTheme = !lightTheme;
-			localStorage.setItem("lightTheme", lightTheme ? "true" : "false");
-			if (lightTheme) {
-				document.body.classList.add("lightTheme");
-				document.body.classList.remove("darkTheme");
-			}
-			else {
-				document.body.classList.remove("lightTheme");
-				document.body.classList.add("darkTheme");
-			}
-		}
-	</script>
-	<div class="body" id="pg0">
-		<h1>Основы html, css и javascript</h1>
-		<!-- <h1>Которая будет работать в браузере</h1> -->
+	<script src="scripts/loadTheme.js"></script>
+	<div class="header">	
+		<span onclick="history.back()">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M19 11H7.83l4.88-4.88c.39-.39.39-1.03 0-1.42-.39-.39-1.02-.39-1.41 0l-6.59 6.59c-.39.39-.39 1.02 0 1.41l6.59 6.59c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L7.83 13H19c.55 0 1-.45 1-1s-.45-1-1-1z"/></svg>
+		</span>
+		<span onclick="toPage(0)">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z"/></svg>
+		</span>
+		<div class="main-font-size" id="pageName"></div>
+		<span onclick="changeTheme()">
+			<svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24" fill="#000000"><rect fill="none" height="24" width="24"/><path d="M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0 c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2 c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1 C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06 c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41 l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41 c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36 c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"/></svg>
+			<svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24" fill="#000000"><rect fill="none" height="24" width="24"/><path d="M11.01,3.05C6.51,3.54,3,7.36,3,12c0,4.97,4.03,9,9,9c4.63,0,8.45-3.5,8.95-8c0.09-0.79-0.78-1.42-1.54-0.95 c-0.84,0.54-1.84,0.85-2.91,0.85c-2.98,0-5.4-2.42-5.4-5.4c0-1.06,0.31-2.06,0.84-2.89C12.39,3.94,11.9,2.98,11.01,3.05z"/></svg>
+		</span>
+	</div>
+
+	<div class="page" id="pg0">
+		<h1>Основы HTML, CSS и javascript</h1>
 		<h2>Оглавление</h2>
-		<ul>
-			<li>Основы</li>
-			<ol>
-				<li><a href="" onclick="toPage(1)">Html, css и javascript</a></li>
-				<li><a href="" onclick="toPage(2)">Javascript и python - основные отличия</a></li>
-				<li><a href="" onclick="toPage(3)">Html страница</a></li>
-				<li><a href="" onclick="toPage(4)">Html: Основные теги</a></li>
-				<li><a href="" onclick="toPage(5)">Css</a></li>
-				<li><a href="" onclick="toPage(6)">Javascript на странице</a></li>
-				<li><a href="" onclick="toPage(7)">Как создать проект</a></li>
-			</ol>
-			<li>Css</li>
-			<ol>
-				<li><a href="" onclick="toPage(8)">Значения</a></li>
-				<li><a href="" onclick="toPage(9)">Cелекторы</a></li>
-				<li><a href="" onclick="toPage(10)">Основные свойства</a></li>
-				<li><a href="" onclick="toPage(11)">Переменные</a></li>
-				<li><a href="" onclick="toPage(12)">Функция calc()</a></li>
-			</ol>
-			<li>Javascript</li>
-			<ol>
-				<li><a href="" onclick="toPage(13)">Взаимодействие со страницей</a></li>
-				<li><a href="" onclick="toPage(14)">Элемент как объект</a></li>
-				<li><a href="" onclick="toPage(15)">События</a></li>
-			</ol>
-			<li>Подробнее о разном</li>
-			<ol>
-				<li><a href="" onclick="toPage(16)">Больше css свойств</a></li>
-				<li><a href="" onclick="toPage(17)">Тег input</a></li>
-				<li><a href="" onclick="toPage(18)">Css анимации</a></li>
-				<li><a href="" onclick="toPage(19)">Тег canvas</a></li>
-				<li><a href="" onclick="toPage(20)">canvas анимации</a></li>
-			</ol>
-			<li>Дополнительно</li>
-			<ol>
-				<li><a href="" onclick="toPage(21)">Функция range()</a></li>
-				<li><a href="" onclick="toPage(22)">code и key любой клавиши</a></li>
-				<li><a href="" onclick="toPage(23)">Красивые кнопки</a></li>
-				<li><a href="" onclick="toPage(24)">3D куб</a></li>
-			</ol>
-		</ul>
-		<p style="margin-top: 3rem; text-align: center;"><span class="changeThemeButton" onclick="changeTheme()">Сменить тему</span></p>
+		<ol class="multi-list">
+			<li>Основы
+				<ol>
+					<li><span class="link" onclick="toPage(1)">HTML, CSS и javascript</span></li>
+					<li><span class="link" onclick="toPage(2)">Javascript и python - основные отличия</span></li>
+					<li><span class="link" onclick="toPage(3)">HTML страница</span></li>
+					<li><span class="link" onclick="toPage(4)">HTML: Основные теги</span></li>
+					<li><span class="link" onclick="toPage(5)">CSS</span></li>
+					<li><span class="link" onclick="toPage(6)">Javascript на странице</span></li>
+					<li><span class="link" onclick="toPage(7)">Как создать проект</span></li>
+				</ol>
+			</li>
+			<li>CSS
+				<ol>
+					<li><span class="link" onclick="toPage(8)">Значения</span></li>
+					<li><span class="link" onclick="toPage(9)">Cелекторы</span></li>
+					<li><span class="link" onclick="toPage(10)">Основные свойства</span></li>
+					<li><span class="link" onclick="toPage(11)">Переменные</span></li>
+					<li><span class="link" onclick="toPage(12)">Функция calc()</span></li>
+				</ol>
+			</li>
+			<li>Javascript
+				<ol>
+					<li><span class="link" onclick="toPage(13)">Взаимодействие со страницей</span></li>
+					<li><span class="link" onclick="toPage(14)">Элемент как объект</span></li>
+					<li><span class="link" onclick="toPage(15)">События</span></li>
+				</ol>
+			</li>
+			<li>Подробнее о разном
+				<ol>
+					<li><span class="link" onclick="toPage(16)">Больше CSS свойств</span></li>
+					<li><span class="link" onclick="toPage(17)">Тег input</span></li>
+					<li><span class="link" onclick="toPage(18)">CSS анимации</span></li>
+					<li><span class="link" onclick="toPage(19)">Тег canvas</span></li>
+					<li><span class="link" onclick="toPage(20)">canvas анимации</span></li>
+				</ol>
+			</li>
+			<li>Дополнительно
+				<ol>
+					<li><span class="link" onclick="toPage(21)">Функция range()</span></li>
+					<li><span class="link" onclick="toPage(22)">code и key любой клавиши</span></li>
+					<li><span class="link" onclick="toPage(23)">Красивые кнопки</span></li>
+					<li><span class="link" onclick="toPage(24)">3D куб</span></li>
+				</ol>
+			</li>
+		</ol>
 	</div>
 
 
-	<div class="body" id="pg1">
-		<div class="header"><a href="" onclick="history.back()">Назад</a><a href="" onclick="toPage(0)">На главную</a><div></div><span onclick="changeTheme()">Сменить тему</span></div>
-		<h1>Html, css и javascript</h1>
-		<p>Интернет-страница состоит из трёх частей: html, css и javascript.</p>
+	<div class="page" id="pg1">
+		<h1>HTML, CSS и javascript</h1>
+		<p>Для написания интернет-страниц используют HTML, CSS и javascript.</p>
 		<ul>
-			<li>html - язык разметки документов. Им указывают, где будут располагаться части страницы: тексты, кнопки, заголовки...</li>
-			<li>css - язык описания внешнего вида документа. Цвета, размер текста, шрифт - всё указывается с помощью css.</li>
-			<li>javascript - язык программирования, позволяет добавить интерактивность на страницу.</li>
+			<li>HTML - язык разметки документов. Им указывают, где будут располагаться части страницы: тексты, кнопки, заголовки...</li>
+			<li>CSS - язык описания внешнего вида документа. Цвета, размер текста, шрифт - всё указывается с помощью CSS.</li>
+			<li>Javascript - язык программирования, позволяет добавить интерактивность на страницу.</li>
 		</ul>
 
-		<h2>Html</h2>
-		<p>Начнём с html. В html всё состоит из элементов. Элементы обозначаются тегами: &lt;tag&gt; - начало, &lt;/tag&gt; - конец элемента.</p>
+		<h2>HTML</h2>
+		<p>Начнём с HTML. В HTML всё состоит из элементов. Элементы обозначаются тегами: &lt;tag&gt; - начало, &lt;/tag&gt; - конец элемента.</p>
 		<p>Например, вот так выглядит этот абзац:</p>
 		<pre><span class="tb">&lt;</span><span class="t">p</span><span class="tb">&gt;</span>Например, вот так выглядит этот абзац:<span class="tb">&lt;/</span><span class="t">p</span><span class="tb">&gt;</span></pre>
 		<p>Также бывают элементы, внутрь которых нельзя ничего добавить, у таких элементов нет закрывающего тега.</p>
@@ -454,8 +103,8 @@
 		<p>Например, для элемента ссылка, можно указать атрибут адрес ссылки:</p>
 		<pre><span class="tb">&lt;</span><span class="t">a<span class="a"> href=<span class="s">"https://yandex.ru/"</span></span></span><span class="tb">&gt;</span>Ссылка на яндекс<span class="tb">&lt;/<span class="t">a</span>&gt;</span></pre>
 
-		<h2>Css</h2>
-		<p>Css позволяет добавить на страницу стили и даже анимацию.</p>
+		<h2>CSS</h2>
+		<p>CSS позволяет добавить на страницу стили и даже анимацию.</p>
 		<p>Для стилей есть атрибут style. Стили пишутся в таком виде:</p>
 		<pre><span class="tb">&lt;</span><span class="t">p</span> <span class="a">style</span>=<span class="s">"стиль: значение; стиль: значение;"</span><span class="tb">&gt;</span><span class="tb">&lt;/</span><span class="t">p</span><span class="tb">&gt;</span></pre>
 		<p>Например можно изменить цвет текста и фона:</p>
@@ -463,19 +112,18 @@
 		<p style="color: green; background-color: pink;">Текст зелёного цвета на розовом фоне.</p>
 		<p>Можно сделать даже такую анимацию:</p>
 		<div class="rect3d"><div><div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div></div></div>
-		<p>Этот куб сделан только с помощью html и css. В одной из глав, будет показано как сделать такой куб.</p>
+		<p>Этот куб сделан только с помощью HTML и CSS. В одной из глав, будет показано как сделать такой куб.</p>
 
 		<h2>Javascript</h2>
 		<p>Позволяет добавить интерактивность на страницу, чтобы кнопки нажимались, а ваш заказ в магазине отправлялся.</p>
 		<p>Для тех, кто не знает javascript:</p>
-		<p>Если вы знаете python, можете перейти на главу <a href="" onclick="toPage(2)">основные различия между javascript и python</a></p>
+		<p>Если вы знаете python, переходите на главу <span class="link" onclick="toPage(2)">основные различия между javascript и python</span></p>
 		<p>Если нет, то на <a href="https://learn.javascript.ru/" target="_blank">этом сайте</a> можно изучить javascript</p>
-		<div class="footer"><a href="" onclick="toPage(3)">Следующая тема</a></div>
+		<div class="footer"><span class="link" onclick="toPage(3)">Следующая тема</span></div>
 	</div>
 
 
-	<div class="body" id="pg2">
-		<div class="header"><a href="" onclick="history.back()">Назад</a><a href="" onclick="toPage(0)">На главную</a><div></div><span onclick="changeTheme()">Сменить тему</span></div>
+	<div class="page" id="pg2">
 		<h1>Javascript и python - основные отличия</h1>
 		<div>
 			<p>Начнём, например, с того, что в javascript нет обязательного форматирования, то есть не обязательно ставить пробелы в теле цикла или функции.</p>
@@ -594,7 +242,7 @@
 		<h2>Цикл for</h2>
 		<div>
 			<p>В javascript нет функции range().</p>
-			<p>Если вы очень к ней привыкли: моя реализация <a href="" onclick="toPage(21)">функции range()</a>.</p>
+			<p>Если вы очень к ней привыкли: моя реализация <span class="link" onclick="toPage(21)">функции range()</span>.</p>
 			<p>Цикл от 0 до 10 не включительно:</p>
 			<pre>
 <span class="k">for</span> (<span class="kj">let</span> <span class="vl">i</span> = <span class="n">0</span>; <span class="vl">i</span> &lt; <span class="n">10</span>; <span class="vl">i</span>++) {
@@ -829,7 +477,7 @@
 			<p>Для тех, кто не знает, что делает forEach: он для каждого элемента вызывает функцию, которую вы ему передали.
 				В этом случае функция просто выводит в консоль элемент.</p>
 			<p>Почему вывод будет 30 и 40? Потому что интерпретатор воспринимает этот код так:</p>
-			<pre>
+			<pre class="nowrap">
 <span class="kj">const</span> <span class="vc">a</span> = [[<span class="n">10</span>, <span class="n">20</span>], [<span class="n">30</span>, <span class="n">40</span>]][<span class="n">1</span>].<span class="f">forEach</span>(<span class="vl">num</span> <span class="kj">=></span> <span class="vl">console</span>.<span class="f">log</span>(<span class="vl">num</span>));
 </pre>
 			<p>Элемент с индексом 1 как раз [30, 40], а в переменной 'a' будет undefined.</p>
@@ -848,22 +496,22 @@
 <span class="vl">console</span>.<span class="f">log</span>(<span class="vl">NaN</span> == <span class="vl">NaN</span>); <span class="c">// Вывод: false. NaN не равно NaN!</span>
 <span class="vl">console</span>.<span class="f">log</span>(<span class="f">isNaN</span>(<span class="vl">NaN</span>)); <span class="c">// Вывод: true. Проверять надо так</span>
 </pre>
-			<pre>
-<span class="kj">const</span> <span class="vc">a</span> = <span class="sj">"2"</span> + <span class="n">1</span>; <span class="c">// Вы получите '21', ошибки не будет!</span>
-<span class="kj">const</span> <span class="vc">b</span> = <span class="sj">"2"</span> - <span class="n">1</span>; <span class="c">// Вы получите цифру 1, ошибки не будет!</span>
-<span class="kj">const</span> <span class="vc">c</span> = <span class="sj">"4"</span> / <span class="n">2</span>; <span class="c">// Вы получите цифру 2, ошибки не будет!</span>
-<span class="kj">const</span> <span class="vc">d</span> = <span class="sj">"2"</span> * <span class="n">3</span>; <span class="c">// Вы получите цифру 6, а не '222'!</span>
-<span class="kj">const</span> <span class="vc">e</span> = <span class="sj">[2]</span> * <span class="n">3</span>; <span class="c">// Вы получите цифру 6, а не ['2', '2', '2']!</span>
-<span class="kj">const</span> <span class="vc">f</span> = <span class="sj">"a"</span> * <span class="n">3</span>; <span class="c">// Вы получите NaN, а не 'aaa'!</span>
-<span class="kj">const</span> <span class="vc">f</span> = <span class="sj">[2, 1]</span> * <span class="n">2</span>; <span class="c">// Вы получите NaN, а не ['2', '1', '2', '1']!</span>
-<span class="kj">const</span> <span class="vc">g</span> = <span class="n">5</span> / <span class="n">0</span>; <span class="c">// Вы получите Infinity, ошибки не будет!</span>
+			<pre class="nowrap">
+<span class="kj">const</span> <span class="vc">a</span> = <span class="sj">"2"</span> + <span class="n">1</span>; <span class="c">// a == '21', ошибки не будет!</span>
+<span class="kj">const</span> <span class="vc">b</span> = <span class="sj">"2"</span> - <span class="n">1</span>; <span class="c">// b == 1, ошибки не будет!</span>
+<span class="kj">const</span> <span class="vc">c</span> = <span class="sj">"4"</span> / <span class="n">2</span>; <span class="c">// c == 2, ошибки не будет!</span>
+<span class="kj">const</span> <span class="vc">d</span> = <span class="sj">"2"</span> * <span class="n">3</span>; <span class="c">// d == 6, а не '222'!</span>
+<span class="kj">const</span> <span class="vc">e</span> = [<span class="n">2</span>] * <span class="n">3</span>; <span class="c">// e == 6, а не ['2', '2', '2']!</span>
+<span class="kj">const</span> <span class="vc">f</span> = <span class="sj">"a"</span> * <span class="n">3</span>; <span class="c">// isNaN(f), а не 'aaa'!</span>
+<span class="kj">const</span> <span class="vc">g</span> = [<span class="n">2</span>, <span class="n">1</span>] * <span class="n">2</span>; <span class="c">// isNaN(g), а не ['2', '1', '2', '1']!</span>
+<span class="kj">const</span> <span class="vc">h</span> = <span class="n">5</span> / <span class="n">0</span>; <span class="c">// h == Infinity, ошибки не будет!</span>
 </pre>
 			<p>Оператор in в javascript проверяет не то, есть ли в списке такой элемент, а есть ли такое свойство.</p>
 			<pre>
 <span class="kj">const</span> <span class="vc">a</span> = [<span class="sj">"a"</span>, <span class="sj">"b"</span>, <span class="sj">"c"</span>];
 <span class="vl">console</span>.<span class="f">log</span>(<span class="n">1</span> <span class="kj">in</span> <span class="vc">a</span>); <span class="c">// Вывод: true. Так как в списке есть элемент с таким индексом</span>
 
-<span class="kj">const</span> <span class="vc">b</span> = {a: <span class="sj">"123"</span>, b: <span class="sj">"abc"</span>};
+<span class="kj">const</span> <span class="vc">b</span> = {<span class="vl">a</span>: <span class="sj">"123"</span>, <span class="vl">b</span>: <span class="sj">"abc"</span>};
 <span class="vl">console</span>.<span class="f">log</span>(<span class="sj">"a"</span> <span class="kj">in</span> <span class="vc">b</span>); <span class="c">// Вывод: true. Так как в объекте есть значение по ключу 'a'</span>
 </pre>
 			<p>В javascript нет целочисленного деления (// - в python), но можно сделать его так:</p>
@@ -876,15 +524,14 @@
 		</div>
 
 
-		<div class="footer"><a href="" onclick="toPage(3)">Следующая тема</a></div>
+		<div class="footer"><span class="link" onclick="toPage(3)">Следующая тема</span></div>
 	</div>
 
 
-	<div class="body" id="pg3">
-		<div class="header"><a href="" onclick="history.back()">Назад</a><a href="" onclick="toPage(0)">На главную</a><div></div><span onclick="changeTheme()">Сменить тему</span></div>
-		<h1>Html страница</h1>
-		<p>Для корректной работы каждая html страница должна быть составлена по определённому шаблону:</p>
-		<pre>
+	<div class="page" id="pg3">
+		<h1>HTML страница</h1>
+		<p>Для корректной работы каждая HTML страница должна быть составлена по определённому шаблону:</p>
+		<pre class="nowrap">
 <span class="tb">&lt;!</span><span class="t">DOCTYPE</span> <span class="a">html</span><span class="tb">&gt;</span>
 <span class="tb">&lt;</span><span class="t">html</span> <span class="a">lang</span>=<span class="s">"ru"</span><span class="tb">&gt;</span>
 <span class="tb">&lt;<span class="t">head</span>&gt;</span>
@@ -903,9 +550,9 @@
 <span class="c">&lt;!-- Тип документа --&gt;</span>
 
 <span class="tb">&lt;</span><span class="t">html</span> <span class="a">lang</span>=<span class="s">"ru"</span><span class="tb">&gt;</span>
-<span class="c">&lt;!-- Начало html страницы, атрибут lang указывает язык вашей страницы для правильной работы поисковых систем --&gt;</span>
+<span class="c">&lt;!-- Начало HTML страницы, атрибут lang указывает язык вашей страницы для правильной работы поисковых систем --&gt;</span>
 
-<span class="tb">&lt;<span class="t">head</span>&gt;</span> <span class="c">&lt;!-- Начало заголовка страницы --&gt;</span>
+<span class="tb">&lt;<span class="t">head</span>&gt;</span> <span class="c">&lt;!-- Начало служебной части страницы --&gt;</span>
 
 	<span class="tb">&lt;</span><span class="t">meta</span> <span class="a">charset</span>=<span class="s">"UTF-8"</span><span class="tb">&gt;</span>
 	<span class="c">&lt;!-- Указывает, что надо использовать кодировку UTF-8, иначе вместо руских букв будут закорючки --&gt;</span>
@@ -916,7 +563,7 @@
 	<span class="tb">&lt;</span><span class="t">title</span><span class="tb">&gt;</span>Document<span class="tb">&lt;/</span><span class="t">title</span><span class="tb">&gt;</span>
 	<span class="c">&lt;!-- Заголовок страницы, тот, что написан на вкладке --&gt;</span>
 
-<span class="tb">&lt;/</span><span class="t">head</span><span class="tb">&gt;</span> <span class="c">&lt;!-- Конец заголовка --&gt;</span>
+<span class="tb">&lt;/</span><span class="t">head</span><span class="tb">&gt;</span> <span class="c">&lt;!-- Конец служебной части --&gt;</span>
 <span class="tb">&lt;</span><span class="t">body</span><span class="tb">&gt;</span> <span class="c">&lt;!-- Начало содержимого страницы --&gt;</span>
 
 	<span class="c">&lt;!-- Сюда и надо добавлять тексты, кнопки и картинки --&gt;</span>
@@ -924,13 +571,12 @@
 <span class="tb">&lt;/</span><span class="t">body</span><span class="tb">&gt;</span> <span class="c">&lt;!-- Конец содержимого --&gt;</span>
 <span class="tb">&lt;/</span><span class="t">html</span><span class="tb">&gt;</span> <span class="c">&lt;!-- Конец страницы --&gt;</span>
 </pre>
-		<div class="footer"><a href="" onclick="toPage(4)">Следующая тема</a></div>
+		<div class="footer"><span class="link" onclick="toPage(4)">Следующая тема</span></div>
 	</div>
 
 
-	<div class="body" id="pg4">
-		<div class="header"><a href="" onclick="history.back()">Назад</a><a href="" onclick="toPage(0)">На главную</a><div></div><span onclick="changeTheme()">Сменить тему</span></div>
-		<h1>Html: Основные теги</h1>
+	<div class="page" id="pg4">
+		<h1>HTML: Основные теги</h1>
 		<h1>Немного о том, что можно добавить в body</h1>
 		<p>Универсальный тег <b>div</b> - можно назвать его контейнером для элементов.
 			Отделить часть страницы, добавить отдельный блок, или когда стандартные теги не подходят.</p>
@@ -941,14 +587,17 @@
 
 		<h2>Картинки</h2>
 		<pre><span class="tb">&lt;</span><span class="t">img</span> <span class="a">scr</span>=<span class="s">"Ссылка на картинку"</span><span class="tb">&gt;</span></pre>
-		<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAZdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAuMTnU1rJkAAAEeUlEQVRoQ82VX08cZRTGN34SE7+DicnObOKFNvGiF5p4URNirFYDadOqhZW/WmkwoBKsdbFtSgqKIshisbSlQuuKlC6CZCkkEkVtLUYiTWsam1Z57Duc0bNnz+zODDutT/K7mXOec85zM2+sHIovbIcXg89eVyHrvVM8twN+SD+/VhIaeXcU/7YSQfis6jff0IpoFJ/ZiTAM77oSGFpZPsWzu+GHazX1Jfl8zyVf0OrNKz71MoqhHemXkb3LRaETwiv+dQ280A4Ky6nkkid0SnDFM7XQmNlfpx5huJqsL+gfrVv8l8vJDtXnwns5dJJ/WecaoaEtNWi9LmcacyraHIPWa6DTSssaew0a2jKtTzK2b7Yo2lytz0Aness60wwNuWDLSb1P4+z+rC/kDq3HQKfqsk61QCIHaz3FOPfGpG/kLq2HTi2UNdIGyXTzq3kDtR4OjSqqTFsGxeD7DFoPjcqXNfw2JHzQo0NvFdRdaEQgTbSPwwu+V6vTiP9kDXVAwocYtB4DjQilyXdGoSF3az00YkPW4EFI+ACtbiD7pnT+4Ag0+H6tTvYNWf2d4HCzQdYNZC2LLnQOQyJvkPVs6sQDjtnqOwwJN2p1x1hmTR9JQ8Lv0OqO0eo9Cgk3anXHWGZ909UPCb9DqztGq6cbHG5aSzbk1QyOKSLNdn8EzlzXB3n3yLpjso59CA43yJrBMUWkud4eSPg9suaYrKMfg8MNsmZwTBEp19cFCb9H1hyTdWQAHG6QNYNjikjz/Yc+nR84DA6/R9bmBw4di1nvp8HhBlkz0K5IhMbG+xbSKXD4PbJ2MZ36O2anjoPDDbJmoF2RaGahMpX7bgcWv38GSz9WYPnytrx7rl57DH/ceAR/3nwYt2/bWF9/qD9mv3sCHG6QNQPtikSzC5UIEsAx2R2nweEGWTM4pogULkD7F+BwQ7a+Na9mcEwRKVyAN89Cwk1a3TGWWdncLsgA/I7Vta0eAVq/goQbtbpjLLNCBzCyWybB4UaDrBvIWhZNzr4EGeD31uq8G2SAW7esKrLfCdB8ARJu1uoGsm9KmWz1eS0A37+y+nhBALJvyN43AwkfYNB6DDQilManaqcz0zWQAeTukgGM7KY5SPgQre5CIwJpdKIJ41N1KBXg0sqTBQFoRL7shnlI+CCD1sOhUUV1fKwFI1++Dq8AcqfvAEZ27SIkcqDWo/LK4qCZ2T3U+V7v8AF8crIdg6NtKBZA7jLvgAzgHOolO7kEDTlY6/HiTgD4CSB3uA9ZoABG9t4foCEXGLQ+SakA2lz+EvMAdGJp2S/+BA1tmUHrdfEKcKWlQZ3FHzIegE7zL3v3L9DQlrps2bNc0C8DaD4X/g7wAHRScCV2/govtAPCIn+jPMDPK088SOeEU6JqFcXQDvKL1zvgBqATNq/EC2vwg3akpNQ74Aag1eVT4rnrCIPf3ygPQCujUWL7DQQhSABacXeUePom/OAnAI28N0pU4P5ExV/wwivA6Ymmahrx/1Ri23pP4imYAH30KQLFYv8AriP3Fbxh25kAAAAASUVORK5CYII=">
+		<img src="icon.png">
 
 		<h2>Ссылки</h2>
 		<br>
 		<pre><span class="tb">&lt;</span><span class="t">a</span> <span class="a">href</span>=<span class="s">"Адрес ссылки"</span> <span class="a">target</span>=<span class="s">"_blank"</span><span class="tb">&gt;</span>Текст ссылки<span class="tb">&lt;/</span><span class="t">a</span><span class="tb">&gt;</span></pre>
 		<p>target="_blank" - значит открывать ссылку в новой вкладке (желательно всегда добавлять)</p>
 		<p>Вместо текста в ссылку можно вставить другие теги, например, картинку:</p>
-		<pre><span class="tb">&lt;</span><span class="t">a</span> <span class="a">href</span>=<span class="s">"https://yandex.ru/"</span> <span class="a">target</span>=<span class="s">"_blank"</span><span class="tb">&gt;</span><span class="tb">&lt;</span><span class="t">img</span> <span class="a">scr</span>=<span class="s">"Ссылка на картинку"</span><span class="tb">&gt;</span><span class="tb">&lt;/</span><span class="t">a</span><span class="tb">&gt;</span></pre>
+		<pre>
+<span class="tb">&lt;</span><span class="t">a</span> <span class="a">href</span>=<span class="s">"https://yandex.ru/"</span> <span class="a">target</span>=<span class="s">"_blank"</span><span class="tb">&gt;</span>
+	<span class="tb">&lt;</span><span class="t">img</span> <span class="a">scr</span>=<span class="s">"Ссылка на картинку"</span><span class="tb">&gt;</span>
+<span class="tb">&lt;/</span><span class="t">a</span><span class="tb">&gt;</span></pre>
 		<a href="https://yandex.ru/" target="_blank"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAZdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAuMTnU1rJkAAAEeUlEQVRoQ82VX08cZRTGN34SE7+DicnObOKFNvGiF5p4URNirFYDadOqhZW/WmkwoBKsdbFtSgqKIshisbSlQuuKlC6CZCkkEkVtLUYiTWsam1Z57Duc0bNnz+zODDutT/K7mXOec85zM2+sHIovbIcXg89eVyHrvVM8twN+SD+/VhIaeXcU/7YSQfis6jff0IpoFJ/ZiTAM77oSGFpZPsWzu+GHazX1Jfl8zyVf0OrNKz71MoqhHemXkb3LRaETwiv+dQ280A4Ky6nkkid0SnDFM7XQmNlfpx5huJqsL+gfrVv8l8vJDtXnwns5dJJ/WecaoaEtNWi9LmcacyraHIPWa6DTSssaew0a2jKtTzK2b7Yo2lytz0Aness60wwNuWDLSb1P4+z+rC/kDq3HQKfqsk61QCIHaz3FOPfGpG/kLq2HTi2UNdIGyXTzq3kDtR4OjSqqTFsGxeD7DFoPjcqXNfw2JHzQo0NvFdRdaEQgTbSPwwu+V6vTiP9kDXVAwocYtB4DjQilyXdGoSF3az00YkPW4EFI+ACtbiD7pnT+4Ag0+H6tTvYNWf2d4HCzQdYNZC2LLnQOQyJvkPVs6sQDjtnqOwwJN2p1x1hmTR9JQ8Lv0OqO0eo9Cgk3anXHWGZ909UPCb9DqztGq6cbHG5aSzbk1QyOKSLNdn8EzlzXB3n3yLpjso59CA43yJrBMUWkud4eSPg9suaYrKMfg8MNsmZwTBEp19cFCb9H1hyTdWQAHG6QNYNjikjz/Yc+nR84DA6/R9bmBw4di1nvp8HhBlkz0K5IhMbG+xbSKXD4PbJ2MZ36O2anjoPDDbJmoF2RaGahMpX7bgcWv38GSz9WYPnytrx7rl57DH/ceAR/3nwYt2/bWF9/qD9mv3sCHG6QNQPtikSzC5UIEsAx2R2nweEGWTM4pogULkD7F+BwQ7a+Na9mcEwRKVyAN89Cwk1a3TGWWdncLsgA/I7Vta0eAVq/goQbtbpjLLNCBzCyWybB4UaDrBvIWhZNzr4EGeD31uq8G2SAW7esKrLfCdB8ARJu1uoGsm9KmWz1eS0A37+y+nhBALJvyN43AwkfYNB6DDQilManaqcz0zWQAeTukgGM7KY5SPgQre5CIwJpdKIJ41N1KBXg0sqTBQFoRL7shnlI+CCD1sOhUUV1fKwFI1++Dq8AcqfvAEZ27SIkcqDWo/LK4qCZ2T3U+V7v8AF8crIdg6NtKBZA7jLvgAzgHOolO7kEDTlY6/HiTgD4CSB3uA9ZoABG9t4foCEXGLQ+SakA2lz+EvMAdGJp2S/+BA1tmUHrdfEKcKWlQZ3FHzIegE7zL3v3L9DQlrps2bNc0C8DaD4X/g7wAHRScCV2/govtAPCIn+jPMDPK088SOeEU6JqFcXQDvKL1zvgBqATNq/EC2vwg3akpNQ74Aag1eVT4rnrCIPf3ygPQCujUWL7DQQhSABacXeUePom/OAnAI28N0pU4P5ExV/wwivA6Ymmahrx/1Ri23pP4imYAH30KQLFYv8AriP3Fbxh25kAAAAASUVORK5CYII="></a>
 
 		<h2>Ввод данных</h2>
@@ -973,7 +622,7 @@
 		<input type="radio" name="input-radio">
 		<input type="radio" name="input-radio">
 		<p>Для input типа radio необходимо указать атрибут name, чтобы всегда был выбран только один.</p>
-		<p>Больше о теге input в главе <a href="" onclick="toPage(17)">Тег input</a>.</p>
+		<p>Больше о теге input в главе <span class="link" onclick="toPage(17)">Тег input</span>.</p>
 
 		<h2>Таблицы</h2>
 		<p>С помощью таблиц легко расположить элементы на странице.</p>
@@ -1017,29 +666,28 @@
 		</ol>
 		<p style="margin-top: 0px;">&lt;/ol&gt;</p>
 
-		<div class="footer"><a href="" onclick="toPage(5)">Следующая тема</a></div>
+		<div class="footer"><span class="link" onclick="toPage(5)">Следующая тема</span></div>
 	</div>
 
 
-	<div class="body" id="pg5">
-		<div class="header"><a href="" onclick="history.back()">Назад</a><a href="" onclick="toPage(0)">На главную</a><div></div><span onclick="changeTheme()">Сменить тему</span></div>
-		<h1>Css</h1>
-		<p>С помощью css можно делать очень красочные и анимированные сайты, но здесь будет рассказаны только основы.</p>
-		<p>В css есть наследование стилей, то есть если вы укажите шрифт у body, то у элементов внутри него тоже применится этот шрифт.
+	<div class="page" id="pg5">
+		<h1>CSS</h1>
+		<p>С помощью CSS можно делать очень красочные и анимированные сайты. Здесь будут рассмотрены только основы.</p>
+		<p>В CSS есть наследование стилей, то есть если вы укажите шрифт у body, то у элементов внутри него тоже применится этот шрифт.
 			Но если у элемента внутри body тоже будет указан шрифт, то применится он. Наследование работает не со всеми свойствами и тегами.
 		</p>
 		<h2>Добавление стилей</h2>
-		<p><b>Способ 1</b>: Внутри html тега, в атрибуте style:</p>
+		<p><b>Способ 1</b>: Внутри HTML тега, в атрибуте style:</p>
 		<pre><span class="tb">&lt;</span><span class="t">p</span> <span class="a">style</span>=<span class="s">"стиль: значение; стиль: значение;"</span><span class="tb">&gt;</span><span class="tb">&lt;/</span><span class="t">p</span><span class="tb">&gt;</span></pre>
-		<p>Такой способ усложняет написание html.</p>
+		<p>Такой способ усложняет написание HTML.</p>
 		<p><b>Способ 2</b>: Внутри head:</p>
 		<pre>
 <span class="tb">&lt;<span class="t">head</span>&gt;</span>
 	<span class="tb">&lt;</span><span class="t">style</span><span class="tb">&gt;</span>
 		<span class="c">/* Стили */</span>
 	<span class="tb">&lt;/</span><span class="t">style</span><span class="tb">&gt;</span>
-	<span class="c">/* Либо в отдельном файле (.css): */</span>
-	<span class="tb">&lt;</span><span class="t">link</span> <span class="a">rel</span>=<span class="s">"stylesheet"</span> <span class="a">href</span>=<span class="s">"styles.css"</span><span class="tb">&gt;</span> <span class="c">/* Ссылка на файл (styles.css) со стилями */</span>
+	<span class="c">&lt;!-- Либо в отдельном файле (.css): --&gt;</span>
+	<span class="tb">&lt;</span><span class="t">link</span> <span class="a">rel</span>=<span class="s">"stylesheet"</span> <span class="a">href</span>=<span class="s">"styles.css"</span><span class="tb">&gt;</span> <span class="c">&lt;!-- Ссылка на файл (styles.css) со стилями --&gt;</span>
 <span class="tb">&lt;/</span><span class="t">head</span><span class="tb">&gt;</span>
 </pre>
 		<h2>Написание стилей</h2>
@@ -1087,18 +735,17 @@
 		<p>&lt;p&gt;Абзац<span>&lt;span&gt;<span style="color: pink;">span внутри абзаца</span>&lt;/span&gt;</span>&lt;/p&gt;</p>
 		<br>
 		<p>Другие способы указания элементов, а также свойства которые есть у элементов будут рассмотрены в следующих темах.</p>
-		<div class="footer"><a href="" onclick="toPage(6)">Следующая тема</a></div>
+		<div class="footer"><span class="link" onclick="toPage(6)">Следующая тема</span></div>
 	</div>
 
 
-	<div class="body" id="pg6">
-		<div class="header"><a href="" onclick="history.back()">Назад</a><a href="" onclick="toPage(0)">На главную</a><div></div><span onclick="changeTheme()">Сменить тему</span></div>
+	<div class="page" id="pg6">
 		<h1>Javascript на странице</h1>
 		<p>Добавить javascript на страницу можно несколькими способами.</p>
 		<p>Весь код на странице будет находится в общей памяти. То есть, если в одном из скриптов вы создадите переменную или функцию,
 			то она будет доступна и в других скриптах на вашей странице (по-другому при использовании модулей).</p>
 		<p>В примерах нет других тегов в head, так как в них показывается, куда нужно добавить элементы</p>
-		<p><b>Вариант 1</b>: Добавить код прямо в html файл.</p>
+		<p><b>Вариант 1</b>: Добавить код прямо в HTML файл.</p>
 		<p>Для этого необходимо добавить тег script, внутри него можно писать любой код. Тег можно добавить в head или в body.</p>
 		<pre>
 <span class="tb">&lt;<span class="t">head</span>&gt;</span>
@@ -1146,7 +793,7 @@
 		<p><b>Работают, только если страница находится на сервере!</b></p>
 		<p>В этом случае каждый файл будет находиться в отдельной памяти. Вы сможете не беспокоиться о том, что вы уже использовали это имя функции в другом файле.</p>
 		<p>Для доступа к объектам из другого файла нужно будет писать import, а в файле, из которого вы импортируете - export, перед тем, что вы хотите экспортировать.</p>
-		<p>При использовании модулей, в html достаточно написать только скрипт, с которого начинается ваша программа.
+		<p>При использовании модулей, в HTML достаточно написать только скрипт, с которого начинается ваша программа.
 			Ваш скрипт сам загрузит файлы, которые вы указали в import, а те файлы тоже сами догрузят необходимое.</p>
 		<p>Для использования модулей необходимо добавить атрибут type="module".</p>
 		<p>Модули всегда запускаются после загрузки страницы, атрибут defer не нужен.</p>
@@ -1167,20 +814,19 @@
 	<span class="vl">console</span>.<span class="f">log</span>(<span class="vl">text</span>);
 }
 </pre>
-		<div class="footer"><a href="" onclick="toPage(7)">Следующая тема</a></div>
+		<div class="footer"><span class="link" onclick="toPage(7)">Следующая тема</span></div>
 	</div>
 
 
-	<div class="body" id="pg7">
-		<div class="header"><a href="" onclick="history.back()">Назад</a><a href="" onclick="toPage(0)">На главную</a><div></div><span onclick="changeTheme()">Сменить тему</span></div>
+	<div class="page" id="pg7">
 		<h1>Как создать проект</h1>
-		<p>Для редактирования html, css и javascript я рекомендую студию <a href="https://code.visualstudio.com/" target="_blank">Visual&nbsp;Studio&nbsp;Code</a>.</p>
+		<p>Для редактирования HTML, CSS и javascript я рекомендую студию <a href="https://code.visualstudio.com/" target="_blank">Visual&nbsp;Studio&nbsp;Code</a>.</p>
 		<p>Создайте папку для проекта, в этой папке создайте два файла:</p>
-		<p>index.html - стандартное имя главной html страницы на сайте.</p>
+		<p>index.html - стандартное имя главной HTML страницы на сайте.</p>
 		<p>styles.css - для стилей.</p>
 		<p>Создайте папку js, и в этой папке файл main.js</p>
 		<p>Если вы работаете в студии <a href="https://code.visualstudio.com/" target="_blank">VS Code</a>, то можете в папке с вашим проектом нажать "ПКМ -> Открыть с помощью Code" - для открытия студии в этой папке.</p>
-		<h2>Заполните html файл</h2>
+		<h2>Заполните HTML файл</h2>
 		<pre>
 <span class="tb">&lt;!</span><span class="t">DOCTYPE</span> <span class="a">html</span><span class="tb">&gt;</span>
 <span class="tb">&lt;</span><span class="t">html</span> <span class="a">lang</span>=<span class="s">"ru"</span><span class="tb">&gt;</span>
@@ -1214,13 +860,12 @@
 <span class="tb">&lt;/</span><span class="t">html</span><span class="tb">&gt;</span>
 </pre>
 
-		<div class="footer"><a href="" onclick="toPage(8)">Следующая тема</a></div>
+		<div class="footer"><span class="link" onclick="toPage(8)">Следующая тема</span></div>
 	</div>
 
 
-	<div class="body" id="pg8">
-		<div class="header"><a href="" onclick="history.back()">Назад</a><a href="" onclick="toPage(0)">На главную</a><div></div><span onclick="changeTheme()">Сменить тему</span></div>
-		<h1>Css значения</h1>
+	<div class="page" id="pg8">
+		<h1>CSS значения</h1>
 		<h2>Цвета</h2>
 		<p>Цвета можно указывать названием, в формате RGB, RGBA, HSL, HSLA, а также шестнадцатеричным значением.</p>
 		<pre>
@@ -1231,10 +876,10 @@
 </pre>
 
 		<h2>Единицы измерения</h2>
-		<p>В css существуют разные единицы измерения:</p>
+		<p>В CSS существуют разные единицы измерения:</p>
 		<ul>
 			<li>em - размер шрифта</li>
-			<li>rem - размер шрифта &lt;html&gt; элемента</li>
+			<li>rem - размер шрифта &lt;HTML&gt; элемента</li>
 			<li>vw - процент от ширины окна</li>
 			<li>vh - процент от высоты окна</li>
 			<li>% - в процентах</li>
@@ -1249,14 +894,13 @@
 		<p>inherit - значение свойства наследуется у родительского элемента.</p>
 		<p>initial - устанавливается исходное значения свойства.</p>
 
-		<div class="footer"><a href="" onclick="toPage(9)">Следующая тема</a></div>
+		<div class="footer"><span class="link" onclick="toPage(9)">Следующая тема</span></div>
 	</div>
 
 
-	<div class="body" id="pg9">
-		<div class="header"><a href="" onclick="history.back()">Назад</a><a href="" onclick="toPage(0)">На главную</a><div></div><span onclick="changeTheme()">Сменить тему</span></div>
-		<h1>Css селекторы</h1>
-		<p>В css много способов указания элементов, также существуют псевдо-классы, которые позволяют менять стили, например, при наведении курсора на элемент.</p>
+	<div class="page" id="pg9">
+		<h1>CSS селекторы</h1>
+		<p>В CSS много способов указания элементов, также существуют псевдо-классы, которые позволяют менять стили, например, при наведении курсора на элемент.</p>
 		<h2>Выбор элементов</h2>
 		<p>Указать элемент можно, написав его тег, класс или id. Для применения стиля к разным элементам их можно написать через запятую:</p>
 		<pre><span class="ct">тег</span>, <span class="ct">.класс</span>, <span class="ct">#id</span> { }</pre>
@@ -1306,10 +950,10 @@
 </pre>
 		<pre>
 <span class="tb">&lt;</span><span class="t">p</span><span class="tb">&gt;</span>
-		<span class="tb">&lt;</span><span class="t">span</span><span class="tb">&gt;</span>Этот span - :first-child и :nth-child(1)<span class="tb">&lt;/</span><span class="t">span</span><span class="tb">&gt;</span>
-		<span class="tb">&lt;</span><span class="t">span</span><span class="tb">&gt;</span>Этот span - :nth-child(2)<span class="tb">&lt;/</span><span class="t">span</span><span class="tb">&gt;</span>
-		<span class="tb">&lt;</span><span class="t">span</span><span class="tb">&gt;</span>Этот span - :nth-child(3)<span class="tb">&lt;/</span><span class="t">span</span><span class="tb">&gt;</span>
-		<span class="tb">&lt;</span><span class="t">span</span><span class="tb">&gt;</span>Этот span - :last-child и :nth-child(4)<span class="tb">&lt;/</span><span class="t">span</span><span class="tb">&gt;</span>
+	<span class="tb">&lt;</span><span class="t">span</span><span class="tb">&gt;</span>Этот span - :first-child и :nth-child(1)<span class="tb">&lt;/</span><span class="t">span</span><span class="tb">&gt;</span>
+	<span class="tb">&lt;</span><span class="t">span</span><span class="tb">&gt;</span>Этот span - :nth-child(2)<span class="tb">&lt;/</span><span class="t">span</span><span class="tb">&gt;</span>
+	<span class="tb">&lt;</span><span class="t">span</span><span class="tb">&gt;</span>Этот span - :nth-child(3)<span class="tb">&lt;/</span><span class="t">span</span><span class="tb">&gt;</span>
+	<span class="tb">&lt;</span><span class="t">span</span><span class="tb">&gt;</span>Этот span - :last-child и :nth-child(4)<span class="tb">&lt;/</span><span class="t">span</span><span class="tb">&gt;</span>
 <span class="tb">&lt;/</span><span class="t">p</span><span class="tb">&gt;</span>
 </pre>
 		<p>:hover - позволяет выбрать элемент, на который навели курсор:</p>
@@ -1327,13 +971,12 @@
 		<p>Все псевдо-классы можно изучить <a href="https://www.w3schools.com/css/css_pseudo_classes.asp" target="_blank">по ссылке</a>.</p>
 
 
-		<div class="footer"><a href="" onclick="toPage(10)">Следующая тема</a></div>
+		<div class="footer"><span class="link" onclick="toPage(10)">Следующая тема</span></div>
 	</div>
 
 
-	<div class="body" id="pg10">
-		<div class="header"><a href="" onclick="history.back()">Назад</a><a href="" onclick="toPage(0)">На главную</a><div></div><span onclick="changeTheme()">Сменить тему</span></div>
-		<h1>Css: Основные свойства</h1>
+	<div class="page" id="pg10">
+		<h1>CSS: Основные свойства</h1>
 		<h2>Цвета</h2>
 		<p>color - цвет текста.</p>
 		<p>background-color - цвет фона.</p>
@@ -1506,12 +1149,11 @@
 		<p>Все значения display на <a target="_blank" href="https://webref.ru/css/display">этом сайте</a>.</p>
 
 
-		<div class="footer"><a href="" onclick="toPage(11)">Следующая тема</a></div>
+		<div class="footer"><span class="link" onclick="toPage(11)">Следующая тема</span></div>
 	</div>
 
 
-	<div class="body" id="pg11">
-		<div class="header"><a href="" onclick="history.back()">Назад</a><a href="" onclick="toPage(0)">На главную</a><div></div><span onclick="changeTheme()">Сменить тему</span></div>
+	<div class="page" id="pg11">
 		<h1>Css: Переменные</h1>
 		<p>Переменные должны начинаться с двойного дефиса:</p>
 		<pre><span class="cp">--имя-переменной</span>: <span class="cs">любое значение</span>;</pre>
@@ -1539,12 +1181,11 @@
 <span class="tb">&lt;/</span><span class="t">body</span><span class="tb">&gt;</span>
 </pre>
 
-		<div class="footer"><a href="" onclick="toPage(12)">Следующая тема</a></div>
+		<div class="footer"><span class="link" onclick="toPage(12)">Следующая тема</span></div>
 	</div>
 
 
-	<div class="body" id="pg12">
-		<div class="header"><a href="" onclick="history.back()">Назад</a><a href="" onclick="toPage(0)">На главную</a><div></div><span onclick="changeTheme()">Сменить тему</span></div>
+	<div class="page" id="pg12">
 		<h1>Функция calc()</h1>
 		<p>Функция calc() позволяет делать математические действия.</p>
 		<p>Пример:</p>
@@ -1553,19 +1194,18 @@
 	<span class="cp">width</span>: <span class="ck">calc</span>(<span class="cn">50%</span> - <span class="cn">5em</span>);
 }
 </pre>
-		<div class="footer"><a href="" onclick="toPage(13)">Следующая тема</a></div>
+		<div class="footer"><span class="link" onclick="toPage(13)">Следующая тема</span></div>
 	</div>
 
 
-	<div class="body" id="pg13">
-		<div class="header"><a href="" onclick="history.back()">Назад</a><a href="" onclick="toPage(0)">На главную</a><div></div><span onclick="changeTheme()">Сменить тему</span></div>
+	<div class="page" id="pg13">
 		<h1>Взаимодействие со страницей</h1>
 		<p>Для взаимодействия со страницей нужно уметь получать элемент со страницы в виде объекта, а так же создавать и добавлять новые элементы на страницу.</p>
 		<h2>Получить элемент</h2>
 		<p>Элемент &lt;body&gt; находится в document.body</p>
 		<p>document.getElementById("id") - получить элемент можно по id. Он должен быть уникальным у всех элементов, иначе результат будет непредсказуем.</p>
-		<p>document.querySelectorAll("селектор") - получить все элементы (массивом) по css селектору.</p>
-		<p>document.querySelector("селектор") - получить первый подходящий элемент по css селектору.</p>
+		<p>document.querySelectorAll("селектор") - получить все элементы (массивом) по CSS селектору.</p>
+		<p>document.querySelector("селектор") - получить первый подходящий элемент по CSS селектору.</p>
 		<h2>Получить элемент через другой</h2>
 		<p>el.firstChild - первый дочерний элемент</p>
 		<p>el.lastChild - последний дочерний элемент</p>
@@ -1576,26 +1216,25 @@
 		<p>Добавить элемент внутрь данного:</p>
 		<p>el.appendChild(элемент) - в конец.</p>
 		<p>el.insertBefore(элемент, элемент2) - перед элемент2.</p>
-		<h2>Удалить элемент из html</h2>
+		<h2>Удалить элемент из HTML</h2>
 		<p>el.removeChild(элемент) - удалить дочерний элемент.</p>
 
-		<div class="footer"><a href="" onclick="toPage(14)">Следующая тема</a></div>
+		<div class="footer"><span class="link" onclick="toPage(14)">Следующая тема</span></div>
 	</div>
 
 
-	<div class="body" id="pg14">
-		<div class="header"><a href="" onclick="history.back()">Назад</a><a href="" onclick="toPage(0)">На главную</a><div></div><span onclick="changeTheme()">Сменить тему</span></div>
+	<div class="page" id="pg14">
 		<h1>Элемент как объект</h1>
-		<p>В javascript html элементы представлены в виде классов. Изменив значения полей объекта, вы поменяете и сам html элемент.</p>
-		<p>Свойства html элементов:</p>
+		<p>В javascript HTML элементы представлены в виде классов. Изменив значения полей объекта, вы поменяете и сам HTML элемент.</p>
+		<p>Свойства HTML элементов:</p>
 		<h2>Содержимое</h2>
 		<p>el.innerText - текст внутри элемента.</p>
-		<p>el.innerHTML - html внутри элемента, строка, содержащая html теги.</p>
+		<p>el.innerHTML - HTML внутри элемента, строка, содержащая HTML теги.</p>
 		<h2>Стили</h2>
 		<p>el.style - объект, содержащий все стили элемента.</p>
-		<p>Для каждого css свойства в style есть поле с его значением.</p>
+		<p>Для каждого CSS свойства в style есть поле с его значением.</p>
 		<p>В именах из нескольких слов тире убираются, а следующая буква делается заглавной:</p>
-		<p>css свойство background-color в объекте style поле backgroundColor.</p>
+		<p>CSS свойство background-color в объекте style поле backgroundColor.</p>
 		<p>Значения в style не пустые в случае, если стили указаны в атрибуте style или через javascript.</p>
 		<h2>Классы</h2>
 		<p>el.classList - объект, содержащий все классы элемента, итерируемый.</p>
@@ -1607,12 +1246,11 @@
 		<p>Атрибуты элементов располагаются в соответствующих полях, например:</p>
 		<p>Атрибут href у ссылок: el.href,</p>
 		<p>Атрибут type у &lt;input&gt;: el.type.</p>
-		<div class="footer"><a href="" onclick="toPage(15)">Следующая тема</a></div>
+		<div class="footer"><span class="link" onclick="toPage(15)">Следующая тема</span></div>
 	</div>
 
 
-	<div class="body" id="pg15">
-		<div class="header"><a href="" onclick="history.back()">Назад</a><a href="" onclick="toPage(0)">На главную</a><div></div><span onclick="changeTheme()">Сменить тему</span></div>
+	<div class="page" id="pg15">
 		<h1>События</h1>
 		<h1>Интерактивность!</h1>
 		<p>Событие – это сигнал от браузера о том, что что-то произошло.</p>
@@ -1621,7 +1259,7 @@
 		<p>Когда на элементе происходит событие, обработчики сначала срабатывают на нём, потом на его родителе, затем выше и так далее, вверх по цепочке предков.</p>
 		<p>Для определения, на каком элементе произошло событие, у него есть свойство target, в нём хранится элемент, на котором оно произошло.</p>
 		<h2>Обработчики события</h2>
-		<p>Обработчик события можно добавить к html элементу:</p>
+		<p>Обработчик события можно добавить к HTML элементу:</p>
 		<pre>
 <span class="vc">el</span>.<span class="f">addEventListener</span>(<span class="sj">"событие"</span>, <span class="f">ваша_функция</span>);
 <span class="c">// Можно и удалить:</span>
@@ -1656,14 +1294,13 @@
 			<li>code - нажатая клавиша на клавиатуре.</li>
 			<li>key - значение нажатой клавиши.</li>
 		</ul>
-		<p>Глава <a href="" onclick="toPage(22)">code и key любой клавиши</a>.</p>
-		<div class="footer"><a href="" onclick="toPage(16)">Следующая тема</a></div>
+		<p>Глава <span class="link" onclick="toPage(22)">code и key любой клавиши</span>.</p>
+		<div class="footer"><span class="link" onclick="toPage(16)">Следующая тема</span></div>
 	</div>
 
 
-	<div class="body" id="pg16">
-		<div class="header"><a href="" onclick="history.back()">Назад</a><a href="" onclick="toPage(0)">На главную</a><div></div><span onclick="changeTheme()">Сменить тему</span></div>
-		<h1>Больше css свойств</h1>
+	<div class="page" id="pg16">
+		<h1>Больше CSS свойств</h1>
 		<h2>visibility</h2>
 		<p>Значения: visible или hidden.</p>
 		<p>При visibility: hidden элемент продолжает занимать место на странице.</p>
@@ -1704,12 +1341,11 @@
 		<p>Все виды курсоров на <a target="_blank" href="https://webref.ru/css/cursor">этом сайте</a>.</p>
 
 
-		<div class="footer"><a href="" onclick="toPage(17)">Следующая тема</a></div>
+		<div class="footer"><span class="link" onclick="toPage(17)">Следующая тема</span></div>
 	</div>
 
 
-	<div class="body" id="pg17">
-		<div class="header"><a href="" onclick="history.back()">Назад</a><a href="" onclick="toPage(0)">На главную</a><div></div><span onclick="changeTheme()">Сменить тему</span></div>
+	<div class="page" id="pg17">
 		<h1>Тег input</h1>
 		<p>Подробнее о его возможностях и как им можно пользоваться.</p>
 		<h2>Виды input</h2>
@@ -1763,14 +1399,14 @@
 		<p>У input есть два полезных события:</p>
 		<p>input - происходит каждый раз при изменении значения пользователем.</p>
 		<p>changed - происходит, когда пользователь завершил ввод (нажал вне поля ввода, закрыл меню выбора цвета/даты).</p>
-		<div class="footer"><a href="" onclick="toPage(18)">Следующая тема</a></div>
+		<div class="footer"><span class="link" onclick="toPage(18)">Следующая тема</span></div>
 	</div>
 
 
-	<div class="body" id="pg18">
-		<div class="header"><a href="" onclick="history.back()">Назад</a><a href="" onclick="toPage(0)">На главную</a><div></div><span onclick="changeTheme()">Сменить тему</span></div>
-		<h1>Css анимации</h1>
-		<p>Для анимации необходимо настроить два css свойства:</p>
+	<div class="page" id="pg18">
+		<h1>CSS анимации</h1>
+		<p>CSS анимации пока что не поддерживаются всеми браузерами, см. <a target="_blank" href="https://caniuse.com/css-animation">таблицу совместимости</a>.</p>
+		<p>Для анимации необходимо настроить два CSS свойства:</p>
 		<ul>
 			<li>transition-property - какие свойства анимировать</li>
 			<li>transition-duration - длительность анимации</li>
@@ -1788,7 +1424,10 @@
 	<span class="cp">background-color</span>: <span class="cs">red</span>;
 }
 </pre>
-		<div><div class="pg18-anim-rect"></div></div>
+		<div style="display: flex;">
+			<div class="pg18-anim-rect"></div>
+			<div class="pg18-no-anim-rect main-font-size">Без анимации</div>
+		</div>
 		<pre>
 <span class="ct">.anim-button</span> {
 	<span class="cp">transition-property</span>: <span class="cs">color</span>, <span class="cs">background-color</span>;
@@ -1801,7 +1440,10 @@
 	<span class="cp">color</span>: <span class="cs">lime</span>;
 }
 </pre>
-		<p><button class="pg18-anim-button">Нажмите сюда</button></p>
+		<p>
+			<button class="pg18-anim-button">Нажмите сюда</button>
+			<button class="pg18-no-anim-button">Без анимации</button>
+		</p>
 
 		<h2>Сложные анимации</h2>
 		<p>Можно делать анимации по ключевым кадрам.</p>
@@ -1849,14 +1491,13 @@
 }
 </pre>
 		<div><div class="pg18-anim-div"></div></div>
-		<p>Все про анимацию можно узнать на <a target="_blank" href="https://webref.ru/css/cursor">этом сайте</a>.</p>
+		<p>Все про анимацию можно узнать на <a target="_blank" href="https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Animations/Using_CSS_animations">этом сайте</a>.</p>
 
-		<div class="footer"><a href="" onclick="toPage(19)">Следующая тема</a></div>
+		<div class="footer"><span class="link" onclick="toPage(19)">Следующая тема</span></div>
 	</div>
 
 
-	<div class="body" id="pg19">
-		<div class="header"><a href="" onclick="history.back()">Назад</a><a href="" onclick="toPage(0)">На главную</a><div></div><span onclick="changeTheme()">Сменить тему</span></div>
+	<div class="page" id="pg19">
 		<h1>Тег canvas</h1>
 		<p>Канва - это место, где вы можете рисовать.</p>
 		<p>Атрибутами width и height можно указать размер холста в пикселях.
@@ -1864,6 +1505,7 @@
 			изображение будет расстягиваться под размер канвы.</p>
 		<p>Размер холста можно изменить и через javascript:</p>
 		<pre>
+<span class="kj">const</span> <span class="vc">canvas</span> = <span class="vl">document</span>.<span class="f">getElementById</span>(<span class="sj">"canvas"</span>);
 <span class="vc">canvas</span>.<span class="vl">width</span> = <span class="n">300</span>;
 <span class="vc">canvas</span>.<span class="vl">height</span> = <span class="n">300</span>;
 </pre>
@@ -1975,12 +1617,11 @@
 		}
 		</script>
 
-		<div class="footer"><a href="" onclick="toPage(20)">Следующая тема</a></div>
+		<div class="footer"><span class="link" onclick="toPage(20)">Следующая тема</span></div>
 	</div>
 
 
-	<div class="body" id="pg20">
-		<div class="header"><a href="" onclick="history.back()">Назад</a><a href="" onclick="toPage(0)">На главную</a><div></div><span onclick="changeTheme()">Сменить тему</span></div>
+	<div class="page" id="pg20">
 		<h1>canvas анимации</h1>
 		<p>Для создания анимаций или игр на канве необходимо обновлять канву несколько раз в секунду. Для этого существует функция requestAnimationFrame().</p>
 		<p>В качестве параметра она принимает функцию, которую необходимо вызвать. Этой функции она передаст прошедшее время первым параметром.</p>
@@ -2061,12 +1702,11 @@
 		}
 		</script>
 
-		<div class="footer"><a href="" onclick="toPage(21)">Следующая тема</a></div>
+		<div class="footer"><span class="link" onclick="toPage(21)">Следующая тема</span></div>
 	</div>
 
 
-	<div class="body" id="pg21">
-		<div class="header"><a href="" onclick="history.back()">Назад</a><a href="" onclick="toPage(0)">На главную</a><div></div><span onclick="changeTheme()">Сменить тему</span></div>
+	<div class="page" id="pg21">
 		<h1>Функция range()</h1>
 		<p>Моя реализация функции range() из python.</p>
 		<p>Работает так же:</p>
@@ -2098,12 +1738,11 @@
 	<span class="vl">console</span>.<span class="f">log</span>(<span class="vl">i</span>);
 }
 </pre>
-		<div class="footer"><a href="" onclick="toPage(22)">Следующая тема</a></div>
+		<div class="footer"><span class="link" onclick="toPage(22)">Следующая тема</span></div>
 	</div>
 
 
-	<div class="body" id="pg22">
-		<div class="header"><a href="" onclick="history.back()">Назад</a><a href="" onclick="toPage(0)">На главную</a><div></div><span onclick="changeTheme()">Сменить тему</span></div>
+	<div class="page" id="pg22">
 		<h1>code и key любой клавиши</h1>
 		<p>Нажмите любую клавишу.</p>
 		<div style="padding: 10px;" id="pg22-output"></div>
@@ -2127,12 +1766,11 @@
 			});
 		}
 		</script>
-		<div class="footer"><a href="" onclick="toPage(23)">Следующая тема</a></div>
+		<div class="footer"><span class="link" onclick="toPage(23)">Следующая тема</span></div>
 	</div>
 
 
-	<div class="body" id="pg23">
-		<div class="header"><a href="" onclick="history.back()">Назад</a><a href="" onclick="toPage(0)">На главную</a><div></div><span onclick="changeTheme()">Сменить тему</span></div>
+	<div class="page" id="pg23">
 		<h1>Красивые кнопки</h1>
 		<p>Стандартные кнопки выглядят неплохо, но не всегда.</p>
 		<p><button class="main-font-size">Кнопка</button></p>
@@ -2230,15 +1868,14 @@
 	<span class="cp">text-decoration</span>: <span class="cs">none</span>;
 }
 </pre>
-		<div class="footer"><a href="" onclick="toPage(24)">Следующая тема</a></div>
+		<div class="footer"><span class="link" onclick="toPage(24)">Следующая тема</span></div>
 	</div>
 
 
-	<div class="body" id="pg24">
-		<div class="header"><a href="" onclick="history.back()">Назад</a><a href="" onclick="toPage(0)">На главную</a><div></div><span onclick="changeTheme()">Сменить тему</span></div>
+	<div class="page" id="pg24">
 		<h1>3D куб</h1>
 		<div class="rect3d"><div><div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div></div></div>
-		<p>html куба:</p>
+		<p>HTML куба:</p>
 		<pre>
 <span class="tb">&lt;</span><span class="t">div</span> <span class="a">class</span>=<span class="s">"rect3d"</span><span class="tb">&gt;</span> <span class="c">&lt;!-- контейнер --&gt;</span>
 	<span class="tb">&lt;</span><span class="t">div</span><span class="tb">&gt;</span> <span class="c">&lt;!-- куб --&gt;</span>
@@ -2303,41 +1940,7 @@
 }
 </pre>
 
-		<div class="footer"><a href="" onclick="toPage(0)">На главную</a></div>
+		<div class="footer"><span class="link" onclick="toPage(0)">На главную</span></div>
 	</div>
-
-	<script>
-		const getEl = (i) => document.getElementById(`pg${i}`);
-		let pageCur = 0;
-		if (typeof history.state == "number") setPage(history.state);
-		else setPage(0);
-		window.addEventListener("popstate", (e) =>
-			{
-				const state = history.state;
-				if (typeof state == "number") setPage(state);
-				else toPage(0);
-			});
-		function setPage(pg) {
-			try {
-				getEl(pageCur).classList.remove("visible");
-			} catch (e) {
-				console.error(e);
-				pageCur = 0;
-				toPage(0);
-			}
-			try {
-				pageCur = pg;
-				getEl(pageCur).classList.add("visible");
-			} catch (e) {
-				console.error(e);
-				pageCur = 0;
-				getEl(0).classList.add("visible");
-				toPage(0);
-			}
-		}
-		function toPage(pg) {
-			history.pushState(pg, "");
-		}
-	</script>
 </body>
 </html>

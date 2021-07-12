@@ -1,0 +1,81 @@
+.hover-red:hover { color: red; }
+.active-red:active { color: red; }
+.focus-lightblue:focus { background-color: lightblue; }
+.flex-container-div { display: flex; flex-wrap: wrap; }
+.flex-container-div div { padding: 10px; border: 3px solid lime; margin: 5px; flex-grow: 1; text-align: center;}
+.pg10-container {
+    position: relative;
+    min-height: 100px;
+    background-color: gray;
+}
+.pg10-element1, .pg10-element2 {
+    position: absolute;
+    background-color: lime;
+    width: 50px;
+    height: 50px;
+    top: 20px;
+    left: 10px;
+}
+.pg10-element2 {
+    top: -20px;
+    left: 70px;
+}
+.pg18-anim-rect {
+    transition-property: background-color;
+    transition-duration: 1s;
+    background-color: blue;
+    margin-right: 1rem;
+    width: 100px;
+    height: 100px;
+}
+.pg18-anim-rect:hover {
+    background-color: red;
+}
+.pg18-no-anim-rect {
+    background-color: blue;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+}
+.pg18-no-anim-rect:hover {
+    background-color: red;
+}
+.pg18-anim-button {
+    transition-property: color, background-color;
+    transition-duration: 250ms;
+    background-color: lightblue;
+    color: black;
+    border: 1px solid gray;
+}
+.pg18-anim-button:active {
+    background-color: blue;
+    color: lime;
+}
+.pg18-no-anim-button {
+    background-color: lightblue;
+    color: black;
+    border: 1px solid gray;
+}
+.pg18-no-anim-button:active {
+    background-color: blue;
+    color: lime;
+}
+@keyframes pg18-cool-animation {
+    0% {
+        background-color: cyan;
+        width: 100px;
+    }
+    50% {
+        background-color: lime;
+    }
+    100% {
+        background-color: yellow;
+        width: 100%;
+    }
+}
+.pg18-anim-div {
+    animation: pg18-cool-animation 2s infinite alternate;
+    height: 100px;
+}

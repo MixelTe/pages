@@ -1,0 +1,161 @@
+body {
+    --t-dur--: 250ms;
+    transition-property: color, background-color;
+    transition-duration: var(--t-dur--);
+    background-color: var(--c-back--);
+    font-family: 'PT Sans', Arial, Helvetica, sans-serif;
+    margin: 0px;
+    padding: 10px;
+    padding-top: 0px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: var(--c-text--);
+}
+.page {
+    max-width: 50rem;
+    width: 100%;
+    display: none;
+    margin-bottom: 10rem;
+}
+.visible { display: block; }
+h1, h2 {
+    font-family: 'PT Sans Caption', 'Times New Roman', Times, serif;
+    text-align: center;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+.raw {
+    font-family: revert;
+    text-align: revert;
+    margin-bottom: revert;
+    margin-top: revert;
+}
+h2 { margin-top: 2rem; }
+h1 + h1 { font-size: 1.3rem; }
+p, ul, ol, .footer, table, a, .header span, .main-font-size { font-size: 1.15rem; }
+li { margin-top: 0.5rem; }
+pre {
+    font-family: 'PT Mono', monospace;
+    font-size: 1rem;
+    white-space: pre-wrap;
+    tab-size: 4;
+    transition-duration: calc(var(--t-dur--) / 4);
+    margin: 1em 0em;
+}
+pre span { transition-duration: var(--t-dur--); }
+pre::selection, pre *::selection {
+    background-color: var(--c-selection--);
+}
+p + p { margin-top: -0.6rem; }
+a, .link {
+    transition-property: color;
+    transition-duration: var(--t-dur--);
+    color: var(--c-link--);
+    outline: none;
+    text-decoration-skip-ink: none;
+    text-decoration: none;
+    cursor: pointer;
+}
+a:hover, .link:hover { text-decoration: underline; }
+a:focus, .link:focus { text-decoration: underline; }
+.fake {
+    color: tomato;
+}
+.header {
+    position: sticky;
+    z-index: 2;
+    padding-top: 10px;
+    /* height: 2.6rem; */
+    width: 100%;
+    max-width: 50rem;
+    top: 0px;
+    background-color: var(--c-back--);
+    display: flex;
+    align-items: center;
+    transition-duration: var(--t-dur--);
+}
+.header svg {
+    transition-property: fill;
+    transition-duration: var(--t-dur--);
+    height: 1.9rem;
+    fill: var(--c-text--);
+    user-select: none;
+}
+.header a:focus svg {
+    fill: var(--c-link--);
+}
+.header span {
+    cursor: pointer;
+}
+.lightTheme .header span:last-child svg:first-child {
+    display: none;
+}
+.darkTheme .header span:last-child svg:last-child {
+    display: none;
+}
+.header span + span { margin-left: 20px; }
+.header div { 
+    flex: 1 1 auto; 
+    text-align: center;
+}
+.footer {
+    text-align: center;
+    margin-top: 5rem;
+}
+.multi-list, .multi-list ol {
+    list-style: none;
+    counter-reset: section;
+    padding-left: 1.6rem;
+}
+.multi-list li::before {
+    counter-increment: section;
+    content: counters(section, ".");
+    padding-right: 0.6rem;
+}
+.multi-list > li::before {
+    content: counters(section, ".") ".";
+}
+
+pre.nowrap {
+    white-space: pre;
+    overflow-x: auto;
+}
+pre.nowrap::-webkit-scrollbar {
+    width: 0.4em;
+    height: 0.4em;
+}   
+pre.nowrap::-webkit-scrollbar-thumb {
+    background-color: rgba(128, 128, 128, 0.6);
+    border-radius: 0.2em;
+    /* outline: 1px solid slategrey; */
+}
+pre.nowrap::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(128, 128, 128);
+}
+.pre-container {
+    position: relative;
+}
+.copy {
+    position: absolute;
+    top: -1em;
+    right: 0;
+    font-size: 1rem;
+}
+.copy svg {
+    height: 1em;
+    transition-property: fill;
+    transition-duration: var(--t-dur--);
+    fill: var(--c-text--);
+    cursor: pointer;
+}
+.copied::after {
+    content: "Скопировано!";
+    font-size: 0.85em;
+    background-color: rgba(128, 128, 128, 0.6);
+    padding: 0.3em 0.5em;
+    border-radius: 0.3em;
+    position: absolute;
+    top: 1.5em;
+    right: 0;
+}
