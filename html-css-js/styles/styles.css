@@ -106,9 +106,13 @@ a:focus, .link:focus { text-decoration: underline; }
 .multi-list, .multi-list ol {
     list-style: none;
     counter-reset: section;
-    padding-left: 1.6rem;
+    padding-left: 0rem;
+}
+.multi-list li {
+    display: table;
 }
 .multi-list li::before {
+    display: table-cell;
     counter-increment: section;
     content: counters(section, ".");
     padding-right: 0.6rem;

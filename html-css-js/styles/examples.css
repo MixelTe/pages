@@ -24,6 +24,9 @@
     transition-property: background-color;
     transition-duration: 1s;
     background-color: blue;
+    display: flex;
+    align-items: center;
+    text-align: center;
     margin-right: 1rem;
     width: 100px;
     height: 100px;
@@ -44,7 +47,7 @@
 }
 .pg18-anim-button {
     transition-property: color, background-color;
-    transition-duration: 250ms;
+    transition-duration: 500ms;
     background-color: lightblue;
     color: black;
     border: 1px solid gray;

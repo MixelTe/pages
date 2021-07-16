@@ -133,8 +133,8 @@
 			<p>Сразу скажу про функцию print(), в javascript эта функция не печатает текст в консоль, а нужна для печати на принтере. Функции input() в javascript нет.</p>
 			<p>Вместо функции print() можно использовать alert() - вывод на экран или console.log() - вывод в консоль (открывается в браузере по кнопке F12).
 				Нажмите, чтобы вызвать функцию:
-				<span onclick='alert("Текст в alert")' style="color: violet; cursor: pointer;">alert("Текст в alert")</span>,
-				<span onclick='console.log("Текст в консоль")' style="color: violet; cursor: pointer;">console.log("Текст в консоль")</span>
+				<br><span onclick='alert("Текст в alert")' style="color: violet; cursor: pointer;">alert("Текст в alert")</span>,
+				<br><span onclick='console.log("Текст в консоль")' style="color: violet; cursor: pointer;">console.log("Текст в консоль")</span>
 			</p>
 			<p>Для комментариев в тексте используются два слэша: //комментарий.</p>
 			<p>В конце строк желательно ставить точку с запятой (;).</p>
@@ -169,6 +169,8 @@
 { Какие-либо действия; } <span class="c">// Можно и так</span>
 { Действие; Действие; Действие; } <span class="c">// И так тоже</span>
 
+</pre>
+<pre>
 <span class="kj">const</span> <span class="vc">a</span> = <span class="sj">"123"</span>;
 {
 	<span class="kj">const</span> <span class="vc">a</span> = <span class="sj">"abc"</span>; <span class="c">// Это уже другая переменная</span>
@@ -189,7 +191,7 @@
 		<div>
 			<p>В javascript вместо and, or и not используются &&, || и ! соответственно.</p>
 			<pre>!(<span class="vl">a</span> == <span class="n">1</span> && <span class="vl">b</span> != <span class="n">1</span>) <span class="c">// not(a == 1 and b != 1)</span></pre>
-			<p>Также, в javascript false и true пишутся с маленькой буквы.</p>
+			<p>Также, в javascript true и false пишутся с маленькой буквы.</p>
 			<pre>!(<span class="vl">a</span> == <span class="b">true</span> || <span class="vl">b</span> == <span class="b">false</span>) <span class="c">// not(a is True or b is False)</span></pre>
 		</div>
 
@@ -198,15 +200,15 @@
 			<pre>
 <span class="k">if</span> (условие)
 {
-	Действия, если условие верно;
+	Действия;
 }
 <span class="k">else if</span> (условие) <span class="c">// Вместо elif</span>
 {
-	Действия, если предыдущие условия оказались неверны, а это верно;
+	Действия;
 }
 <span class="k">else</span>
 {
-	Действия, если предыдущие условия оказались неверны;
+	Действия;
 }
 </pre>
 			<p>Условия обязательно писать в скобках.</p>
@@ -417,7 +419,7 @@
 			<p>В javascript вместо метода __init__ есть метод constructor.</p>
 			<p>Вместо self - this.</p>
 			<p>Поля класса можно объявлять вне конструктора.</p>
-			<p>В javascript не нужно передовать this в каждую функцию, он сам неявно передаётся!</p>
+			<p>В javascript не нужно писать this первым параметром!</p>
 			<pre>
 <span class="kj">class</span> <span class="m">Person</span>
 {
@@ -629,7 +631,7 @@
 
 		<h2>Таблицы</h2>
 		<p>С помощью таблиц легко расположить элементы на странице.</p>
-		<pre>
+		<pre class="nowrap">
 <span class="tb">&lt;</span><span class="t">table</span><span class="tb">&gt;</span>
 	<span class="tb">&lt;</span><span class="t">tr</span><span class="tb">&gt;</span><span class="tb">&lt;</span><span class="t">th</span><span class="tb">&gt;</span>Заголовок 1<span class="tb">&lt;/</span><span class="t">th</span><span class="tb">&gt;</span><span class="tb">&lt;</span><span class="t">th</span><span class="tb">&gt;</span>Заголовок 2<span class="tb">&lt;/</span><span class="t">th</span><span class="tb">&gt;</span><span class="tb">&lt;/</span><span class="t">tr</span><span class="tb">&gt;</span>
 	<span class="tb">&lt;</span><span class="t">tr</span><span class="tb">&gt;</span><span class="tb">&lt;</span><span class="t">td</span><span class="tb">&gt;</span>Ячейка 1<span class="tb">&lt;/</span><span class="t">td</span><span class="tb">&gt;</span><span class="tb">&lt;</span><span class="t">td</span><span class="tb">&gt;</span>Ячейка 2<span class="tb">&lt;/</span><span class="t">td</span><span class="tb">&gt;</span><span class="tb">&lt;/</span><span class="t">tr</span><span class="tb">&gt;</span>
@@ -747,7 +749,6 @@
 		<p>Добавить javascript на страницу можно несколькими способами.</p>
 		<p>Весь код на странице будет находится в общей памяти. То есть, если в одном из скриптов вы создадите переменную или функцию,
 			то она будет доступна и в других скриптах на вашей странице (по-другому при использовании модулей).</p>
-		<p>В примерах нет других тегов в head, так как в них показывается, куда нужно добавить элементы</p>
 		<p><b>Вариант 1</b>: Добавить код прямо в HTML файл.</p>
 		<p>Для этого необходимо добавить тег script, внутри него можно писать любой код. Тег можно добавить в head или в body.</p>
 		<pre>
@@ -830,7 +831,7 @@
 		<p>Создайте папку js, и в этой папке файл main.js</p>
 		<p>Если вы работаете в студии <a href="https://code.visualstudio.com/" target="_blank">VS Code</a>, то можете в папке с вашим проектом нажать "ПКМ -> Открыть с помощью Code" - для открытия студии в этой папке.</p>
 		<h2>Заполните HTML файл</h2>
-		<pre>
+		<pre class="nowrap">
 <span class="tb">&lt;!</span><span class="t">DOCTYPE</span> <span class="a">html</span><span class="tb">&gt;</span>
 <span class="tb">&lt;</span><span class="t">html</span> <span class="a">lang</span>=<span class="s">"ru"</span><span class="tb">&gt;</span>
 <span class="tb">&lt;<span class="t">head</span>&gt;</span>
@@ -847,7 +848,7 @@
 <span class="tb">&lt;/</span><span class="t">html</span><span class="tb">&gt;</span>
 </pre>
 		<h2>С использованием js модулей</h2>
-		<pre>
+		<pre class="nowrap">
 <span class="tb">&lt;!</span><span class="t">DOCTYPE</span> <span class="a">html</span><span class="tb">&gt;</span>
 <span class="tb">&lt;</span><span class="t">html</span> <span class="a">lang</span>=<span class="s">"ru"</span><span class="tb">&gt;</span>
 <span class="tb">&lt;<span class="t">head</span>&gt;</span>
@@ -1105,11 +1106,11 @@
 		<p>Устанавливает способ позиционирования элемента на странице.</p>
 		<p>Значения:</p>
 		<ul>
-			<li>absolute - элемент располагается относительно родительского элемента с position: relative, если такого нет, то как fixed</li>
+			<li>absolute - элемент располагается относительно родительского элемента с position: relative, если такого нет, то относительно body</li>
 			<li>fixed - элемент располагается относительно окна браузера (не двигается при прокрутке)</li>
 			<li>relative - элемент сдвигается относительно его положения</li>
 			<li>static - элемент отображается как обычно</li>
-			<li>sticky - отображается как обычно, если влезает в экран, иначе как absolute</li>
+			<li>sticky - отображается как обычно, если влезает в экран, иначе как fixed</li>
 		</ul>
 		<p>При absolute и fixed элемент перестаёт занимать место среди других элементов.</p>
 		<p>Пример sticky: панель вверху с кнопками "Назад", "На главную" и "<span class="changeThemeButton" onclick="changeTheme()">Сменить тему</span>".</p>
@@ -1146,6 +1147,7 @@
 		<ul>
 			<li>block - перенос строк в начале и в конце элемента, расстягивается на всю доступную ширину.</li>
 			<li>inline - элемент располагается на той же строке, последовательно. Ширина и высота элемента определяются по содержимому. Поменять их нельзя.</li>
+			<li>inline-block - элемент располагается на той же строке, последовательно. Ширину и высоту элемента можно указать стилями.</li>
 			<li>flex - позволяет располагать элементы внутри очень гибкими способами.</li>
 			<li>grid - позволяет располагать элементы внутри по сетке.</li>
 		</ul>
@@ -1214,13 +1216,13 @@
 		<p>el.lastChild - последний дочерний элемент</p>
 		<p>el.parentNode - родительский элемент</p>
 		<h2>Создать элемент</h2>
-		<p>document.createElement("тег")</p>
+		<pre><span class="kj">const</span> <span class="vc">el</span> = <span class="vl">document</span>.<span class="f">createElement</span>(<span class="sj">"тег"</span>);</pre>
 		<h2>Добавить элемент</h2>
 		<p>Добавить элемент внутрь данного:</p>
-		<p>el.appendChild(элемент) - в конец.</p>
-		<p>el.insertBefore(элемент, элемент2) - перед элемент2.</p>
+		<pre><span class="vc">el</span>.<span class="f">appendChild</span>(<span class="vc">элемент</span>); <span class="c">// В конец</span></pre>
+		<pre><span class="vc">el</span>.<span class="f">insertBefore</span>(<span class="vc">элемент</span>, <span class="vc">элемент2</span>); <span class="c">// Перед элемент2</span></pre>
 		<h2>Удалить элемент из HTML</h2>
-		<p>el.removeChild(элемент) - удалить дочерний элемент.</p>
+		<pre><span class="vc">el</span>.<span class="f">removeChild</span>(<span class="vc">элемент</span>); <span class="c">// удалить дочерний элемент</span></pre>
 
 		<div class="footer"><span class="link" onclick="toPage(14)">Следующая тема</span></div>
 	</div>
@@ -1270,7 +1272,7 @@
 </pre>
 		<p>Обработчик события, добавленный к объекту window - самый глобальный.</p>
 		<p>Так обработчик не удалится:</p>
-		<pre>
+		<pre class="nowrap">
 <span class="vc">el</span>.<span class="f">addEventListener</span>(<span class="sj">"событие"</span>, (<span class="vl">e</span>) <span class="kj">=></span> <span class="f">doSmth</span>(<span class="vl">e</span>));
 <span class="vc">el</span>.<span class="f">removeEventListener</span>(<span class="sj">"событие"</span>, (<span class="vl">e</span>) <span class="kj">=></span> <span class="f">doSmth</span>(<span class="vl">e</span>));
 </pre>
@@ -1298,6 +1300,35 @@
 			<li>key - значение нажатой клавиши.</li>
 		</ul>
 		<p>Глава <span class="link" onclick="toPage(22)">code и key любой клавиши</span>.</p>
+		<h2>Пример использования событий</h2>
+		<pre>
+<span class="tb">&lt;</span><span class="t">p</span> <span class="a">id</span>=<span class="s">"display-move"</span><span class="tb">&gt;</span>Курсор: X: -- Y: --<span class="tb">&lt;/</span><span class="t">p</span><span class="tb">&gt;</span>
+<span class="tb">&lt;</span><span class="t">p</span> <span class="a">id</span>=<span class="s">"display-click"</span><span class="tb">&gt;</span>Нажатие: X: -- Y: --<span class="tb">&lt;/</span><span class="t">p</span><span class="tb">&gt;</span>
+</pre>
+		<p id="pg15-display-move">Курсор: X: -- Y: --</p>
+		<p id="pg15-display-click">Нажатие: X: -- Y: --</p>
+		<pre>
+<span class="kj">const</span> <span class="vc">display_move</span> = <span class="vl">document</span>.<span class="f">getElementById</span>(<span class="sj">"pg15-display-move"</span>);
+<span class="kj">const</span> <span class="vc">display_click</span> = <span class="vl">document</span>.<span class="f">getElementById</span>(<span class="sj">"pg15-display-click"</span>);
+<span class="vl">window</span>.<span class="f">addEventListener</span>(<span class="sj">"mousemove"</span>, <span class="vl">e</span> <span class="kj">=></span> {
+	<span class="vc">display_move</span>.<span class="vl">innerText</span> = <span class="sj">`Курсор: X: </span><span class="kj">${</span><span class="vl">e</span>.<span class="vc">pageY</span><span class="kj">}</span><span class="sj"> Y: </span><span class="kj">${</span><span class="vl">e</span>.<span class="vc">pageY</span><span class="kj">}</span><span class="sj">`</span>;
+});
+<span class="vl">window</span>.<span class="f">addEventListener</span>(<span class="sj">"click"</span>, <span class="vl">e</span> <span class="kj">=></span> {
+	<span class="vc">display_click</span>.<span class="vl">innerText</span> = <span class="sj">`Нажатие: X: </span><span class="kj">${</span><span class="vl">e</span>.<span class="vc">pageY</span><span class="kj">}</span><span class="sj"> Y: </span><span class="kj">${</span><span class="vl">e</span>.<span class="vc">pageY</span><span class="kj">}</span><span class="sj">`</span>;
+});
+		</pre>
+		<script>
+			{
+				const display_move = document.getElementById("pg15-display-move");
+				const display_click = document.getElementById("pg15-display-click");
+				window.addEventListener("mousemove", e => {
+					display_move.innerText = `Курсор: X: ${e.pageX} Y: ${e.pageY}`;
+				});
+				window.addEventListener("click", e => {
+					display_click.innerText = `Нажатие: X: ${e.pageX} Y: ${e.pageY}`;
+				});
+			}
+		</script>
 		<div class="footer"><span class="link" onclick="toPage(16)">Следующая тема</span></div>
 	</div>
 
@@ -1323,8 +1354,8 @@
 		<p>Расположение элемента по "высоте":</p>
 		<div style="position: relative; height: 7em;">
 			<div style="position: absolute; top: 0em; left: 0em; background-color: gray; padding: 1em; border: 1px solid lime;">z-index: 1</div>
-			<div style="position: absolute; top: 1.6em; left: 0.5em; background-color: gray; padding: 1em; border: 1px solid lime;">z-index: 2</div>
-			<div style="position: absolute; top: 3.2em; left: 1em; background-color: gray; padding: 1em; border: 1px solid lime;">z-index: 3</div>
+			<div style="z-index: 2; position: absolute; top: 2em; left: 0.5em; background-color: gray; padding: 1em; border: 1px solid lime;">z-index: 2</div>
+			<div style="position: absolute; top: 4em; left: 1em; background-color: gray; padding: 1em; border: 1px solid lime;">z-index: 1</div>
 		</div>
 
 		<h2>cursor</h2>
@@ -1408,7 +1439,7 @@
 
 	<div class="page" id="pg18">
 		<h1>CSS анимации</h1>
-		<p>CSS анимации пока что не поддерживаются всеми браузерами, см. <a target="_blank" href="https://caniuse.com/css-animation">таблицу совместимости</a>.</p>
+		<p>CSS анимации поддерживаются не всеми браузерами, см. <a target="_blank" href="https://caniuse.com/css-animation">таблицу совместимости</a>.</p>
 		<p>Для анимации необходимо настроить два CSS свойства:</p>
 		<ul>
 			<li>transition-property - какие свойства анимировать</li>
@@ -1428,13 +1459,13 @@
 }
 </pre>
 		<div style="display: flex;">
-			<div class="pg18-anim-rect"></div>
+			<div class="pg18-anim-rect main-font-size">Наведите курсор</div>
 			<div class="pg18-no-anim-rect main-font-size">Без анимации</div>
 		</div>
 		<pre>
 <span class="ct">.anim-button</span> {
 	<span class="cp">transition-property</span>: <span class="cs">color</span>, <span class="cs">background-color</span>;
-	<span class="cp">transition-duration</span>: <span class="cn">250ms</span>;
+	<span class="cp">transition-duration</span>: <span class="cn">500ms</span>;
 	<span class="cp">background-color</span>: <span class="cs">lightblue</span>;
 	<span class="cp">color</span>: <span class="cs">black</span>;
 }
@@ -1495,6 +1526,7 @@
 </pre>
 		<div><div class="pg18-anim-div"></div></div>
 		<p>Все про анимацию можно узнать на <a target="_blank" href="https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Animations/Using_CSS_animations">этом сайте</a>.</p>
+		<p>Учебник по анимации на <a target="_blank" href="https://html5book.ru/css3-animation/">этом сайте</a>.</p>
 
 		<div class="footer"><span class="link" onclick="toPage(19)">Следующая тема</span></div>
 	</div>
@@ -1879,7 +1911,7 @@
 		<h1>3D куб</h1>
 		<div class="rect3d"><div><div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div></div></div>
 		<p>HTML куба:</p>
-		<pre>
+		<pre class="nowrap">
 <span class="tb">&lt;</span><span class="t">div</span> <span class="a">class</span>=<span class="s">"rect3d"</span><span class="tb">&gt;</span> <span class="c">&lt;!-- контейнер --&gt;</span>
 	<span class="tb">&lt;</span><span class="t">div</span><span class="tb">&gt;</span> <span class="c">&lt;!-- куб --&gt;</span>
 		<span class="c">&lt;!-- стороны куба --&gt;</span>
@@ -1893,7 +1925,7 @@
 <span class="tb">&lt;/</span><span class="t">div</span><span class="tb">&gt;</span>
 		</pre>
 		<p>Стили:</p>
-		<pre>
+		<pre class="nowrap">
 <span class="ct">.rect3d</span> { <span class="c">/* Контейнер */</span>
 	<span class="cp">height</span>: <span class="cn">80px</span>;
 	<span class="cp">padding</span>: <span class="cn">25px</span>;
