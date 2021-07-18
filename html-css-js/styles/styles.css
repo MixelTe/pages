@@ -95,8 +95,8 @@ a:focus, .link:focus { text-decoration: underline; }
     display: none;
 }
 .header span + span { margin-left: 20px; }
-.header div { 
-    flex: 1 1 auto; 
+.header div {
+    flex: 1 1 auto;
     text-align: center;
 }
 .footer {
@@ -128,7 +128,7 @@ pre.nowrap {
 pre.nowrap::-webkit-scrollbar {
     width: 0.4em;
     height: 0.4em;
-}   
+}
 pre.nowrap::-webkit-scrollbar-thumb {
     background-color: rgba(128, 128, 128, 0.6);
     border-radius: 0.2em;
