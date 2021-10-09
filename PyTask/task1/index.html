@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAZdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAuMTnU1rJkAAAEeUlEQVRoQ82VX08cZRTGN34SE7+DicnObOKFNvGiF5p4URNirFYDadOqhZW/WmkwoBKsdbFtSgqKIshisbSlQuuKlC6CZCkkEkVtLUYiTWsam1Z57Duc0bNnz+zODDutT/K7mXOec85zM2+sHIovbIcXg89eVyHrvVM8twN+SD+/VhIaeXcU/7YSQfis6jff0IpoFJ/ZiTAM77oSGFpZPsWzu+GHazX1Jfl8zyVf0OrNKz71MoqhHemXkb3LRaETwiv+dQ280A4Ky6nkkid0SnDFM7XQmNlfpx5huJqsL+gfrVv8l8vJDtXnwns5dJJ/WecaoaEtNWi9LmcacyraHIPWa6DTSssaew0a2jKtTzK2b7Yo2lytz0Aness60wwNuWDLSb1P4+z+rC/kDq3HQKfqsk61QCIHaz3FOPfGpG/kLq2HTi2UNdIGyXTzq3kDtR4OjSqqTFsGxeD7DFoPjcqXNfw2JHzQo0NvFdRdaEQgTbSPwwu+V6vTiP9kDXVAwocYtB4DjQilyXdGoSF3az00YkPW4EFI+ACtbiD7pnT+4Ag0+H6tTvYNWf2d4HCzQdYNZC2LLnQOQyJvkPVs6sQDjtnqOwwJN2p1x1hmTR9JQ8Lv0OqO0eo9Cgk3anXHWGZ909UPCb9DqztGq6cbHG5aSzbk1QyOKSLNdn8EzlzXB3n3yLpjso59CA43yJrBMUWkud4eSPg9suaYrKMfg8MNsmZwTBEp19cFCb9H1hyTdWQAHG6QNYNjikjz/Yc+nR84DA6/R9bmBw4di1nvp8HhBlkz0K5IhMbG+xbSKXD4PbJ2MZ36O2anjoPDDbJmoF2RaGahMpX7bgcWv38GSz9WYPnytrx7rl57DH/ceAR/3nwYt2/bWF9/qD9mv3sCHG6QNQPtikSzC5UIEsAx2R2nweEGWTM4pogULkD7F+BwQ7a+Na9mcEwRKVyAN89Cwk1a3TGWWdncLsgA/I7Vta0eAVq/goQbtbpjLLNCBzCyWybB4UaDrBvIWhZNzr4EGeD31uq8G2SAW7esKrLfCdB8ARJu1uoGsm9KmWz1eS0A37+y+nhBALJvyN43AwkfYNB6DDQilManaqcz0zWQAeTukgGM7KY5SPgQre5CIwJpdKIJ41N1KBXg0sqTBQFoRL7shnlI+CCD1sOhUUV1fKwFI1++Dq8AcqfvAEZ27SIkcqDWo/LK4qCZ2T3U+V7v8AF8crIdg6NtKBZA7jLvgAzgHOolO7kEDTlY6/HiTgD4CSB3uA9ZoABG9t4foCEXGLQ+SakA2lz+EvMAdGJp2S/+BA1tmUHrdfEKcKWlQZ3FHzIegE7zL3v3L9DQlrps2bNc0C8DaD4X/g7wAHRScCV2/govtAPCIn+jPMDPK088SOeEU6JqFcXQDvKL1zvgBqATNq/EC2vwg3akpNQ74Aag1eVT4rnrCIPf3ygPQCujUWL7DQQhSABacXeUePom/OAnAI28N0pU4P5ExV/wwivA6Ymmahrx/1Ri23pP4imYAH30KQLFYv8AriP3Fbxh25kAAAAASUVORK5CYII=">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT Sans|PT Sans Caption">
+    <link rel="stylesheet" href="../themes.css">
+    <link rel="stylesheet" href="../base-styles.css">
+    <title>PyTask 1</title>
+</head>
+<body>
+    <div class="page">
+        <div class="header">Сова на проводе</div>
+        <div class="body">
+            <div><a href="../index.html">Назад</a></div>
+            <h2>Предыстория</h2>
+            <div class="text">
+                Вы познокомились с очень болтливой совой, теперь вы общаетесь дни на пролёт.
+                К сожалению, иногда сова очень увлекается и говорит по совиному, вы не хотите прерывать её речь, но как-то нужно понимать, что она говорит.
+            </div>
+            <div class="text">
+                К счастью, у вас есть сово-русский словарь и программа для расспознования речи.
+            </div>
+            <h2>Условие</h2>
+            <div class="text">
+                Напишите функцию translate_speech. На вход она принимает строку - предложение, сказанное совой.
+                Функция должна найти в стороке слова на совином и вернуть варианты их перевода.
+                Функция должна возвращать данные в виде списка кортежей, где первый элемент это совиное слово, второй - варианты перевода.
+                Порядок слов тот же, что и в строке.
+            </div>
+            <div class="text">
+                Слова не меняют смысл от того заглавными или маленкими буквами они написанны.
+            </div>
+            <div class="text">
+                В файле <a href="./dictionary.txt" download="dictionary.txt" target="_blank">dictionary.txt</a> находятся слова и их перевод в виде:
+            </div>
+            <pre>
+слово: превод1, перевод2
+Ух: привет, пока, да
+            </pre>
+            <h2>Пример</h2>
+            <pre>
+<span class="v">speech</span> = <span class="s">"И пошла я на базар и... и купила УуЮХ! Такой Юухх!"</span>
+<span class="v">result</span> = <span class="f">translate_speech</span>(<span class="v">speech</span>)
+<span class="s"># result == [
+#     ("УуЮХ", ["чайник", "самовар"]),
+#     ("Юухх", ["замечательный", "красивый"])
+# ]</span>
+            </pre>
+            <h2>Проверка</h2>
+            <div class="text">
+                Для проверки скачате <a href="./check.py" download="check.py" target="_blank">этот</a> файл.
+                Вставьте вашу функцию в самое начало файла и запустите.
+            </div>
+            <h2>Результат</h2>
+            <div class="text">
+                После того, как программа прошла все тесты, можете скачать <a href="./result.py" download="result.py" target="_blank">этот</a> файл.
+                Вставьте вашу функцию в самое начало файла и запустите.
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,98 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "PT Sans", Arial, Helvetica, sans-serif;
+}
+
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: var(--c-back);
+    color: var(--c-text)
+}
+a {
+    color: var(--c-link);
+    text-decoration-skip-ink: none;
+    text-decoration: none;
+    outline: none;
+}
+a:visited {
+    color: var(--c-link);
+}
+a:hover, a:focus {
+    text-decoration: underline;
+}
+::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: rgba(127, 127, 127, 0.3);
+    border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(127, 127, 127, 0.7);
+}
+.page {
+    max-height: 100%;
+    overflow: overlay;
+    width: 100%;
+    max-width: 700px;
+    font-size: 1.2rem;
+    /* letter-spacing: 0.04em; */
+}
+.header {
+    height: 2em;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    letter-spacing: 0.1em;
+    font-family: "PT Sans Caption", 'Times New Roman', Times, serif;
+    background-color: var(--c-back);
+    position: sticky;
+    top: 0;
+}
+/* .body {
+} */
+.space {
+    margin-top: 1em;
+}
+ul {
+    padding-left: 2em;
+}
+ol {
+    padding-left: 1em;
+}
+ol > li {
+    padding-left: 0.5em;
+}
+h2 {
+    margin-top: 0.5em;
+    text-align: center;
+    letter-spacing: 0.05em;
+}
+.text + .text {
+    margin-top: 0.3em;
+}
+pre::selection, pre *::selection {
+    background-color: var(--c-selection--);
+}
+span.v {
+    color: var(--c-v);
+}
+span.s {
+    color: var(--c-s);
+}
+span.f {
+    color: var(--c-f);
+}
+span.c {
+    color: var(--c-c);
+}

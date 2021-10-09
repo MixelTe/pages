@@ -1,0 +1,24 @@
+:root {
+    --c-back: #faf5e9;
+    --c-link: blue;
+    --c-text: black;
+    --c-selection--: #add6ff;
+
+    --c-v: #001080;
+    --c-s: #a31515;
+    --c-f: #795e26;
+    --c-c: #008000;
+}
+@media (prefers-color-scheme: dark) {
+    :root {
+        --c-back: #1e1e1e;
+        --c-link: #00ffff;
+        --c-text: #d4d4d4;
+        --c-selection--: #264f78;
+
+        --c-v: #9cdcfe;
+        --c-s: #ce9178;
+        --c-f: #dcdcaa;
+        --c-c: #6a9955;
+    }
+}
