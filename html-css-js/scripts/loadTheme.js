@@ -33,7 +33,7 @@ function changeHeaderColor(color)
         let el = document.querySelector(`meta[name="${item}"]`)
         if (el)
         {
-            lightTheme.setAttribute('content', color)
+            el.setAttribute('content', color)
         }
     }
 }
