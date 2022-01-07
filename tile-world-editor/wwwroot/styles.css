@@ -16,6 +16,8 @@ h1 {
 
 .toolbar {
 	background-color: rgb(195, 247, 195);
+	background-color: rgb(32, 32, 32);
+	color: rgb(226, 226, 226);
 	width: 300px;
 	padding: 0.4em;
 	flex-shrink: 0;
@@ -72,6 +74,7 @@ h1 {
 	width: 20px;
 	height: 20px;
 	border: 1px solid black;
+	color: black;
 	background-color: rgb(177, 225, 255);
 }
 #world-map button.active {
@@ -127,6 +130,7 @@ h1 {
 	image-rendering: pixelated;
 	width: 48px;
 	height: 48px;
+	margin: 2px;
 }
 #palette canvas {
 	cursor: pointer;
@@ -141,6 +145,7 @@ h1 {
 	border: 1px solid green;
 	border-radius: 0.2em;
 	padding: 0.09em 0.4em;
+	color: black;
 }
 .inp-file span:hover, .inp-file input:focus ~ span {
 	background-color: hsl(120, 73%, 60%);
@@ -155,6 +160,7 @@ h1 {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	background-color: rgb(32, 32, 32);
 }
 .cursor-move {
 	cursor: move;
@@ -218,7 +224,7 @@ canvas {
 	position: relative;
 	width: 300px;
 	height: 300px;
-	background-color: rgba(0, 0, 0, 0.4);
+	background-color: rgba(255, 255, 255, 0.4);
 	border-radius: 50%;
 	overflow: hidden;
 }
@@ -245,4 +251,7 @@ canvas {
 	margin-left: 5px;
 	image-rendering: pixelated;
 	border-radius: 40%;
+}
+.invisible {
+	display: none;
 }

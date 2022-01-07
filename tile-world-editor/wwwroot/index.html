@@ -20,17 +20,17 @@
 		<div class="line">
 			<button id="btn-controls">Показать управление</button>
 		</div>
-		<table>
+		<table class="invisible">
 			<tr title="Ширина мира"><td><label for="inp-width">Ширина</label></td><td><input type="number" id="inp-width" value="5"></td></tr>
 			<tr title="Высота мира"><td><label for="inp-height">Высота</label></td><td><input type="number" id="inp-height" value="5"></td></tr>
 		</table>
-		<div class="world-map" title="Миникарта. ЛКМ: переместиться к экрану, ПКМ: переместиться и вместить в окно">
+		<div class="world-map invisible" title="Миникарта. ЛКМ: переместиться к экрану, ПКМ: переместиться и вместить в окно">
 			<!-- <table id="world-map"></table> -->
 			<div class="minimap">
 				<canvas id="minimap"></canvas>
 			</div>
 		</div>
-		<div class="btns line">
+		<div class="btns line invisible">
 			<button id="btn-left" title="Сдвинуть все экраны влево">←</button>
 			<button id="btn-up" title="Сдвинуть все экраны вверх">↑</button>
 			<button id="btn-right" title="Сдвинуть все экраны вправо">→</button>
@@ -50,7 +50,7 @@
 				<label title="Покрасить все одинаковые плитки, соприкасающиеся сторонами"><span>[W] Заливка:</span><input type="radio" id="inp-mode-fill" name="mode"></label>
 			</span>
 		</div>
-		<div class="line" title="Режим настройки экранов: перемещение, добавление, удаление">
+		<div class="line invisible" title="Режим настройки экранов: перемещение, добавление, удаление">
 			<label>
 				<span>[A] Режим экранов:</span>
 				<span class="checkbox-switch">
@@ -59,7 +59,7 @@
 				</span>
 			</label>
 		</div>
-		<div class="line" title="Режим расстановки и настройки сущностей">
+		<div class="line invisible" title="Режим расстановки и настройки сущностей">
 			<label>
 				<span>[D] Режим сущностей:</span>
 				<span class="checkbox-switch">

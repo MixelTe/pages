@@ -21,23 +21,34 @@ const canvas = getCanvas("canvas");
 const ctx = getCanvasContext(canvas);
 
 const localStorageKey = "WorldEditor-world-data";
-const ViewWidth = 15;
-const ViewHeight = 7;
+const ViewWidth = 20;
+const ViewHeight = 12;
 let TileSize = 16 * 2;
 // let TileSize = 16 * 4; // Temp
 const tileIds = {
-	sand1: "sand1.png",
-	sand2: "sand2.png",
-	sand3: "sand3.png",
-	grass1: "grass1.png",
-	grass2: "grass2.png",
-	grass3: "grass3.png",
-	water_deep: "water_deep.png",
-	water_low: "water_low.png",
-	water_sand: "water_sand.png",
+	".": "black.png",
+	"b": "black.png",
+	"#": "wall.png",
+	"$": "wall2.png",
+	"!": "wall3.png",
+	"%": "wall4.png",
+	"^": "wall5.png",
+	"&": "wall6.png",
+	"*": "wall7.png",
+	"`": "wall8.png",
+	"~": "wall9.png",
+	"/": "wall10.png",
+	"?": "wall11.png",
+	"|": "wall12.png",
+	">": "wall13.png",
+	",": "wall14.png",
+	"<": "wall15.png",
+	"@": "pacman.png",
+	"c": "cherry.png",
+	"s": "super_point.png",
 }
 const entity: (typeof Entity)[] = [
-	Entity_Crab,
+	// Entity_Crab,
 ];
 const tileImages: TileImages = {};
 let icon_move: null | HTMLImageElement = null;
@@ -53,7 +64,7 @@ const camera_speed = () =>
 {
 	return Math.round(TileSize * inp_cameraSpeed.valueAsNumber / 2);
 };
-let pen: keyof (typeof tileIds) = "sand1";
+let pen: keyof (typeof tileIds) = ".";
 let penEntity: typeof Entity | null = null;
 let selectedEntity: Entity | null = null;
 let worldFileName = "worldData.json";
@@ -408,14 +419,14 @@ class View
 			{
 				if (x == 0 || x == ViewWidth - 1 || y == 0 || y == ViewHeight - 1)
 				{
-					line.push(new Tile("water_deep"))
+					line.push(new Tile("."))
 				}
 				else
 				{
 					const random = Math.floor(Math.random() * 3);
-					if (random == 0) line.push(new Tile("sand1"));
-					else if (random == 1) line.push(new Tile("sand2"));
-					else line.push(new Tile("sand3"));
+					if (random == 0) line.push(new Tile("."));
+					else if (random == 1) line.push(new Tile("."));
+					else line.push(new Tile("."));
 				}
 			}
 			this.tiles.push(line)
@@ -587,7 +598,7 @@ class View
 }
 class Tile
 {
-	id: Tiles = "sand1";
+	id: Tiles = ".";
 	constructor(id?: Tiles)
 	{
 		if (id) this.id = id;
@@ -746,7 +757,8 @@ class FastPalette
 	}
 }
 
-let world = new World(0, 0);
+let world = new World(1, 1);
+world.map[0][0] = new View();
 const minimap = new MiniMap();
 const fastPalette = new FastPalette();
 
@@ -988,8 +1000,8 @@ window.addEventListener("keypress", e =>
 	switch (e.code) {
 		case "KeyW": inp_mode_fill.checked = true; break;
 		case "KeyS": inp_mode_pen.checked = true; break;
-		case "KeyA": inp_mode_view.checked = !inp_mode_view.checked; break;
-		case "KeyD": inp_mode_entity.checked = !inp_mode_entity.checked; setPalete(); break;
+		// case "KeyA": inp_mode_view.checked = !inp_mode_view.checked; break;
+		// case "KeyD": inp_mode_entity.checked = !inp_mode_entity.checked; setPalete(); break;
 		// case "KeyC": endEntityMove()?.center(); break;
 	}
 });
@@ -1029,13 +1041,13 @@ function loadImages()
 		const key = <Tiles>k;
 		const path = tileIds[key];
 		tileImages[key] = undefined;
-		loadImage("../../src/data/images/" + path, img => tileImages[key] = img);
+		loadImage("./images/" + path, img => tileImages[key] = img);
 	}
 	loadImage("./imgs/icon-move.png", img => icon_move = img);
 	loadImage("./imgs/icon-trash.png", img => icon_trash = img);
 	loadImage("./imgs/icon-plus.png", img => icon_plus = img);
 	entity.forEach(e => {
-		loadImage("../../src/data/images/" + e.imgUrl, img => e.img = img);
+		loadImage("./images/" + e.imgUrl, img => e.img = img);
 	});
 }
 function centerView(x: number, y: number)
@@ -1186,6 +1198,7 @@ setPalete();
 World.loadFromLocalStorage();
 loop();
 setInterval(() => world.saveToLocalStarage(), 1000);
+centerView(1, 1);
 // btn_new.click() // Temp
 // world.map[0][0] = new View(); // Temp
 // penEntity = Entity_Crab; // Temp

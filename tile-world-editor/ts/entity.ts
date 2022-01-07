@@ -229,6 +229,6 @@ class Entity_Crab extends Entity
 	];
 }
 
-const EntityDict = {
-	"Entity_Crab": Entity_Crab,
+const EntityDict: { [a: string]: typeof Entity } = {
+	// "Entity_Crab": Entity_Crab,
 }
