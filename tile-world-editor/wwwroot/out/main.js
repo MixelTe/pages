@@ -65,69 +65,16 @@ const camera_speed = () => {
 let pen = ".";
 let penEntity = null;
 let selectedEntity = null;
-let worldFileName = "worldData.json";
+let worldFileName = localStorage.getItem("WorldEditor-filename") || "worldData.txt";
 let mousePos = { x: 0, y: 0 };
 class World {
     map = [];
     width;
     height;
     constructor(width, height, world) {
-        this.width = width;
-        this.height = height;
-        this.map = [];
-        if (world) {
-            if (world.width > width) {
-                for (let y = 0; y < world.height; y++) {
-                    for (let x = width; x < world.width; x++) {
-                        if (world.map[y][x]) {
-                            const popup = new Popup();
-                            popup.content.appendChild(Div([], [], "Уменьшение мира нельзя провести без потерь!"));
-                            popup.open();
-                            this.width = world.width;
-                            this.height = world.height;
-                            this.map = world.map;
-                            return;
-                        }
-                    }
-                }
-            }
-            if (world.height > height) {
-                for (let y = height; y < world.height; y++) {
-                    for (let x = 0; x < world.width; x++) {
-                        if (world.map[y][x]) {
-                            const popup = new Popup();
-                            popup.content.appendChild(Div([], [], "Уменьшение мира нельзя провести без потерь!"));
-                            popup.open();
-                            this.width = world.width;
-                            this.height = world.height;
-                            this.map = world.map;
-                            return;
-                        }
-                    }
-                }
-            }
-            for (let y = 0; y < height; y++) {
-                const line = [];
-                for (let x = 0; x < width; x++) {
-                    if (y < world.height && x < world.width) {
-                        line.push(world.map[y][x]);
-                    }
-                    else {
-                        line.push(undefined);
-                    }
-                }
-                this.map.push(line);
-            }
-        }
-        else {
-            for (let y = 0; y < height; y++) {
-                const line = [];
-                for (let x = 0; x < width; x++) {
-                    line.push(undefined);
-                }
-                this.map.push(line);
-            }
-        }
+        this.width = 1;
+        this.height = 1;
+        this.map = [[new View()]];
         // this.createTable();
     }
     up() {
@@ -307,8 +254,8 @@ class World {
     }
     saveToLocalStarage() {
         const data = this.getData();
-        const json = JSON.stringify(data);
-        localStorage.setItem(localStorageKey, json);
+        // const json = JSON.stringify(data);
+        localStorage.setItem(localStorageKey, data);
     }
     getData() {
         const data = {
@@ -327,17 +274,34 @@ class World {
             }
             data.map.push(row);
         }
-        return data;
+        let dataStr = "";
+        if (!data.map[0][0])
+            return "";
+        for (let i = 0; i < data.map[0][0].tiles.length; i++) {
+            const tiles = data.map[0][0].tiles[i];
+            dataStr += tiles.join("") + "\n";
+        }
+        return dataStr;
     }
     static fromData(data) {
-        const world = new World(data.width, data.height);
-        for (let y = 0; y < data.height; y++) {
-            for (let x = 0; x < data.width; x++) {
-                const vData = data.map[y][x];
-                if (vData)
-                    world.map[y][x] = View.fromData(vData);
+        const world = new World(1, 1);
+        const lines = data.split("\n");
+        if (!world.map[0][0])
+            return world;
+        for (let i = 0; i < world.map[0][0].tiles.length; i++) {
+            const tiles = world.map[0][0].tiles[i];
+            for (let j = 0; j < tiles.length; j++) {
+                tiles[j] = new Tile(lines[i][j]);
             }
         }
+        // for (let y = 0; y < data.height; y++)
+        // {
+        // 	for (let x = 0; x < data.width; x++)
+        // 	{
+        // 		const vData = data.map[y][x];
+        // 		if (vData) world.map[y][x] = View.fromData(vData);
+        // 	}
+        // }
         return world;
     }
     static loadFromLocalStorage() {
@@ -348,8 +312,8 @@ class World {
     }
     static loadData(json) {
         try {
-            const data = JSON.parse(json);
-            const newWorld = World.fromData(data);
+            // const data = <string>JSON.parse(json);
+            const newWorld = World.fromData(json);
             world = newWorld;
         }
         catch (error) {
@@ -671,7 +635,6 @@ class FastPalette {
     }
 }
 let world = new World(1, 1);
-world.map[0][0] = new View();
 const minimap = new MiniMap();
 const fastPalette = new FastPalette();
 inp_width.addEventListener("change", () => {
@@ -689,7 +652,7 @@ btn_right.addEventListener("click", () => world.right());
 btn_down.addEventListener("click", () => world.down());
 btn_left.addEventListener("click", () => world.left());
 btn_save.addEventListener("click", () => {
-    const text = JSON.stringify(world.getData());
+    const text = world.getData();
     var el = document.createElement('a');
     el.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
     el.setAttribute('download', worldFileName);
@@ -710,6 +673,7 @@ inp_load.addEventListener("input", async () => {
     }
     const file = curFiles[0];
     worldFileName = file.name;
+    localStorage.setItem("WorldEditor-filename", worldFileName);
     const data = await file.text();
     World.loadData(data);
 });
