@@ -447,6 +447,7 @@ class View
 		const Y = Math.floor(y / TileSize);
 		pen = this.tiles[Y][X].id;
 		fastPalette.addTile(pen);
+		picker.update();
 	}
 	public setCursor(x: number, y: number)
 	{
@@ -689,6 +690,7 @@ class FastPalette
 		this.closedByClick = closedByClick;
 		if (inp_mode_entity.checked) penEntity = this.entity.length > this.hovered ? this.entity[this.hovered] : this.entity[0];
 		else pen = this.tiles.length > this.hovered ? this.tiles[this.hovered] : this.tiles[0];
+		picker.update();
 	}
 	public addTile(tileid: Tiles)
 	{
@@ -703,10 +705,84 @@ class FastPalette
 		this.addentityI = (this.addentityI + 1) % this.imgs.length;
 	}
 }
+class Picker
+{
+	private top = getInput("inp-picker-top");
+	private left = getInput("inp-picker-left");
+	private right = getInput("inp-picker-right");
+	private bottom = getInput("inp-picker-bottom");
+	private img = getDiv("img-picker");
+
+	private dict = {
+		"----": '.',
+		"++++": '#',
+		"-++-": '$',
+		"+--+": '!',
+		"-+-+": '%',
+		"++--": '^',
+		"+-+-": '&',
+		"--++": '*',
+		"++-+": '`',
+		"+++-": '~',
+		"+-++": '/',
+		"-+++": '?',
+		"-+--": '|',
+		"+---": '>',
+		"--+-": ',',
+		"---+": '<',
+	}
+
+	constructor()
+	{
+		this.top.addEventListener("change", () => this.change())
+		this.left.addEventListener("change", () => this.change())
+		this.right.addEventListener("change", () => this.change())
+		this.bottom.addEventListener("change", () => this.change())
+		this.setImg(pen);
+	}
+	private change()
+	{
+		const key = (this.top.checked ? "+" : "-") +
+			(this.left.checked ? "+" : "-") +
+			(this.right.checked ? "+" : "-") +
+			(this.bottom.checked ? "+" : "-");
+		const tile = <keyof typeof tileIds>this.dict[<keyof typeof this.dict>key]
+		pen = tile;
+		fastPalette.addTile(pen);
+		this.setImg(tile);
+	}
+	public update()
+	{
+		for (const key in this.dict)
+		{
+			if (this.dict[<keyof typeof this.dict>key] == pen)
+			{
+				this.top.checked = key[0] == "+";
+				this.left.checked = key[1] == "+";
+				this.right.checked = key[2] == "+";
+				this.bottom.checked = key[3] == "+";
+				break;
+			}
+		}
+		this.setImg(pen);
+	}
+	private setImg(key: keyof typeof tileIds)
+	{
+		const img = document.createElement("img");
+		img.src = "./images/" + tileIds[key];
+		this.img.innerHTML = "";
+		this.img.appendChild(img);
+	}
+	public c_top() { this.top.checked = !this.top.checked; this.change() };
+	public c_left() { this.left.checked = !this.left.checked; this.change() };
+	public c_right() { this.right.checked = !this.right.checked; this.change() };
+	public c_bottom() { this.bottom.checked = !this.bottom.checked; this.change() };
+}
 
 let world = new World(1, 1);
 const minimap = new MiniMap();
 const fastPalette = new FastPalette();
+const picker = new Picker();
 
 inp_width.addEventListener("change", () =>
 {
@@ -955,10 +1031,10 @@ window.addEventListener("keypress", e =>
 window.addEventListener("keydown", e =>
 {
 	switch (e.code) {
-		case "ArrowUp": world.up(); break;
-		case "ArrowRight": world.right(); break;
-		case "ArrowDown": world.down(); break;
-		case "ArrowLeft": world.left(); break;
+		case "ArrowUp": picker.c_top(); break;
+		case "ArrowRight": picker.c_right(); break;
+		case "ArrowDown": picker.c_bottom(); break;
+		case "ArrowLeft": picker.c_left(); break;
 		case "KeyQ": fastPalette.open(); break;
 	}
 });
@@ -1084,6 +1160,7 @@ function setPalete()
 		for (const k in tileImages)
 		{
 			const key = <keyof TileImages>k;
+			if (key == "b") continue;
 			function addImg()
 			{
 				if (inp_mode_entity.checked) return;
@@ -1096,6 +1173,7 @@ function setPalete()
 					{
 						pen = key;
 						fastPalette.addTile(pen);
+						picker.update();
 					});
 				}
 				else setTimeout(addImg, 100);

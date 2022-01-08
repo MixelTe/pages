@@ -250,8 +250,17 @@ canvas {
 	margin-bottom: 25px;
 	margin-left: 5px;
 	image-rendering: pixelated;
-	border-radius: 40%;
+	border-radius: 20%;
 }
 .invisible {
 	display: none;
+}
+
+.picker input {
+	width: 30px;
+	height: 30px;
+}
+.picker img {
+	width: 60px;
+	height: 60px;
 }

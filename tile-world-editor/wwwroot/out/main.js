@@ -412,6 +412,7 @@ class View {
         const Y = Math.floor(y / TileSize);
         pen = this.tiles[Y][X].id;
         fastPalette.addTile(pen);
+        picker.update();
     }
     setCursor(x, y) {
         if (rectPointIntersect(icon_trash_rect(), { x, y })) {
@@ -620,6 +621,7 @@ class FastPalette {
             penEntity = this.entity.length > this.hovered ? this.entity[this.hovered] : this.entity[0];
         else
             pen = this.tiles.length > this.hovered ? this.tiles[this.hovered] : this.tiles[0];
+        picker.update();
     }
     addTile(tileid) {
         if (this.tiles.indexOf(tileid) != -1)
@@ -634,9 +636,78 @@ class FastPalette {
         this.addentityI = (this.addentityI + 1) % this.imgs.length;
     }
 }
+class Picker {
+    top = getInput("inp-picker-top");
+    left = getInput("inp-picker-left");
+    right = getInput("inp-picker-right");
+    bottom = getInput("inp-picker-bottom");
+    img = getDiv("img-picker");
+    dict = {
+        "----": '.',
+        "++++": '#',
+        "-++-": '$',
+        "+--+": '!',
+        "-+-+": '%',
+        "++--": '^',
+        "+-+-": '&',
+        "--++": '*',
+        "++-+": '`',
+        "+++-": '~',
+        "+-++": '/',
+        "-+++": '?',
+        "-+--": '|',
+        "+---": '>',
+        "--+-": ',',
+        "---+": '<',
+    };
+    constructor() {
+        this.top.addEventListener("change", () => this.change());
+        this.left.addEventListener("change", () => this.change());
+        this.right.addEventListener("change", () => this.change());
+        this.bottom.addEventListener("change", () => this.change());
+        this.setImg(pen);
+    }
+    change() {
+        const key = (this.top.checked ? "+" : "-") +
+            (this.left.checked ? "+" : "-") +
+            (this.right.checked ? "+" : "-") +
+            (this.bottom.checked ? "+" : "-");
+        const tile = this.dict[key];
+        pen = tile;
+        fastPalette.addTile(pen);
+        this.setImg(tile);
+    }
+    update() {
+        for (const key in this.dict) {
+            if (this.dict[key] == pen) {
+                this.top.checked = key[0] == "+";
+                this.left.checked = key[1] == "+";
+                this.right.checked = key[2] == "+";
+                this.bottom.checked = key[3] == "+";
+                break;
+            }
+        }
+        this.setImg(pen);
+    }
+    setImg(key) {
+        const img = document.createElement("img");
+        img.src = "./images/" + tileIds[key];
+        this.img.innerHTML = "";
+        this.img.appendChild(img);
+    }
+    c_top() { this.top.checked = !this.top.checked; this.change(); }
+    ;
+    c_left() { this.left.checked = !this.left.checked; this.change(); }
+    ;
+    c_right() { this.right.checked = !this.right.checked; this.change(); }
+    ;
+    c_bottom() { this.bottom.checked = !this.bottom.checked; this.change(); }
+    ;
+}
 let world = new World(1, 1);
 const minimap = new MiniMap();
 const fastPalette = new FastPalette();
+const picker = new Picker();
 inp_width.addEventListener("change", () => {
     world = new World(inp_width.valueAsNumber, inp_height.valueAsNumber, world);
     inp_width.valueAsNumber = world.width;
@@ -864,16 +935,16 @@ window.addEventListener("keypress", e => {
 window.addEventListener("keydown", e => {
     switch (e.code) {
         case "ArrowUp":
-            world.up();
+            picker.c_top();
             break;
         case "ArrowRight":
-            world.right();
+            picker.c_right();
             break;
         case "ArrowDown":
-            world.down();
+            picker.c_bottom();
             break;
         case "ArrowLeft":
-            world.left();
+            picker.c_left();
             break;
         case "KeyQ":
             fastPalette.open();
@@ -988,6 +1059,8 @@ function setPalete() {
         selectedEntity = null;
         for (const k in tileImages) {
             const key = k;
+            if (key == "b")
+                continue;
             function addImg() {
                 if (inp_mode_entity.checked)
                     return;
@@ -998,6 +1071,7 @@ function setPalete() {
                     img.addEventListener("click", () => {
                         pen = key;
                         fastPalette.addTile(pen);
+                        picker.update();
                     });
                 }
                 else
