@@ -46,6 +46,7 @@ const tileIds = {
 	"@": "pacman.png",
 	"c": "cherry.png",
 	"s": "super_point.png",
+	"e": "ghost.png",
 }
 const entity: (typeof Entity)[] = [
 	// Entity_Crab,
