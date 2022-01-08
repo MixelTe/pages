@@ -74,6 +74,8 @@ class World {
     constructor(width, height, world) {
         this.width = 1;
         this.height = 1;
+        inp_width.valueAsNumber = 1;
+        inp_height.valueAsNumber = 1;
         this.map = [[new View()]];
         // this.createTable();
     }
@@ -263,9 +265,9 @@ class World {
             height: this.height,
             map: [],
         };
-        for (let y = 0; y < this.width; y++) {
+        for (let y = 0; y < this.height; y++) {
             const row = [];
-            for (let x = 0; x < this.height; x++) {
+            for (let x = 0; x < this.width; x++) {
                 const view = this.map[y][x];
                 if (view)
                     row.push(view.getData());
@@ -642,7 +644,7 @@ class Picker {
     right = getInput("inp-picker-right");
     bottom = getInput("inp-picker-bottom");
     img = getDiv("img-picker");
-    dict = {
+    static dict = {
         "----": '.',
         "++++": '#',
         "-++-": '$',
@@ -672,14 +674,14 @@ class Picker {
             (this.left.checked ? "+" : "-") +
             (this.right.checked ? "+" : "-") +
             (this.bottom.checked ? "+" : "-");
-        const tile = this.dict[key];
+        const tile = Picker.dict[key];
         pen = tile;
         fastPalette.addTile(pen);
         this.setImg(tile);
     }
     update() {
-        for (const key in this.dict) {
-            if (this.dict[key] == pen) {
+        for (const key in Picker.dict) {
+            if (Picker.dict[key] == pen) {
                 this.top.checked = key[0] == "+";
                 this.left.checked = key[1] == "+";
                 this.right.checked = key[2] == "+";
