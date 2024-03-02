@@ -19,6 +19,7 @@ function changeTheme() {
         document.body.classList.add("darkTheme");
         changeHeaderColor("#1e1e1e")
     }
+    yaParams();
 }
 
 function changeHeaderColor(color)
@@ -36,4 +37,13 @@ function changeHeaderColor(color)
             el.setAttribute('content', color)
         }
     }
+}
+
+function yaParams()
+{
+    try
+    {
+        ym(96633773, "userParams", { lightTheme });
+    }
+    catch (e) { }
 }
