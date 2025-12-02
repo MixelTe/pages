@@ -62,6 +62,9 @@ a:focus, .link:focus { text-decoration: underline; }
 .fake {
     color: tomato;
 }
+h2[id] {
+    scroll-margin-top: 3rem;
+}
 .header {
     position: sticky;
     z-index: 2;
@@ -82,19 +85,25 @@ a:focus, .link:focus { text-decoration: underline; }
     fill: var(--c-text--);
     user-select: none;
 }
-.header a:focus svg {
-    fill: var(--c-link--);
-}
-.header span {
+.header button {
+    padding: 0;
+    background: none;
+    border: none;
     cursor: pointer;
 }
-.lightTheme .header span:last-child svg:first-child {
+.header a {
+    color: inherit;
+}
+.header a:focus-visible {
+    outline: auto;
+}
+.lightTheme .header button:last-child svg:first-child {
     display: none;
 }
-.darkTheme .header span:last-child svg:last-child {
+.darkTheme .header button:last-child svg:last-child {
     display: none;
 }
-.header span + span { margin-left: 20px; }
+.header button + a { margin-left: 20px; }
 .header div {
     flex: 1 1 auto;
     text-align: center;
@@ -119,6 +128,9 @@ a:focus, .link:focus { text-decoration: underline; }
 }
 .multi-list > li::before {
     content: counters(section, ".") ".";
+}
+.small-list li {
+    margin: 0;
 }
 
 pre.nowrap {

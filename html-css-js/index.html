@@ -1,11 +1,11 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="ru">
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta property="og:title" content="Основы HTML, CSS и javascript" />
-	<meta property="og:description" content="Небольшой учебник для тех, кто хочет начать изучать HTML, CSS и javascript." />
+	<meta property="og:title" content="Основы HTML, CSS и JavaScript" />
+	<meta property="og:description" content="Небольшой учебник для тех, кто хочет начать изучать HTML, CSS и JavaScript." />
 	<meta property="og:type" content="website">
 	<meta property="og:url" content="https://mixelte.github.io/pages/html-css-js/">
 	<meta property="og:image" content="https://mixelte.github.io/pages/html-css-js/img.png" />
@@ -13,13 +13,13 @@
 	<meta property="og:image:width" content="600">
 	<meta property="og:image:height" content="315">
 	<meta name="twitter:site" content="https://mixelte.github.io/pages/html-css-js/">
-	<meta name="twitter:title" content="Основы HTML, CSS и javascript">
-	<meta name="twitter:description" content="Небольшой учебник для тех, кто хочет начать изучать HTML, CSS и javascript.">
+	<meta name="twitter:title" content="Основы HTML, CSS и JavaScript">
+	<meta name="twitter:description" content="Небольшой учебник для тех, кто хочет начать изучать HTML, CSS и JavaScript.">
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:image:src" content="https://mixelte.github.io/pages/html-css-js/img.png">
 	<link rel="canonical" href="https://mixelte.github.io/pages/html-css-js/" />
-	<title>Основы HTML, CSS и javascript</title>
-	<meta name="description" content="Небольшой учебник для тех, кто хочет начать изучать HTML, CSS и javascript."/>
+	<title>Основы HTML, CSS и JavaScript</title>
+	<meta name="description" content="Небольшой учебник для тех, кто хочет начать изучать HTML, CSS и JavaScript."/>
 	<link rel="icon" type="image/png" href="icon.png">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT Sans|PT Sans Caption|PT Mono">
 	<link rel="stylesheet" href="styles/themes.css">
@@ -36,79 +36,79 @@
 </head>
 <body class="lightTheme">
 	<script src="scripts/loadTheme.js"></script>
-	<div class="header">
-		<span onclick="history.back()">
+	<header class="header">
+		<button onclick="history.back()">
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M19 11H7.83l4.88-4.88c.39-.39.39-1.03 0-1.42-.39-.39-1.02-.39-1.41 0l-6.59 6.59c-.39.39-.39 1.02 0 1.41l6.59 6.59c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L7.83 13H19c.55 0 1-.45 1-1s-.45-1-1-1z"/></svg>
-		</span>
-		<span onclick="toPage(0)">
+		</button>
+		<a href="?pg=0" data-link="0">
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#000000"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z"/></svg>
-		</span>
+		</a>
 		<div class="main-font-size" id="pageName"></div>
-		<span onclick="changeTheme()">
+		<button onclick="changeTheme()">
 			<svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24" fill="#000000"><rect fill="none" height="24" width="24"/><path d="M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0 c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2 c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1 C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06 c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41 l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41 c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36 c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"/></svg>
 			<svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24" fill="#000000"><rect fill="none" height="24" width="24"/><path d="M11.01,3.05C6.51,3.54,3,7.36,3,12c0,4.97,4.03,9,9,9c4.63,0,8.45-3.5,8.95-8c0.09-0.79-0.78-1.42-1.54-0.95 c-0.84,0.54-1.84,0.85-2.91,0.85c-2.98,0-5.4-2.42-5.4-5.4c0-1.06,0.31-2.06,0.84-2.89C12.39,3.94,11.9,2.98,11.01,3.05z"/></svg>
-		</span>
-	</div>
+		</button>
+	</header>
 
-	<div class="page" id="pg0">
-		<h1>Основы HTML, CSS и javascript</h1>
+	<section class="page" id="pg0" data-name="" data-shortname="">
+		<h1>Основы HTML, CSS и JavaScript</h1>
 		<h2>Оглавление</h2>
 		<ol class="multi-list">
 			<li>Основы
 				<ol>
-					<li><span class="link" onclick="toPage(1)">HTML, CSS и javascript</span></li>
-					<li><span class="link" onclick="toPage(2)">Javascript и python - основные отличия</span></li>
-					<li><span class="link" onclick="toPage(3)">HTML страница</span></li>
-					<li><span class="link" onclick="toPage(4)">HTML: Основные теги</span></li>
-					<li><span class="link" onclick="toPage(5)">CSS</span></li>
-					<li><span class="link" onclick="toPage(6)">Javascript на странице</span></li>
-					<li><span class="link" onclick="toPage(7)">Как создать проект</span></li>
+					<li><a href="?pg=1" data-link="1">HTML, CSS и JavaScript</a></li>
+					<li><a href="?pg=2" data-link="2">JavaScript и python - основные отличия</a></li>
+					<li><a href="?pg=3" data-link="3">HTML страница</a></li>
+					<li><a href="?pg=4" data-link="4">HTML: Основные теги</a></li>
+					<li><a href="?pg=5" data-link="5">CSS</a></li>
+					<li><a href="?pg=6" data-link="6">JavaScript на странице</a></li>
+					<li><a href="?pg=7" data-link="7">Как создать проект</a></li>
 				</ol>
 			</li>
 			<li>CSS
 				<ol>
-					<li><span class="link" onclick="toPage(8)">Значения</span></li>
-					<li><span class="link" onclick="toPage(9)">Cелекторы</span></li>
-					<li><span class="link" onclick="toPage(10)">Основные свойства</span></li>
-					<li><span class="link" onclick="toPage(11)">Переменные</span></li>
-					<li><span class="link" onclick="toPage(12)">Функция calc()</span></li>
+					<li><a href="?pg=8" data-link="8">Значения</a></li>
+					<li><a href="?pg=9" data-link="9">Cелекторы</a></li>
+					<li><a href="?pg=10" data-link="10">Основные свойства</a></li>
+					<li><a href="?pg=11" data-link="11">Переменные</a></li>
+					<li><a href="?pg=12" data-link="12">Функция calc()</a></li>
 				</ol>
 			</li>
-			<li>Javascript
+			<li>JavaScript
 				<ol>
-					<li><span class="link" onclick="toPage(13)">Взаимодействие со страницей</span></li>
-					<li><span class="link" onclick="toPage(14)">Элемент как объект</span></li>
-					<li><span class="link" onclick="toPage(15)">События</span></li>
+					<li><a href="?pg=13" data-link="13">Взаимодействие со страницей</a></li>
+					<li><a href="?pg=14" data-link="14">Элемент как объект</a></li>
+					<li><a href="?pg=15" data-link="15">События</a></li>
 				</ol>
 			</li>
 			<li>Подробнее о разном
 				<ol>
-					<li><span class="link" onclick="toPage(16)">Больше CSS свойств</span></li>
-					<li><span class="link" onclick="toPage(17)">Тег input</span></li>
-					<li><span class="link" onclick="toPage(18)">CSS анимации</span></li>
-					<li><span class="link" onclick="toPage(19)">Тег canvas</span></li>
-					<li><span class="link" onclick="toPage(20)">canvas анимации</span></li>
+					<li><a href="?pg=16" data-link="16">Больше CSS свойств</a></li>
+					<li><a href="?pg=17" data-link="17">Тег input</a></li>
+					<li><a href="?pg=18" data-link="18">CSS анимации</a></li>
+					<li><a href="?pg=19" data-link="19">Тег canvas</a></li>
+					<li><a href="?pg=20" data-link="20">canvas анимации</a></li>
 				</ol>
 			</li>
 			<li>Дополнительно
 				<ol>
-					<li><span class="link" onclick="toPage(21)">Функция range()</span></li>
-					<li><span class="link" onclick="toPage(22)">code и key любой клавиши</span></li>
-					<li><span class="link" onclick="toPage(23)">Красивые кнопки</span></li>
-					<li><span class="link" onclick="toPage(24)">3D куб</span></li>
+					<li><a href="?pg=21" data-link="21">Функция range()</a></li>
+					<li><a href="?pg=22" data-link="22">code и key любой клавиши</a></li>
+					<li><a href="?pg=23" data-link="23">Красивые кнопки</a></li>
+					<li><a href="?pg=24" data-link="24">3D куб</a></li>
 				</ol>
 			</li>
 		</ol>
-	</div>
+	</section>
 
 
-	<div class="page" id="pg1">
-		<h1>HTML, CSS и javascript</h1>
-		<p>Для написания интернет-страниц используют HTML, CSS и javascript.</p>
+	<section class="page" id="pg1" data-name="HTML, CSS и javascript" data-shortname="Основы: 1.1">
+		<h1>HTML, CSS и JavaScript</h1>
+		<p>Для написания интернет-страниц используют HTML, CSS и JavaScript.</p>
 		<ul>
 			<li>HTML - язык разметки документов. Им указывают, где будут располагаться части страницы: тексты, кнопки, заголовки...</li>
 			<li>CSS - язык описания внешнего вида документа. Цвета, размер текста, шрифт - всё указывается с помощью CSS.</li>
-			<li>Javascript - язык программирования, позволяет добавить интерактивность на страницу.</li>
+			<li>JavaScript - язык программирования, позволяет добавить интерактивность на страницу.</li>
 		</ul>
 
 		<h2>HTML</h2>
@@ -132,20 +132,39 @@
 		<div class="rect3d"><div><div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div></div></div>
 		<p>Этот куб сделан только с помощью HTML и CSS. В одной из глав, будет показано как сделать такой куб.</p>
 
-		<h2>Javascript</h2>
+		<h2>JavaScript</h2>
 		<p>Позволяет добавить интерактивность на страницу, чтобы кнопки нажимались, а ваш заказ в магазине отправлялся.</p>
-		<p>Для тех, кто не знает javascript:</p>
-		<p>Если вы знаете python, переходите на главу <span class="link" onclick="toPage(2)">основные различия между javascript и python</span></p>
-		<p>Если нет, то на <a href="https://learn.javascript.ru/" target="_blank">этом сайте</a> можно изучить javascript</p>
-		<div class="footer"><span class="link" onclick="toPage(3)">Следующая тема</span></div>
-	</div>
+		<p>Для тех, кто не знает JavaScript:</p>
+		<p>Если вы знаете python, переходите на главу <a href="?pg=2" data-link="2">основные различия между JavaScript и python</a></p>
+		<p>Если нет, то на <a href="https://learn.javascript.ru/" target="_blank">этом сайте</a> можно изучить JavaScript</p>
+		<footer class="footer"><a href="?pg=3" data-link="3">Следующая тема</a></footer>
+	</section>
 
 
-	<div class="page" id="pg2">
-		<h1>Javascript и python - основные отличия</h1>
+	<section class="page" id="pg2" data-name="Javascript и python - основные отличия" data-shortname="Основы: 1.2">
+		<h1>JavaScript и python - основные отличия</h1>
+		<h3>Оглавление</h3>
+		<ul class="small-list" style="margin-top: -1rem;">
+			<li><a href="?pg=2#pg2-vars" data-link="2">Переменные</a></li>
+			<li><a href="?pg=2#pg2-braces" data-link="2">Фигурные скобки</a></li>
+			<li><a href="?pg=2#pg2-log_oper" data-link="2">Логические операции</a></li>
+			<li><a href="?pg=2#pg2-cond_oper" data-link="2">Условный оператор</a></li>
+			<li><a href="?pg=2#pg2-while" data-link="2">Цикл while</a></li>
+			<li><a href="?pg=2#pg2-for" data-link="2">Цикл for</a></li>
+			<li><a href="?pg=2#pg2-lists" data-link="2">Списки и строки</a></li>
+			<li><a href="?pg=2#pg2-slice" data-link="2">Срезы</a></li>
+			<li><a href="?pg=2#pg2-flines" data-link="2">F-строки</a></li>
+			<li><a href="?pg=2#pg2-objects" data-link="2">Объекты</a></li>
+			<li><a href="?pg=2#pg2-functions" data-link="2">Функции</a></li>
+			<li><a href="?pg=2#pg2-math" data-link="2">Класс Math</a></li>
+			<li><a href="?pg=2#pg2-modules" data-link="2">Модули в JavaScript</a></li>
+			<li><a href="?pg=2#pg2-classes" data-link="2">Классы</a></li>
+			<li><a href="?pg=2#pg2-if_you_dont_put" data-link="2">Если не поставить ;</a></li>
+			<li><a href="?pg=2#pg2-its_different" data-link="2">А оно-то по-другому!</a></li>
+		</ul>
 		<div>
-			<p>Начнём, например, с того, что в javascript нет обязательного форматирования, то есть не обязательно ставить пробелы в теле цикла или функции.</p>
-			<p>Сразу скажу про функцию print(), в javascript эта функция не печатает текст в консоль, а нужна для печати на принтере. Функции input() в javascript нет.</p>
+			<p>Начнём, например, с того, что в JavaScript нет обязательного форматирования, то есть не обязательно ставить пробелы в теле цикла или функции.</p>
+			<p>Сразу про функцию print(), в JavaScript эта функция не печатает текст в консоль, а нужна для печати на принтере. Функции input() в JavaScript нет.</p>
 			<p>Вместо функции print() можно использовать alert() - вывод на экран или console.log() - вывод в консоль (открывается в браузере по кнопке F12).
 				Нажмите, чтобы вызвать функцию:
 				<br><span onclick='alert("Текст в alert")' style="color: violet; cursor: pointer;">alert("Текст в alert")</span>,
@@ -156,9 +175,9 @@
 			<p>Изменение переменной на единицу можно записать так: a++ и a--, тоже, что и a += 1 и a -= 1</p>
 		</div>
 
-		<h2>Переменные</h2>
+		<h2 id="pg2-vars">Переменные</h2>
 		<div>
-			<p>В javascript для создания переменной необходимо перед её именем написать const или let:</p>
+			<p>В JavaScript для создания переменной необходимо перед её именем написать const или let:</p>
 			<p>const - значение этой переменной нельзя будет изменить</p>
 			<p>let - значение этой переменной можно изменять.</p>
 			<p>Желательно использовать let только тогда, когда вы собираетесь изменять значение - это упрощает отладку и понимание кода.
@@ -172,9 +191,9 @@
 </pre>
 		</div>
 
-		<h2>Фигурные скобки</h2>
+		<h2 id="pg2-braces">Фигурные скобки</h2>
 		<div>
-			<p>В javascript вместо того, чтобы отделять, например, тело цикла, используются не пробелы, а фигурные скобки.
+			<p>В JavaScript вместо того, чтобы отделять, например, тело цикла, используются не пробелы, а фигурные скобки.
 				Переменные, созданные внутри скобок, не видны снаружи. В них можно заключать также любую часть кода.
 			</p>
 			<pre>
@@ -202,15 +221,15 @@
 </pre>
 		</div>
 
-		<h2>Логические операции</h2>
+		<h2 id="pg2-log_oper">Логические операции</h2>
 		<div>
-			<p>В javascript вместо and, or и not используются &&, || и ! соответственно.</p>
+			<p>В JavaScript вместо and, or и not используются &&, || и ! соответственно.</p>
 			<pre>!(<span class="vl">a</span> == <span class="n">1</span> && <span class="vl">b</span> != <span class="n">1</span>) <span class="c">// not(a == 1 and b != 1)</span></pre>
-			<p>Также, в javascript true и false пишутся с маленькой буквы.</p>
+			<p>Также, в JavaScript true и false пишутся с маленькой буквы.</p>
 			<pre>!(<span class="vl">a</span> == <span class="b">true</span> || <span class="vl">b</span> == <span class="b">false</span>) <span class="c">// not(a is True or b is False)</span></pre>
 		</div>
 
-		<h2>Условный оператор</h2>
+		<h2 id="pg2-cond_oper">Условный оператор</h2>
 		<div>
 			<pre>
 <span class="k">if</span> (условие)
@@ -235,7 +254,7 @@
 </pre>
 		</div>
 
-		<h2>Цикл while</h2>
+		<h2 id="pg2-while">Цикл while</h2>
 		<div>
 			<pre>
 <span class="k">while</span> (условие)
@@ -259,10 +278,10 @@
 </pre>
 		</div>
 
-		<h2>Цикл for</h2>
+		<h2 id="pg2-for">Цикл for</h2>
 		<div>
-			<p>В javascript нет функции range().</p>
-			<p>Если вы очень к ней привыкли: моя реализация <span class="link" onclick="toPage(21)">функции range()</span>.</p>
+			<p>В JavaScript нет функции range().</p>
+			<p>Если вы очень к ней привыкли: <a href="?pg=21" data-link="21">реализация функции range()</a>.</p>
 			<p>Цикл от 0 до 10 не включительно:</p>
 			<pre>
 <span class="k">for</span> (<span class="kj">let</span> <span class="vl">i</span> = <span class="n">0</span>; <span class="vl">i</span> &lt; <span class="n">10</span>; <span class="vl">i</span>++) {
@@ -283,7 +302,7 @@
 </pre>
 		</div>
 
-		<h2>Списки и строки</h2>
+		<h2 id="pg2-lists">Списки и строки</h2>
 		<div>
 			<p>Обращение по индексу к элементу, которого нет, не вызовет ошибки, вы просто получите undefined.</p>
 			<p>Не работают отрицательные индексы для отсчёта с конца: "abcd"[-1] == undefined. <span style="color: gray;">(Можно хранить данные и в отрицательных индексах!)</span></p>
@@ -307,9 +326,9 @@
 </pre>
 		</div>
 
-		<h2>Срезы</h2>
+		<h2 id="pg2-slice">Срезы</h2>
 		<div>
-			<p>Для срезов, как в python (a[1:3]), в javascript есть метод slice.</p>
+			<p>Для срезов, как в python (a[1:3]), в JavaScript есть метод slice.</p>
 			<pre>
 <span class="kj">const</span> <span class="vc">a</span> = <span class="sj">"abcd"</span>.<span class="f">slice</span>(<span class="n">1</span>, <span class="n">3</span>); <span class="c">// a == "bc"</span>
 <span class="kj">const</span> <span class="vc">b</span> = [<span class="sj">"a"</span>, <span class="sj">"1"</span>, <span class="b">true</span>, <span class="n">5</span>].<span class="f">slice</span>(<span class="n">1</span>, <span class="n">3</span>); <span class="c">// b == ["1", true]</span>
@@ -329,9 +348,9 @@
 		</div>
 
 
-		<h2>F-строки</h2>
+		<h2 id="pg2-flines">F-строки</h2>
 		<div>
-			<p>В javascript тоже есть способ вставлять переменные в строки.</p>
+			<p>В JavaScript тоже есть способ вставлять переменные в строки.</p>
 			<p>Для этого строку надо заключать не в обычные кавычки, а в косые (те, что на клавише с буквой Ё). А перед фугурными скобками нужно ставить знак доллара.</p>
 			<pre>
 <span class="kj">const</span> <span class="vc">name</span> = <span class="sj">"Иванов"</span>;
@@ -340,7 +359,7 @@
 </pre>
 		</div>
 
-		<h2>Объекты</h2>
+		<h2 id="pg2-objects">Объекты</h2>
 		<div>
 			<p>Объект может иметь свойства.</p>
 			<p>Именем свойства может быть слово, строка или число. Пример объекта:</p>
@@ -357,9 +376,9 @@
 </pre>
 		</div>
 
-		<h2>Функции</h2>
+		<h2 id="pg2-functions">Функции</h2>
 		<div>
-			<p>В javascript функции объявляются таким способом:</p>
+			<p>В JavaScript функции объявляются таким способом:</p>
 			<pre>
 <span class="kj">function</span> <span class="f">имя_функции</span>(аргументы)
 {
@@ -368,7 +387,7 @@
 </pre>
 			<p>Функция, принимающая любое количество аргументов:</p>
 			<pre><span class="kj">function</span> <span class="f">myCoolFunction</span>(...<span class="vl">args</span>) { <span class="vl">console</span>.<span class="f">log</span>(...<span class="vl">args</span>); }</pre>
-			<p>В javascript функции можно вызывать даже до объявления:</p>
+			<p>В JavaScript функции можно вызывать даже до объявления:</p>
 			<pre>
 <span class="f">log</span>(<span class="sj">"function test"</span>);
 <span class="kj">function</span> <span class="f">log</span>(<span class="vl">text</span>)
@@ -390,7 +409,7 @@
 <span class="c">// Ещё короче:</span>
 <span class="kj">const</span> <span class="vc">log3</span> = (<span class="vl">text</span>) <span class="kj">=></span> <span class="vl">console</span>.<span class="f">log</span>(<span class="vl">text</span>);
 </pre>
-		<p>В python есть лямбда-функции, в которых можно писать только одну строку, в javascript такой проблемы нет.</p>
+		<p>В python есть лямбда-функции, в которых можно писать только одну строку, в JavaScript такой проблемы нет.</p>
 		<p>Метод списка, который позволяет пройти по всем элементам:</p>
 		<pre>
 <span class="kj">const</span> <span class="vc">a</span> = [<span class="n">2</span>, <span class="n">5</span>, <span class="n">3</span>, <span class="n">1</span>, <span class="n">1</span>];
@@ -401,9 +420,9 @@
 </pre>
 		</div>
 
-		<h2>Класс Math</h2>
+		<h2 id="pg2-math">Класс Math</h2>
 		<div>
-			<p>В javascript объект Math импортировать не нужно.</p>
+			<p>В JavaScript объект Math импортировать не нужно.</p>
 			<p>Функции max и min находятся в Math:</p>
 			<pre>
 <span class="kj">const</span> <span class="vc">a</span> = <span class="m">Math</span>.<span class="f">max</span>(<span class="n">4</span>, <span class="n">6</span>, <span class="n">3</span>); <span class="c">// a == 6</span>
@@ -411,9 +430,9 @@
 </pre>
 		</div>
 
-		<h2>Модули в Javascript</h2>
+		<h2 id="pg2-modules">Модули в JavaScript</h2>
 		<div>
-			<p>Модули в javascript работают только если страница находится на сервере!</p>
+			<p>Модули в JavaScript работают только если страница находится на сервере!</p>
 			<p>Как и в python, можно импортировать объекты из других файлов. Объекты, которые вы хотите импортировать, должны быть помечены словом export.</p>
 			<p>Основной файл:</p>
 			<pre>
@@ -429,12 +448,12 @@
 </pre>
 		</div>
 
-		<h2>Классы</h2>
+		<h2 id="pg2-classes">Классы</h2>
 		<div>
-			<p>В javascript вместо метода __init__ есть метод constructor.</p>
+			<p>В JavaScript вместо метода __init__ есть метод constructor.</p>
 			<p>Вместо self - this.</p>
 			<p>Поля класса можно объявлять вне конструктора.</p>
-			<p>В javascript не нужно писать this первым параметром!</p>
+			<p>В JavaScript не нужно писать this первым параметром!</p>
 			<pre>
 <span class="kj">class</span> <span class="m">Person</span>
 {
@@ -486,7 +505,7 @@
 			</pre>
 		</div>
 
-		<h2>Если не поставить ;</h2>
+		<h2 id="pg2-if_you_dont_put">Если не поставить ;</h2>
 		<div>
 			<p>В большинстве случаев это ничего не изменит, но иногда могут появиться неожиданные ошибки. Например:</p>
 			<pre>
@@ -504,11 +523,11 @@
 			<p>Для избежания такой проблемы достаточно поставить ; в конце первой строчки.</p>
 		</div>
 
-		<h2>А оно-то по-другому!</h2>
+		<h2 id="pg2-its_different">А оно-то по-другому!</h2>
 		<div>
-			<p>То, что в javascript по-другому.</p>
+			<p>То, что в JavaScript по-другому.</p>
 			<p>[a, b] = [b, a] вместо: a, b = b, a</p>
-			<p>В javascript есть объекты null, undefined, NaN и Infinity:</p>
+			<p>В JavaScript есть объекты null, undefined, NaN и Infinity:</p>
 			<p>NaN - объект типа число, хоть и означает Not a Number, то есть Не Число</p>
 			<p>Infinity - объект типа число, бесконечность</p>
 			<p>null, undefined - тоже, что и None в python</p>
@@ -526,7 +545,7 @@
 <span class="kj">const</span> <span class="vc">g</span> = [<span class="n">2</span>, <span class="n">1</span>] * <span class="n">2</span>; <span class="c">// isNaN(g), а не ['2', '1', '2', '1']!</span>
 <span class="kj">const</span> <span class="vc">h</span> = <span class="n">5</span> / <span class="n">0</span>; <span class="c">// h == Infinity, ошибки не будет!</span>
 </pre>
-			<p>Оператор in в javascript проверяет не то, есть ли в списке такой элемент, а есть ли такое свойство.</p>
+			<p>Оператор in в JavaScript проверяет не то, есть ли в списке такой элемент, а есть ли такое свойство.</p>
 			<pre>
 <span class="kj">const</span> <span class="vc">a</span> = [<span class="sj">"a"</span>, <span class="sj">"b"</span>, <span class="sj">"c"</span>];
 <span class="vl">console</span>.<span class="f">log</span>(<span class="n">1</span> <span class="kj">in</span> <span class="vc">a</span>); <span class="c">// Вывод: true. Так как в списке есть элемент с таким индексом</span>
@@ -534,21 +553,21 @@
 <span class="kj">const</span> <span class="vc">b</span> = {<span class="vl">a</span>: <span class="sj">"123"</span>, <span class="vl">b</span>: <span class="sj">"abc"</span>};
 <span class="vl">console</span>.<span class="f">log</span>(<span class="sj">"a"</span> <span class="kj">in</span> <span class="vc">b</span>); <span class="c">// Вывод: true. Так как в объекте есть значение по ключу 'a'</span>
 </pre>
-			<p>В javascript нет целочисленного деления (// - в python), но можно сделать его так:</p>
+			<p>В JavaScript нет целочисленного деления (// - в python), но можно сделать его так:</p>
 			<pre>
 <span class="kj">const</span> <span class="vc">a</span> = <span class="m">Math</span>.<span class="f">floor</span>(<span class="n">15</span> / <span class="n">2</span>);
 </pre>
-			<p>В javascript нет функций int, float, str, вместо них можно использовать parseInt, parseFloat и `${что-то}` соответственно.
+			<p>В JavaScript нет функций int, float, str, вместо них можно использовать parseInt, parseFloat и `${что-то}` соответственно.
 				Функции parseInt и parseFloat не выдают ошибку в случае, если нельзя переобразовать в число, а просто вернут NaN.
 			</p>
 		</div>
 
 
-		<div class="footer"><span class="link" onclick="toPage(3)">Следующая тема</span></div>
-	</div>
+		<footer class="footer"><a href="?pg=3" data-link="3">Следующая тема</a></footer>
+	</section>
 
 
-	<div class="page" id="pg3">
+	<section class="page" id="pg3" data-name="HTML страница" data-shortname="Основы: 1.3">
 		<h1>HTML страница</h1>
 		<p>Для корректной работы каждая HTML страница должна быть составлена по определённому шаблону:</p>
 		<pre class="nowrap">
@@ -591,11 +610,11 @@
 <span class="tb">&lt;/</span><span class="t">body</span><span class="tb">&gt;</span> <span class="c">&lt;!-- Конец содержимого --&gt;</span>
 <span class="tb">&lt;/</span><span class="t">html</span><span class="tb">&gt;</span> <span class="c">&lt;!-- Конец страницы --&gt;</span>
 </pre>
-		<div class="footer"><span class="link" onclick="toPage(4)">Следующая тема</span></div>
-	</div>
+		<footer class="footer"><a href="?pg=4" data-link="4">Следующая тема</a></footer>
+	</section>
 
 
-	<div class="page" id="pg4">
+	<section class="page" id="pg4" data-name="HTML: Основные теги" data-shortname="Основы: 1.4">
 		<h1>HTML: Основные теги</h1>
 		<h1>Немного о том, что можно добавить в body</h1>
 		<p>Универсальный тег <b>div</b> - можно назвать его контейнером для элементов.
@@ -642,7 +661,7 @@
 		<input type="radio" name="input-radio">
 		<input type="radio" name="input-radio">
 		<p>Для input типа radio необходимо указать атрибут name, чтобы всегда был выбран только один.</p>
-		<p>Больше о теге input в главе <span class="link" onclick="toPage(17)">Тег input</span>.</p>
+		<p>Больше о теге input в главе <a href="?pg=17" data-link="17">Тег input</a>.</p>
 
 		<h2>Таблицы</h2>
 		<p>С помощью таблиц легко расположить элементы на странице.</p>
@@ -686,11 +705,11 @@
 		</ol>
 		<p style="margin-top: 0px;">&lt;/ol&gt;</p>
 
-		<div class="footer"><span class="link" onclick="toPage(5)">Следующая тема</span></div>
-	</div>
+		<footer class="footer"><a href="?pg=5" data-link="5">Следующая тема</a></footer>
+	</section>
 
 
-	<div class="page" id="pg5">
+	<section class="page" id="pg5" data-name="CSS" data-shortname="Основы: 1.5">
 		<h1>CSS</h1>
 		<p>С помощью CSS можно делать очень красочные и анимированные сайты. Здесь будут рассмотрены только основы.</p>
 		<p>В CSS есть наследование стилей, то есть если вы укажите шрифт у body, то у элементов внутри него тоже применится этот шрифт.
@@ -713,7 +732,7 @@
 		<h2>Написание стилей</h2>
 		<p>Для написания стилей необходимо указать, к каким элементам они будут применятся.</p>
 		<p>Элемент можно указывать по тегу, id или классу.</p>
-		<p>id нужен для получения элемента в javascript<br>
+		<p>id нужен для получения элемента в JavaScript<br>
 			Классы как раз для стилей.
 		</p>
 		<pre><span class="tb">&lt;</span><span class="t">p</span> <span class="a">class</span>=<span class="s">"имена классов через пробел"</span><span class="tb">&gt;</span><span class="tb">&lt;/</span><span class="t">p</span><span class="tb">&gt;</span></pre>
@@ -755,13 +774,13 @@
 		<p>&lt;p&gt;Абзац<span>&lt;span&gt;<span style="color: pink;">span внутри абзаца</span>&lt;/span&gt;</span>&lt;/p&gt;</p>
 		<br>
 		<p>Другие способы указания элементов, а также свойства которые есть у элементов будут рассмотрены в следующих темах.</p>
-		<div class="footer"><span class="link" onclick="toPage(6)">Следующая тема</span></div>
-	</div>
+		<footer class="footer"><a href="?pg=6" data-link="6">Следующая тема</a></footer>
+	</section>
 
 
-	<div class="page" id="pg6">
-		<h1>Javascript на странице</h1>
-		<p>Добавить javascript на страницу можно несколькими способами.</p>
+	<section class="page" id="pg6" data-name="Javascript на странице" data-shortname="Основы: 1.6">
+		<h1>JavaScript на странице</h1>
+		<p>Добавить JavaScript на страницу можно несколькими способами.</p>
 		<p>Весь код на странице будет находится в общей памяти. То есть, если в одном из скриптов вы создадите переменную или функцию,
 			то она будет доступна и в других скриптах на вашей странице (по-другому при использовании модулей).</p>
 		<p><b>Вариант 1</b>: Добавить код прямо в HTML файл.</p>
@@ -833,13 +852,13 @@
 	<span class="vl">console</span>.<span class="f">log</span>(<span class="vl">text</span>);
 }
 </pre>
-		<div class="footer"><span class="link" onclick="toPage(7)">Следующая тема</span></div>
-	</div>
+		<footer class="footer"><a href="?pg=7" data-link="7">Следующая тема</a></footer>
+	</section>
 
 
-	<div class="page" id="pg7">
+	<section class="page" id="pg7" data-name="Как создать проект" data-shortname="Основы: 1.7">
 		<h1>Как создать проект</h1>
-		<p>Для редактирования HTML, CSS и javascript я рекомендую студию <a href="https://code.visualstudio.com/" target="_blank">Visual&nbsp;Studio&nbsp;Code</a>.</p>
+		<p>Для редактирования HTML, CSS и JavaScript рекомендую студию <a href="https://code.visualstudio.com/" target="_blank">Visual&nbsp;Studio&nbsp;Code</a>.</p>
 		<p>Создайте папку для проекта, в этой папке создайте два файла:</p>
 		<p>index.html - стандартное имя главной HTML страницы на сайте.</p>
 		<p>styles.css - для стилей.</p>
@@ -879,11 +898,11 @@
 <span class="tb">&lt;/</span><span class="t">html</span><span class="tb">&gt;</span>
 </pre>
 
-		<div class="footer"><span class="link" onclick="toPage(8)">Следующая тема</span></div>
-	</div>
+		<footer class="footer"><a href="?pg=8" data-link="8">Следующая тема</a></footer>
+	</section>
 
 
-	<div class="page" id="pg8">
+	<section class="page" id="pg8" data-name="CSS: Значения" data-shortname="Css: 2.1">
 		<h1>CSS значения</h1>
 		<h2>Цвета</h2>
 		<p>Цвета можно указывать названием, в формате RGB, RGBA, HSL, HSLA, а также шестнадцатеричным значением.</p>
@@ -913,11 +932,11 @@
 		<p>inherit - значение свойства наследуется у родительского элемента.</p>
 		<p>initial - устанавливается исходное значения свойства.</p>
 
-		<div class="footer"><span class="link" onclick="toPage(9)">Следующая тема</span></div>
-	</div>
+		<footer class="footer"><a href="?pg=9" data-link="9">Следующая тема</a></footer>
+	</section>
 
 
-	<div class="page" id="pg9">
+	<section class="page" id="pg9" data-name="CSS: Cелекторы" data-shortname="Css: 2.2">
 		<h1>CSS селекторы</h1>
 		<p>В CSS много способов указания элементов, также существуют псевдо-классы, которые позволяют менять стили, например, при наведении курсора на элемент.</p>
 		<h2>Выбор элементов</h2>
@@ -990,11 +1009,11 @@
 		<p>Все псевдо-классы можно изучить <a href="https://www.w3schools.com/css/css_pseudo_classes.asp" target="_blank">по ссылке</a>.</p>
 
 
-		<div class="footer"><span class="link" onclick="toPage(10)">Следующая тема</span></div>
-	</div>
+		<footer class="footer"><a href="?pg=10" data-link="10">Следующая тема</a></footer>
+	</section>
 
 
-	<div class="page" id="pg10">
+	<section class="page" id="pg10" data-name="CSS: Основные свойства" data-shortname="Css: 2.3">
 		<h1>CSS: Основные свойства</h1>
 		<h2>Цвета</h2>
 		<p>color - цвет текста.</p>
@@ -1169,11 +1188,11 @@
 		<p>Все значения display на <a target="_blank" href="https://webref.ru/css/display">этом сайте</a>.</p>
 
 
-		<div class="footer"><span class="link" onclick="toPage(11)">Следующая тема</span></div>
-	</div>
+		<footer class="footer"><a href="?pg=11" data-link="11">Следующая тема</a></footer>
+	</section>
 
 
-	<div class="page" id="pg11">
+	<section class="page" id="pg11" data-name="CSS: Переменные" data-shortname="Css: 2.4">
 		<h1>Css: Переменные</h1>
 		<p>Переменные должны начинаться с двойного дефиса:</p>
 		<pre><span class="cp">--имя-переменной</span>: <span class="cs">любое значение</span>;</pre>
@@ -1181,7 +1200,7 @@
 		<pre><span class="cp">color</span>: <span class="ck">var</span>(<span class="cs">--ваша-переменная</span>);</pre>
 		<p>Использовать переменные можно, например, для того, чтобы сделать разные темы на сайте:</p>
 		<p>Цвет, шрифт, размер шрифта - всё можно указать переменными.</p>
-		<p>Значения всех переменных можно определить в одном месте и потом менять у &lt;body&gt; класс (с помощью javascript):</p>
+		<p>Значения всех переменных можно определить в одном месте и потом менять у &lt;body&gt; класс (с помощью JavaScript):</p>
 		<pre>
 <span class="ct">.light-theme</span> {
 	<span class="cp">--color-text</span>: <span class="cs">black</span>;
@@ -1203,11 +1222,11 @@
 <span class="tb">&lt;/</span><span class="t">body</span><span class="tb">&gt;</span>
 </pre>
 
-		<div class="footer"><span class="link" onclick="toPage(12)">Следующая тема</span></div>
-	</div>
+		<footer class="footer"><a href="?pg=12" data-link="12">Следующая тема</a></footer>
+	</section>
 
 
-	<div class="page" id="pg12">
+	<section class="page" id="pg12" data-name="CSS: Функция calc()" data-shortname="Css: 2.5">
 		<h1>Функция calc()</h1>
 		<p>Функция calc() позволяет делать математические действия.</p>
 		<p>Пример:</p>
@@ -1216,11 +1235,11 @@
 	<span class="cp">width</span>: <span class="ck">calc</span>(<span class="cn">50%</span> - <span class="cn">5em</span>);
 }
 </pre>
-		<div class="footer"><span class="link" onclick="toPage(13)">Следующая тема</span></div>
-	</div>
+		<footer class="footer"><a href="?pg=13" data-link="13">Следующая тема</a></footer>
+	</section>
 
 
-	<div class="page" id="pg13">
+	<section class="page" id="pg13" data-name="JS: Взаимодействие со страницей" data-shortname="Javascript: 3.1">
 		<h1>Взаимодействие со страницей</h1>
 		<p>Для взаимодействия со страницей нужно уметь получать элемент со страницы в виде объекта, а так же создавать и добавлять новые элементы на страницу.</p>
 		<h2>Получить элемент</h2>
@@ -1241,13 +1260,13 @@
 		<h2>Удалить элемент из HTML</h2>
 		<pre><span class="vc">el</span>.<span class="f">removeChild</span>(<span class="vc">элемент</span>); <span class="c">// удалить дочерний элемент</span></pre>
 
-		<div class="footer"><span class="link" onclick="toPage(14)">Следующая тема</span></div>
-	</div>
+		<footer class="footer"><a href="?pg=14" data-link="14">Следующая тема</a></footer>
+	</section>
 
 
-	<div class="page" id="pg14">
+	<section class="page" id="pg14" data-name="JS: Элемент как объект" data-shortname="Javascript: 3.2">
 		<h1>Элемент как объект</h1>
-		<p>В javascript HTML элементы представлены в виде классов. Изменив значения полей объекта, вы поменяете и сам HTML элемент.</p>
+		<p>В JavaScript HTML элементы представлены в виде классов. Изменив значения полей объекта, вы поменяете и сам HTML элемент.</p>
 		<p>Свойства HTML элементов:</p>
 		<h2>Содержимое</h2>
 		<p>el.innerText - текст внутри элемента.</p>
@@ -1257,7 +1276,7 @@
 		<p>Для каждого CSS свойства в style есть поле с его значением.</p>
 		<p>В именах из нескольких слов тире убираются, а следующая буква делается заглавной:</p>
 		<p>CSS свойство background-color в объекте style поле backgroundColor.</p>
-		<p>Значения в style не пустые в случае, если стили указаны в атрибуте style или через javascript.</p>
+		<p>Значения в style не пустые в случае, если стили указаны в атрибуте style или через JavaScript.</p>
 		<h2>Классы</h2>
 		<p>el.classList - объект, содержащий все классы элемента, итерируемый.</p>
 		<p>el.classList.add("class") - добавить класс.</p>
@@ -1268,11 +1287,11 @@
 		<p>Атрибуты элементов располагаются в соответствующих полях, например:</p>
 		<p>Атрибут href у ссылок: el.href,</p>
 		<p>Атрибут type у &lt;input&gt;: el.type.</p>
-		<div class="footer"><span class="link" onclick="toPage(15)">Следующая тема</span></div>
-	</div>
+		<footer class="footer"><a href="?pg=15" data-link="15">Следующая тема</a></footer>
+	</section>
 
 
-	<div class="page" id="pg15">
+	<section class="page" id="pg15" data-name="JS: События" data-shortname="Javascript: 3.3">
 		<h1>События</h1>
 		<h1>Интерактивность!</h1>
 		<p>Событие – это сигнал от браузера о том, что что-то произошло.</p>
@@ -1316,7 +1335,7 @@
 			<li>code - нажатая клавиша на клавиатуре.</li>
 			<li>key - значение нажатой клавиши.</li>
 		</ul>
-		<p>Глава <span class="link" onclick="toPage(22)">code и key любой клавиши</span>.</p>
+		<p>Глава <a href="?pg=22" data-link="22">code и key любой клавиши</a>.</p>
 		<h2>Пример использования событий</h2>
 		<pre class="nowrap">
 <span class="tb">&lt;</span><span class="t">p</span> <span class="a">id</span>=<span class="s">"display-move"</span><span class="tb">&gt;</span>Курсор: X: -- Y: --<span class="tb">&lt;/</span><span class="t">p</span><span class="tb">&gt;</span>
@@ -1325,8 +1344,8 @@
 		<p id="pg15-display-move">Курсор: X: -- Y: --</p>
 		<p id="pg15-display-click">Нажатие: X: -- Y: --</p>
 		<pre class="nowrap">
-<span class="kj">const</span> <span class="vc">display_move</span> = <span class="vl">document</span>.<span class="f">getElementById</span>(<span class="sj">"pg15-display-move"</span>);
-<span class="kj">const</span> <span class="vc">display_click</span> = <span class="vl">document</span>.<span class="f">getElementById</span>(<span class="sj">"pg15-display-click"</span>);
+<span class="kj">const</span> <span class="vc">display_move</span> = <span class="vl">document</span>.<span class="f">getElementById</span>(<span class="sj">"display-move"</span>);
+<span class="kj">const</span> <span class="vc">display_click</span> = <span class="vl">document</span>.<span class="f">getElementById</span>(<span class="sj">"display-click"</span>);
 
 <span class="vl">window</span>.<span class="f">addEventListener</span>(<span class="sj">"mousemove"</span>, <span class="vl">e</span> <span class="kj">=></span> {
 	<span class="vc">display_move</span>.<span class="vl">innerText</span> = <span class="sj">`Курсор: X: </span><span class="kj">${</span><span class="vl">e</span>.<span class="vc">pageY</span><span class="kj">}</span><span class="sj"> Y: </span><span class="kj">${</span><span class="vl">e</span>.<span class="vc">pageY</span><span class="kj">}</span><span class="sj">`</span>;
@@ -1347,11 +1366,11 @@
 				});
 			}
 		</script>
-		<div class="footer"><span class="link" onclick="toPage(16)">Следующая тема</span></div>
-	</div>
+		<footer class="footer"><a href="?pg=16" data-link="16">Следующая тема</a></footer>
+	</section>
 
 
-	<div class="page" id="pg16">
+	<section class="page" id="pg16" data-name="Больше CSS свойств" data-shortName="подробнее о разном: 4.1">
 		<h1>Больше CSS свойств</h1>
 		<h2>visibility</h2>
 		<p>Значения: visible или hidden.</p>
@@ -1393,11 +1412,11 @@
 		<p>Все виды курсоров на <a target="_blank" href="https://webref.ru/css/cursor">этом сайте</a>.</p>
 
 
-		<div class="footer"><span class="link" onclick="toPage(17)">Следующая тема</span></div>
-	</div>
+		<footer class="footer"><a href="?pg=17" data-link="17">Следующая тема</a></footer>
+	</section>
 
 
-	<div class="page" id="pg17">
+	<section class="page" id="pg17" data-name="Тег input" data-shortName="подробнее о разном: 4.2">
 		<h1>Тег input</h1>
 		<p>Подробнее о его возможностях и как им можно пользоваться.</p>
 		<h2>Виды input</h2>
@@ -1435,7 +1454,7 @@
 		<input type="text">
 		<input type="text" disabled>
 
-		<h2>Javascript</h2>
+		<h2>JavaScript</h2>
 		<p>Получив input элемент в виде объекта, вы можете получить/изменить его значение:</p>
 		<ul>
 			<li>value - строка</li>
@@ -1451,11 +1470,11 @@
 		<p>У input есть два полезных события:</p>
 		<p>input - происходит каждый раз при изменении значения пользователем.</p>
 		<p>changed - происходит, когда пользователь завершил ввод (нажал вне поля ввода, закрыл меню выбора цвета/даты).</p>
-		<div class="footer"><span class="link" onclick="toPage(18)">Следующая тема</span></div>
-	</div>
+		<footer class="footer"><a href="?pg=18" data-link="18">Следующая тема</a></footer>
+	</section>
 
 
-	<div class="page" id="pg18">
+	<section class="page" id="pg18" data-name="CSS анимации" data-shortName="подробнее о разном: 4.3">
 		<h1>CSS анимации</h1>
 		<p>CSS анимации поддерживаются не всеми браузерами, см. <a target="_blank" href="https://caniuse.com/css-animation">таблицу совместимости</a>.</p>
 		<p>Для анимации необходимо настроить два CSS свойства:</p>
@@ -1546,17 +1565,17 @@
 		<p>Все про анимацию можно узнать на <a target="_blank" href="https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Animations/Using_CSS_animations">этом сайте</a>.</p>
 		<p>Учебник по анимации на <a target="_blank" href="https://html5book.ru/css3-animation/">этом сайте</a>.</p>
 
-		<div class="footer"><span class="link" onclick="toPage(19)">Следующая тема</span></div>
-	</div>
+		<footer class="footer"><a href="?pg=19" data-link="19">Следующая тема</a></footer>
+	</section>
 
 
-	<div class="page" id="pg19">
+	<section class="page" id="pg19" data-name="Тег canvas" data-shortName="подробнее о разном: 4.4">
 		<h1>Тег canvas</h1>
 		<p>Канва - это место, где вы можете рисовать.</p>
 		<p>Атрибутами width и height можно указать размер холста в пикселях.
 			Размер канвы, указанный стилями, не изменяет размер холста,
 			изображение будет расстягиваться под размер канвы.</p>
-		<p>Размер холста можно изменить и через javascript:</p>
+		<p>Размер холста можно изменить и через JavaScript:</p>
 		<pre>
 <span class="kj">const</span> <span class="vc">canvas</span> = <span class="vl">document</span>.<span class="f">getElementById</span>(<span class="sj">"canvas"</span>);
 <span class="vc">canvas</span>.<span class="vl">width</span> = <span class="n">300</span>;
@@ -1670,11 +1689,11 @@
 		}
 		</script>
 
-		<div class="footer"><span class="link" onclick="toPage(20)">Следующая тема</span></div>
-	</div>
+		<footer class="footer"><a href="?pg=20" data-link="20">Следующая тема</a></footer>
+	</section>
 
 
-	<div class="page" id="pg20">
+	<section class="page" id="pg20" data-name="canvas анимации" data-shortName="подробнее о разном: 4.5">
 		<h1>canvas анимации</h1>
 		<p>Для создания анимаций или игр на канве необходимо обновлять канву несколько раз в секунду. Для этого существует функция requestAnimationFrame().</p>
 		<p>В качестве параметра она принимает функцию, которую необходимо вызвать. Этой функции она передаст прошедшее время первым параметром.</p>
@@ -1755,13 +1774,13 @@
 		}
 		</script>
 
-		<div class="footer"><span class="link" onclick="toPage(21)">Следующая тема</span></div>
-	</div>
+		<footer class="footer"><a href="?pg=21" data-link="21">Следующая тема</a></footer>
+	</section>
 
 
-	<div class="page" id="pg21">
+	<section class="page" id="pg21" data-name="Функция range()" data-shortname="Дополнительно: 5.1">
 		<h1>Функция range()</h1>
-		<p>Моя реализация функции range() из python.</p>
+		<p>Реализация функции range() из python.</p>
 		<p>Работает так же:</p>
 		<ul>
 			<li>range(start, stop, step) - три параметра</li>
@@ -1791,11 +1810,11 @@
 	<span class="vl">console</span>.<span class="f">log</span>(<span class="vl">i</span>);
 }
 </pre>
-		<div class="footer"><span class="link" onclick="toPage(22)">Следующая тема</span></div>
-	</div>
+		<footer class="footer"><a href="?pg=22" data-link="22">Следующая тема</a></footer>
+	</section>
 
 
-	<div class="page" id="pg22">
+	<section class="page" id="pg22" data-name="code и key любой клавиши" data-shortname="Дополнительно: 5.2">
 		<h1>code и key любой клавиши</h1>
 		<p>Нажмите любую клавишу.</p>
 		<div style="padding: 10px;" id="pg22-output"></div>
@@ -1819,11 +1838,11 @@
 			});
 		}
 		</script>
-		<div class="footer"><span class="link" onclick="toPage(23)">Следующая тема</span></div>
-	</div>
+		<footer class="footer"><a href="?pg=23" data-link="23">Следующая тема</a></footer>
+	</section>
 
 
-	<div class="page" id="pg23">
+	<section class="page" id="pg23" data-name="Красивые кнопки" data-shortname="Дополнительно: 5.3">
 		<h1>Красивые кнопки</h1>
 		<p>Стандартные кнопки выглядят неплохо, но не всегда.</p>
 		<p><button class="main-font-size">Кнопка</button></p>
@@ -1921,11 +1940,11 @@
 	<span class="cp">text-decoration</span>: <span class="cs">none</span>;
 }
 </pre>
-		<div class="footer"><span class="link" onclick="toPage(24)">Следующая тема</span></div>
-	</div>
+		<footer class="footer"><a href="?pg=24" data-link="24">Следующая тема</a></footer>
+	</section>
 
 
-	<div class="page" id="pg24">
+	<section class="page" id="pg24" data-name="3D куб" data-shortname="Дополнительно: 5.4">
 		<h1>3D куб</h1>
 		<div class="rect3d"><div><div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div></div></div>
 		<p>HTML куба:</p>
@@ -1993,8 +2012,8 @@
 }
 </pre>
 
-		<div class="footer"><span class="link" onclick="toPage(0)">На главную</span></div>
-	</div>
+		<footer class="footer"><a href="?pg=0" data-link="0">На главную</a></footer>
+	</section>
 
 	<!-- Yandex.Metrika counter -->
 	<script type="text/javascript" >
