@@ -28,11 +28,13 @@
 	<link rel="stylesheet" href="styles/highlight.css">
 	<link rel="stylesheet" href="styles/examples.css">
 	<link rel="stylesheet" href="styles/buttons.css">
+	<link rel="stylesheet" href="styles/commonComps.css">
 	<meta name="theme-color" content="#fff7e5">
 	<meta name="msapplication-navbutton-color" content="#fff7e5">
 	<meta name="apple-mobile-web-app-status-bar-style" content="#fff7e5">
 	<script src="scripts/main.js" defer></script>
 	<script src="scripts/codeCopy.js" defer></script>
+	<script src="scripts/commonComps.js" defer></script>
 </head>
 <body class="lightTheme">
 	<script src="scripts/loadTheme.js"></script>
@@ -96,6 +98,7 @@
 					<li><a href="?pg=22" data-link="22">code и key любой клавиши</a></li>
 					<li><a href="?pg=23" data-link="23">Красивые кнопки</a></li>
 					<li><a href="?pg=24" data-link="24">3D куб</a></li>
+					<li><a href="?pg=25" data-link="25">Типовые компоненты</a></li>
 				</ol>
 			</li>
 		</ol>
@@ -1969,9 +1972,9 @@
 	<span class="cp">text-align</span>: <span class="cs">center</span>;
 }
 <span class="ct">.rect3d div</span> { <span class="c">/* Куб */</span>
-	<span class="cp">--size--</span>: <span class="cn">40px</span>;
-	<span class="cp">height</span>: <span class="ck">calc</span>(<span class="ck">var</span>(<span class="cp">--size--</span>) * <span class="cn">2</span>);
-	<span class="cp">width</span>: <span class="ck">calc</span>(<span class="ck">var</span>(<span class="cp">--size--</span>) * <span class="cn">2</span>);
+	<span class="cp">--size</span>: <span class="cn">40px</span>;
+	<span class="cp">height</span>: <span class="ck">calc</span>(<span class="ck">var</span>(<span class="cp">--size</span>) * <span class="cn">2</span>);
+	<span class="cp">width</span>: <span class="ck">calc</span>(<span class="ck">var</span>(<span class="cp">--size</span>) * <span class="cn">2</span>);
 	<span class="cp">transform-style</span>: <span class="cs">preserve-3d</span>;
 	<span class="cp">animation</span>: <span class="ca">rect3d-anim</span> <span class="cn">3s</span> <span class="cs">linear infinite</span>;
 	<span class="cp">display</span>: <span class="cs">inline-block</span>;
@@ -1979,27 +1982,27 @@
 <span class="c">/* Стороны: */</span>
 <span class="ct">.rect3d div div:nth-child</span>(<span class="cn">1</span>) {
 	<span class="cp">background-color</span>: <span class="ck">rgba</span>(<span class="cn">90</span>, <span class="cn">90</span>, <span class="cn">90</span>, <span class="cn">0.7</span>);
-	<span class="cp">transform</span>: <span class="ck">translateZ</span>(<span class="ck">var</span>(<span class="cp">--size--</span>));
+	<span class="cp">transform</span>: <span class="ck">translateZ</span>(<span class="ck">var</span>(<span class="cp">--size</span>));
 }
 <span class="ct">.rect3d div div:nth-child</span>(<span class="cn">2</span>) {
 	<span class="cp">background-color</span>: <span class="ck">rgba</span>(<span class="cn">0</span>, <span class="cn">210</span>, <span class="cn">0</span>, <span class="cn">0.7</span>);
-	<span class="cp">transform</span>: <span class="ck">rotateY</span>(<span class="cn">180deg</span>) <span class="ck">translateZ</span>(<span class="ck">var</span>(<span class="cp">--size--</span>));
+	<span class="cp">transform</span>: <span class="ck">rotateY</span>(<span class="cn">180deg</span>) <span class="ck">translateZ</span>(<span class="ck">var</span>(<span class="cp">--size</span>));
 }
 <span class="ct">.rect3d div div:nth-child</span>(<span class="cn">3</span>) {
 	<span class="cp">background-color</span>: <span class="ck">rgba</span>(<span class="cn">210</span>, <span class="cn">0</span>, <span class="cn">0</span>, <span class="cn">0.7</span>);
-	<span class="cp">transform</span>: <span class="ck">rotateY</span>(<span class="cn">90deg</span>) <span class="ck">translateZ</span>(<span class="ck">var</span>(<span class="cp">--size--</span>));
+	<span class="cp">transform</span>: <span class="ck">rotateY</span>(<span class="cn">90deg</span>) <span class="ck">translateZ</span>(<span class="ck">var</span>(<span class="cp">--size</span>));
 }
 <span class="ct">.rect3d div div:nth-child</span>(<span class="cn">4</span>) {
 	<span class="cp">background-color</span>: <span class="ck">rgba</span>(<span class="cn">0</span>, <span class="cn">0</span>, <span class="cn">210</span>, <span class="cn">0.7</span>);
-	<span class="cp">transform</span>: <span class="ck">rotateY</span>(<span class="cn">-90deg</span>) <span class="ck">translateZ</span>(<span class="ck">var</span>(<span class="cp">--size--</span>));
+	<span class="cp">transform</span>: <span class="ck">rotateY</span>(<span class="cn">-90deg</span>) <span class="ck">translateZ</span>(<span class="ck">var</span>(<span class="cp">--size</span>));
 }
 <span class="ct">.rect3d div div:nth-child</span>(<span class="cn">5</span>) {
 	<span class="cp">background-color</span>: <span class="ck">rgba</span>(<span class="cn">210</span>, <span class="cn">210</span>, <span class="cn">0</span>, <span class="cn">0.7</span>);
-	<span class="cp">transform</span>: <span class="ck">rotateX</span>(<span class="cn">90deg</span>) <span class="ck">translateZ</span>(<span class="ck">var</span>(<span class="cp">--size--</span>));
+	<span class="cp">transform</span>: <span class="ck">rotateX</span>(<span class="cn">90deg</span>) <span class="ck">translateZ</span>(<span class="ck">var</span>(<span class="cp">--size</span>));
 }
 <span class="ct">.rect3d div div:nth-child</span>(<span class="cn">6</span>) {
 	<span class="cp">background-color</span>: <span class="ck">rgba</span>(<span class="cn">210</span>, <span class="cn">0</span>, <span class="cn">210</span>, <span class="cn">0.7</span>);
-	<span class="cp">transform</span>: <span class="ck">rotateX</span>(<span class="cn">-90deg</span>) <span class="ck">translateZ</span>(<span class="ck">var</span>(<span class="cp">--size--</span>));
+	<span class="cp">transform</span>: <span class="ck">rotateX</span>(<span class="cn">-90deg</span>) <span class="ck">translateZ</span>(<span class="ck">var</span>(<span class="cp">--size</span>));
 }
 <span class="c">/* Анимация вращения: */</span>
 <span class="ck2">@keyframes</span> <span class="ca">rect3d-anim</span> {
@@ -2012,11 +2015,334 @@
 }
 </pre>
 
+		<footer class="footer"><a href="?pg=25" data-link="25">Следующая тема</a></footer>
+	</section>
+
+	<section class="page" id="pg25" data-name="Типовые компоненты" data-shortname="Дополнительно: 5.5">
+		<h1>Типовые компоненты</h1>
+		<p>В этом разделе будут представлены реализации часто встречающихся компонентов веб-страниц.</p>
+		<h3>Оглавление</h3>
+		<ul class="small-list" style="margin-top: -1rem;">
+			<li><a href="?pg=25#pg25-header" data-link="25">Шапка сайта (header)</a></li>
+			<li><a href="?pg=25#pg25-carousel" data-link="25">Карусель</a></li>
+			<li><a href="?pg=25#pg25-modal" data-link="25">Модальное окно</a></li>
+		</ul>
+		<h2 id="pg25-header">Шапка сайта (header)</h2>
+		<p>Меню в верхней части страницы с логотипом и ссылками. На маленьких экранах ссылки перемещаются в бургер-меню.</p>
+		<div class="commonHeader">
+			<a href="?pg=25#pg25-header" data-link="25" class="commonHeader__logo"><img src="./icon.png" alt="logo"></a>
+			<label>
+				<input type="checkbox">
+				<div class="commonHeader__btn"></div>
+			</label>
+			<div class="commonHeader__links">
+				<a href="?pg=25#pg25-header" data-link="25">Проекты</a>
+				<a href="?pg=25#pg25-header" data-link="25">Новости</a>
+				<a href="?pg=25#pg25-header" data-link="25">Тарифы</a>
+				<a href="?pg=25#pg25-header" data-link="25">О нас</a>
+			</div>
+		</div>
+		<h3>HTML:</h3>
+		<pre class="nowrap">
+<span class="tb">&lt;</span><span class="t">header</span> <span class="a">class</span>=<span class="s">"header"</span><span class="tb">&gt;</span>
+	<span class="tb">&lt;</span><span class="t">a</span> <span class="a">href</span>=<span class="s">"#"</span> <span class="a">class</span>=<span class="s">"header__logo"</span><span class="tb">&gt;</span>
+		<span class="tb">&lt;</span><span class="t">img</span> <span class="a">src</span>=<span class="s">"./icon.png"</span> <span class="a">alt</span>=<span class="s">"logo"</span><span class="tb">&gt;</span>
+	<span class="tb">&lt;/</span><span class="t">a</span><span class="tb">&gt;</span>
+	<span class="tb">&lt;</span><span class="t">label</span><span class="tb">&gt;</span>
+		<span class="tb">&lt;</span><span class="t">input</span> <span class="a">type</span>=<span class="s">"checkbox"</span><span class="tb">&gt;</span>
+		<span class="tb">&lt;</span><span class="t">div</span> <span class="a">class</span>=<span class="s">"header__btn"</span><span class="tb">&gt;</span><span class="tb">&lt;/</span><span class="t">div</span><span class="tb">&gt;</span>
+	<span class="tb">&lt;/</span><span class="t">label</span><span class="tb">&gt;</span>
+	<span class="tb">&lt;</span><span class="t">div</span> <span class="a">class</span>=<span class="s">"header__links"</span><span class="tb">&gt;</span>
+		<span class="tb">&lt;</span><span class="t">a</span> <span class="a">href</span>=<span class="s">"#"</span><span class="tb">&gt;</span>Проекты<span class="tb">&lt;/</span><span class="t">a</span><span class="tb">&gt;</span>
+		<span class="tb">&lt;</span><span class="t">a</span> <span class="a">href</span>=<span class="s">"#"</span><span class="tb">&gt;</span>Новости<span class="tb">&lt;/</span><span class="t">a</span><span class="tb">&gt;</span>
+		<span class="tb">&lt;</span><span class="t">a</span> <span class="a">href</span>=<span class="s">"#"</span><span class="tb">&gt;</span>Тарифы<span class="tb">&lt;/</span><span class="t">a</span><span class="tb">&gt;</span>
+		<span class="tb">&lt;</span><span class="t">a</span> <span class="a">href</span>=<span class="s">"#"</span><span class="tb">&gt;</span>О нас<span class="tb">&lt;/</span><span class="t">a</span><span class="tb">&gt;</span>
+	<span class="tb">&lt;/</span><span class="t">div</span><span class="tb">&gt;</span>
+<span class="tb">&lt;/</span><span class="t">header</span><span class="tb">&gt;</span>
+		</pre>
+		<h3>CSS:</h3>
+		<pre class="nowrap">
+<span class="ct">.header </span>{
+<span class="cp">	--_c-back</span>:<span class="cs"> #fff0cc</span>;
+<span class="cp">	--_c-text</span>:<span class="cs"> #664700</span>;
+<span class="cp">	display</span>:<span class="cs"> flex</span>;
+<span class="cp">	align-items</span>:<span class="cs"> center</span>;
+<span class="cp">	gap</span>:<span class="cn"> 2em</span>;
+<span class="cp">	padding</span>:<span class="cn"> 0.5em 2em</span>;
+<span class="cp">	background-color</span>:<span class="ck"> var</span>(<span class="cp">--_c-back</span>);
+<span class="cp">	border</span>:<span class="cn"> 2px</span><span class="cs"> solid</span><span class="ck"> var</span>(<span class="cp">--_c-text</span>);
+<span class="cp">	border-radius</span>:<span class="cn"> 1em</span>;
+}
+<span class="ct">.header a </span>{
+<span class="cp">	color</span>:<span class="ck"> var</span>(<span class="cp">--_c-text</span>);
+}
+
+<span class="ct">.header__logo </span>{
+<span class="cp">	display</span>:<span class="cs"> flex</span>;
+<span class="cp">	user-select</span>:<span class="cs"> none</span>;
+}
+<span class="ct">.header__logo img </span>{
+<span class="cp">	height</span>:<span class="cn"> 2.5em</span>;
+}
+
+<span class="ct">.header__links </span>{
+<span class="cp">	display</span>:<span class="cs"> flex</span>;
+<span class="cp">	align-items</span>:<span class="cs"> center</span>;
+<span class="cp">	gap</span>:<span class="cn"> 1.5em</span>;
+}
+
+<span class="ct">.header label </span>{
+<span class="cp">	position</span>:<span class="cs"> relative</span>;
+<span class="cp">	width</span>:<span class="cn"> 2.5em</span>;
+<span class="cp">	height</span>:<span class="cn"> 2.5em</span>;
+<span class="cp">	display</span>:<span class="cs"> none</span>;
+<span class="cp">	align-items</span>:<span class="cs"> center</span>;
+<span class="cp">	justify-content</span>:<span class="cs"> center</span>;
+}
+<span class="ct">.header input </span>{
+<span class="cp">	position</span>:<span class="cs"> absolute</span>;
+<span class="cp">	pointer-events</span>:<span class="cs"> none</span>;
+<span class="cp">	opacity</span>:<span class="cn"> 0</span>;
+}
+<span class="ct">.header__btn</span>,
+<span class="ct">.header__btn::before</span>,
+<span class="ct">.header__btn::after </span>{
+<span class="cp">	content</span>:<span class="cs"> ""</span>;
+<span class="cp">	position</span>:<span class="cs"> absolute</span>;
+<span class="cp">	display</span>:<span class="cs"> block</span>;
+<span class="cp">	height</span>:<span class="cn"> 0.125em</span>;
+<span class="cp">	width</span>:<span class="cn"> 2em</span>;
+<span class="cp">	background-color</span>:<span class="ck"> var</span>(<span class="cp">--_c-text</span>);
+}
+<span class="ct">.header__btn::before </span>{
+<span class="cp">	transform</span>:<span class="ck"> translateY</span>(<span class="cn">-0.75em</span>);
+}
+<span class="ct">.header__btn::after </span>{
+<span class="cp">	transform</span>:<span class="ck"> translateY</span>(<span class="cn">0.75em</span>);
+}
+
+<span class="ck2">@media</span> <span class="cs">screen</span> and (<span class="cp">max-width</span>: <span class="cn">500px</span>) {
+<span class="ct">	.header </span>{
+<span class="cp">		justify-content</span>:<span class="cs"> space-between</span>;
+	}
+<span class="ct">	.header label </span>{
+<span class="cp">		display</span>:<span class="cs"> flex</span>;
+	}
+<span class="ct">	.header__links </span>{
+<span class="cp">		display</span>:<span class="cs"> none</span>;
+	}
+<span class="ct">	.header:has(input:checked) </span>{
+<span class="cp">		position</span>:<span class="cs"> fixed</span>;
+<span class="cp">		inset</span>:<span class="cn"> 0</span>;
+<span class="cp">		z-index</span>:<span class="cn"> 999</span>;
+<span class="cp">		display</span>:<span class="cs"> grid</span>;
+<span class="cp">		grid-template-columns</span>:<span class="cs"> auto auto</span>;
+<span class="cp">		grid-template-rows</span>:<span class="cs"> auto</span><span class="cn"> 1fr</span>;
+<span class="cp">		border-radius</span>:<span class="cn"> 0</span>;
+	}
+<span class="ct">	.header:has(input:checked) .header__links </span>{
+<span class="cp">		display</span>:<span class="cs"> flex</span>;
+<span class="cp">		flex-direction</span>:<span class="cs"> column</span>;
+<span class="cp">		grid-column</span>:<span class="cs"> span</span><span class="cn"> 2</span>;
+	}
+}
+		</pre>
+		<h2 id="pg25-carousel">Карусель</h2>
+		<p>Карточки прокручивающиеся по горизонтали</p>
+		<div class="carousel" id="carousel">
+			<div class="carousel__items">
+				<img src="./imgs/slide1.jpg" alt="slide1">
+				<img src="./imgs/slide2.jpg" alt="slide2">
+				<img src="./imgs/slide3.jpg" alt="slide3">
+			</div>
+			<button class="carousel__btn">&lt;</button>
+			<button class="carousel__btn">&gt;</button>
+			<div class="carousel__dots"></div>
+		</div>
+		<h3>HTML:</h3>
+		<pre class="nowrap">
+<span class="tb">&lt;</span><span class="t">div</span> <span class="a">class</span>=<span class="s">"carousel"</span> <span class="a">id</span>=<span class="s">"carousel"</span><span class="tb">&gt;</span>
+	<span class="tb">&lt;</span><span class="t">div</span> <span class="a">class</span>=<span class="s">"carousel__items"</span><span class="tb">&gt;</span>
+		<span class="tb">&lt;</span><span class="t">img</span> <span class="a">src</span>=<span class="s">"./imgs/slide1.jpg"</span> <span class="a">alt</span>=<span class="s">"slide1"</span><span class="tb">&gt;</span>
+		<span class="tb">&lt;</span><span class="t">img</span> <span class="a">src</span>=<span class="s">"./imgs/slide2.jpg"</span> <span class="a">alt</span>=<span class="s">"slide2"</span><span class="tb">&gt;</span>
+		<span class="tb">&lt;</span><span class="t">img</span> <span class="a">src</span>=<span class="s">"./imgs/slide3.jpg"</span> <span class="a">alt</span>=<span class="s">"slide3"</span><span class="tb">&gt;</span>
+	<span class="tb">&lt;/</span><span class="t">div</span><span class="tb">&gt;</span>
+	<span class="tb">&lt;</span><span class="t">button</span> <span class="a">class</span>=<span class="s">"carousel__btn"</span><span class="tb">&gt;</span>&amp;lt;<span class="tb">&lt;/</span><span class="t">button</span><span class="tb">&gt;</span>
+	<span class="tb">&lt;</span><span class="t">button</span> <span class="a">class</span>=<span class="s">"carousel__btn"</span><span class="tb">&gt;</span>&amp;gt;<span class="tb">&lt;/</span><span class="t">button</span><span class="tb">&gt;</span>
+	<span class="tb">&lt;</span><span class="t">div</span> <span class="a">class</span>=<span class="s">"carousel__dots"</span><span class="tb">&gt;</span><span class="tb">&lt;/</span><span class="t">div</span><span class="tb">&gt;</span>
+<span class="tb">&lt;/</span><span class="t">div</span><span class="tb">&gt;</span>
+		</pre>
+		<h3>CSS:</h3>
+		<pre class="nowrap">
+<span class="ct">.carousel </span>{
+<span class="cp">	--_c-back</span>:<span class="cs"> #fff0cc</span>;
+<span class="cp">	--_c-text</span>:<span class="cs"> #664700</span>;
+<span class="cp">	--_aspect</span>:<span class="cn"> 16/9</span>;
+<span class="cp">	--_height</span>:<span class="ck"> min</span>(<span class="cn">20rem</span>, <span class="ck">calc</span>(<span class="cn">100vw</span> / (<span class="ck">var</span>(<span class="cp">--_aspect</span>))));
+<span class="cp">	position</span>:<span class="cs"> relative</span>;
+<span class="cp">	overflow</span>:<span class="cs"> hidden</span>;
+<span class="cp">	height</span>:<span class="ck"> var</span>(<span class="cp">--_height</span>);
+<span class="cp">	user-select</span>:<span class="cs"> none</span>;
+<span class="cp">	border-radius</span>:<span class="cn"> 1em</span>;
+}
+<span class="ct">.carousel__items </span>{
+<span class="cp">	--_width</span>:<span class="ck"> calc</span>(<span class="ck">var</span>(<span class="cp">--_height</span>) * <span class="ck">var</span>(<span class="cp">--_aspect</span>))</span>;
+<span class="cp">	position</span>:<span class="cs"> absolute</span>;
+<span class="cp">	left</span>:<span class="ck"> calc</span>((<span class="cn">100%</span> - <span class="ck">var</span>(<span class="cp">--_width</span>)) / <span class="cn">2</span>)</span>;
+<span class="cp">	display</span>:<span class="cs"> flex</span>;
+<span class="cp">	height</span>:<span class="cn"> 100%</span>;
+}
+<span class="ct">.carousel__items img </span>{
+<span class="cp">	width</span>:<span class="ck"> var</span>(<span class="cp">--_width</span>)</span>;
+<span class="cp">	object-fit</span>:<span class="cs"> cover</span>;
+}
+<span class="ct">.carousel__btn </span>{
+<span class="cp">	position</span>:<span class="cs"> absolute</span>;
+<span class="cp">	top</span>:<span class="cn"> 50%</span>;
+<span class="cp">	left</span>:<span class="cn"> 1rem</span>;
+<span class="cp">	width</span>:<span class="cn"> 1.25em</span>;
+<span class="cp">	height</span>:<span class="cn"> 1.25em</span>;
+<span class="cp">	display</span>:<span class="cs"> flex</span>;
+<span class="cp">	align-items</span>:<span class="cs"> center</span>;
+<span class="cp">	justify-content</span>:<span class="cs"> center</span>;
+<span class="cp">	font-size</span>:<span class="cn"> 2rem</span>;
+<span class="cp">	color</span>:<span class="ck"> var</span>(<span class="cp">--_c-text</span>);
+<span class="cp">	background-color</span>:<span class="ck"> var</span>(<span class="cp">--_c-back</span>);
+<span class="cp">	border</span>:<span class="cs"> none</span>;
+<span class="cp">	border-radius</span>:<span class="cn"> 50%</span>;
+<span class="cp">	cursor</span>:<span class="cs"> pointer</span>;
+}
+<span class="ct">.carousel__btn</span> + <span class="ct">.carousel__btn </span>{
+<span class="cp">	left</span>:<span class="cs"> unset</span>;
+<span class="cp">	right</span>:<span class="cn"> 1rem</span>;
+}
+<span class="ct">.carousel__dots </span>{
+<span class="cp">	position</span>:<span class="cs"> absolute</span>;
+<span class="cp">	bottom</span>:<span class="cn"> 1rem</span>;
+<span class="cp">	left</span>:<span class="cn"> 50%</span>;
+<span class="cp">	transform</span>:<span class="ck"> translateX</span>(<span class="cn">-50%</span>);
+<span class="cp">	display</span>:<span class="cs"> flex</span>;
+<span class="cp">	gap</span>:<span class="cn"> 0.5em</span>;
+}
+<span class="ct">.carousel__dots div</span> {
+<span class="cp">	width</span>:<span class="cn"> 0.35em</span>;
+<span class="cp">	height</span>:<span class="cn"> 0.35em</span>;
+<span class="cp">	border-radius</span>:<span class="cn"> 50%</span>;
+<span class="cp">	background-color</span>:<span class="ck"> var</span>(<span class="cp">--_c-back</span>);
+<span class="cp">	border</span>:<span class="cn"> 0.2em</span><span class="cs"> solid</span><span class="ck"> var</span>(<span class="cp">--_c-back</span>);
+<span class="cp">	transition</span>:<span class="cs"> background-color</span><span class="cn"> 250ms</span>;
+<span class="cp">	cursor</span>:<span class="cs"> pointer</span>;
+}
+<span class="ct">.carousel__dots .active </span>{
+<span class="cp">	background-color</span>:<span class="ck"> var</span>(<span class="cp">--_c-text</span>);
+}
+		</pre>
+		<h3>JS:</h3>
+		<pre class="nowrap">
+<span class="kj">const</span> <span class="vc">animTimeMs</span> = <span class="n">300</span>;
+<span class="kj">const</span> <span class="vc">carousel</span> = <span class="vl">document</span>.<span class="f">getElementById</span>(<span class="sj">"carousel"</span>);
+<span class="kj">const</span> <span class="vc">items</span> = <span class="vc">carousel</span>.<span class="vc">firstElementChild</span>;
+<span class="kj">const</span> <span class="vc">btnPrev</span> = <span class="vc">carousel</span>.<span class="f">querySelectorAll</span>(<span class="sj">"button"</span>)[<span class="n">0</span>];
+<span class="kj">const</span> <span class="vc">btnNext</span> = <span class="vc">carousel</span>.<span class="f">querySelectorAll</span>(<span class="sj">"button"</span>)[<span class="n">1</span>];
+<span class="kj">const</span> <span class="vc">dots</span> = <span class="vc">carousel</span>.<span class="vc">lastElementChild</span>;
+
+<span class="vc">items</span>.<span class="vl">style</span>.<span class="vl">transition</span> = <span class="sj">`transform </span><span class="kj">${</span><span class="vc">animTimeMs</span><span class="kj">}</span><span class="sj">ms`</span>;
+<span class="vc">btnPrev</span>.<span class="f">addEventListener</span>(<span class="sj">"click"</span>, () <span class="kj">=&gt;</span> <span class="f">showSlide</span>(<span class="vl">curSlide</span> - <span class="n">1</span>));
+<span class="vc">btnNext</span>.<span class="f">addEventListener</span>(<span class="sj">"click"</span>, () <span class="kj">=&gt;</span> <span class="f">showSlide</span>(<span class="vl">curSlide</span> + <span class="n">1</span>));
+
+<span class="kj">const</span> <span class="vc">len</span> = <span class="vc">items</span>.<span class="vc">children</span>.<span class="vc">length</span>;
+<span class="k">for</span> (<span class="kj">let</span> <span class="vl">_</span> = <span class="n">0</span>; <span class="vl">_</span> &lt; <span class="n">2</span>; <span class="vl">_</span>++)
+	<span class="k">for</span> (<span class="kj">let</span> <span class="vl">i</span> = <span class="n">0</span>; <span class="vl">i</span> &lt; <span class="vc">len</span>; <span class="vl">i</span>++)
+		<span class="vc">items</span>.<span class="f">appendChild</span>(<span class="vc">items</span>.<span class="vc">children</span>[<span class="vl">i</span>].<span class="f">cloneNode</span>(<span class="b">true</span>));
+<span class="k">for</span> (<span class="kj">let</span> <span class="vl">i</span> = <span class="n">0</span>; <span class="vl">i</span> &lt; <span class="vc">len</span>; <span class="vl">i</span>++)
+{
+	<span class="kj">const</span> <span class="vc">el</span> = <span class="vl">document</span>.<span class="f">createElement</span>(<span class="sj">"div"</span>);
+	<span class="vc">dots</span>.<span class="f">appendChild</span>(<span class="vc">el</span>);
+	<span class="vc">el</span>.<span class="f">addEventListener</span>(<span class="sj">"click"</span>, () <span class="kj">=&gt;</span> <span class="f">showSlide</span>(<span class="vc">len</span> + <span class="vl">i</span>));
+}
+
+<span class="kj">let</span> <span class="vl">curSlide</span> = <span class="n">0</span>;
+<span class="f">showSlide</span>(<span class="vc">len</span>, <span class="b">true</span>);
+<span class="kj">async</span> <span class="kj">function</span> <span class="f">showSlide</span>(<span class="vl">i</span>, <span class="vl">instant</span> = <span class="b">false</span>)
+{
+	<span class="kj">const</span> <span class="vc">transition</span> = <span class="vc">items</span>.<span class="vl">style</span>.<span class="vl">transition</span>;
+	<span class="vl">curSlide</span> = <span class="vl">i</span>;
+	<span class="k">if</span> (<span class="vl">instant</span>) <span class="vc">items</span>.<span class="vl">style</span>.<span class="vl">transition</span> = <span class="sj">"none"</span>;
+	<span class="k">else</span>
+	{
+		<span class="k">if</span> (<span class="vl">i</span> &gt;= <span class="vc">len</span> * <span class="n">2</span>) { <span class="k">await</span> <span class="f">showSlide</span>(<span class="vc">len</span> - <span class="n">1</span>, <span class="b">true</span>); <span class="vl">curSlide</span> = <span class="vc">len</span>; }
+		<span class="k">if</span> (<span class="vl">i</span> &lt; <span class="vc">len</span>) { <span class="k">await</span> <span class="f">showSlide</span>(<span class="vc">len</span> * <span class="n">2</span>, <span class="b">true</span>); <span class="vl">curSlide</span> = <span class="vc">len</span> * <span class="n">2</span> - <span class="n">1</span>; }
+	}
+	<span class="vc">items</span>.<span class="vl">style</span>.<span class="vl">transform</span> = <span class="sj">`translateX(</span><span class="kj">${</span>-<span class="vl">curSlide</span> / <span class="vc">items</span>.<span class="vc">children</span>.<span class="vc">length</span> * <span class="n">100</span><span class="kj">}</span><span class="sj">%)`</span>;
+	<span class="m">Array</span>.<span class="f">from</span>(<span class="vc">dots</span>.<span class="vc">children</span>).<span class="f">forEach</span>(<span class="vl">el</span> <span class="kj">=&gt;</span> <span class="vl">el</span>.<span class="vl">classList</span>.<span class="f">remove</span>(<span class="sj">"active"</span>));
+	<span class="vc">dots</span>.<span class="vc">children</span>[<span class="vl">curSlide</span> % <span class="vc">len</span>].<span class="vl">classList</span>.<span class="f">add</span>(<span class="sj">"active"</span>);
+	<span class="k">if</span> (<span class="vl">instant</span>) <span class="k">return</span> <span class="kj">new</span> <span class="m">Promise</span>(<span class="f">r</span> <span class="kj">=&gt;</span> <span class="f">setTimeout</span>(() <span class="kj">=&gt;</span> { <span class="vc">items</span>.<span class="vl">style</span>.<span class="vl">transition</span> = <span class="vc">transition</span>; <span class="f">r</span>(); }));
+}
+		</pre>
+		<h2 id="pg25-modal">Модальное окно</h2>
+		<p>Окно, после открытия отображающееся поверх всего</p>
+		<dialog id="pg25_dialog" class="commonDialog">
+			<div>
+				<button autofocus onclick="pg25_dialog.close()">Закрыть</button>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero rerum alias illum tempore, animi soluta expedita dignissimos, quia eligendi non explicabo ullam fugit quos inventore suscipit. Repellendus dolorum architecto ad?</p>
+			</div>
+		</dialog>
+		<button class="commonDialog__open" onclick="pg25_dialog.showModal()">Открыть модальное окно</button>
+		<h3>HTML:</h3>
+		<pre class="nowrap">
+<span class="tb">&lt;</span><span class="t">dialog</span> <span class="a">id</span>=<span class="s">"mydialog"</span> <span class="a">class</span>=<span class="s">"dialog"</span><span class="tb">&gt;</span>
+	<span class="tb">&lt;</span><span class="t">div</span><span class="tb">&gt;</span>
+		<span class="tb">&lt;</span><span class="t">button</span> <span class="a">autofocus</span> <span class="a">onclick</span>=<span class="s">"<span class="vl">mydialog</span>.<span class="f">close</span>()"</span><span class="tb">&gt;</span>Закрыть<span class="tb">&lt;/</span><span class="t">button</span><span class="tb">&gt;</span>
+		<span class="tb">&lt;</span><span class="t">p</span><span class="tb">&gt;</span>Lorem ipsum dolor sit amet consectetur adipisicing elit...<span class="tb">&lt;/</span><span class="t">p</span><span class="tb">&gt;</span>
+	<span class="tb">&lt;/</span><span class="t">div</span><span class="tb">&gt;</span>
+<span class="tb">&lt;/</span><span class="t">dialog</span><span class="tb">&gt;</span>
+<span class="tb">&lt;</span><span class="t">button</span> <span class="a">class</span>=<span class="s">"dialog__open"</span> <span class="a">onclick</span>=<span class="s">"<span class="vl">mydialog</span>.<span class="f">showModal</span>()"</span><span class="tb">&gt;</span>Открыть модальное окно<span class="tb">&lt;/</span><span class="t">button</span><span class="tb">&gt;</span>
+		</pre>
+		<h3>CSS:</h3>
+		<pre class="nowrap">
+<span class="ct">.commonDialog </span>{
+<span class="cp">	--_c-back</span>:<span class="cs"> #fff7e5</span>;
+<span class="cp">	--_c-text</span>:<span class="cs"> #000000</span>;
+<span class="cp">	padding</span>:<span class="cn"> 0</span>;
+<span class="cp">	background</span>:<span class="ck"> var</span>(<span class="cp">--_c-back</span>);
+<span class="cp">	color</span>:<span class="ck"> var</span>(<span class="cp">--_c-text</span>);
+<span class="cp">	border</span>:<span class="cn"> 1px</span> <span class="cs">solid</span><span class="ck"> var</span>(<span class="cp">--_c-text</span>);
+<span class="cp">	border-radius</span>:<span class="cn"> 1rem</span>;
+<span class="cp">	max-width</span>:<span class="cn"> 600px</span>;
+}
+<span class="ct">.commonDialog::backdrop </span>{
+<span class="cp">	background-color</span>:<span class="ck"> rgb</span>(<span class="cn">0 0 0</span> / <span class="cn">70%</span>);
+}
+<span class="ct">.commonDialog</span> > <span class="ct">div</span> {
+<span class="cp">	padding</span>:<span class="cn"> 1em</span>;
+<span class="cp">	display</span>:<span class="cs"> flex</span>;
+<span class="cp">	flex-direction</span>:<span class="cs"> column</span>;
+}
+<span class="ct">.commonDialog button </span>{
+<span class="cp">	margin-left</span>:<span class="cs"> auto</span>;
+<span class="cp">	background</span>:<span class="cs"> none</span>;
+<span class="cp">	padding</span>:<span class="cn"> 0.5em 1em</span>;
+<span class="cp">	border</span>:<span class="cn"> 2px</span> <span class="cs">solid</span><span class="ck"> var</span>(<span class="cp">--_c-text</span>);
+<span class="cp">	border-radius</span>:<span class="cn"> 0.5em</span>;
+<span class="cp">	color</span>:<span class="ck"> var</span>(<span class="cp">--_c-text</span>);
+<span class="cp">	cursor</span>:<span class="cs"> pointer</span>;
+}
+		</pre>
+		<h3>JS:</h3>
+		<pre class="nowrap">
+<span class="c">// Закрытие по клику мимо модального окна</span>
+<span class="kj">const</span> <span class="vc">pg25_dialog</span> = <span class="vl">document</span>.<span class="f">getElementById</span>(<span class="sj">"pg25_dialog"</span>);
+<span class="vc">pg25_dialog</span>.<span class="f">addEventListener</span>(<span class="sj">"click"</span>, <span class="vl">e</span> <span class="kj">=&gt;</span>
+{
+	<span class="k">if</span> (<span class="vl">e</span>.<span class="vc">target</span> === <span class="vl">e</span>.<span class="vc">currentTarget</span>)
+		<span class="vc">pg25_dialog</span>.<span class="f">close</span>()
+});
+		</pre>
 		<footer class="footer"><a href="?pg=0" data-link="0">На главную</a></footer>
 	</section>
 
 	<!-- Yandex.Metrika counter -->
-	<script type="text/javascript" >
+	<!-- <script type="text/javascript" >
 		(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
 		m[i].l=1*new Date();
 		for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
@@ -2029,7 +2355,22 @@
 			accurateTrackBounce:true
 		});
 	</script>
-	<noscript><div><img src="https://mc.yandex.ru/watch/96633773" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+	<noscript><div><img src="https://mc.yandex.ru/watch/96633773" style="position:absolute; left:-9999px;" alt="" /></div></noscript> -->
 	<!-- /Yandex.Metrika counter -->
+	<!--
+	html
+		<(\/?)([a-z]*)\b(.*?)>
+		<span class="tb">&lt;$1</span><span class="t">$2</span>$3<span class="tb">&gt;</span>
+
+		(?<!span) ([a-z]*)="([a-z\d_#\.\\\/\(\)]*)"
+		 <span class="a">$1</span>=<span class="s">"$2"</span>
+
+	css
+		^([a-z\.# \t].*)(\{|,)$
+		<span class="ct">$1</span>$2
+
+		^([a-z\.# \t].*):(.*);
+		<span class="cp">$1</span>:<span class="cs">$2</span>;
+	-->
 </body>
 </html>

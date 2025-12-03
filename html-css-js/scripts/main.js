@@ -44,7 +44,7 @@ function toPage(pg, hash)
 {
     const url = new URL(window.location.href);
     url.searchParams.set("pg", pg);
-    url.hash = hash;
+    url.hash = hash || "";
     history.pushState(pg, "", url.toString());
     setPage(pg);
     if (hash) document.querySelector(hash)?.scrollIntoView?.({ block: "start" });

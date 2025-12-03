@@ -1,0 +1,188 @@
+.commonHeader {
+	--_c-back: #fff0cc;
+	--_c-text: #664700;
+	font-size: 1rem;
+	display: flex;
+	align-items: center;
+	gap: 2em;
+	padding: 0.5em 2em;
+	background-color: var(--_c-back);
+	border: 2px solid var(--_c-text);
+	border-radius: 1em;
+	transition: background-color var(--t-dur), border var(--t-dur);
+}
+.darkTheme .commonHeader {
+	--_c-back: #262626;
+	--_c-text: #d4d4d4;
+}
+.commonHeader a {
+	font-size: inherit;
+	color: var(--_c-text);
+}
+
+.commonHeader__logo {
+	display: flex;
+	user-select: none;
+}
+.commonHeader__logo img {
+	height: 2.5em;
+}
+
+.commonHeader__links {
+	display: flex;
+	align-items: center;
+	gap: 1.5em;
+}
+
+.commonHeader label {
+	position: relative;
+	width: 2.5em;
+	height: 2.5em;
+	display: none;
+	align-items: center;
+	justify-content: center;
+}
+.commonHeader input {
+	position: absolute;
+	pointer-events: none;
+	opacity: 0;
+}
+.commonHeader__btn,
+.commonHeader__btn::before,
+.commonHeader__btn::after {
+	content: "";
+	position: absolute;
+	display: block;
+	height: 0.125em;
+	width: 2em;
+	background-color: var(--_c-text);
+}
+.commonHeader__btn::before {
+	transform: translateY(-0.75em);
+}
+.commonHeader__btn::after {
+	transform: translateY(0.75em);
+}
+
+@media screen and (max-width: 500px) {
+	.commonHeader {
+		justify-content: space-between;
+	}
+	.commonHeader label {
+		display: flex;
+	}
+	.commonHeader__links {
+		display: none;
+	}
+	.commonHeader:has(input:checked) {
+		position: fixed;
+		inset: 0;
+		z-index: 999;
+		display: grid;
+		grid-template-columns: auto auto;
+		grid-template-rows: auto 1fr;
+		border-radius: 0;
+	}
+	.commonHeader:has(input:checked) .commonHeader__links {
+		display: flex;
+		flex-direction: column;
+		grid-column: span 2;
+	}
+}
+
+
+.carousel {
+	--_c-back: #fff0cc;
+	--_c-text: #664700;
+	--_aspect: 16/9;
+	--_height: min(20rem, calc(100vw / (var(--_aspect))));
+	position: relative;
+	overflow: hidden;
+	height: var(--_height);
+	user-select: none;
+	border-radius: 1em;
+}
+.darkTheme .carousel {
+	--_c-back: #262626;
+	--_c-text: #d4d4d4;
+}
+.carousel__items {
+	--_width: calc(var(--_height) * var(--_aspect));
+	position: absolute;
+	left: calc((100% - var(--_width)) / 2);
+	display: flex;
+	height: 100%;
+}
+.carousel__items img {
+	width: var(--_width);
+	object-fit: cover;
+}
+.carousel__btn {
+	position: absolute;
+	top: 50%;
+	left: 1rem;
+	width: 1.25em;
+	height: 1.25em;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 2rem;
+	color: var(--_c-text);
+	background-color: var(--_c-back);
+	border: none;
+	border-radius: 50%;
+	cursor: pointer;
+}
+.carousel__btn + .carousel__btn {
+	left: unset;
+	right: 1rem;
+}
+.carousel__dots {
+	position: absolute;
+	bottom: 1rem;
+	left: 50%;
+	transform: translateX(-50%);
+	display: flex;
+	gap: 0.5em;
+}
+.carousel__dots div {
+	width: 0.35em;
+	height: 0.35em;
+	border-radius: 50%;
+	background-color: var(--_c-back);
+	border: 0.2em solid var(--_c-back);
+	transition: background-color 250ms;
+	cursor: pointer;
+}
+.carousel__dots .active {
+	background-color: var(--_c-text);
+}
+
+.commonDialog {
+	padding: 0;
+	background: var(--c-back);
+	color: var(--c-text);
+	border: 1px solid var(--c-text);
+	border-radius: 1rem;
+	max-width: 600px;
+}
+.commonDialog::backdrop {
+	background-color: rgb(0 0 0 / 70%);
+}
+.commonDialog > div {
+	padding: 1em;
+	display: flex;
+	flex-direction: column;
+}
+.commonDialog button,
+.commonDialog__open {
+	background: none;
+	padding: 0.5em 1em;
+	border: 2px solid var(--c-text);
+	border-radius: 0.5em;
+	color: var(--c-text);
+	cursor: pointer;
+}
+.commonDialog button {
+	margin-left: auto;
+}
