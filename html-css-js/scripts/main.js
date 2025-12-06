@@ -1,6 +1,5 @@
 const getPage = (i) => document.getElementById(`pg${i}`);
 const pageName = document.getElementById("pageName");
-let pageCur = -1;
 
 if (typeof history.state == "number") setPage(history.state);
 else setPage(tryGetPageFromUrl());
@@ -20,6 +19,7 @@ document.querySelectorAll("[data-link]").forEach(link =>
     })
 );
 
+var pageCur;
 function setPage(pg)
 {
     window.scrollTo(0, 0);

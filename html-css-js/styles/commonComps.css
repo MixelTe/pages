@@ -112,6 +112,9 @@
 	left: calc((100% - var(--_width)) / 2);
 	display: flex;
 	height: 100%;
+
+
+    transform: translateX(calc(var(--curI) * -100% / var(--count)));
 }
 .carousel__items img {
 	width: var(--_width);
