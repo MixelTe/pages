@@ -26,7 +26,6 @@ const urlsToCache = [
     "./_js/pages/dayStats.js",
     "./_js/pages/qlist.js",
     "./_js/pages/settings.js",
-    "./_js/pages/stats.js",
     "./_js/pages/switchPage.js",
     "./_js/confetti.js",
     "./_js/dayStatistics.js",
