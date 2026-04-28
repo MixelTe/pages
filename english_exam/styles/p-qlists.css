@@ -1,0 +1,297 @@
+#p-qlists {
+	padding-block: 1rem;
+}
+
+#qlists {
+	display: flex;
+	flex-direction: column;
+	justify-content: stretch;
+	gap: 1rem;
+}
+
+.qlists {
+	font-size: 1.3rem;
+}
+.qlists input {
+	position: absolute;
+	pointer-events: none;
+	opacity: 0;
+}
+
+.qlists-btn {
+	display: flex;
+	align-items: center;
+	gap: 1.4rem;
+	cursor: pointer;
+}
+
+.qlists-btn span {
+	flex-grow: 1;
+}
+
+.qlist-arrow {
+	position: relative;
+	display: block;
+	width: 0.6em;
+	height: 0.6em;
+	border: 2px solid var(--c-text);
+	border-radius: 3px;
+	transform: translateX(0.25em) rotate(-45deg);
+	transition: transform 200ms;
+	margin-left: 0.2rem;
+}
+.qlist-arrow::after {
+	content: "";
+	position: absolute;
+	display: block;
+	width: 50%;
+	height: 50%;
+	top: 25%;
+	left: 25%;
+	background-color: var(--c-title);
+	border-radius: 50%;
+	transform: rotate(45deg) scale(0);
+	transition: transform 200ms;
+}
+.qlists input:focus-visible ~ * .qlist-arrow,
+.qlists-btn:hover .qlist-arrow {
+	transform: translateX(0) rotate(-45deg);
+}
+.qlists input:checked ~ * .qlist-arrow {
+	transform: translateX(0) rotate(45deg);
+}
+.qlists input:checked ~ * .qlist-arrow::after {
+	transform: rotate(45deg) scale(1);
+}
+.qlists input:checked:focus-visible ~ * .qlist-arrow,
+.qlists input:checked ~ * .qlists-btn:hover .qlist-arrow {
+	transform: translateY(-0.25em) rotate(45deg);
+}
+
+.qlist-count {
+	position: relative;
+	font-size: 0.9rem;
+	margin-right: 0.6rem;
+}
+.qlists-list a :nth-child(2)::before,
+.qlist-count::before {
+	content: "";
+	position: absolute;
+	inset: -0.05em -0.1em;
+	background-color: var(--c-title);
+	border-radius: 0.2em;
+	opacity: 0.2;
+	z-index: -1;
+	filter: blur(4px);
+}
+
+.qlists-list_container {
+	display: grid;
+	grid-template-rows: 0fr;
+	transition: grid-template-rows 200ms;
+}
+.qlists input:checked ~ .qlists-list_container {
+	grid-template-rows: 1fr;
+}
+.qlists-list {
+	display: flex;
+	flex-direction: column;
+	padding-left: 1.8rem;
+	padding-right: 1rem;
+	overflow: hidden;
+}
+
+.qlists-list a {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	gap: 1rem;
+	background-color: transparent;
+	border: none;
+	text-align: left;
+	font-size: 1.1rem;
+	cursor: pointer;
+	padding: 0.3em 0.4em;
+	padding-left: 1.2em;
+	outline: none;
+}
+.qlists-list a::before,
+.qlists-list a::after {
+	position: absolute;
+	left: 0.2em;
+	transition-property: opacity;
+	transition-duration: 100ms;
+	color: var(--c-title);
+}
+.qlists-list a::before {
+	content: "§";
+	opacity: 1;
+}
+.qlists-list a::after {
+	content: "";
+	border: 0.4em solid transparent;
+	border-top-color: var(--c-title);
+	border-bottom-color: var(--c-title);
+	opacity: 0;
+	transform: translate(-0.15em, 0.25em) scaleX(0.6);
+}
+.qlists-list a:focus-visible::before,
+.qlists-list a:hover::before {
+	opacity: 0;
+}
+.qlists-list a:focus-visible::after,
+.qlists-list a:hover::after {
+	opacity: 1;
+}
+
+.qlists-list a :nth-child(2) {
+	position: relative;
+	font-size: 0.9rem;
+}
+
+
+#p-qlist {
+	padding-block: 2rem;
+	margin-inline: auto;
+	width: 100%;
+	max-width: 700px;
+}
+#p-qlist.open {
+	display: block;
+}
+
+#p-qlist .loading {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	overflow: visible;
+}
+#p-qlist .loading-error {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	overflow: visible;
+}
+
+#qlist {
+	display: grid;
+	grid-template-columns: 4fr 6fr;
+	min-width: 300px;
+}
+
+#p-qlist-sortBtn {
+	position: fixed;
+	top: 0.6rem;
+	right: 0.4rem;
+	width: 1.2rem;
+	height: 1.2rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: transparent;
+	padding: 0;
+	margin: 0;
+	border: 1px solid var(--c-title);
+	border-radius: 0.3rem;
+	cursor: pointer;
+}
+#p-qlist-sortBtn span {
+	display: block;
+	width: 0.5rem;
+	height: 0.5rem;
+	border: 2px solid var(--c-title);
+	border-top: transparent;
+	border-left: transparent;
+	border-bottom-right-radius: 0.2rem;
+	transform: translateX(15%) rotate(-225deg);
+	transition: transform 250ms;
+}
+#p-qlist-sortBtn.p-qlist-sortBtn_sorted span {
+	transform: translateY(-15%) rotate(45deg);
+}
+#p-qlist-sortBtn.p-qlist-sortBtn_reverse span {
+	transform: translateY(15%) rotate(-135deg);
+}
+
+#qlist > div {
+	position: relative;
+	display: flex;
+	padding: 1rem 0.4rem;
+	border-bottom: 1px solid var(--c-title);
+	overflow-x: auto;
+	font-size: 1.1rem;
+}
+#qlist > div:nth-child(2n) {
+	margin-right: 0.2rem;
+}
+#qlist > div:nth-last-child(2),
+#qlist > div:nth-last-child(1) {
+	border: none;
+}
+
+.qlist-id {
+	position: absolute;
+	top: 0.1rem;
+	left: 3.2rem;
+	font-size: 0.55rem;
+	opacity: 0.6;
+}
+
+.qlist-marker {
+	position: absolute;
+	left: 0.1rem;
+	top: 0.3rem;
+	display: flex;
+	gap: 0.15rem;
+}
+.qlist-marker > * {
+	display: block;
+	width: 0.35rem;
+	height: 0.35rem;
+	border-radius: 50%;
+}
+.qlist-marker-1 {
+	background-color: #17ab17;
+}
+.qlist-marker-0 {
+	background-color: #e93313;
+}
+.qlist-marker-u {
+	background-color: #8f8d8d;
+}
+
+.qlist-cell {
+	margin: auto;
+}
+
+@media screen and (max-width: 450px) {
+	#qlist {
+		grid-template-columns: 1fr;
+	}
+	#qlist > div:nth-child(2n - 1) {
+		border: none;
+	}
+	.qlist-id {
+		left: 0.2rem;
+	}
+	.qlist-marker {
+		left: auto;
+		right: 0.1rem;
+	}
+}
+
+#qlist.qlist_single {
+	grid-template-columns: 1fr;
+}
+#qlist.qlist_single > div:nth-child(2n - 1) {
+	border: none;
+	padding-bottom: 0;
+}
+#qlist.qlist_single > div:nth-child(2n) {
+	padding-top: 0;
+}
+#qlist.qlist_single > div:nth-child(2n - 1) .qlist-cell {
+	display: none;
+}

@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ЛЯРО | English Exam</title>
+	<meta name="description" content="Приложение для подготовки к экзамену по английскому"/>
+	<meta name="theme-color" content="#a52a2a" />
+	<meta property="og:title" content="ЛЯРО | English Exam" />
+	<meta property="og:description" content="Приложение для подготовки к экзамену по английскому" />
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://mixelte.github.io/pages/english_exam/">
+	<meta property="og:image" content="https://mixelte.github.io/pages/english_exam/imgs/logo.png" />
+	<meta property="og:image:type" content="image/png">
+	<meta property="og:image:width" content="1200">
+	<meta property="og:image:height" content="800">
+	<meta name="twitter:site" content="https://mixelte.github.io/pages/english_exam/">
+	<meta name="twitter:title" content="ЛЯРО | English Exam">
+	<meta name="twitter:description" content="Приложение для подготовки к экзамену по английскому">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:image:src" content="https://mixelte.github.io/pages/english_exam/imgs/logo.png">
+	<link rel="apple-touch-icon" href="logo192.png" />
+	<link rel="manifest" href="manifest.json" />
+	<link rel="canonical" href="https://mixelte.github.io/pages/english_exam/"/>
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+	<link rel="stylesheet" type="text/css" href="styles/popup.css">
+	<link rel="stylesheet" type="text/css" href="styles/themes.css">
+	<link rel="stylesheet" type="text/css" href="styles/base.css">
+	<link rel="stylesheet" type="text/css" href="styles/pageSwitch.css">
+	<link rel="stylesheet" type="text/css" href="styles/confetti.css">
+	<link rel="stylesheet" type="text/css" href="styles/formulas.css">
+	<link rel="stylesheet" type="text/css" href="styles/doc.css">
+	<link rel="stylesheet" type="text/css" href="styles/p-start.css">
+	<link rel="stylesheet" type="text/css" href="styles/p-tester.css">
+	<link rel="stylesheet" type="text/css" href="styles/p-stats.css">
+	<link rel="stylesheet" type="text/css" href="styles/p-qlists.css">
+	<link rel="stylesheet" type="text/css" href="styles/p-dayStats.css">
+	<link rel="stylesheet" type="text/css" href="styles/p-about.css">
+	<link rel="stylesheet" type="text/css" href="styles/p-settings.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans|Comfortaa|Arimo">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" />
+	<script src="_js/main.js" type="module"></script>
+	<!-- Yandex.RTB -->
+	<!-- <script>window.yaContextCb = window.yaContextCb || []</script> -->
+	<!-- <script src="https://yandex.ru/ads/system/context.js" async></script> -->
+</head>
+
+<body>
+	<style>
+		#beforeload {
+			position: fixed;
+			inset: 0;
+			z-index: 1000;
+			transition: opacity 400ms 100ms !important;
+		}
+	</style>
+	<div id="beforeload"></div>
+	<script>
+		let dark = false;
+		{
+			const theme = localStorage.getItem("learner_ege-theme") || "auto";
+			dark = theme == "dark" || (theme == "auto" && window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches);
+			document.getElementById("beforeload").style.backgroundColor = dark ? "#100c05" : "#f1e6d1";
+		}
+	</script>
+	<div class="menu" id="menu">
+		<div>
+			<h2>Меню</h2>
+			<div class="menuBtns">
+				<a href="#" id="btn-index">На главную</a>
+				<a href="#qlists" id="btn-qlist">Вопросы</a>
+				<a href="#dayStats" id="btn-dayStats">Статистика</a>
+			</div>
+		</div>
+		<footer>
+			<a href="#about" class="material-symbols-rounded" id="btn-about">
+				<span>favorite</span>
+				<span>star</span>
+				<span>heart_plus</span>
+				<span>thumb_up</span>
+				<span>handshake</span>
+				<span>sentiment_very_satisfied</span>
+				<span>emoji_food_beverage</span>
+			</a>
+			<a href="#settings" class="material-symbols-rounded" id="btn-settings">
+				<span>settings</span>
+			</a>
+		</footer>
+	</div>
+	<header>
+		<button class="menuBtn" id="menuBtn">
+			<div></div>
+			<div></div>
+			<div></div>
+		</button>
+		<h2 id="title"></h2>
+		<h3 id="subtitle"></h3>
+	</header>
+	<div class="page open vanished" id="p-start">
+		<div class="logo">
+			<div style="--d: 1"><span>при</span><span class="logo-letter">Л</span>ожение</div>
+			<div style="--d: 1.8"><span>дл</span><span class="logo-letter">Я</span></div>
+			<div style="--d: -0.5"><span>повто</span><span class="logo-letter">Р</span>ения</div>
+			<div style="--d: 1.4"><span>те</span><span class="logo-letter">О</span>рии</div>
+		</div>
+		<h4>Подготовка к английскому</h4>
+		<div>
+			<h2>Разделы</h2>
+			<div class="sectionSelection" id="sections">
+				<template id="template-section">
+					<div>
+						<input type="checkbox" id="group-1">
+						<div class="sectionSelection-marker">
+							<div></div>
+							<div></div>
+							<div></div>
+						</div>
+						<label for="group-1">Name</label>
+						<div class="sectionSelection-list_container">
+							<div class="sectionSelection-list">
+								<!-- <button>Всё</button> -->
+								<!-- <button>Тема 1</button> -->
+							</div>
+						</div>
+					</div>
+				</template>
+			</div>
+		</div>
+		<div class="version">v1.0</div>
+	</div>
+	<div class="page" id="p-tester">
+		<div class="tester">
+			<div class="tester-head">
+				<div id="t-page">##/##</div>
+				<div id="t-id">####</div>
+			</div>
+			<div class="tester-task" id="t-task">
+				Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat molestiae animi sunt rem itaque,
+				fugiat doloribus ex eius voluptate enim nemo?
+			</div>
+			<div class="tester-input" id="t-input">
+
+			</div>
+		</div>
+	</div>
+	<div class="page" id="p-qlists">
+		<template id="template-qlists">
+			<div class="qlists">
+				<input type="checkbox" id="qlists-1">
+				<label class="qlists-btn" for="qlists-1">
+					<div class="qlist-arrow"></div>
+					<span>Математика</span>
+					<div class="qlist-count">127</div>
+				</label>
+				<div class="qlists-list_container">
+					<div class="qlists-list">
+						<!-- <button><span>Тема 1</span><span>43</span></button> -->
+					</div>
+				</div>
+			</div>
+		</template>
+		<div id="qlists"></div>
+	</div>
+	<div class="page" id="p-qlist">
+		<button id="p-qlist-sortBtn"><span></span></button>
+		<div id="qlist">
+		</div>
+	</div>
+	<div class="page" id="p-dayStats">
+		<div class="dayStats-days">
+			<h3>Дней подряд</h3>
+			<div class="dayStats-days-num">
+				<h4>Сейчас</h4>
+				<div id="dayStats-current">0</div>
+			</div>
+			<div class="dayStats-days-num dayStats-days-num_gold">
+				<h4>Лучший</h4>
+				<div id="dayStats-longest">12</div>
+			</div>
+		</div>
+		<div class="dayStats-scale">
+			<h3>По дням</h3>
+			<span id="dayStats-scale_min">0</span>
+			<div></div>
+			<span id="dayStats-scale">0</span>
+		</div>
+		<div class="dayStats-last">
+			<h4>Вчера</h4>
+			<span id="dayStats-last_yesterday">56</span>
+			<h4>Сегодня</h4>
+			<span id="dayStats-last_today">253</span>
+		</div>
+		<div id="dayStats-days"></div>
+	</div>
+	<div class="page" id="p-about">
+		<h2>ЛЯРО</h2>
+		<div>
+			<h3>Приложение для подготовки к экзамену по английскому</h3>
+			<small>Автор не гарантирует корректность предоставляемого материала</small>
+		</div>
+		<div class="aboutAuthor">
+			<h4>Автор:</h4>
+			<div class="aboutAuthor-corners">
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+			<img class="aboutAuthor-avatar" src="./imgs/vertic.jpg" alt="Avatar">
+			<div class="aboutAuthor-body">
+				<h3>Mixel Te</h3>
+				<span>
+					<a href="https://github.com/MixelTe" target="_blank">
+						<img class="hideOnDark" src="./imgs/github_black.svg" alt="github">
+						<img class="hideOnLight" src="./imgs/github_white.svg" alt="github">
+					</a>
+					<a href="https://t.me/MixelTe" target="_blank"><img src="imgs/telegram.svg" alt="telegram"></a>
+					<a href="https://vk.com/mixel_te" target="_blank"><img src="imgs/vk.svg" alt="vk"></a>
+				</span>
+			</div>
+		</div>
+		<a class="aboutGroup" href="https://t.me/+8k32-Y1AvzgxZTAy" target="_blank">
+			<div class="aboutGroup-img">
+				<img src="imgs/mixelDev.png" alt="Avatar">
+			</div>
+			<div>
+				<h4>
+					<span>Другие</span>
+					<span>проекты</span>
+					<span>автора</span>
+				</h4>
+				<div class="aboutAuthor-tg">
+					<img src="imgs/telegram.svg" alt="telegram">
+				</div>
+			</div>
+		</a>
+	</div>
+	<div class="page" id="p-settings">
+		<div class="settings-theme" id="settings-theme">
+			<span>Тема:</span>
+			<label>
+				<input type="radio" name="settings-theme" id="settings-theme-light">
+				<span class="material-symbols-rounded">light_mode</span>
+			</label>
+			<label>
+				<input type="radio" name="settings-theme" id="settings-theme-dark">
+				<span class="material-symbols-rounded">dark_mode</span>
+			</label>
+			<label>
+				<input type="radio" name="settings-theme" id="settings-theme-auto">
+				<span class="material-symbols-rounded">night_sight_auto</span>
+			</label>
+		</div>
+		<label class="checkbox">
+			<input type="checkbox" id="settings-anim">
+			<span class="checkbox-mark"></span>
+			<span>Анимации</span>
+		</label>
+		<!-- <label class="checkbox">
+			<input type="checkbox" id="settings-adv">
+			<span class="checkbox-mark"></span>
+			<span>Меньше рекламы</span>
+		</label> -->
+		<div class="settings-customTheme">
+			<label class="checkbox">
+				<input type="checkbox" id="settings-customTheme">
+				<span class="checkbox-mark"></span>
+				<span>Своя тема</span>
+			</label>
+			<div class="settings-customTheme-inputs" id="settings-customTheme-inputs">
+				<div>
+					<div>
+
+						<span>Фон 1</span>
+						<input type="color" id="settings-color-back1">
+						<span>Фон 2</span>
+						<input type="color" id="settings-color-back2">
+						<span>Текст 1</span>
+						<input type="color" id="settings-color-text">
+						<span>Текст 2</span>
+						<input type="color" id="settings-color-title">
+					</div>
+					<!-- <button id="settings-customTheme-set">
+						Установить за рекламу
+					</button> -->
+				</div>
+			</div>
+		</div>
+		<div class="settings-data">
+			<input type="checkbox" id="settings-data-collapse">
+			<label for="settings-data-collapse">
+				<span>Данные</span>
+				<div></div>
+			</label>
+			<div>
+				<div>
+					<p>Прогресс сохраняется только на вашем устройстве. Вы можете вручную перенести ваши данные:</p>
+					<div>
+						<button id="settings-export">Экспорт</button>
+						<button id="settings-import">Импорт</button>
+					</div>
+					<p>Вы можете сбросить данные:</p>
+					<div>
+						<button id="settings-reset">Сбросить</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer style="max-width: 100dvw;" id="footer">
+		<!-- Yandex.RTB R-A-6760567-1 -->
+		<div id="yandex_rtb_R-A-6760567-1"></div>
+	</footer>
+</body>
+
+</html>

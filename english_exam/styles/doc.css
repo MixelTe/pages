@@ -1,0 +1,82 @@
+.doc {
+
+}
+
+.doc-center {
+	text-align: center;
+}
+.doc ol,
+.doc ul {
+	text-align: left;
+	margin-block: 0.5rem;
+}
+
+.doc-img {
+
+}
+.doc-img-btn {
+	position: relative;
+	border: none;
+	background-color: transparent;
+	outline: none;
+	cursor: pointer;
+}
+.doc-img-btn::after,
+.doc-img-btn::before {
+	content: "";
+	position: absolute;
+	width: 0.4em;
+	height: 0.4em;
+	bottom: 0;
+	border: 0px solid currentColor;
+	border-bottom-width: 0.1em;
+	transition-property: width, bottom;
+	transition-duration: 200ms;
+}
+.doc-img-btn::before {
+	left: -0.1em;
+	border-left-width: 0.1em;
+	border-bottom-left-radius: 0.2em;
+}
+.doc-img-btn::after {
+	right: -0.1em;
+	border-right-width: 0.1em;
+	border-bottom-right-radius: 0.2em;
+}
+.doc-img-btn:focus-visible::after,
+.doc-img-btn:focus-visible::before,
+.doc-img-btn:hover::after,
+.doc-img-btn:hover::before {
+	width: 100%;
+}
+.doc-img-btn:active::after,
+.doc-img-btn:active::before {
+	bottom: 0.2em;
+}
+
+.doc-svg-container {
+	position: relative;
+}
+.doc-svg-w100 svg {
+	width: 100%;
+	height: auto;
+}
+.doc-svg-wm100 svg {
+	max-width: 100%;
+	height: auto;
+}
+.doc-svg-center {
+	text-align: center;
+}
+
+.doc hr {
+	width: min(50%, 4rem);
+	border: 1px solid var(--c-title);
+	opacity: 0.5;
+	margin-block: 0.5em;
+}
+
+.doc .br {
+	margin-block: 0.45em;
+	height: 0.1em;
+}

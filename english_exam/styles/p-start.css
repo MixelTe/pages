@@ -1,0 +1,214 @@
+#p-start {
+	padding-block: 3rem;
+	overflow-x: hidden;
+}
+
+.logo {
+	font-family: "Comfortaa", "PT Sans", Arial, Helvetica, sans-serif;
+	font-size: 2rem;
+}
+
+.logo > div {
+	position: relative;
+	left: calc(var(--d) * 1em);
+}
+
+.logo-letter {
+	color: var(--c-title);
+}
+
+
+.sectionSelection {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	margin-top: 1rem;
+}
+
+.sectionSelection > div {
+	position: relative;
+	width: 256px;
+	padding-left: 1em;
+	margin-left: 0.4em;
+}
+
+.sectionSelection input {
+	position: absolute;
+	pointer-events: none;
+	opacity: 0;
+}
+
+.sectionSelection label {
+	display: block;
+	font-size: 1.3rem;
+	user-select: none;
+	cursor: pointer;
+}
+
+.sectionSelection-list_container {
+	display: grid;
+	grid-template-rows: 0fr;
+	transition: grid-template-rows 200ms;
+}
+.sectionSelection input:checked ~ .sectionSelection-list_container {
+	grid-template-rows: 1fr;
+}
+.sectionSelection-list {
+	display: flex;
+	flex-direction: column;
+	margin-top: 0.3em;
+	overflow: hidden;
+}
+
+.sectionSelection-marker {
+	font-size: 1.3rem;
+}
+.sectionSelection-marker > :nth-child(1) {
+	position: absolute;
+	top: 0.4em;
+	left: 0.05em;
+	width: 0.55em;
+	height: 0.55em;
+	border: 2px solid var(--c-text);
+	border-radius: 50%;
+	transition-property: top, border-radius;
+	transition-duration: 100ms;
+	transition-delay: 200ms, 100ms;
+}
+.sectionSelection > div:hover .sectionSelection-marker > :nth-child(1),
+.sectionSelection input:focus-visible ~ .sectionSelection-marker > :nth-child(1),
+.sectionSelection input:checked ~ .sectionSelection-marker > :nth-child(1) {
+	top: 0.8em;
+	transition-delay: 0ms;
+	border-bottom-right-radius: 0;
+}
+.sectionSelection-marker > :nth-child(2) {
+	position: absolute;
+	top: 1.25em;
+	left: 0.4em;
+	width: 0%;
+	height: 2px;
+	background-color: var(--c-text);
+	transition: width 200ms;
+}
+.sectionSelection > div:hover .sectionSelection-marker > :nth-child(2),
+.sectionSelection input:focus-visible ~ .sectionSelection-marker > :nth-child(2),
+.sectionSelection input:checked ~ .sectionSelection-marker > :nth-child(2) {
+	width: 100%;
+	transition-delay: 50ms;
+}
+.sectionSelection-marker > :nth-child(3) {
+	position: absolute;
+	top: 1.25em;
+	left: 0.5em;
+	width: 2px;
+	height: calc(100% - 2em);
+	background-color: var(--c-text);
+	transition: height 200ms;
+}
+.sectionSelection input:checked ~ .sectionSelection-marker > :nth-child(3) {
+	height: calc(100% - 0.8em);
+}
+
+.sectionSelection-list a {
+	position: relative;
+	background-color: transparent;
+	border: none;
+	text-align: left;
+	font-size: 1.1rem;
+	cursor: pointer;
+	padding: 0.3em 0.2em;
+	padding-left: 1.3em;
+	outline: none;
+}
+.sectionSelection-list a::before,
+.sectionSelection-list a::after {
+	position: absolute;
+	top: 0.32em;
+	left: 0.33em;
+	transition-property: opacity;
+	transition-duration: 100ms;
+	color: var(--c-title);
+}
+.sectionSelection-list a::before {
+	content: "§";
+	opacity: 1;
+}
+.sectionSelection-list a::after {
+	content: "";
+	border: 0.4em solid transparent;
+	border-left-color: var(--c-title);
+	opacity: 0;
+	transform: translate(0.1em, 0.25em) scaleY(0.7);
+}
+.sectionSelection-list a:focus-visible::before,
+.sectionSelection-list a:hover::before {
+	opacity: 0;
+}
+.sectionSelection-list a:focus-visible::after,
+.sectionSelection-list a:hover::after {
+	opacity: 1;
+}
+
+.sectionSelection-list a svg {
+	position: absolute;
+	top: 0.4em;
+	left: 0em;
+	width: 20px;
+	height: 20px;
+}
+
+.version {
+	position: fixed;
+	right: 0.5rem;
+	bottom: 0.5rem;
+	font-size: 1rem;
+}
+
+
+.logo > * {
+	transition-property: transform, opacity;
+	transition-duration: 750ms, 500ms;
+}
+.logo > :nth-child(1) {
+	transition-delay: 400ms;
+}
+.logo > :nth-child(2) {
+	transition-delay: 550ms;
+}
+.logo > :nth-child(3) {
+	transition-delay: 700ms;
+}
+.logo > :nth-child(4) {
+	transition-delay: 850ms;
+}
+#p-start > :nth-child(2),
+#p-start > :nth-child(3) {
+	transition-property: transform, opacity;
+	transition-duration: 750ms;
+	transition-delay: 1000ms;
+}
+#p-start > :nth-child(3) {
+	transition-delay: 1100ms;
+}
+
+.vanished .logo > * {
+	opacity: 0;
+}
+.vanished .logo > :nth-child(1) {
+	transform: translateX(-2em);
+}
+.vanished .logo > :nth-child(2) {
+	transform: translateX(2em);
+}
+.vanished .logo > :nth-child(3) {
+	transform: translateX(-2em);
+}
+.vanished .logo > :nth-child(4) {
+	transform: translateX(2em);
+}
+.vanished > :nth-child(2),
+.vanished > :nth-child(3) {
+	opacity: 0;
+	transform: translateY(-1em);
+}
