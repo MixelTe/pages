@@ -10,7 +10,9 @@ export const Sections = [
     },
     {
         name: "КМ3",
-        themes: [],
+        themes: [
+            { id: "e1", count: 99, name: "Аббревиатуры", color: themes.blue, items: getItemLoader("e1") },
+        ],
     },
 ];
 function getItemLoader(name) {
