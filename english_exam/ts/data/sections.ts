@@ -13,7 +13,7 @@ export const Sections: Section[] = [
 	{
 		name: "КМ3",
 		themes: [
-			{ id: "e1", count: 99, name: "Аббревиатуры", color: themes.blue, items: getItemLoader("e1") },
+			{ id: "e1", count: 99, name: "Вопросы", color: themes.blue, items: getItemLoader("e1") },
 		],
 	},
 ]
