@@ -11,7 +11,7 @@ export const Sections = [
     {
         name: "КМ3",
         themes: [
-            { id: "e1", count: 25, name: "Вопросы", color: themes.blue, items: getItemLoader("e1") },
+            { id: "e1", count: 45, name: "Вопросы", color: themes.blue, items: getItemLoader("e1") },
         ],
     },
 ];
